@@ -29,7 +29,7 @@ twitter_username: CloudsDocker
 github_username:  CloudsDocker
 
 # Build settings
-theme: minima
+theme: jekyll-theme-merlot
 # theme: minimal-mistakes-jekyll
 minimal_mistakes_skin: "aqua" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
 # minimal_mistakes_skin: "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
