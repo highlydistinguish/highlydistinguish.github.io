@@ -20,7 +20,7 @@
 
 title: Highly Distinguish
 subtitle: "IT solution & education"
-email: phray.zhang@gmail.com
+email: highlydistinguish@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Highly Distinguish pty. ltd.
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -29,8 +29,8 @@ twitter_username: CloudsDocker
 github_username:  CloudsDocker
 
 # Build settings
-# theme: minima
-theme: minimal-mistakes-jekyll
+theme: minima
+# theme: minimal-mistakes-jekyll
 minimal_mistakes_skin: "aqua" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
 # minimal_mistakes_skin: "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
 # remote_theme: "mmistakes/minimal-mistakes@4.24.0"
