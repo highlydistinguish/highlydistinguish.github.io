@@ -8,4 +8,4 @@ header:
     caption: Being Highly Distinguish!
     overlay_filter: 0.5, rgba(255, 0, 0, 0.5)
 ---
-We are here to make you being Highly Distinguish !
+We are here to make you being Highly Distinguish!
