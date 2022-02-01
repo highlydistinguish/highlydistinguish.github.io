@@ -1,11 +1,11 @@
 ---
 layout: archive
 ---
-1111
+<div class="badge badge-secondary bg-dark shadow border border-1 border-success mx-auto text-success text-right sticky-top opacity-75">
 {{ content }}
-2222
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Technical Posts" }}</h3>
-333
+</div>
+<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Latest Technical Posts" }}</h3>
+
 {% if paginator %}
   {% assign posts = paginator.posts %}
 {% else %}
@@ -15,9 +15,9 @@ layout: archive
 {% assign entries_layout = page.entries_layout | default: 'list' %}
 <div class="entries-{{ entries_layout }}">
   {% for post in posts %}
-
-    {% include archive-single.html type=entries_layout %}
-    
+    {% if post.category == 'tech' %}
+      {% include archive-single.html type=entries_layout %}
+    {% endif %}
   {% endfor %}
 </div>
 
