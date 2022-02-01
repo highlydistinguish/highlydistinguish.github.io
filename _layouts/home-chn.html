@@ -1,0 +1,26 @@
+---
+layout: archive
+---
+<div class="alert alert-secondary shadow border border-1 border-success mx-auto text-success text-right sticky-top">
+{{ content }}
+</div>
+<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "最新技术秘籍" }}</h3>
+
+
+{% if paginator %}
+  {% assign posts = paginator.posts %}
+{% else %}
+  {% assign posts = site.posts %}
+{% endif %}
+
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}">
+  {% for post in posts %}
+    {% if post.category == 'chn' %}
+    <!-- {{ post.category | inspect}} -->
+      {% include archive-single.html type=entries_layout %}
+    {% endif %}
+  {% endfor %}
+</div>
+
+{% include paginator.html %}
