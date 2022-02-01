@@ -1,0 +1,5293 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+
+<!--google fonts-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Spring notes - Highly Distinguish</title>
+<meta name="description" content="Spring Bean Life Cycle Callback Methods">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Highly Distinguish">
+<meta property="og:title" content="Spring notes">
+<meta property="og:url" content="http://localhost:4000/2017/03/05/Spring.html">
+
+
+  <meta property="og:description" content="Spring Bean Life Cycle Callback Methods">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2017-03-05T00:00:00+11:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/2017/03/05/Spring.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Highly Distinguish Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+<link rel="stylesheet" href="/assets/css/blog.css">
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--posts">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Highly Distinguish
+          <span class="site-subtitle">IT solution & education</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/blog_business/index.html">Business</a>
+            </li><li class="masthead__menu-item">
+              <a href="/sitemap/">Sitemap</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url"></a>
+    </h3>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+  
+  </div>
+
+
+
+  <div class="archive">
+    
+      <h1 id="page-title" class="page__title">Spring notes</h1>
+    
+    <h1 id="spring-bean-life-cycle-callback-methods">Spring Bean Life Cycle Callback Methods</h1>
+
+<p><img src="https://www.concretepage.com/spring/images/spring-bean-life-cycle-tutorial.jpg" alt="life cycle" />
+A bean life cycle includes the following steps.</p>
+<ol>
+  <li>Within IoC container, a spring bean is created using class constructor.</li>
+  <li>Now the dependency injection is performed using setter method.</li>
+  <li>Once the dependency injection is completed, BeanNameAware.setBeanName() is called. It sets the name of bean in the bean factory that created this bean.</li>
+  <li>Now &lt; code&gt;BeanClassLoaderAware.setBeanClassLoader() is called that supplies the bean class loader to a bean instance.</li>
+  <li>Now &lt; code&gt;BeanFactoryAware.setBeanFactory() is called that provides the owning factory to a bean instance.</li>
+  <li>Now the IoC container calls BeanPostProcessor.postProcessBeforeInitialization on the bean. Using this method a wrapper can be applied on original bean.</li>
+  <li>Now the method annotated with @PostConstruct is called.</li>
+  <li>After @PostConstruct, the method InitializingBean.afterPropertiesSet() is called.</li>
+  <li>Now the method specified by init-method attribute of bean in XML configuration is called.</li>
+  <li>And then BeanPostProcessor.postProcessAfterInitialization() is called. It can also be used to apply wrapper on original bean.</li>
+  <li>Now the bean instance is ready to be used. Perform the task using the bean.</li>
+  <li>Now when the ApplicationContext shuts down such as by using registerShutdownHook() then the method annotated with @PreDestroy is called.</li>
+  <li>After that DisposableBean.destroy() method is called on the bean.</li>
+  <li>Now the method specified by destroy-method attribute of bean in XML configuration is called.</li>
+  <li>Before garbage collection, finalize() method of Object is called.</li>
+</ol>
+
+<p>Spring framework provides following 4 ways for controlling life cycle events of bean:</p>
+
+<ul>
+  <li>InitializingBean and DisposableBean callback interfaces</li>
+  <li>Other Aware interfaces for specific behavior</li>
+  <li>Custom init() and destroy() methods in bean configuration file</li>
+  <li>@PostConstruct and @PreDestroy annotations</li>
+</ul>
+
+<h2 id="initializingbean">InitializingBean</h2>
+<p>The org.springframework.beans.factory.InitializingBean interface specifies a single method −</p>
+
+<p>void afterPropertiesSet() throws Exception;</p>
+
+<h2 id="destruction-callbacks">Destruction callbacks</h2>
+<p>The org.springframework.beans.factory.DisposableBean interface specifies a single method −</p>
+
+<p>void destroy() throws Exception;</p>
+
+<h2 id="custom-init-and-destroy-methods-in-bean-configuration-file">Custom init() and destroy() methods in bean configuration file</h2>
+<p>The default init and destroy methods in bean configuration file can be defined in two ways:</p>
+
+<p>Bean local definition applicable to a single bean
+Global definition applicable to all beans defined in beans context</p>
+
+<p>Local definition is given as below.</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;beans&gt;</span>
+
+	<span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"demoBean"</span> <span class="na">class=</span><span class="s">"com.howtodoinjava.task.DemoBean"</span> 
+					<span class="na">init-method=</span><span class="s">"customInit"</span> 
+					<span class="na">destroy-method=</span><span class="s">"customDestroy"</span><span class="nt">&gt;&lt;/bean&gt;</span>
+
+<span class="nt">&lt;/beans&gt;</span>
+</code></pre></div></div>
+
+<p>Where as global definition is given as below. These methods will be invoked for all bean definitions given under <beans> tag. They are useful when you have a pattern of defining common method names such as init() and destroy() for all your beans consistently. This feature helps you in not mentioning the init and destroy method names for all beans independently.</beans></p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nt">&lt;beans</span> <span class="na">default-init-method=</span><span class="s">"customInit"</span> <span class="na">default-destroy-method=</span><span class="s">"customDestroy"</span><span class="nt">&gt;</span>   
+
+    	<span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"demoBean"</span> <span class="na">class=</span><span class="s">"com.howtodoinjava.task.DemoBean"</span><span class="nt">&gt;&lt;/bean&gt;</span>
+
+<span class="nt">&lt;/beans&gt;</span>
+</code></pre></div></div>
+
+<h2 id="postconstruct-and-predestroy-annotations">@PostConstruct and @PreDestroy annotations</h2>
+<p>Spring 2.5 onwards, you can use annotations also for specifying life cycle methods using @PostConstruct and @PreDestroy annotations.</p>
+
+<p>@PostConstruct annotated method will be invoked after the bean has been constructed using default constructor and just before it’s instance is returned to requesting object.
+@PreDestroy annotated method is called just before the bean is about be destroyed inside bean container.
+A sample implementation will look like this:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">com.howtodoinjava.task</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">javax.annotation.PostConstruct</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.annotation.PreDestroy</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">DemoBean</span> 
+<span class="o">{</span>
+	<span class="nd">@PostConstruct</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">customInit</span><span class="o">()</span> 
+	<span class="o">{</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Method customInit() invoked..."</span><span class="o">);</span>
+	<span class="o">}</span>
+	
+	<span class="nd">@PreDestroy</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">customDestroy</span><span class="o">()</span> 
+	<span class="o">{</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Method customDestroy() invoked..."</span><span class="o">);</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h1 id="spring-notes">Spring Notes</h1>
+
+<h2 id="aop">AOP</h2>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">execution</span><span class="o">(*</span> <span class="n">concert</span><span class="o">.</span><span class="na">Performance</span><span class="o">.</span><span class="na">perform</span><span class="o">())</span>  <span class="n">and</span> <span class="o">!</span><span class="n">bean</span><span class="o">(</span><span class="err">'</span><span class="n">woodstock</span><span class="err">'</span><span class="o">)</span>
+ <span class="nd">@Aspect</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Audience</span> <span class="o">{</span>
+  <span class="nd">@Before</span><span class="o">(</span><span class="s">"execution(** concert.Performance.perform(..))"</span><span class="o">)</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">silenceCellPhones</span><span class="o">()</span> <span class="o">{</span>
+<span class="nc">Before</span> <span class="n">performance</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>Fortunately, there’s a way: the @Pointcut annotation defines a reusable pointcut within an @AspectJ aspect. The next listing shows the Audience aspect, updated to use @Pointcut.</p>
+  </li>
+  <li>Reuse pointuct
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Aspect</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Audience</span> <span class="o">{</span>
+<span class="nd">@Pointcut</span><span class="o">(</span><span class="s">"execution(** concert.Performance.perform(..))"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">performance</span><span class="o">()</span> <span class="o">{}</span> <span class="c1">//Define named pointcut</span>
+
+  <span class="nd">@Before</span><span class="o">(</span><span class="s">"performance()"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">silenceCellPhones</span><span class="o">()</span> <span class="o">{</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Silencing cell phones"</span><span class="o">);</span>
+<span class="nd">@Before</span><span class="o">(</span><span class="s">"performance()"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">takeSeats</span><span class="o">()</span> <span class="o">{</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Taking seats"</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>The body of the performance() method is irrelevant and, in fact, should be empty. The method itself is just a marker, giving the @Pointcut annotation something to attach itself to.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">org.aspectj.lang.ProceedingJoinPoint</span><span class="o">;</span> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Audience</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">watchPerformance</span><span class="o">(</span><span class="nc">ProceedingJoinPoint</span> <span class="n">jp</span><span class="o">)</span> <span class="o">{</span> <span class="k">try</span> <span class="o">{</span>
+
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Silencing cell phones"</span><span class="o">);</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Taking seats"</span><span class="o">);</span>
+</code></pre></div></div>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;aop:config&gt;</span>
+<span class="nt">&lt;aop:aspect</span> <span class="na">ref=</span><span class="s">"audience"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;aop:pointcut</span>
+<span class="na">id=</span><span class="s">"performance"</span>
+<span class="na">expression=</span><span class="s">"execution(** concert.Performance.perform(..))"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;aop:around</span>     <span class="err">Declare</span> <span class="err">around</span> <span class="err">advice</span>
+        
+<span class="na">pointcut-ref=</span><span class="s">"performance"</span> <span class="na">method=</span><span class="s">"watchPerformance"</span><span class="nt">/&gt;</span> <span class="nt">&lt;/aop:aspect&gt;</span>
+<span class="nt">&lt;/aop:config&gt;</span>   
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>to use AspectJ’s @DeclareParents annota¬tion to magically introduce a new method into an advised bean. But AOP introduc¬tions aren’t exclusive to AspectJ. Using the <aop:declare-parents> element from Spring’s aop namespace, you can do similar magic in XML.</aop:declare-parents></p>
+  </li>
+  <li>Listing 1.7 Spring offers Java-based configuration as an alternative to XML.
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">com.springinaction.knights.config</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.context.annotation.Bean</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.context.annotation.Configuration</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.springinaction.knights.BraveKnight</span><span class="o">;</span> <span class="kn">import</span> <span class="nn">com.springinaction.knights.Knight</span><span class="o">;</span> <span class="kn">import</span> <span class="nn">com.springinaction.knights.Quest</span><span class="o">;</span> <span class="kn">import</span> <span class="nn">com.springinaction.knights.SlayDragonQuest</span><span class="o">;</span>
+<span class="nd">@Configuration</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">KnightConfig</span> <span class="o">{</span>
+<span class="nd">@Bean</span>
+<span class="kd">public</span> <span class="nc">Knight</span> <span class="nf">knight</span><span class="o">()</span> <span class="o">{</span>
+<span class="k">return</span> <span class="k">new</span> <span class="nf">BraveKnight</span><span class="o">(</span><span class="n">quest</span><span class="o">());</span>
+<span class="o">}</span>
+<span class="nd">@Bean</span>
+<span class="kd">public</span> <span class="nc">Quest</span> <span class="nf">quest</span><span class="o">()</span> <span class="o">{</span>
+<span class="k">return</span> <span class="k">new</span> <span class="nf">SlayDragonQuest</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">);</span>
+<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>In a Spring application, an application context loads bean definitions and wires them together. The Spring application context is fully responsible for the creation of and wiring of the objects that make up the application. Spring comes with several imple¬mentations of its application context, each primarily differing only in how it loads its configuration.</p>
+  </li>
+  <li>
+    <p>When the beans in knights.xml are declared in an XML file, an appropriate choice for application context might be ClassPathXmlApplicationContext.1</p>
+  </li>
+  <li>
+    <p>These system services are commonly referred to as cross-cut¬ting concerns because they tend to cut across multiple components in a system.</p>
+  </li>
+  <li>
+    <p>Your components are littered with code that isn’t aligned with their core func¬tionality. A method that adds an entry to an address book should only be con¬cerned with how to add the address and not with whether it’s secure or transactional.</p>
+  </li>
+  <li>Spring seeks to eliminate boilerplate code by encapsulating it in templates. Spring’s JdbcTemplate makes it possible to perform database operations without all the ceremony required by traditional JDBC.
+The container is at the core of the Spring Framework. Spring’s container uses DI to manage the components that make up an application. This includes creating associa¬tions between collaborating components. As such, these objects are cleaner and easier to understand, they support reuse, and they’re easy to unit test.</li>
+  <li>There’s no single Spring container. Spring comes with several container imple¬mentations that can be categorized into two distinct types. Bean factories (defined by the org.springframework.beans.factory.BeanFactory interface) are the simplest of containers, providing basic support for DI. Application contexts (defined by the org.springframework.context.ApplicationContext interface) build on the notion of a bean factory by providing application-framework services, such as the ability to resolve textual messages from a properties file and the ability to publish application events to interested event listeners.</li>
+  <li>
+    <p>Although it’s possible to work with Spring using either bean factories or applica¬tion contexts, bean factories are often too low-level for most applications. Therefore, application contexts are preferred over bean factories. We’ll focus on working with application contexts and not spend any more time talking about bean factories.</p>
+  </li>
+  <li>
+    <p>As you can see, a bean factory performs several setup steps before a bean is ready to use. Let’s break down figure 1.5 in more detail:
+1 Spring instantiates the bean.
+2 Spring injects values and bean references into the bean’s properties.
+3 If the bean implements BeanNameAware, Spring passes the bean’s ID to the set-BeanName() method.
+4 If the bean implements BeanFactoryAware, Spring calls the setBeanFactory() method, passing in the bean factory itself.
+5 If the bean implements ApplicationContextAware, Spring calls the set-ApplicationContext() method, passing in a reference to the enclosing appli¬cation context.
+6       If the bean implements the BeanPostProcessor interface, Spring calls its post- 
+ProcessBeforeInitialization() method.
+7       If the bean implements the InitializingBean interface, Spring calls its after- 
+PropertiesSet() method. Similarly, if the bean was declared with an init-method, then the specified initialization method is called.
+8 If the bean implements BeanPostProcessor, Spring calls its postProcess-AfterInitialization() method.
+9 At this point, the bean is ready to be used by the application and remains in the application context until the application context is destroyed.
+10 If the bean implements the DisposableBean interface, Spring calls its destroy() method. Likewise, if the bean was declared with a destroy-method, the specified method is called.</p>
+  </li>
+  <li>Spring Boot heavily employs automatic configuration techniques that can elimi¬nate most (and in many cases, all) Spring configuration. It also provides several starter projects to help reduce the size of your Spring project build files, whether you’re using Maven or Gradle.</li>
+</ul>
+
+<p>·   Spring began to support Servlet 3.0, including the ability to declare servlets and filters in Java-based configuration instead of web.xml.
+·   You should now have a good idea of what Spring brings to the table. Spring aims to make enterprise Java development easier and to promote loosely coupled code. Vital to this are dependency injection and aspect-oriented programming.
+When it comes to expressing a bean wiring specification, Spring is incredibly flexible, offering three primary wiring mechanisms:
+·   Explicit configuration in XML
+·   Explicit configuration in Java
+·   Implicit bean discovery and automatic wiring
+·   in many cases, the choice is largely a matter of personal taste, and you’re welcome to choose the approach that feels best for you.
+Spring attacks automatic wiring from two angles:
+·   Component scanning—Spring automatically discovers beans to be created in the application context.
+·   Autowiring—Spring automatically satisfies bean dependencies.
+Working together, component scanning and autowiring are a powerful force and can help keep explicit configuration to a minimum.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">soundsystem</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">CompactDisc</span> <span class="o">{</span> <span class="kt">void</span> <span class="nf">play</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>The specifics of the CompactDisc interface aren’t important. What is important is that you’ve defined it as an interface. As an interface, it defines the contract through which a CD player can operate on the CD. And it keeps the coupling between any CD player implementation and the CD itself to a minimum.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">soundsystem</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.stereotype.Component</span><span class="o">;</span>
+<span class="nd">@Component</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SgtPeppers</span> <span class="kd">implements</span> <span class="nc">CompactDisc</span> <span class="o">{</span>
+<span class="kd">private</span> <span class="nc">String</span> <span class="n">title</span> <span class="o">=</span> <span class="s">"Sgt. Pepper's Lonely Hearts Club Band"</span><span class="o">;</span> <span class="kd">private</span> <span class="nc">String</span> <span class="n">artist</span> <span class="o">=</span> <span class="s">"The Beatles"</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">play</span><span class="o">()</span> <span class="o">{</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Playing "</span> <span class="o">+</span> <span class="n">title</span> <span class="o">+</span> <span class="s">" by "</span> <span class="o">+</span> <span class="n">artist</span><span class="o">);</span>
+<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>that SgtPeppers is annotated with @Component. This simple annotation identifies this class as a component class and serves as a clue to Spring that a bean should be created for the class.
+Component scanning isn’t turned on by default, however. You’ll still need to write an explicit configuration to tell Spring to seek out classes annotated with @Component and to create beans from them. The configuration class in the following listing shows the minimal configuration to make this possible.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">soundsystem</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.context.annotation.ComponentScan</span><span class="o">;</span> <span class="kn">import</span> <span class="nn">org.springframework.context.annotation.Configuration</span><span class="o">;</span>
+<span class="nd">@Configuration</span> <span class="nd">@ComponentScan</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">CDPlayerConfig</span> <span class="o">{</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>you can explicitly identify any state as the starting state by setting the start-state attri¬bute in the <flow> element:
+```xml
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;</flow></li>
+</ul>
+<flow xmlns="http://www.springframework.org/schema/webflow" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.3.xsd" start-state="identifyCustomer">
+...
+</flow>
+
+<body>
+<h2>Welcome to Spizza!!!</h2>
+<form:form>
+<input type="hidden" name="_flowExecutionKey" value="${flowExecutionKey}" />
+<input type="text" name="phoneNumber" /><br />
+<input type="submit" name="_eventId_phoneEntered" value="Lookup Customer" />
+</form:form>
+</body>
+<p>&lt;/html&gt;</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+- The _eventId_ portion of the button’s name is a clue to Spring Web Flow that what follows is an event that should be fired. When the form is submitted by clicking that button, a phoneEntered event is fired, triggering a transition to lookupCustomer.
+
+    Flow execution key
+```xml
+&lt;p&gt;The address is outside of our delivery area. You may
+still place the order, but you will need to pick it up
+yourself.&lt;/p&gt;
+&lt;![CDATA[
+&lt;a href="${flowExecutionUrl}&amp;_eventId=accept"&gt;
+Continue, I'll pick up the order&lt;/a&gt; |
+&lt;a href="${flowExecutionUrl}&amp;_eventId=cancel"&gt;Never mind&lt;/a&gt;
+11&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>Note that the customerReady end state includes an <output> element. This ele-ment is a flow’s equivalent of Java’s return statement. It passes back some data from a subflow to the calling flow. In this case, <output> returns the customer flow variable so that the identifyCustomer subflow state in the pizza flow can assign it to the order.
+you use the <input /> element to pass the Order in to the flow. Here you’re using it to accept that Order object. If you think of this subflow as being analo¬gous to a method in Java, the <input /> element used here is effectively defining the subflow’s signature. This flow requires a single parameter called order.</output></output></p>
+  </li>
+  <li>
+    <p>States, transitions, and entire flows can be secured in Spring Web Flow by using the <secured> element as a child of those elements. For example, to secure access to a view state, you might use <secured> like this:</secured></secured></p>
+  </li>
+</ul>
+<view-state id="restricted">
+<secured attributes="ROLE_ADMIN" match="all" /> </view-state>
+<p>As configured here, access to the view state will be restricted to only users who are granted ROLE_ADMIN access (per the attributes attribute). The attributes attribute takes a comma-separated list of authorities that the user must have to gain access to the state, transition, or flow.</p>
+
+<h1 id="requestbody-converter">@RequestBody converter</h1>
+
+<p>Spring uses HttpMessageConverters to render @ResponseBody (or responses from @RestController).</p>
+
+<p>If a bean you add is of a type that would have been included by default anyway (such as MappingJackson2HttpMessageConverter for JSON conversions), it replaces the default value. A convenience bean of type HttpMessageConverters is provided and is always available if you use the default MVC configuration. It has some useful methods to access the default and user-enhanced message converters (For example, it can be useful if you want to manually inject them into a custom RestTemplate).</p>
+
+<p>On the contrary, REST has little to do with RPC. Whereas RPC is service oriented and focused on actions and verbs, REST is resource oriented, emphasizing the things and nouns that comprise an application.</p>
+
+<p>Put more succinctly, REST is about transferring the state of resources—in a representational form that is most appropriate for the client or server—from a server to a client (or vice versa).</p>
+
+<p>It’s a small start, but you’ll build on this controller throughout this chapter as you learn the ins and outs of Spring’s REST programming model.</p>
+
+<p>Representation is an important facet of REST. It’s how a client and a server communicate about a resource. Any given resource can be represented in virtually any form. If the consumer of the resource prefers JSON, then the resource can be</p>
+
+<p>Meanwhile, a human user viewing the resource in a web browser will likely prefer seeing it in HTML (or possibly PDF, Excel, or some other human-readable form). The resource doesn’t change—only how it’s represented.</p>
+
+<p>Understanding how ContentNegotiatingViewResolverworks involves getting to know the content-negotiation two-step:</p>
+
+<ol>
+  <li>
+    <p>Determine the requested media type(s).</p>
+  </li>
+  <li>
+    <p>Find the best view for the requested media type(s).</p>
+  </li>
+</ol>
+
+<p>The @ResponseBodyannotation tells Spring that you want to send the returned object as a resource to the client, converted into some representational form that the client can accept. More specifically, DispatcherServletconsiders the request’s Acceptheader and looks for a message converter that can give the client the representation it wants.</p>
+
+<p>Just as @ResponseBody tells Spring to employ a message converter when sending data to a client, the @RequestBody tells Spring to find a message converter to convert a resource representation coming from a client into an object. For example, suppose that you need a way for a client to submit a new Spittle to be saved. You can write the controller method to handle such a request like this:</p>
+
+<p>The body of the POST request is expected to carry a resource representation for a Spittle. Because the Spittleparameter is annotated with @RequestBody, Spring will look at the Content-Type header of the request and try to find a message converter that can convert the request body into a Spittle.</p>
+
+<p>For example, if the client sent the Spittle data in a JSON representation, then the Content-Type header might be set to application/json. In that case, DispatcherServletwill look for a message converter that can convert JSON into Java objects. If the Jackson 2 library is on the classpath, then MappingJackson2Http-MessageConverterwill get the job and will convert the JSON representation into a Spittle that’s passed into the saveSpittle()method. The method is also annotated with @ResponseBodyso that the returned Spittle will be converted into a resource representation to be returned to the client.</p>
+
+<p>Notice that the @RequestMappinghas a consumesattribute set to application/json. The consumesattribute works much like the producesattribute, only with regard to the request’s Content-Typeheader. This tells Spring that this method will only handle POSTrequests to /spittles if the request’s Content-Typeheader is application/json. Otherwise, it will be up to some other method (if a suitable one exists) to handle the request.</p>
+
+<p>The key thing to notice in listing 16.3is what’s not in the code. Neither of the handler methods are annotated with @ResponseBody. But because the controller is annotated with @RestController, the objects returned from those methods will still go through message conversion to produce a resource representation for the client.The @ExceptionHandler annotation can be applied to controller methods to handle specific exceptions. Here, it’s indicating that if a SpittleNotFoundException is thrown from any of the handler methods in the same controller, the spittleNotFound() method should be called to handle that exception.</p>
+
+<p>@ExceptionHandler(SpittleNotFoundException.class)@ResponseStatus(HttpStatus.NOT_FOUND)public @ResponseBody Error spittleNotFound(SpittleNotFoundException e) {  long spittleId = e.getSpittleId();  return new Error(4, “Spittle [” + spittleId + “] not found”);}</p>
+
+<p>@ExceptionHandler(SpittleNotFoundException.class)
+@ResponseStatus(HttpStatus.NOT_FOUND)
+public @ResponseBody Error spittleNotFound(SpittleNotFoundException e) {
+ long spittleId = e.getSpittleId();
+ return new Error(4, “Spittle [” + spittleId + “] not found”);
+}</p>
+
+<p>Because spittleNotFound() always returns an Error, the only reason to keep Response-Entity around is so you can set the status code. But by annotating spittleNotFound() with @ResponseStatus(HttpStatus.NOT_FOUND), you can achieve the same effect and get rid of ResponseEntity.</p>
+
+<p>Again, if the controller class is annotated with @RestController, you can remove the @ResponseBody annotation and clean up the code a little more:</p>
+
+<p>@ExceptionHandler(SpittleNotFoundException.class)
+@ResponseStatus(HttpStatus.NOT_FOUND)
+public Error spittleNotFound(SpittleNotFoundException e) {
+ long spittleId = e.getSpittleId();
+ return new Error(4, “Spittle [” + spittleId + “] not found”);
+}</p>
+
+<p>public Spittle fetchSpittle(long id) {
+ RestTemplate rest = new RestTemplate();
+ ResponseEntity<Spittle> response = rest.getForEntity(</Spittle></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> "http://localhost:8080/spittr-api/spittles/{id}",
+ Spittle.class, id);  if(response.getStatusCode() == HttpStatus.NOT_MODIFIED) {    throw new NotModifiedException();  }  return response.getBody(); }
+</code></pre></div></div>
+
+<p>Just like the getForEntity() method, postForEntity() returns a Response-Entity<T> object. From that object, you can call getBody() to get the resource object (a Spitter in this case). And the getHeaders() method gives you an HttpHeaders from which you can access the various HTTP headers returned in the response. Here, you’re calling getLocation() to retrieve the Location header as a java.net.URI.</T></p>
+
+<p>By passing in HttpMethod.GET as the HTTP verb, you’re asking exchange() to send a GET request. The third argument is for sending a resource on the request, but because this is a GET request, it can be null. The next argument indicates that you want the response converted into a Spitter object. An</p>
+
+<p>Used this way, the exchange() method is virtually identical to the previously used getForEntity(). But unlike getForEntity()—or getForObject()—exchange() lets you set headers on the request sent. Instead of passing null to exchange(), you pass in an HttpEntity created with the request headers you want.</p>
+
+<p>RESTful architecture uses web standards to integrate applications, keeping the interactions simple and natural. Resources in a system are identified by URLs, manipulated with HTTP methods, and represented in one or more forms suitable for the client.</p>
+
+<p>Spring’s philosophy of avoiding checked exceptions, you don’t want to let the JMSException escape this method, so you’ll catch it instead.</p>
+
+<p>In the catch block, you can use the convertJmsAccessException() method from Spring’s JmsUtils class to convert the checked JMSException to an unchecked JmsException. This is effectively the same thing JmsTemplate does for you in other cases.</p>
+
+<p>A message-listener container is a special bean that watches a JMS destination, waiting for a message to arrive. Once a message arrives, the bean retrieves the message and passes it on to any message listeners that are interested.</p>
+
+<jms:listener-container connection-factory="connectionFactory">
+ <jms:listener destination="spitter.alert.queue" ref="spittleHandler" method="handleSpittleAlert" />
+</jms:listener-container>
+
+<p>JmsInvokerServiceExporter is much like those other service exporters. In fact, note that there’s some symmetry in the names of JmsInvokerServiceExporter and HttpInvokerServiceExporter. If HttpInvokerServiceExporter exports services that communicate over HTTP, then JmsInvokerServiceExporter must export services that converse over JMS.</p>
+
+<p>As it turns out, AMQP offers several advantages over JMS. First, AMQP defines a wire-level protocol for messaging, whereas JMS defines an API specification. JMS’s API specification ensures that all JMS implementations can be used through a common API but doesn’t mandate that messages sent by one JMS implementation can be consumed by a different JMS implementation. AMQP’s wire-level protocol, on the other hand, specifies the format that messages will take when en route between the producer and consumer. Consequently, AMQP is more interoperable than JMS—not only across different AMQP implementations, but also across languages and platforms.</p>
+
+<p>In JMS, there are just three primary participants: the message producer, the message consumer(s), and a channel (either a queue or a topic) to carry the message between producers and consumers. These essentials of the JMS messaging model are illustrated in figures 17.3 and 17.4.</p>
+
+<p>In JMS, the channel helps to decouple the producer from the consumer, but both are still coupled to the channel. A producer publishes messages to a specific queue or topic, and the consumer receives those message from a specific queue or topic. The channel has the double duty of relaying messages and determining how those messages will be routed; queues route using a point-to-point algorithm, and topics route in publish/subscribe fashion.</p>
+
+<p>In contrast, AMQP producers don’t publish directly to a queue. Instead, AMQP introduces a new level of indirection between the producer and any queues that will carry the message: the exchange. This relationship is illustrated in figure 17.8.</p>
+
+<p>Figure 17.8. In AMQP, message producers are decoupled from message queues by an exchange that handles message routing.</p>
+
+<p>For example, to have a message routed to multiple queues with no regard for the routing key, you can configure a fanout exchange and several queues like this:</p>
+
+<admin connection-factory="connectionFactory" />
+<queue name="spittle.alert.queue.1"> <queue name="spittle.alert.queue.2"> <queue name="spittle.alert.queue.3"> <fanout-exchange name="spittle.fanout"> <bindings> <binding queue="spittle.alert.queue.1" /> <binding queue="spittle.alert.queue.2" /> <binding queue="spittle.alert.queue.3" /> </bindings> </fanout-exchange>
+
+As its name implies, the RabbitMQ connection factory is used to create connections with RabbitMQ. If you want to send messages via RabbitMQ, you could inject the connectionFactory bean into your AlertServiceImpl class, use it to create a Connection, use that Connection to create a Channel, and use that Channel to publish a message to an exchange.
+
+Yep, you could do that.
+
+you can configure different defaults using the exchange and routing-key attributes on the <template> element:
+
+<template id="rabbitTemplate" connection-factory="connectionFactory" exchange="spittle.alert.exchange" routing-key="spittle.alerts" />
+
+
+it was tricky to convert domain objects into Messages for sending, it’s messy to convert received Messages to domain objects. Therefore, consider using RabbitTemplate’s receiveAndConvert() method instead:
+
+Spittle spittle =
+   (Spittle) rabbit.receiveAndConvert("spittle.alert.queue");
+Or you can leave the queue name out of the call parameters to fall back on the template’s default queue name:
+
+The first thing you’ll need in order to consume a Spittle object asynchronously in a message-driven POJO is the POJO itself. Here’s SpittleAlertHandler, which fills that role:
+
+package com.habuma.spittr.alerts;
+import com.habuma.spittr.domain.Spittle;
+
+public class SpittleAlertHandler {
+
+ public void handleSpittleAlert(Spittle spittle) {
+   // ... implementation goes here ...
+ }
+}
+
+<listener-container connection-factory="connectionFactory">
+   <listener ref="spittleListener" method="handleSpittleAlert" queue-names="spittle.alert.queue" />
+</listener-container>
+Do you see the difference? I’ll agree that it’s not obvious. The <listener-container> and <listener> elements appear to be similar to their JMS counterparts. These elements, however, come from the rabbit namespace instead of the JMS namespace.
+
+I said it wasn’t obvious.
+
+
+Regardless of whether you handle text messages, binary messages, or both, you might also be interested in handling the establishment and closing of connections. In that case, you can override afterConnectionEstablished() and afterConnectionClosed():
+
+public void afterConnectionEstablished(WebSocketSession session)
+   throws Exception {
+ logger.info("Connection established");
+}
+
+@Override
+public void afterConnectionClosed(
+   WebSocketSession session, CloseStatus status) throws Exception {
+ logger.info("Connection closed. Status: " + status);
+}
+
+
+
+Fortunately, you don’t have to work with raw WebSocket connections. Just as HTTP layers a request-response model on top of TCP sockets, STOMP layers a frame-based wire format to define messaging semantics on top of WebSocket.
+
+At a quick glance, STOMP message frames look very similar in structure to HTTP requests. Much like HTTP requests and responses, STOMP frames are comprised of a command, one or more headers, and a payload. For example, here’s a STOMP frame that sends data.
+
+SEND
+destination:/app/marco
+content-length:20
+
+{\"message\":\"Marco!\"}
+In this simple example, the STOMP command is SEND, indicating that something is being sent. It’s followed by two headers: one indicates the destination where the message should be sent, and the other communicates the size of the payload. Following a blank line, the frame concludes with the payload; in this case, a JSON message.
+
+Taking advantage of Maven’s and Gradle’s transitive dependency resolution, the starters declare several dependencies in their own pom.xml file. When you add one of these starter dependencies to your Maven or Gradle build, the starter’s dependencies are resolved transitively.
+
+Whereas Spring Boot starters cut down the size of your build’s dependency list, Spring Boot autoconfiguration cuts down on the amount of Spring configuration.
+
+When Spring Boot’s web autoconfiguration detects Spring MVC in the classpath, it will automatically configure several beans to support Spring MVC, including view resolvers, resource handlers, and message converters (among others). All that’s left for you to do is write the controller classes to handle the requests.
+
+Spring Boot is an exciting new addition to the Spring family of projects. Where Spring aims to make Java development simpler, Spring Boot aims to make Spring itself simpler.
+
+Spring Boot employs two main tricks to eliminate boilerplate configuration in a Spring project: Spring Boot starters and automatic configuration.
+
+A single Spring Boot starter dependency can replace several common dependencies in a Maven or Gradle build. For example, adding only Spring Boot’s web starter as a dependency in a project pulls in Spring’s web and Spring MVC modules as well as the Jackson 2 databind module.
+
+Automatic configuration takes full advantage of Spring 4.0’s conditional configuration feature to automatically configure certain Spring beans to enable a certain feature. For example, Spring Boot can detect that Thymeleaf is in the application classpath and automatically configure the beans required to enable Thymeleaf templates as Spring MVC views.
+
+In addition to the MBean info assemblers you’ve seen thus far, Spring provides another assembler known as MetadataMBeanInfoAssembler that can be configured to use annotations to appoint bean methods as managed operations and attributes. I could show you
+
+JTA transaction management is resource-intensive; its exception handling is based on checked exceptions and so is not developer-friendly. Moreover, unit testing is hard with EJB CMT.
+
+Most applications just need local transactions since they do not deal with multiple servers or transactional resources such as databases, JMS, and JCA; hence, they do not need a full-blown application server. For distributed transactions spanned across multiple servers over remote calls, you need JTA, necessitating an application server, as JTA needs JNDI to look up the data source. JNDI is normally available only in an application server. Use JTATransactionManager inside application servers for JTA capabilities.
+
+TransactionDefinition defines the critical transaction attributes such as isolation, propagation, transaction timeout, and the read-only status of a given transaction instance.
+
+
+Transaction attributes determine the behavior of transaction instances. They can be set programmatically as well as declaratively. Transaction attributes are:
+
+Isolation level: Defines how much a transaction is isolated from (can see) other transactions running in parallel. Valid values are: None, Read committed, Read uncommitted, Repeatable reads, and Serializable. Read committed cannot see dirty reads from other transactions.
+
+Propagation: Determines the transactional scope of a database operation in relation to other operations before, after, and nested inside itself. Valid values are: REQUIRED, REQUIRES_NEW, NESTED, MANDATORY, SUPPORTS, NOT_SUPPORTED, and NEVER.
+
+Timeout: Maximum time period that a transaction can keep running or waiting before it completes. Once at timeout, it will roll back automatically.
+
+Read-only status: You cannot save the data read in this mode.
+
+These transaction attributes are not specific to Spring, but reflect standard transactional concepts. The TransactionDefinition interface specifies these attributes in the Spring Transaction Management context.
+For multiple DataSource objects or transactional resources, you need a JtaTransactionManager with JTA capabilities, which usually delegates to a container JTA provider.
+
+If you are using Hibernate and just a single DataSource (and no other transactional resource), then the best option is to use HibernateTransactionManager, which requires you to pass the session factory as a dependency.
+
+Spring Transactions supports two transactional modes: proxy mode and AspectJ mode. Proxy is the default and most popular mode. In proxy mode, Spring creates an AOP proxy object, wrapping the transactional beans, and applies transactional behavior transparently around the methods using transaction aspects based on the metadata. The AOP proxy created by Spring based on transactional metadata, with the help of the configured PlatformTransactionManager, performs transactions around the transactional methods.
+
+Spring offers two convenient approaches for declaratively defining the transactional behavior of your beans:
+
+AOP configuration for transactions in an XML metadata file
+Using the @Transactional annotation
+
+<!-- transactional advices -->
+<tx:advice id="txAdvice" transaction-manager="transactionManager">
+ <!-- the transactional semantics... -->
+ <tx:attributes>
+   <!-- all methods starting with 'get' are read-only -->
+   <tx:method name="find*" read-only="true" />
+   <!-- other methods use the default transaction settings (see below) -->
+   <tx:method name="*" isolation="DEFAULT" propagation="REQUIRED" />
+ </tx:attributes>
+</tx:advice>
+
+<!-- Applying the above advices to the service layer methods -->
+<aop:config>
+ <aop:pointcut id="allServiceMethods" expression="execution(* com.taskify.service.*.*(..))" />
+ <aop:advisor advice-ref="txAdvice" pointcut-="" ref="allServiceMethods" />
+</aop:config>
+You can see that this AOP configuration instructs Spring how to weave transactional advices around the methods using pointcuts. It instructs TransactionManager to make all find methods of the entire service layer read-only, and to force other methods to have the transaction propagation: REQUIRED, which means that, if the caller of the method is already in a transactional context, this method joins the same transaction without creating a new one; otherwise, a new transaction is created. If you want to create a different transaction for this method, you should use the REQUIRES_NEW propagation.
+Also, note that the transaction isolation level is specified as DEFAULT, which means the default isolation of the database is to be used. Most databases default to READ_COMMITTED, which means a transactional thread cannot see the data of other transactions in progress (dirty reads).
+
+Note
+@Transactional can be applied only to public methods. If you want to annotate over protected, private, or package-visible methods, consider using AspectJ, which uses compile-time aspect weaving. Spring recommends annotating @Transactional only on concrete classes as opposed to interfaces, as it will not work in most cases such as when you use proxy-target-class="true" or mode="aspectj".
+
+You need to first enable transaction management in your application before Spring can detect the @Transactional annotation for your bean methods. You enable transaction in your XML metadata using the following notation:
+
+<tx:annotation-driven transaction-manager="transactionManager" />
+The following is the Java configuration alternative for the preceding listing:
+
+@Configuration
+@EnableTransactionManagement
+public class JpaConfiguration {
+}
+Spring scans the application context for bean methods annotated with @Transactional when it sees either of the preceding settings.
+
+
+Implementing InitializingBean and DisposableBean
+
+The Spring IoC container invokes the callback methods afterPropertiesSet() of org.springframework.beans.factory.InitializingBean and destroy() of org.springframework.beans.factory.DisposableBean on any Spring bean and implements them:
+
+There are different bean scopes in Spring, such as singleton, prototype, request, session, and global session. We will understand each session one by one.
+
+By default, all Spring beans are singleton. Once ApplicationContext is initialized, it looks at all the beans in XML and initializes only one bean per bean definition in Spring Container. On each call to the getBean() method, Spring Container returns the same instance of the bean.
+
+Prototype
+
+The prototype is second bean scope in Spring, which returns a brand-new instance of a bean on each call to the getBean() method. When a bean is defined as a prototype, Spring waits for getBean() to happen and only then does it initialize the prototype. 
+
+Spring doesn't maintain the complete life cycle of the prototype. Here, the container instantiates and configures prototype beans and returns this bean to the client with no further record of this prototype instance.
+
+
+Request
+
+The third bean scope in Spring is request, which is available only in web applications that use Spring and create an instance of bean for every HTTP request. Here, a new bean is created per Servlet request. Spring will be aware of when a new request is happening because it ties well with the Servlet APIs, and depending on the request, Spring creates a new bean. So, if the reque
+
+Session
+
+The session is the fourth bean scope in Spring, which is available only in web applications that use Spring and create an instance of bean for every HTTP session. Here, a new bean is created per session. As long as there is one user accessing in a single session, each call to getBean() will return same instance of the bean. 
+
+
+
+Global session
+
+The global session is the fifth bean scope in Spring, which works only in portlet environments that use Spring and create a bean for every new portlet session.
+
+Spring's BeanFactory manages the life cycle of beans created through the Spring IoC container. The life cycle of beans consist of callback methods, which can be categorized broadly into the following two groups:
+
+Post-initialization callback methods
+Pre-destruction callback methods
+
+
+
+Initialization
+
+It represents a sequence of activities that take place between the bean instantiation and the handover of its reference to the client application:
+
+The bean container finds the definition of the Spring bean in the configuration file and creates an instance of the bean
+If any properties are mentioned, populate the properties using setters
+If the Bean class implements the BeanNameAware interface, then call the setBeanName() method
+If the Bean class implements the BeanFactoryAware interface, then call the setBeanFactory() method
+If the Bean class implements the ApplicationContextAware interface, then call the setApplicationContext() method
+If there are any BeanPostProcessors objects associated with the BeanFactory interface that loaded the bean, then Spring will call the postProcessBeforeInitialization() method before the properties for the bean are injected
+If the Bean class implements the InitializingBean interface, then call the afterPropertiesSet() method once all the bean properties defined in the configuration file are injected
+If the bean definition in the configuration file contains the init-method attribute, then call this method after resolving the value for the attribute to a method name in the Bean class
+The postProcessAfterInitialization() method will be called if there are any bean post processors attached to the BeanFactory interface that loads the bean
+
+
+Destruction
+
+This represents the following sequence of activities:
+
+If the Bean class implements the DisposableBean interface, then call the destroy() method when the application no longer needs the bean reference
+If the bean definition in the configuration file contains the destroy-method attribute, then call this method after resolving the value for the attribute to a method name in the Bean class.
+
+
+The InitializingBean interface has afterPropertiesSet(), which needs to be implemented, and it will be called by Spring when this bean is initialized and all properties are set. This InitializingBean interface is a marker for the bean to know that the afterPropertiesSet() method of this bean needs to be called after initialization.
+
+
+Using init-method in the XML configuration
+In the case of XML-based configuration metadata, you can use the init-method attribute to specify the name of the method that has a void no-argument signature, which is to be called on the bean immediately upon instantiation.
+
+In the beans.xml file, you'll find the following code:
+
+...
+<bean id="employeeServiceBean" class="org.packt.Spring.chapter2.callbacks.xml.EmployeeServiceImpl" init-method="myInit">
+</bean>
+...
+In the EmployeeServiceImpl.java class, you'll find the following code:
+
+
+
+
+</listener></listener-container></template></queue></queue></queue>
+
+
+<ul class="taxonomy__index">
+  
+  
+    <li>
+      <a href="#2021">
+        <strong>2021</strong> <span class="taxonomy__count">17</span>
+      </a>
+    </li>
+  
+    <li>
+      <a href="#2020">
+        <strong>2020</strong> <span class="taxonomy__count">29</span>
+      </a>
+    </li>
+  
+    <li>
+      <a href="#2019">
+        <strong>2019</strong> <span class="taxonomy__count">8</span>
+      </a>
+    </li>
+  
+    <li>
+      <a href="#2018">
+        <strong>2018</strong> <span class="taxonomy__count">41</span>
+      </a>
+    </li>
+  
+    <li>
+      <a href="#2017">
+        <strong>2017</strong> <span class="taxonomy__count">40</span>
+      </a>
+    </li>
+  
+    <li>
+      <a href="#2016">
+        <strong>2016</strong> <span class="taxonomy__count">54</span>
+      </a>
+    </li>
+  
+    <li>
+      <a href="#2007">
+        <strong>2007</strong> <span class="taxonomy__count">1</span>
+      </a>
+    </li>
+  
+</ul>
+
+
+
+
+  <section id="2021" class="taxonomy__section">
+    <h2 class="archive__subtitle">2021</h2>
+    <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blogs/tech/en/boostrap_logging_in_springbootapplication" rel="permalink">How logging system Bootstrapped in Spring Boot Application
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Summary
+Following diagram demonstrated the process to bootstrap and use Logback for loggings in Spring Boot applciation.
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blogs/tech/en/sqlserver_driver_not_configured_integrated_authenciation" rel="permalink">SQLServer Error about This driver is not configured for integrated authentication
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Symptoms
+When you are using integrated authentication (Kerberos connection) for MS SqlServer connection, there is one possible error :
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blogs/tech/en/save_resources_to_files" rel="permalink">How to copy files from resources folder in jar and save to a file
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Why to extract resources from jar to local disk
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blogs/tech/en/debug_not_hit_intelliJ" rel="permalink">Debug of SpringBoot run not working in IntelliJ
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Normal approach to debug maven
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/tech/2021/11/01/How-to-watch-kubenetes-deployment-by-label-selector.html" rel="permalink">How to watch specific kubenetes deployment by labels
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">How to watch specific kubenetes deployment by labels
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/tech/2021/10/11/Could-not-resolve-github-host.html" rel="permalink">Failed to talk to github.com from corporation network
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Background
+It’s typical to get various network connection issues when you run commands within corporation network. For example, you’ll find diversed issues w...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/tech/2021/10/11/Day-Day-Up-Java.html" rel="permalink">Day-Day-Up-Java
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">More developer friendly Threa Sleep
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/business/2021/10/08/How-to-user-fire-extinguisher.html" rel="permalink">How to user fire extinguisher
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Summary
+As you know, staff and your safety is paramount. So what if emergency take place, such as fire in office, how to help yourself and your colleagues by...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/tech/2021/10/07/Spring-Boot-ApplicationEvents-DeepDive.html" rel="permalink">Deep dive into ApplicationEvent in SpringBoot
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Summary
+As you know,  there are various event will be sent (multicast) when a specific story taken place.
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog_chn/business/2021/09/22/IT-Solutions-For-Remote-Learning.html" rel="permalink">2021-09-22-IT-Solutions-For-Remote-Learning
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">IT-Solutions-For-Remote-Learning.md
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog_business/business/2021/09/22/IT-Solutions-For-Remote-Learning.html" rel="permalink">2021-09-22-IT-Solutions-For-Remote-Learning
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">IT-Solutions-For-Remote-Learning.md
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2021/09/16/Kubernetes-Client-API-DeepDive.html" rel="permalink">Deep dive into Kubernetes Client API
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Summary
+To talk to K8s for getting data, there are few approaches. While K8s’ official Java library is the most widely used one.
+This blog will look into thi...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2021/09/14/Get-CPU-info-core-in-windows.html" rel="permalink">How to get CPU name, core, 64bit and speed in command line
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Summary
+In windows operation system, if you want to get your CPU name, core, 64bit and speed in command line. Just follow below actions:
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2021/09/13/Whitelabel-Error-Page.html" rel="permalink">Whitelabel Error Page
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Summary
+Whitelabel Error Page is the default error page in Spring Boot web app.
+It provide a more user-friently error page whenever there are any issues when...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2021/01/19/Google-maps-no-photos-reviews.html" rel="permalink">Google maps no photos reviews
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Summary
+I found a weird problem of the app Google Maps of my Oppo Android phone. That’s when you search a place in Google map, say “Central Park”, ideally th...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2021/01/19/Google-maps-no-photos-reviews-CHN.html" rel="permalink">谷歌地图里面照片的评论显示不出来
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">简介
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2021/01/04/Debts-In-a-nutshell.html" rel="permalink">Debts in a nutshell
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">A debt security represents a debt owed by the issuer to an investor. Here, the investor acts as a lender to the issuer which may be a government, organisatio...</p>
+  </article>
+</div>
+
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
+
+  <section id="2020" class="taxonomy__section">
+    <h2 class="archive__subtitle">2020</h2>
+    <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/10/20/How-to-use-S3-download-URL.html" rel="permalink">How to process data from S3 download URL
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">S3 download URL
+As you know, AWS S3 object can be downloaded/processed by S3 download URL. 
+I’m showing you two examples on how to process S3 Object by NIO f...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/09/24/Debug-Stuck-IntelliJ.html" rel="permalink">Debug Stuck IntelliJ
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">What happened to a debug job hanging in IntelliJ (IDEAS) IDE?
+You may find when you try to debug a class in Intellij but it stuck there and never proceed, e....</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/09/18/Awesome-Kotlin.html" rel="permalink">Awesome Kotlin
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Difference with Scala
+Kotlin takes the best of Java and Scala, the response times are similar as working with Java natively, which is a considerable advantag...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/09/17/Awesome-Chrome-tips.html" rel="permalink">Awesome tips for Chrome
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Shortcuts &amp; tips
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/chn/2020/09/15/JVM-Warm-up-CHN.html" rel="permalink">JVM热身
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  此文是作者英文原文的翻译文章，英文原文在：http://todzhang.com/posts/2018-06-10-jvm-warm-up/
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/09/07/Awesome-shortcuts-Slack.html" rel="permalink">Awesome tips and shortcuts for Slack
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Shortcuts for Slack
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/09/03/Neverl-ending-Gralde-run.html" rel="permalink">Gradle build stuck
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Gradle build stuck, keep on running but never ending
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/08/21/Reactor-Reactive.html" rel="permalink">Awesome Reactive programming
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Key points of Reactive Programming
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/08/20/Awesome-swift.html" rel="permalink">Awesome Swift for iOS
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Frame in Swift
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/08/16/Swift-For-iOS.html" rel="permalink">Swift for iOS
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">#
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/08/13/Mock-In-Kotlin.html" rel="permalink">Mock in kotlin
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Argument Matching &amp; Answers
+For example, you have mocked DOC with call(arg: Int): Intfunction. You want to return 1 if argument is greater than 5 and -1 ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/08/13/Docker.html" rel="permalink">Docker
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Dockers Concepts
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/08/03/How-to-decode-path-parameters-in-All-REST-calls.html" rel="permalink">How to decode path parameters in All REST WebServices calls
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">How to decode path parameters in All REST WebServices calls
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/07/27/Curl.html" rel="permalink">Curl
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Linux Curl command
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/07/24/AOP.html" rel="permalink">AOP
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">The concept of join points as matched by pointcut expressions is central to AOP, and Spring uses the AspectJ pointcut expression language by default.
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/07/07/micrometer-notes.html" rel="permalink">Micrometer notes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">As a general rule it should be possible to use the name as a pivot. Dimensions allow a particular named metric to be sliced to drill down and reason about th...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/07/07/Awesome-shortcuts.html" rel="permalink">Awesome Shortcuts
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Shortcuts &amp; tips
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/07/04/Leetcode-tips.html" rel="permalink">Tips about algorithm resolving from Leetcode
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Here are some tips and notes about how to resolve algorithm issues listed in LeetCode
+Rotation problem
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/07/02/pigeon-hole-principle.html" rel="permalink">Pigeons in holes principle
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description"># Pigeonhole principle
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/06/29/Awesome-Algorithm-Solutions.html" rel="permalink">Awesome solutions for algorithm questions
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">你就会发现只要涉及递归的问题，都是 树的问题。
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/06/29/Java-Concurrency.html" rel="permalink">Concurrency in Java
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">How to make thread-safe
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/06/28/Facial-Recognition_en.html" rel="permalink">A Facial Recognition utility in a dozen of LOC
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">A Facial Recognition utility in a dozen of python LOC (Lines Of Code)
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/06/26/TLS-SSL-HTTPS.html" rel="permalink">Awesome SSL certificates and HTTPS
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">What’s TLS
+TLS (Transport Layer Security) and its predecessor, SSL (Secure Sockets Layer), are security protocols designed to secure the communication betwee...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/06/21/JPA-Notes.html" rel="permalink">Java Pesistence API Notes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">JPA
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/05/10/Java-Deep-Notes.html" rel="permalink">Java Deep Notes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Java Deep Notes
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/03/28/JVM-Warm-up.html" rel="permalink">JVM warm up by Escape Analysis
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Why JVM need warm up
+I don’t know how and why you get to this blog. But I know the key words in your mind are “warm” for JVM. As the name “warm up” suggested...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/03/15/Concurrent-In-Java-col-2.html" rel="permalink">Java Concurrent Column 2
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is the second half about Java Concurrent of my blog
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/03/10/Concurrent-In-Java.html" rel="permalink">Java Concurrent
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">This blog is about noteworthy pivot points about Java Concurrent Framework
+
+  Back to Java old days there were wait()/notify() which is error prone, while fr...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/03/03/Algorithm-Leecode-1.html" rel="permalink">Algorithm notes from Leecode – 1
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Algorithm Leetcode
+</p>
+  </article>
+</div>
+
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
+
+  <section id="2019" class="taxonomy__section">
+    <h2 class="archive__subtitle">2019</h2>
+    <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2019/09/12/Conversations-with-God.html" rel="permalink">Conversations with God
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Feelings is the language of the soul.
+If you want to know what’s true for you about something, look to how your’re feeling about.
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2019/09/02/Kafka-In-Spring.html" rel="permalink">Kafka In Spring
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Enable Kafka listener annotated endpoints that are created under the covers by a AbstractListenerContainerFactory. To be used on Configuration classes as fol...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2019/08/25/AWS-Certificate.html" rel="permalink">AWS certification
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Footprint
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2019/07/26/Terraform.html" rel="permalink">Terraform
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Why Terraform
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2019/07/07/Kafka.html" rel="permalink">Kafka
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Kafka
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2019/01/17/Mifid.html" rel="permalink">Mifid
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">FX Spot is not covered by the regulation, as it is not considered to be a financial instrument by ESMA, the European Union (EU) regulator. As FX is considere...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2019/01/17/FX-ForeignExchange.html" rel="permalink">Foreign Exchange
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">currency pairs
+
+  Direct ccy: means USD is part of currency pair
+  Cross ccy: means ccy wihtout USD, so except NDF, the deal will be split to legs, both with...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2019/01/03/IPC.html" rel="permalink">Inter Processes Communication
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">IPC
+</p>
+  </article>
+</div>
+
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
+
+  <section id="2018" class="taxonomy__section">
+    <h2 class="archive__subtitle">2018</h2>
+    <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/11/01/seconds.html" rel="permalink">Seconds
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">nano seconds
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/10/13/SBE.html" rel="permalink">Citrix receiver
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Simple Binary Encoding (SBE)
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/09/26/Citrix.html" rel="permalink">Citrix receiver
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">“Cannot connect to remote desktop” with Citrix Receiver
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/09/18/Google-Guice.html" rel="permalink">Guice
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">A new type of Juice
+Put simply, Guice alleviates the need for factories and the use of new in your Java code. Think of Guice’s @Inject as the new new. You wi...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/09/16/yaml-config.html" rel="permalink">YAML
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Key points
+All YAML files (regardless of their association with Ansible or not) can optionally begin with — and end with …. This is part of the YAML format a...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/09/06/mockito.html" rel="permalink">Distruptor
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">multithreading
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/09/03/distruptor.html" rel="permalink">Mockito
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Feature
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/08/23/protobuf.html" rel="permalink">Protobuf
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">What are protocol buffers?
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/08/21/sudo.html" rel="permalink">Sudo in a Nutshell
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Sudo in a Nutshell
+
+Sudo (su “do”) allows a system administrator to give certain users (or groups of users) the ability to run some (or all) commands as root...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/08/19/ZooKeeper.html" rel="permalink">Zoo-keeper
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">ZK Motto
+
+  the motto “ZooKeeper: Because Coordinating Distributed Systems is a Zoo.”
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/08/15/PrestoDB.html" rel="permalink">Presto DB
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">WHAT IS PRESTO?
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/08/09/Chronicle.html" rel="permalink">Chronicle
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Overview
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/08/08/Cucumber.html" rel="permalink">Cucumber
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Acceptance testing vs unit test
+It’s sometimes said that unit tests ensure you build the thing right, whereas acceptance tests ensure you build the right thi...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/07/28/Scala.html" rel="permalink">Scala
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Scala String
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/07/23/akka-scala.html" rel="permalink">akka framework of scala
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">philosophy
+The actor model adopts the philosophy that everything is an actor. This is similar to the everything is an object philosophy used by some object-o...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/07/16/FileUtils_Camel.html" rel="permalink">File Util in Apache Camel
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">FileUtil.class
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/07/11/Camel.html" rel="permalink">Apache Camel
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Camel’s message model
+In Camel, there are two abstractions for modeling messages, both of which we’ll cover in this section.
+
+  org.apache.camel.Message—The ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/07/10/QuickFixJ.html" rel="permalink">QuickFixJ
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Settings
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/07/10/JMX.html" rel="permalink">JXM
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Exporting your beans to JMX
+The core class in Spring’s JMX framework is the MBeanExporter. This class is responsible for taking your Spring beans and registe...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/07/04/Solace-MQ.html" rel="permalink">Solace MQ
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Solace PubSub+
+It is a message broker that lets you establish event-driven interactions between applications and microservices across hybrid cloud environmen...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/06/26/Core-Java.html" rel="permalink">Core Java
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Annotation retention policy
+What is Retention policy in java annotations?
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/06/21/Apigee.html" rel="permalink">Apigee
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">App deployment, configuration management and orchestration - all from one system. Ansible is powerful IT automation that you can learn quickly.
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/06/21/Ansible.html" rel="permalink">Ansible
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Ansible: What Is It Good For?
+Ansible is often described as a configuration management tool, and is typically mentioned in the same breath as Chef, Puppet, a...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/06/14/flex-box.html" rel="permalink">flexbox
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">How Flexbox works — explained with big, colorful, animated gifs
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/06/14/JBoss-Console.html" rel="permalink">Jboss tips
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">commands:
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/06/12/Locking-And-Multithreading.html" rel="permalink">Locking and multithreading
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Single Writer principle
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/06/12/KDB.html" rel="permalink">KDB
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">KDB
+However kdb+ evaluates expressions right-to-left. There are no precedence rules. The reason commonly given for this behaviour is that it is a much simple...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/06/09/FX.html" rel="permalink">Foreign Exchange
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Foreign Exchange markets
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/06/07/Protractor.html" rel="permalink">Portactor
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Better to use smart wait
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/06/06/Scrum-Agile.html" rel="permalink">Agile and SCRUM
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Key concept
+In Scrum, a team is cross functional, meaning everyone is needed to take a feature from idea to implementation.
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/06/02/DevOps-Philosophy.html" rel="permalink">DevOps-Philosophy
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">:100:DevOps Model Defined
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/05/15/rxjs-pipe-in-depth.html" rel="permalink">rxjs pipe in depth
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">https://stormforger.com/blog/2016/07/08/types-of-performance-testing/
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/05/15/how-to-setup-node-config-in-intranet.html" rel="permalink">How to setup nodejs to install package from intranet
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Error of ‘ECONNRESET’
+You may face error ECONNRESET from intranet, even appropriate proxy tools (e.g. cntlm) is running. The errors may looks like
+```bash
+$ ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/05/14/Strategy-Of-Openshift-Releases.html" rel="permalink">Strategy-Of-Openshift-Releases
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Release &amp; Testing Strategy
+There are various methods for safely releasing changes to Production. Each team must select what is appropriate for their own ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/05/11/Node-errors-DB.html" rel="permalink">Node errors troubleshooting
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Here is the typical erros log:
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/03/18/NodeJs-Notes.html" rel="permalink">NodeJs Notes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">commands to read files
+var lineReader = require(‘readline’).createInterface({
+    input: require(‘fs’).createReadStream(‘C:\dev\node\input\git_reset_files.tx...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/02/27/MVP.html" rel="permalink">Minium Viable Product
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">https://blog.leanstack.com/minimum-viable-product-mvp-7e280b0b9418
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/01/11/Angular-Module-Declaration-Import.html" rel="permalink">What is difference between declarations, providers and import in NgModule
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">What is difference between declarations, providers and import in NgModule
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/01/10/CORS.html" rel="permalink">CORS :Cross-Origin Resource Sharing
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Cross-Origin Request Sharing - CORS (A.K.A. Cross-Domain AJAX request) is an issue that most web developers might encounter, according to Same-Origin-Policy,...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/01/08/ngrx.html" rel="permalink">ngrx
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Why @Effects?
+In a simple ngrx/store project without ngrx/effects there is really no good place to put your async calls. Suppose a user clicks on a button or...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/01/06/iOS.html" rel="permalink">iOS programming
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">View
+A view is also a responder (UIView is a subclass of UIResponder). This means that a view is subject to user interactions, such as taps and swipes. Thus,...</p>
+  </article>
+</div>
+
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
+
+  <section id="2017" class="taxonomy__section">
+    <h2 class="archive__subtitle">2017</h2>
+    <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/12/18/OpenStack-vs-OpenShift.html" rel="permalink">cloud computering
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">openshift vs openstack
+The shoft and direct answer is `OpenShift Origin can run on top of OpenStack. They are complementary projects that work well together....</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/12/18/Clouding.html" rel="permalink">cloud computering
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Concepts
+Cloud computing is the on-demand demand delivery of compute database storage applications and other IT resources through a cloud services platform v...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/12/12/Redux.html" rel="permalink">Redux
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">whats @Effects
+You can almost think of your Effects as special kinds of reducer functions that are meant to be a place for you to put your async calls in suc...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/12/11/Why-Reactive-programming-is-outpermant.html" rel="permalink">reactive programing
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">The second advantage to a lazy subscription is that the observable doesn’t hold onto data by default. In the previous example, each event generated by the in...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/12/10/RxJS.html" rel="permalink">Router in angular
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Lettable operators
+RxJS 5.5, piping all the things
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/12/08/Router-In-Angular.html" rel="permalink">RxJS reactive extension javascript
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Streams
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/12/07/Errors-In-NPM.html" rel="permalink">common errors in NPM or node
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">code E503
+code E503 when run npm install packages, e.g.
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/12/02/Container.html" rel="permalink">Container
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">The Docker project was responsible for popularizing container development in Linux systems. The original project defined a command and service (both named do...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/12/01/Promise-vs-Observable.html" rel="permalink">promise vs observiable
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">The drawback of using Promises is that they’re unable to handle data sources that produce more than one value, like mouse movements or sequences of bytes in ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/11/29/OpenShift.html" rel="permalink">Openshift tips
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Commands bible
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/11/27/TypeScript.html" rel="permalink">TypeScript noteworthy notes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Async Await keywords
+Async Await Support in TypeScript
+Async - Await has been supported by TypeScript since version 1.7. Asynchronous functions are prefixed ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/09/04/Google-Analytics.html" rel="permalink">google analysis
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">How Page Value is calculated
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/06/24/JDK-sources.html" rel="permalink">JDK source
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">interface RandomAccess
+Marker interface used by List implementations to indicate that they support fast (generally constant time) random access. The primary ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/04/06/SSH.html" rel="permalink">SSH SFTP
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Secure FTP
+
+  SFTP over FTP is the equivalant of HTTPS over HTTP, the security version
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/03/30/WebSphere-setp-via-CLI.html" rel="permalink">Setup WebSphere profiles and application in command line
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Setup WebSphere profiles and application in command line
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/03/21/aws.html" rel="permalink">AWS Tips
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">After establishing a SSH session, you can install a default web server by executing sudo yum install httpd -y. To start the web server, type sudo service htt...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/03/13/oracle.html" rel="permalink">Oracle
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  ORA-12899: Value Too Large for Column
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/03/05/Spring.html" rel="permalink">Spring notes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Spring Bean Life Cycle Callback Methods
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/02/21/Java-JIT.html" rel="permalink">Java JIT compiler
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is talking about Java JIT (Just-In-Time) compiler
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/02/15/Java-Security.html" rel="permalink">Java Security Notes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Java Security
+
+  well-behaved: programs should be prevent from consuming too much system resources
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/02/14/SerialVersionUID.html" rel="permalink">SeriableVersionUID
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Noteworthy points about SeriableVersionUID in Java
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/02/09/R-Lang.html" rel="permalink">R Language
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">s&lt;-read.csv("C:/Users/xxx/dev/R/IRS/SHH_SCHISHG.csv")
+# aggregate 
+s2&lt;-table(s$Original.CP)
+s3&lt;-as.data.frame(s2)
+# extract by Frequency ordered 
+s3...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/02/06/SSH-Cryptography.html" rel="permalink">SSH and Cryptography
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">SFTP versus FTPS
+
+  SS: Secure Shell
+  An increasing number of our customers are looking to move away from standard FTP for transferring data, so we are ofte...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/02/06/Eclipse-tips.html" rel="permalink">Eclipse notes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">How do I remove a plug-in?
+Run Help &gt; About Eclipse &gt; Installation Details, select the software you no longer want and click Uninstall. (On Macintosh i...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/02/05/JVM.html" rel="permalink">Java JVM
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Class loading subsystem
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/02/03/Maven-Notes.html" rel="permalink">Maven-Notes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Maven philosophy
+
+  “It is important to note that in the pom.xml file you specify the what and not the how. The pom.xml file can also serve as a documentatio...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/02/02/Java-New-IO.html" rel="permalink">Java New IO
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Notes
+
+  JDK 1.0 introduced rudimentary I/O facilities for accessing the file system (to create a directory, remove a file, or perform another task), accessi...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/28/Network-Protocols.html" rel="permalink">Network Protocols
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Net Protocols
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/26/IT-Architect.html" rel="permalink">IT-Architect
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">SOA
+
+  SOA is a set of design principles for building a suite of interoperable, flexible and reusable services based architecture.
+  top-down and bottom-up a...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/21/Algorithm.html" rel="permalink">Algorithm
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">This page is about key points about Algorithm
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/20/DeadLock.html" rel="permalink">Dead Lock
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Concept
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/19/Java-Tricky-Tech-Questions.html" rel="permalink">Java-Tricky-Tech-Questions.md
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">What is the difference between Serializable and Externalizable in Java?
+
+  In earlier version of Java, reflection was very slow, and so serializaing large ob...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/19/Java-NavigableMap.html" rel="permalink">NavigableMap Misc
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">What is NavigableMap
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/19/Compare-In-Java.html" rel="permalink">Compare-In-Java
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Concepts
+
+  If you implement Comparable interface and override compareTo() method it must be consistent with equals() method i.e. for equal object by equals(...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/17/Java-Collections-Misc.html" rel="permalink">Java Collections Misc
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Difference between equals and deepEquals of Arrays in Java
+
+  Arrays.equals() method does not compare recursively if an array contains another array
+  on oth...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/16/Java-HashMap.html" rel="permalink">HashMap in JDK
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Hashmap in JDK
+Some note worth points about hashmap
+
+  Lookup process
+    
+      Step# 1: Quickly determine the bucket number in which this element may resid...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/14/Java-8.html" rel="permalink">Java 8 Tips
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">This blog is listing key new features introduced in Java 8
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/04/Arbitrage-vs-Hedging.html" rel="permalink">Arbitrage vs Heading
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">What is the difference between arbitrage and hedging?
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/03/IntelliJ-Tips.html" rel="permalink">IntelliJ Tips
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Shortcuts
+Expand/collapse method body in code editor
+Cmd + +/- to expand and collapse a method body
+Show java doc
+
+  Ctrl+J: To show JavaDoc
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/02/Enum-Misc.html" rel="permalink">Java Enum Misc
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Enum Misc
+</p>
+  </article>
+</div>
+
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
+
+  <section id="2016" class="taxonomy__section">
+    <h2 class="archive__subtitle">2016</h2>
+    <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/12/30/Java-GC.html" rel="permalink">Java GC notes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">verbose:gc
+verbose:gc prints right after each gc collection and prints details about each generation memory details. Here is blog on how to read verbose gc
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/12/30/HashCode-Contract.html" rel="permalink">Hash Code Misc
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">contract of hashCode :
+
+  Whenever it is invoked on the same object more than once during an execution of a Java application, the hashCode method must consis...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/12/24/Apache-Tips.html" rel="permalink">Apache Tips
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Apache
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/12/12/Angular.html" rel="permalink">Angulary Misc
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Dependency Injection
+Angular doesn’t automatically know how you want to create instances of your services or the injector to create your service. You must co...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/12/09/HeadsFirst-RandomNumber-In-Java.html" rel="permalink">Random number in java
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">ThreadLocalRandom, SecureRandm, java.util.Random, java.math.Random
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/12/01/Java-New-Features-Chronicle.html" rel="permalink">Java new features
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">JDK Versions
+
+  JDK 1.5 in 2005
+  JDK 1.6 in 2006
+  JDK 1.7 in 2011
+  JDK 1.8 in 2014
+Sun之前风光无限，但是在2010年1月27号被Oracle收购。
+在被Oracle收购后对外承诺要回到每2年一个realse的节奏。但是20...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/11/22/Facial-Recognition.html" rel="permalink">用10几行代码自己写个人脸识别程序
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">用10几行代码自己写个人脸识别程序
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/11/12/elastic.html" rel="permalink">Eslastic Search
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Eslastic Search
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/11/05/JSON-Lines.html" rel="permalink">JSON lines
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">JSON lines
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/11/04/Python-Scrapy.html" rel="permalink">Python Scraphy
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Python Scraphy
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/10/26/Continuous-Integretaion-Simpler-Chronicle.html" rel="permalink">Simpler chronicle of CI(Continuous Integration) “乱弹系列”之持续集成工具
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">引言
+有句话说有人的地方就有江湖，同样，有江湖的地方就有恩怨。在软件行业历史长河（虽然相对于其他行业来说，软件行业的历史实在太短了，但是确是充满了智慧的碰撞也是十分的精彩）中有一些恩怨情愁，分分合合的小故事，比如类似的有，从一套代码发展出来后面由于合同到期就分道扬镳，然后各自发展成独门产品的Sybase DB和微...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/10/19/head-first-blockchian-3.html" rel="permalink">Head First Blockchina 3
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  Hyperledger Fabric for Mortals
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/10/13/head-first-blockchian-2.html" rel="permalink">【原创】深入浅出区块链系统：第二章
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  使用Solidity创建以太坊(Ethereum)智能合约(Smart Contract)
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/10/06/Sublime-Syntax-Highlights.html" rel="permalink">How to customize Sublime syntax highlights
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Reference
+
+  Sublime Scope Naming
+  Syntax Guide
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/09/17/Assert-In-Unit-Test-CN.html" rel="permalink">浅谈软件单元测试中的“断言” (assert)，从石器时代进步到黄金时代。
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">大家都知道，在软件测试特别是在单元测试时,必用的一个功能就是“断言”（Assert)，可能有些人觉得不就一个Assert语句，没啥花头，也有很多人用起来也是懵懵懂懂，认为只要是Assert开头的方法，拿过来就用。一个偶然的机会跟人聊到此功能，觉得还是有必要在此整理一下如何使用以及对“断言”的理解。希望可以帮助大家...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/09/14/JetBrains-Tips.html" rel="permalink">JetBrains/IntelliJ tips
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Shortcuts
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/09/11/head-first-blockchian-1.html" rel="permalink">Head First Blockchina 1
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">深入浅出区块链系统：第一章.
+what you should know about blockchain
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/09/04/Kubernets-vs-Swarm.html" rel="permalink">Kubernetes 与 Docker Swarm的对比
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Kubernetes 和Docker Swarm 可能是使用最广泛的工具，用于在集群环境中部署容器。但是这两个工具还是有很大的差别。
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/09/02/Design-Principals.html" rel="permalink">漫谈开发设计中的一些‘原则’及’设计哲学’
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">在开发设计中有一些常用原则或者潜规则，根据笔者的经验，这里稍微总结一下最最常用的，以飨读者。
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/09/01/Mac-Tips.html" rel="permalink">Mac tips
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">how to show full path in Finder window
+Open and run following command in terminal window
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true; ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/09/01/HTTP-Methods-RFC.html" rel="permalink">http methods
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">RFC origion http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.1.2)
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/08/30/Spark-vs-Storm.html" rel="permalink">Spark-vs-Storm
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">The stark difference among Spark and Storm. Although both are claimed to process the streaming data in real time. But Spark processes it as micro-batches; wh...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/08/24/microservices.html" rel="permalink">微服务
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">可以想像一下，之前的传统应用系统，像是一个大办公室里面，有各个部门，销售部，采购部，财务部。办一件事情效率比较高。但是也有一些弊端，首先，各部门都在一个房间里。
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/08/12/unmodifiableCollection.html" rel="permalink">unmodifiableList, unmodifiableSet,unmodifiableMap
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">What’s it
+Returns an unmodifiable view of the specified set.  This method allows
+modules to provide users with “read-only” access to internal sets.
+Query ope...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/08/11/Sentry.html" rel="permalink">kibana, view layer of elasticsearch
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+What’s Kibana
+kibana is an open source data visualization plugin for Elasticsearch.  It provides visualization capabilities on top of the content indexed on...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/08/11/Kibana.html" rel="permalink">kibana, view layer of elasticsearch
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+What’s Kibana
+kibana is an open source data visualization plugin for Elasticsearch.  It provides visualization capabilities on top of the content indexed on...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/08/05/Anatomy-of-ThreadLocal.html" rel="permalink">Anatomy of ThreadLocal
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Design philosophies
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/08/04/iConnect.html" rel="permalink">iConnect
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">UI
+HTML5, AngularJS, BootStrap, REST API, JSON
+Backend
+Hadoop core (HDFS), Hive, HBase, MapReduce, Oozie, Pig, Solr
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/08/04/BA.html" rel="permalink">Business Analysis
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Purpose of BA
+
+  带来一些商业价值（收益）
+  解决业务痛点
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/08/02/RESTful.html" rel="permalink">Something about RESTful architect
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">REST API must be hypertext driver
+Roy’s interview
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/07/25/Data-Structure.html" rel="permalink">Data Structure
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Binary Tree
+
+  A binary tree is a tree in which no node can have more than two children.
+  A property of a binary tree that is sometimes important is that th...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/07/24/Bookmarks.html" rel="permalink">Useful bookmarks
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">eBooks
+list of various books
+Node.js
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/07/02/file-name-too-long-when-git-checkout.html" rel="permalink">git raise error filename too long when checkout
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Symptoms:
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/29/heavy-load-web-app.html" rel="permalink">heavy load web application
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Common solutions
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/29/TIPS-AS400-IBM-EMULATOR.html" rel="permalink">tips in as400 IBM Emulator
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Toggle crosshair
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/29/SOMETHING-ABOUT-AUTHENTICATION.html" rel="permalink">Something about authentication
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">It’s annoying to keep on repeating typing same login and password when you access multiple systems within office or for systems in external Internet. There a...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/23/Equity.html" rel="permalink">equity trading
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Difference between mutal funds and hedge funds
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/14/SQL.html" rel="permalink">SQL
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Differences between not in, not exists , and left join with null
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/14/HTTP-HTTPS2.html" rel="permalink">HTTPS/2
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">concepts
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/13/github-pages.html" rel="permalink">Github page commands notes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">404 error for customized domain (such as godday)
+404
+There is not a GitHub Pages site here.
+
+
+  Go to github master branch for gitpages site, manually add CN...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/13/RQFII.html" rel="permalink">RenMinBi International
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">RQFII
+RQFII stands for Renminbi Qualified Foreign Institutional Investor. RQFII was introduced in 2011 to allow qualified foreign institutional investors to ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/13/GIT.html" rel="permalink">Git commands notes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">hall-of-frame by commit numbers
+git shortlog -s | sort -n -r
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/12/JavaScript-tips.html" rel="permalink">JavaScript tips
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">includes() vs some()
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/10/Linux-Tips.html" rel="permalink">Linux Tips
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Get permission denied error when sudo su (or hyphen in sudo command)
+bash: /home/YOURNAME/.bashrc: Permission denied
+That’s because you didn’t add “-“ hyphen...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/09/Docker-Errors-Fixes.html" rel="permalink">Docker Errors and Fixes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Docker Errors
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/07/Load-Balancing.html" rel="permalink">Load Balancing
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Concepts
+LVS means Linux Virtual Server, which is one Linux built-in component.
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/05/Python.html" rel="permalink">Python
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">(‘—–Unexpected error:’, &lt;type ‘exceptions.TypeError’&gt;) datetime.datetime.now()
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/03/Storage-Management.html" rel="permalink">Storage Management
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">RAID
+RAID is Reductant Array Independent Disk,
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/03/CI-CD.html" rel="permalink">CI and CD
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Concepts
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/01/XA-2PC.html" rel="permalink">XA Transactions in 2PC
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Description
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/01/Setup-Git-In-Mint.html" rel="permalink">Setup Git in Mint Linux
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">How to setup Git in Mint Linux
+=================================================
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/01/DB-Sharding.html" rel="permalink">Database sharding
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">DB sharding in YHD
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/05/31/Microservices-Vs-SOA.html" rel="permalink">Microservices vs. SOA
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Microservice
+
+  Services are organized around capabilities, e.g., user interface front-end, recommendation, logistics, billing, etc.
+  Services are small in ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/02/25/Java-Class-Loader.html" rel="permalink">Java Class Loader
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Codecache
+
+  The maximum size of the code cache is set via the -XX:ReservedCodeCacheSize=N flag (where N is the default just mentioned for the particular com...</p>
+  </article>
+</div>
+
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
+
+  <section id="2007" class="taxonomy__section">
+    <h2 class="archive__subtitle">2007</h2>
+    <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2007/04/28/GIT-scripts-bible-errors.html" rel="permalink">GIT useful scripts or error solutions
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Script bible
+</p>
+  </article>
+</div>
+
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
+
+
+  </div>
+</div>
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2022 Highly Distinguish. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

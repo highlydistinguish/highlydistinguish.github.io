@@ -1,0 +1,548 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+
+<!--google fonts-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>SQLServer Error about This driver is not configured for integrated authentication - Highly Distinguish</title>
+<meta name="description" content="Symptoms When you are using integrated authentication (Kerberos connection) for MS SqlServer connection, there is one possible error :">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Highly Distinguish">
+<meta property="og:title" content="SQLServer Error about This driver is not configured for integrated authentication">
+<meta property="og:url" content="http://localhost:4000/blogs/tech/en/sqlserver_driver_not_configured_integrated_authenciation">
+
+
+  <meta property="og:description" content="Symptoms When you are using integrated authentication (Kerberos connection) for MS SqlServer connection, there is one possible error :">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/hd_sql_auth.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2021-11-24T00:00:00+11:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/blogs/tech/en/sqlserver_driver_not_configured_integrated_authenciation">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Highly Distinguish Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+<link rel="stylesheet" href="/assets/css/blog.css">
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Highly Distinguish
+          <span class="site-subtitle">IT solution & education</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/blog_business/index.html">Business</a>
+            </li><li class="masthead__menu-item">
+              <a href="/sitemap/">Sitemap</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero"
+  style=" background-image: url('');"
+>
+  
+    <img src="/assets/images/hd_sql_auth.png" alt="SQLServer Error about This driver is not configured for integrated authentication" class="page__hero-image">
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url"></a>
+    </h3>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="SQLServer Error about This driver is not configured for integrated authentication">
+    <meta itemprop="description" content="SymptomsWhen you are using integrated authentication (Kerberos connection) for MS SqlServer connection, there is one possible error :">
+    <meta itemprop="datePublished" content="2021-11-24T00:00:00+11:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/blogs/tech/en/sqlserver_driver_not_configured_integrated_authenciation" class="u-url" itemprop="url">SQLServer Error about This driver is not configured for integrated authentication
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+        <h1 id="symptoms">Symptoms</h1>
+<p>When you are using integrated authentication (Kerberos connection) for MS SqlServer connection, there is one possible error :</p>
+
+<p><code class="language-plaintext highlighter-rouge">This driver is not configured for integrated authentication. ClientConnectionId</code></p>
+
+<p>and</p>
+
+<p><code class="language-plaintext highlighter-rouge">no mssql-jdbc_auth-9.2.1.x64 in java.library.path:</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">Failed to load the sqljdbc_auth.dll cause : no sqljdbc_auth in java.library.path</code></p>
+
+<h2 id="error-stack-trace">Error stack trace</h2>
+<p>The error strack trace may look like following</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>com.microsoft.sqlserver.jdbc.SQLServerException: This driver is not configured <span class="k">for </span>integrated authentication. ClientConnectionId:f965454c-897b-4707-a625-52506e450878
+    at com.microsoft.sqlserver.jdbc.SQLServerConnection.terminate<span class="o">(</span>SQLServerConnection.java:3206<span class="o">)</span> ~[mssql-jdbc-9.2.1.jre8.jar:na]
+    at com.microsoft.sqlserver.jdbc.AuthenticationJNI.&lt;init&gt;<span class="o">(</span>AuthenticationJNI.java:72<span class="o">)</span> ~[mssql-jdbc-9.2.1.jre8.jar:na]
+    at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon<span class="o">(</span>SQLServerConnection.java:4015<span class="o">)</span> ~[mssql-jdbc-9.2.1.jre8.jar:na]
+
+
+
+Caused by: java.lang.UnsatisfiedLinkError: no mssql-jdbc_auth-9.2.1.x64 <span class="k">in </span>java.library.path: <span class="o">[</span>C:<span class="se">\s</span>oft<span class="se">\j</span>ava-11-openjdk-11.0.11.9-1.windows.redhat.x86_64<span class="se">\b</span><span class="k">in</span>, C:<span class="se">\W</span>INDOWS<span class="se">\S</span>un<span class="se">\J</span>ava<span class="se">\b</span><span class="k">in</span>, C:<span class="se">\W</span>INDOWS<span class="se">\s</span>ystem32, C:<span class="se">\W</span>INDOWS, C:<span class="se">\P</span>ython39<span class="se">\S</span>cripts<span class="se">\,</span> C:<span class="se">\P</span>ython39<span class="se">\,</span> C:<span class="se">\P</span>rogram Files <span class="o">(</span>x86<span class="o">)</span><span class="se">\R</span>SA SecurID Token Common, C:<span class="se">\W</span>INDOWS<span class="se">\s</span>ystem32, C:<span class="se">\W</span>INDOWS, C:<span class="se">\W</span>INDOWS<span class="se">\S</span>ystem32<span class="se">\W</span>bem, C:<span class="se">\W</span>INDOWS<span class="se">\S</span>ystem32<span class="se">\W</span>indowsPowerShell<span class="se">\v</span>1.0<span class="se">\,</span> C:<span class="se">\W</span>INDOWS<span class="se">\S</span>ystem32<span class="se">\O</span>penSSH<span class="se">\,</span> C:<span class="se">\P</span>rogram Files<span class="se">\G</span>it<span class="se">\c</span>md, c:<span class="se">\d</span>ev<span class="se">\s</span>cripts<span class="se">\,</span> c:<span class="se">\d</span>ev<span class="se">\a</span>pache-maven-3.8.1<span class="se">\\</span>bin, C:<span class="se">\M</span>inikube, C:<span class="se">\S</span>oft<span class="se">\n</span>odejs<span class="se">\,</span> C:<span class="se">\P</span>rogramData<span class="se">\c</span>hocolatey<span class="se">\b</span><span class="k">in</span>, C:<span class="se">\P</span>rogram Files <span class="o">(</span>x86<span class="o">)</span><span class="se">\M</span>icrosoft SQL Server<span class="se">\1</span>50<span class="se">\D</span>TS<span class="se">\B</span>inn<span class="se">\,</span> C:<span class="se">\P</span>rogram Files<span class="se">\A</span>zure Data Studio<span class="se">\b</span><span class="k">in</span>, C:<span class="se">\P</span>rogram Files<span class="se">\D</span>ocker<span class="se">\D</span>ocker<span class="se">\r</span>esources<span class="se">\b</span><span class="k">in</span>, C:<span class="se">\P</span>rogramData<span class="se">\D</span>ockerDesktop<span class="se">\v</span>ersion-bin, C:<span class="se">\P</span>rogram Files<span class="se">\d</span>otnet<span class="se">\,</span> C:<span class="se">\P</span>rogramData<span class="se">\R</span>iverbed<span class="se">\P</span>rocessInjection<span class="se">\r</span>pictrlBin, C:<span class="se">\s</span>oft<span class="se">\j</span>ava<span class="se">\j</span>ava-11-openjdk-11.0.11.9-1.windows.redhat.x86_64<span class="se">\b</span><span class="k">in</span>, C:<span class="se">\P</span>rogram Files <span class="o">(</span>x86<span class="o">)</span><span class="se">\s</span>bt<span class="se">\b</span><span class="k">in</span>, C:<span class="se">\P</span>rogram Files <span class="o">(</span>x86<span class="o">)</span><span class="se">\s</span>cala<span class="se">\b</span><span class="k">in</span>, C:<span class="se">\P</span>rogram Files<span class="se">\P</span>owerShell<span class="se">\7\,</span> C:<span class="se">\W</span>INDOWS<span class="se">\s</span>ystem32, C:<span class="se">\W</span>INDOWS, C:<span class="se">\W</span>INDOWS<span class="se">\S</span>ystem32<span class="se">\W</span>bem, C:<span class="se">\W</span>INDOWS<span class="se">\S</span>ystem32<span class="se">\W</span>indowsPowerShell<span class="se">\v</span>1.0<span class="se">\,</span> C:<span class="se">\W</span>INDOWS<span class="se">\S</span>ystem32<span class="se">\O</span>penSSH<span class="se">\,</span> C:<span class="se">\U</span>sers<span class="se">\X</span>XX<span class="se">\A</span>ppData<span class="se">\L</span>ocal<span class="se">\M</span>icrosoft<span class="se">\W</span>indowsApps, C:<span class="se">\s</span>oft<span class="se">\J</span>etBrains<span class="se">\I</span>ntelliJ IDEA 2021.1.3<span class="se">\b</span><span class="k">in</span>, ., c:<span class="se">\P</span>rogramData<span class="se">\c</span>hocolatey<span class="se">\l</span>ib<span class="se">\g</span>radle<span class="se">\t</span>ools<span class="se">\g</span>radle-7.2<span class="se">\\</span>bin, C:<span class="se">\s</span>oft<span class="se">\M</span>icrosoft VS Code<span class="se">\b</span><span class="k">in</span>, C:<span class="se">\U</span>sers<span class="se">\X</span>XX<span class="se">\A</span>ppData<span class="se">\R</span>oaming<span class="se">\n</span>pm, C:<span class="se">\P</span>rogram Files<span class="se">\A</span>zure Data Studio<span class="se">\b</span><span class="k">in</span>, C:<span class="se">\s</span>oft<span class="se">\j</span>ava-11-openjdk-11.0.11.9-1.windows.redhat.x86_64<span class="se">\b</span><span class="k">in</span>, ., C:<span class="se">\s</span>oft<span class="se">\J</span>etBrains<span class="se">\I</span>ntelliJ IDEA Educational Edition 2021.2.3<span class="se">\b</span><span class="k">in</span>, ., C:<span class="se">\s</span>oft<span class="se">\J</span>etBrains<span class="se">\I</span>ntelliJ IDEA Community Edition 2021.2.3<span class="se">\b</span><span class="k">in</span>, ., .]
+    at java.base/java.lang.ClassLoader.loadLibrary<span class="o">(</span>ClassLoader.java:2670<span class="o">)</span> ~[na:na]
+    at java.base/java.lang.Runtime.loadLibrary0<span class="o">(</span>Runtime.java:830<span class="o">)</span> ~[na:na]
+    at java.base/java.lang.System.loadLibrary<span class="o">(</span>System.java:1873<span class="o">)</span> ~[na:na]
+    at com.microsoft.sqlserver.jdbc.AuthenticationJNI.&lt;clinit&gt;<span class="o">(</span>AuthenticationJNI.java:51<span class="o">)</span> ~[mssql-jdbc-9.2.1.jre8.jar:na]
+    at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon<span class="o">(</span>SQLServerConnection.java:4014<span class="o">)</span> ~[mssql-jdbc-9.2.1.jre8.jar:na]
+    ... 46 common frames omitted
+
+
+
+  2021-11-24 16:11:58.244  WARN 38084 <span class="nt">---</span> <span class="o">[</span>           main] c.m.s.jdbc.internals.AuthenticationJNI   : Failed to load the sqljdbc_auth.dll cause : no sqljdbc_auth <span class="k">in </span>java.library.path: <span class="o">[</span>C:<span class="se">\s</span>oft<span class="se">\j</span>ava-11-openjdk-11.0.11.9-1.windows.redhat.x86_64<span class="se">\b</span><span class="k">in</span>, C:<span class="se">\W</span>INDOWS<span class="se">\S</span>un<span class="se">\J</span>ava<span class="se">\b</span><span class="k">in</span>, C:<span class="se">\W</span>INDOWS<span class="se">\s</span>ystem32, C:<span class="se">\W</span>INDOWS, C:<span class="se">\P</span>ython39<span class="se">\S</span>cripts<span class="se">\,</span> C:<span class="se">\P</span>ython39<span class="se">\,</span> C:<span class="se">\P</span>rogram Files <span class="o">(</span>x86<span class="o">)</span><span class="se">\R</span>SA SecurID Token Common, C:<span class="se">\W</span>INDOWS<span class="se">\s</span>ystem32, C:<span class="se">\W</span>INDOWS, C:<span class="se">\W</span>INDOWS<span class="se">\S</span>ystem32<span class="se">\W</span>bem, C:<span class="se">\W</span>INDOWS<span class="se">\S</span>ystem32<span class="se">\W</span>indowsPowerShell<span class="se">\v</span>1.0<span class="se">\,</span> C:<span class="se">\W</span>INDOWS<span class="se">\S</span>ystem32<span class="se">\O</span>penSSH<span class="se">\,</span> C:<span class="se">\P</span>rogram Files<span class="se">\G</span>it<span class="se">\c</span>md, c:<span class="se">\d</span>ev<span class="se">\s</span>cripts<span class="se">\,</span> c:<span class="se">\d</span>ev<span class="se">\a</span>pache-maven-3.8.1<span class="se">\\</span>bin, C:<span class="se">\M</span>inikube, C:<span class="se">\S</span>oft<span class="se">\n</span>odejs<span class="se">\,</span> C:<span class="se">\P</span>rogramData<span class="se">\c</span>hocolatey<span class="se">\b</span><span class="k">in</span>, C:<span class="se">\P</span>rogram Files <span class="o">(</span>x86<span class="o">)</span><span class="se">\M</span>icrosoft SQL Server<span class="se">\1</span>50<span class="se">\D</span>TS<span class="se">\B</span>inn<span class="se">\,</span> C:<span class="se">\P</span>rogram Files<span class="se">\A</span>zure Data Studio<span class="se">\b</span><span class="k">in</span>, C:<span class="se">\P</span>rogram Files<span class="se">\D</span>ocker<span class="se">\D</span>ocker<span class="se">\r</span>esources<span class="se">\b</span><span class="k">in</span>, C:<span class="se">\P</span>rogramData<span class="se">\D</span>ockerDesktop<span class="se">\v</span>ersion-bin, C:<span class="se">\P</span>rogram Files<span class="se">\d</span>otnet<span class="se">\,</span> C:<span class="se">\P</span>rogramData<span class="se">\R</span>iverbed<span class="se">\P</span>rocessInjection<span class="se">\r</span>pictrlBin, C:<span class="se">\s</span>oft<span class="se">\j</span>ava<span class="se">\j</span>ava-11-openjdk-11.0.11.9-1.windows.redhat.x86_64<span class="se">\b</span><span class="k">in</span>, C:<span class="se">\P</span>rogram Files <span class="o">(</span>x86<span class="o">)</span><span class="se">\s</span>bt<span class="se">\b</span><span class="k">in</span>, C:<span class="se">\P</span>rogram Files <span class="o">(</span>x86<span class="o">)</span><span class="se">\s</span>cala<span class="se">\b</span><span class="k">in</span>, C:<span class="se">\P</span>rogram Files<span class="se">\P</span>owerShell<span class="se">\7\,</span> C:<span class="se">\W</span>INDOWS<span class="se">\s</span>ystem32, C:<span class="se">\W</span>INDOWS, C:<span class="se">\W</span>INDOWS<span class="se">\S</span>ystem32<span class="se">\W</span>bem, C:<span class="se">\W</span>INDOWS<span class="se">\S</span>ystem32<span class="se">\W</span>indowsPowerShell<span class="se">\v</span>1.0<span class="se">\,</span> C:<span class="se">\W</span>INDOWS<span class="se">\S</span>ystem32<span class="se">\O</span>penSSH<span class="se">\,</span> C:<span class="se">\U</span>sers<span class="se">\X</span>XX<span class="se">\A</span>ppData<span class="se">\L</span>ocal<span class="se">\M</span>icrosoft<span class="se">\W</span>indowsApps, C:<span class="se">\s</span>oft<span class="se">\J</span>etBrains<span class="se">\I</span>ntelliJ IDEA 2021.1.3<span class="se">\b</span><span class="k">in</span>, ., c:<span class="se">\P</span>rogramData<span class="se">\c</span>hocolatey<span class="se">\l</span>ib<span class="se">\g</span>radle<span class="se">\t</span>ools<span class="se">\g</span>radle-7.2<span class="se">\\</span>bin, C:<span class="se">\s</span>oft<span class="se">\M</span>icrosoft VS Code<span class="se">\b</span><span class="k">in</span>, C:<span class="se">\U</span>sers<span class="se">\X</span>XX<span class="se">\A</span>ppData<span class="se">\R</span>oaming<span class="se">\n</span>pm, C:<span class="se">\P</span>rogram Files<span class="se">\A</span>zure Data Studio<span class="se">\b</span><span class="k">in</span>, C:<span class="se">\s</span>oft<span class="se">\j</span>ava-11-openjdk-11.0.11.9-1.windows.redhat.x86_64<span class="se">\b</span><span class="k">in</span>, ., C:<span class="se">\s</span>oft<span class="se">\J</span>etBrains<span class="se">\I</span>ntelliJ IDEA Educational Edition 2021.2.3<span class="se">\b</span><span class="k">in</span>, ., C:<span class="se">\s</span>oft<span class="se">\J</span>etBrains<span class="se">\I</span>ntelliJ IDEA Community Edition 2021.2.3<span class="se">\b</span><span class="k">in</span>, ., .]
+
+</code></pre></div></div>
+
+<h1 id="root-cause">Root cause</h1>
+<p>This is a  hardcode logic in Microsoft JDBC library authentication module.  Downlaoded auth file will be named as mssql-jdbc_auth-9.4.0.x64.dll, it has to renamed to sqljdbc_auth.dll and save to %JAVA_HOME%\bin folder</p>
+
+<h1 id="solution">Solution</h1>
+<ul>
+  <li>Firstly download file from Microsoft folder as below</li>
+</ul>
+
+<p>https://docs.microsoft.com/en-us/sql/connect/jdbc/release-notes-for-the-jdbc-driver?view=sql-server-ver15</p>
+
+<ul>
+  <li>
+    <p>Then unzip and copy the file under folder “auth”</p>
+  </li>
+  <li>
+    <p>Lastly, copy your platform dill file (e.g. mssql-jdbc_auth-9.4.0.x64.dll) and rename to sqljdbc_auth.dll</p>
+  </li>
+</ul>
+
+<p><img src="/assets/images/sql_server_auth.png" alt="" /></p>
+
+<p>–End–</p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2021-11-24T00:00:00+11:00">November 24, 2021</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=SQLServer+Error+about+This+driver+is+not+configured+for+integrated+authentication%20http%3A%2F%2Flocalhost%3A4000%2Fblogs%2Ftech%2Fen%2Fsqlserver_driver_not_configured_integrated_authenciation" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fblogs%2Ftech%2Fen%2Fsqlserver_driver_not_configured_integrated_authenciation" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fblogs%2Ftech%2Fen%2Fsqlserver_driver_not_configured_integrated_authenciation" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/blogs/tech/en/save_resources_to_files" class="pagination--pager" title="How to copy files from resources folder in jar and save to a file
+">Previous</a>
+    
+    
+      <a href="/blogs/tech/en/boostrap_logging_in_springbootapplication" class="pagination--pager" title="How logging system Bootstrapped in Spring Boot Application
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">You May Also Enjoy</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/HighlyDistinguishLogo-stamp.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blogs/tech/en/boostrap_logging_in_springbootapplication" rel="permalink">How logging system Bootstrapped in Spring Boot Application
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Summary
+Following diagram demonstrated the process to bootstrap and use Logback for loggings in Spring Boot applciation.
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/HighlyDistinguishLogo-stamp.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blogs/tech/en/save_resources_to_files" rel="permalink">How to copy files from resources folder in jar and save to a file
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Why to extract resources from jar to local disk
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/HighlyDistinguishLogo-stamp.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blogs/tech/en/debug_not_hit_intelliJ" rel="permalink">Debug of SpringBoot run not working in IntelliJ
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Normal approach to debug maven
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/HighlyDistinguishLogo-stamp.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/tech/2021/11/01/How-to-watch-kubenetes-deployment-by-label-selector.html" rel="permalink">How to watch specific kubenetes deployment by labels
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">How to watch specific kubenetes deployment by labels
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2022 Highly Distinguish. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,578 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+
+<!--google fonts-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Deep dive into ApplicationEvent in SpringBoot - Highly Distinguish</title>
+<meta name="description" content="Summary As you know,  there are various event will be sent (multicast) when a specific story taken place.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Highly Distinguish">
+<meta property="og:title" content="Deep dive into ApplicationEvent in SpringBoot">
+<meta property="og:url" content="http://localhost:4000/tech/2021/10/07/Spring-Boot-ApplicationEvents-DeepDive.html">
+
+
+  <meta property="og:description" content="Summary As you know,  there are various event will be sent (multicast) when a specific story taken place.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2021-10-07T00:00:00+11:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/tech/2021/10/07/Spring-Boot-ApplicationEvents-DeepDive.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Highly Distinguish Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+<link rel="stylesheet" href="/assets/css/blog.css">
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Highly Distinguish
+          <span class="site-subtitle">IT solution & education</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/blog_business/index.html">Business</a>
+            </li><li class="masthead__menu-item">
+              <a href="/sitemap/">Sitemap</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url"></a>
+    </h3>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Deep dive into ApplicationEvent in SpringBoot">
+    <meta itemprop="description" content="SummaryAs you know,  there are various event will be sent (multicast) when a specific story taken place.">
+    <meta itemprop="datePublished" content="2021-10-07T00:00:00+11:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/tech/2021/10/07/Spring-Boot-ApplicationEvents-DeepDive.html" class="u-url" itemprop="url">Deep dive into ApplicationEvent in SpringBoot
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+        <h1 id="summary">Summary</h1>
+<p>As you know,  there are various <code class="language-plaintext highlighter-rouge">event</code> will be sent (multicast) when a specific story taken place.</p>
+
+<p>This simple blog will walk through the list of key <code class="language-plaintext highlighter-rouge">ApplicationEvent</code> when you kick start a Spring Boot applicaiton. So that you’ll get an insight into how SpringBoot application bootstraped and started to serving requests.</p>
+
+<h1 id="key-application-events">Key application events</h1>
+
+<h2 id="holistic-diagram-view">Holistic diagram view</h2>
+
+<p><img src="/assets/images/SpringBootApplicationEvent.png" alt="" /></p>
+
+<h2 id="applicationstartingevent">ApplicationStartingEvent</h2>
+
+<blockquote>
+  <p>Event published as early as conceivably possible as soon as a SpringApplication has been started - before the Environment or ApplicationContext is available, but after the ApplicationListeners have been registered.</p>
+</blockquote>
+
+<p>This is called in SpringApplication.java ‘s run method.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">listeners</span><span class="o">.</span><span class="na">starting</span><span class="o">(</span><span class="n">bootstrapContext</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">mainApplicationClass</span><span class="o">);</span>
+</code></pre></div></div>
+
+<h2 id="applicationenvironmentpreparedevent">ApplicationEnvironmentPreparedEvent</h2>
+<blockquote>
+  <p>Event published when a SpringApplication is starting up and the Environment is first available for inspection and modification.</p>
+</blockquote>
+
+<p>This is triggered in SpringApplication’s prepareEnvrionment method, which indica envrionment configured.</p>
+
+<h2 id="applicationcontextinitializedevent">ApplicationContextInitializedEvent</h2>
+<blockquote>
+  <p>Event published when a SpringApplication is starting up and the ApplicationContext is prepared and ApplicationContextInitializers have been called but before any bean definitions are loaded.</p>
+</blockquote>
+
+<p>This is triggered in SpringApplication’s prepareContext method, which indicate context initialized and context inititializers are called.</p>
+
+<h2 id="applicationpreparedevent">ApplicationPreparedEvent</h2>
+
+<blockquote>
+  <p>Event published as when a SpringApplication is starting up and the ApplicationContext is fully prepared but not refreshed. The bean definitions will be loaded and the Environment is ready for use at this event.</p>
+</blockquote>
+
+<p>This is called at last step of SpringApplication’s prepareContext method, which indicate ApplicationContext is loaded</p>
+
+<h2 id="objectmapperconfigured-optional">ObjectMapperConfigured (optional)</h2>
+<blockquote>
+  <p>This is used for MvcObjectMapper</p>
+</blockquote>
+
+<p>This is come from WebMvcObjectMapperConfigurer, it’s actually means HttpMessageConverter beans configured. Those used in Mvc’s RequestMappingHandlerAdapter</p>
+
+<h2 id="servletwebserverinitializedevent-optional">ServletWebServerInitializedEvent (optional)</h2>
+<blockquote>
+  <p>Event to be published after the WebServer is ready. Useful for obtaining the local port of a running server.
+Normally it will have been started, but listeners are free to inspect the server and stop and start it if they want to.</p>
+</blockquote>
+
+<p>This is triggered in WebServerStartStopLifecycle.java#start() method, after calling underlying webserver’s start method and set “running” flag to true.</p>
+
+<p>Because WebServerStartStopLifecycle implemented SmartLifecycle, and it’s autoStartup flag is true, so AbastractApplicationContext’s finsihRefresh will call all lifecycleProcessoer.onRefresh(), which will invoke lifeCycle’s start() method.</p>
+
+<p>Ultimately this is called when SpringApplicatin to refresh(context)</p>
+
+<h2 id="contextrefreshedevent">ContextRefreshedEvent</h2>
+<blockquote>
+  <p>Event raised when an ApplicationContext gets initialized or refreshed.
+This is thrown in AbstractApplicationContext#fresh()</p>
+</blockquote>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">publishEvent</span><span class="o">(</span><span class="k">new</span> <span class="nc">ContextRefreshedEvent</span><span class="o">(</span><span class="k">this</span><span class="o">));</span>
+</code></pre></div></div>
+
+<h2 id="applicationstartedevent">ApplicationStartedEvent</h2>
+<blockquote>
+  <p>Event published once the application context has been refreshed but before any application and command line runners have been called.</p>
+</blockquote>
+
+<p>It then will call following one to further publish availability change event</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">AvailabilityChangeEvent</span><span class="o">.</span><span class="na">publish</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="nc">LivenessState</span><span class="o">.</span><span class="na">CORRECT</span><span class="o">);</span>
+</code></pre></div></div>
+
+<h2 id="availabilitychangeevent">AvailabilityChangeEvent</h2>
+<p>It’s payload is “CORRECT”</p>
+
+<p>public enum LivenessState implements AvailabilityState {
+“Liveness” state of the application.
+An application is considered live when it’s running with a correct internal state. “Liveness” failure means that the internal state of the application is broken and we cannot recover from it. As a result, the platform should restart the application.</p>
+
+<p>After this event, SpringApplication’s “run” method will be invoked, normally you’ll call start method of your service/runner</p>
+
+<h2 id="applicationreadyevent">ApplicationReadyEvent</h2>
+<blockquote>
+  <p>Event published as late as conceivably possible to indicate that the application is ready to service requests.</p>
+</blockquote>
+
+<p>Then it will invoke another event for Accepting_traffic</p>
+
+<h2 id="availabilitychangeevent-1">AvailabilityChangeEvent</h2>
+
+<p>ApplicationEvent sent when the AvailabilityState of the application changes.</p>
+
+<p>When starting Spring Application, this state will be “ACCEPTING_TRAFFIC”</p>
+
+<p>“Tada!” when you get this event, it means your SpringApplication started and happy to accept requests from users.</p>
+
+<p>–End–</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2021-10-07T00:00:00+11:00">October 7, 2021</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Deep+dive+into+ApplicationEvent+in+SpringBoot%20http%3A%2F%2Flocalhost%3A4000%2Ftech%2F2021%2F10%2F07%2FSpring-Boot-ApplicationEvents-DeepDive.html" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Ftech%2F2021%2F10%2F07%2FSpring-Boot-ApplicationEvents-DeepDive.html" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Ftech%2F2021%2F10%2F07%2FSpring-Boot-ApplicationEvents-DeepDive.html" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/blog_chn/business/2021/09/22/IT-Solutions-For-Remote-Learning.html" class="pagination--pager" title="2021-09-22-IT-Solutions-For-Remote-Learning
+">Previous</a>
+    
+    
+      <a href="/business/2021/10/08/How-to-user-fire-extinguisher.html" class="pagination--pager" title="How to user fire extinguisher
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">You May Also Enjoy</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/HighlyDistinguishLogo-stamp.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blogs/tech/en/boostrap_logging_in_springbootapplication" rel="permalink">How logging system Bootstrapped in Spring Boot Application
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Summary
+Following diagram demonstrated the process to bootstrap and use Logback for loggings in Spring Boot applciation.
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/HighlyDistinguishLogo-stamp.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blogs/tech/en/sqlserver_driver_not_configured_integrated_authenciation" rel="permalink">SQLServer Error about This driver is not configured for integrated authentication
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Symptoms
+When you are using integrated authentication (Kerberos connection) for MS SqlServer connection, there is one possible error :
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/HighlyDistinguishLogo-stamp.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blogs/tech/en/save_resources_to_files" rel="permalink">How to copy files from resources folder in jar and save to a file
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Why to extract resources from jar to local disk
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/HighlyDistinguishLogo-stamp.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blogs/tech/en/debug_not_hit_intelliJ" rel="permalink">Debug of SpringBoot run not working in IntelliJ
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Normal approach to debug maven
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2022 Highly Distinguish. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

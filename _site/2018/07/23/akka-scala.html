@@ -1,0 +1,5271 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+
+<!--google fonts-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>akka framework of scala - Highly Distinguish</title>
+<meta name="description" content="philosophy The actor model adopts the philosophy that everything is an actor. This is similar to the everything is an object philosophy used by some object-oriented programming languages.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Highly Distinguish">
+<meta property="og:title" content="akka framework of scala">
+<meta property="og:url" content="http://localhost:4000/2018/07/23/akka-scala.html">
+
+
+  <meta property="og:description" content="philosophy The actor model adopts the philosophy that everything is an actor. This is similar to the everything is an object philosophy used by some object-oriented programming languages.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2018-07-23T00:00:00+10:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/2018/07/23/akka-scala.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Highly Distinguish Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+<link rel="stylesheet" href="/assets/css/blog.css">
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--posts">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Highly Distinguish
+          <span class="site-subtitle">IT solution & education</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/blog_business/index.html">Business</a>
+            </li><li class="masthead__menu-item">
+              <a href="/sitemap/">Sitemap</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url"></a>
+    </h3>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+  
+  </div>
+
+
+
+  <div class="archive">
+    
+      <h1 id="page-title" class="page__title">akka framework of scala</h1>
+    
+    <h1 id="philosophy">philosophy</h1>
+<p>The actor model adopts the philosophy that everything is an actor. This is similar to the everything is an object philosophy used by some object-oriented programming languages.</p>
+
+<p>Decoupling the sender from communications sent was a fundamental advance of the Actor model enabling asynchronous communication and control structures as patterns of passing messages.</p>
+
+<p>Recipients of messages are identified by address, sometimes called “mailing address”. Thus an actor can only communicate with actors whose addresses it has.</p>
+
+<h1 id="route">Route</h1>
+<p>Routes effectively are simply highly specialised functions that take a RequestContext and eventually complete it, which could (and often should) happen asynchronously.</p>
+
+<p>Directives create Routes.</p>
+
+<p>The Route is the central concept of Akka HTTP’s Routing DSL. All the structures you build with the DSL, no matter whether they consists of a single line or span several hundred lines, are type turning a RequestContext into a Future[RouteResult].</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">type</span> <span class="kt">Route</span> <span class="o">=</span> <span class="nc">RequestContext</span> <span class="k">=&gt;</span> <span class="nc">Future</span><span class="o">[</span><span class="kt">RouteResult</span><span class="o">]</span>
+</code></pre></div></div>
+
+<p>Generally when a route receives a request (or rather a RequestContext for it) it can do one of these things:</p>
+
+<ul>
+  <li>Complete the request by returning the value of requestContext.complete(…)</li>
+  <li>Reject the request by returning the value of requestContext.reject(…) (see Rejections)</li>
+  <li>Fail the request by returning the value of requestContext.fail(…) or by just throwing an exception (see Exception Handling)</li>
+  <li>Do any kind of asynchronous processing and instantly return a Future[RouteResult] to be eventually completed later</li>
+</ul>
+
+<h2 id="the-routing-tree">The Routing Tree</h2>
+<p>Essentially, when you combine directives and custom routes via nesting and the ~ operator, you build a routing structure that forms a tree. When a request comes in it is injected into this tree at the root and flows down through all the branches in a depth-first manner until either some node completes it or it is fully rejected.</p>
+
+<p>In RouteDirective.scala</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/**
+   * Completes the request using the given arguments.
+   *
+   * @group route
+   */</span>
+  <span class="k">def</span> <span class="nf">complete</span><span class="o">(</span><span class="n">m</span><span class="k">:</span> <span class="kt">?</span> <span class="kt">ToResponseMarshallable</span><span class="o">)</span><span class="k">:</span> <span class="kt">StandardRoute</span> <span class="o">=</span>
+    <span class="nc">StandardRoute</span><span class="o">(</span><span class="nv">_</span><span class="o">.</span><span class="py">complete</span><span class="o">(</span><span class="n">m</span><span class="o">))</span>
+
+</code></pre></div></div>
+
+<h2 id="routeresult">RouteResult</h2>
+<p>RouteResult is a simple abstract data type (ADT) that models the possible non-error results of a Route. It is defined as such:</p>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">sealed</span> <span class="k">trait</span> <span class="nc">RouteResult</span>
+
+<span class="k">object</span> <span class="nc">RouteResult</span> <span class="o">{</span>
+  <span class="k">final</span> <span class="k">case</span> <span class="k">class</span> <span class="nc">Complete</span><span class="o">(</span><span class="n">response</span><span class="k">:</span> <span class="kt">HttpResponse</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">RouteResult</span>
+  <span class="k">final</span> <span class="k">case</span> <span class="k">class</span> <span class="nc">Rejected</span><span class="o">(</span><span class="n">rejections</span><span class="k">:</span> <span class="kt">immutable.Seq</span><span class="o">[</span><span class="kt">Rejection</span><span class="o">])</span> <span class="k">extends</span> <span class="nc">RouteResult</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h2 id="routing-dsl">Routing DSL</h2>
+
+<p>In addition to the Core Server API Akka HTTP provides a very flexible ,Routing DSL, for elegantly defining RESTful web services.</p>
+
+<p>Http().bindAndHandle(routes ~ abcRoute, host, port)</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/**
+     * Returns a Route that chains two Routes. If the first Route rejects the request the second route is given a
+     * chance to act upon the request.
+     */</span>
+    <span class="k">def</span> <span class="nf">~</span><span class="o">(</span><span class="n">other</span><span class="k">:</span> <span class="kt">Route</span><span class="o">)</span><span class="k">:</span> <span class="kt">Route</span> <span class="o">=</span> <span class="o">{</span> <span class="n">ctx</span> <span class="o">?</span>
+      <span class="k">import</span> <span class="nn">ctx.executionContext</span>
+      <span class="nf">route</span><span class="o">(</span><span class="n">ctx</span><span class="o">).</span><span class="py">fast</span><span class="o">.</span><span class="py">flatMap</span> <span class="o">{</span>
+        <span class="k">case</span> <span class="n">x</span><span class="k">:</span> <span class="kt">RouteResult.Complete</span> <span class="kt">?</span> <span class="kt">FastFuture.successful</span><span class="o">(</span><span class="kt">x</span><span class="o">)</span>
+        <span class="kt">case</span> <span class="kt">RouteResult.Rejected</span><span class="o">(</span><span class="kt">outerRejections</span><span class="o">)</span> <span class="kt">?</span>
+          <span class="kt">other</span><span class="o">(</span><span class="kt">ctx</span><span class="o">)</span><span class="kt">.fast.map</span> <span class="o">{</span>
+            <span class="kt">case</span> <span class="kt">x:</span> <span class="kt">RouteResult.Complete</span>               <span class="kt">?</span> <span class="kt">x</span>
+            <span class="kt">case</span> <span class="kt">RouteResult.Rejected</span><span class="o">(</span><span class="kt">innerRejections</span><span class="o">)</span> <span class="kt">?</span> <span class="kt">RouteResult.Rejected</span><span class="o">(</span><span class="kt">outerRejections</span> <span class="kt">++</span> <span class="kt">innerRejections</span><span class="o">)</span>
+          <span class="o">}</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+
+</code></pre></div></div>
+
+<h3 id="path-matching">Path matching</h3>
+<blockquote>
+  <p>Note
+The path matching DSL describes what paths to accept after URL decoding. This is why the path-separating slashes have special status and cannot simply be specified as part of a string! The string ¡°foo/bar¡± would match the raw URI path ¡°foo%2Fbar¡±, which is most likely not what you want!</p>
+</blockquote>
+
+<h1 id="sink">Sink</h1>
+<p>A Sink is a set of stream processing steps that has one open input. Can be used as a Subscriber</p>
+
+<h1 id="supervision">supervision</h1>
+
+<h2 id="what-supervision-means">What Supervision Means</h2>
+<p>As described in Actor Systems supervision describes a dependency relationship between actors: the supervisor delegates tasks to subordinates and therefore must respond to their failures. When a subordinate detects a failure (i.e. throws an exception), it suspends itself and all its subordinates and sends a message to its supervisor, signaling failure. Depending on the nature of the work to be supervised and the nature of the failure, the supervisor has a choice of the following four options:</p>
+
+<ul>
+  <li>Resume the subordinate, keeping its accumulated internal state</li>
+  <li>Restart the subordinate, clearing out its accumulated internal state</li>
+  <li>Stop the subordinate permanently</li>
+  <li>Escalate the failure, thereby failing itself</li>
+</ul>
+
+<h2 id="sealed-class">sealed class</h2>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">object</span> <span class="nc">Supervision</span> <span class="o">{</span>
+  <span class="n">sealed</span> <span class="n">trait</span> <span class="nc">Directive</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>A sealed class may not be directly inherited, except if the inheriting template is defined in the same source file as the inherited class. However, subclasses of a sealed class can inherited anywhere.</p>
+
+<h2 id="implicit">implicit</h2>
+<p>A method can have an implicit parameter list, marked by the implicit keyword at the start of the parameter list. If the parameters in that parameter list are not passed as usual, Scala will look if it can get an implicit value of the correct type, and if it can, pass it automatically.</p>
+
+<p>The places Scala will look for these parameters fall into two categories:</p>
+
+<p>Scala will first look for implicit definitions and implicit parameters that can be accessed directly (without a prefix) at the point the method with the implicit parameter block is called.
+Then it looks for members marked implicit in all the companion objects associated with the implicit candidate type.</p>
+
+<h2 id="killswitch">KillSwitch</h2>
+<p>A KillSwitch allows completion of Graphs from the outside by completing Graphs of FlowShape linked to the switch. Depending on whether the KillSwitch is a UniqueKillSwitch or a SharedKillSwitch one or multiple streams might be linked with the switch.</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">trait</span> <span class="nc">KillSwitch</span> <span class="o">{</span>
+<span class="c1">//After calling KillSwitch.shutdown() the linked Graphs of FlowShape are completed normally.</span>
+ <span class="k">def</span> <span class="nf">shutdown</span><span class="o">()</span><span class="k">:</span> <span class="kt">Unit</span>
+ <span class="k">def</span> <span class="nf">abort</span><span class="o">(</span><span class="n">ex</span><span class="k">:</span><span class="kt">Throwable</span><span class="o">)</span><span class="k">:</span> <span class="kt">Unit</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h2 id="source">Source</h2>
+<p>A Source is a set of stream processing steps that has one open output. It can comprise any number of internal sources and transformations that are wired together, or it can be an atomic source, e.g. from a collection or a file. Materialization turns a Source into a Reactive Streams Publisher (at least conceptually).</p>
+
+<h3 id="connect-to-sink">connect to Sink</h3>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/**
+   * Connect this [[akka.stream.scaladsl.Source]] to a [[akka.stream.scaladsl.Sink]],
+   * concatenating the processing steps of both.
+   */</span>
+  <span class="k">def</span> <span class="nf">to</span><span class="o">[</span><span class="kt">Mat2</span><span class="o">](</span><span class="n">sink</span><span class="k">:</span> <span class="kt">Graph</span><span class="o">[</span><span class="kt">SinkShape</span><span class="o">[</span><span class="kt">Out</span><span class="o">]</span>, <span class="kt">Mat2</span><span class="o">])</span><span class="k">:</span> <span class="kt">RunnableGraph</span><span class="o">[</span><span class="kt">Mat</span><span class="o">]</span> <span class="k">=</span> <span class="nf">toMat</span><span class="o">(</span><span class="n">sink</span><span class="o">)(</span><span class="nv">Keep</span><span class="o">.</span><span class="py">left</span><span class="o">)</span>
+</code></pre></div></div>
+
+<h1 id="future">Future</h1>
+<p>trait Future[+T]
+ extends Awaitable[T]
+A Future represents a value which may or may not <em>currently</em> be available, but will be available at some point, or an exception if that value could not be made available. Asynchronous computations that yield futures are created with the Future.apply call and are computed using a supplied ExecutionContext, which can be backed by a Thread pool.</p>
+
+<p>import ExecutionContext.Implicits.global
+   val s = “Hello”
+   val f: Future[String] = Future {
+     s + “ future!”
+   }
+   f foreach {
+     msg =&gt; println(msg)
+   }</p>
+
+<h2 id="future-introduction">Future introduction</h2>
+<p>Futures provide a way to reason about performing many operations in parallel¨C in an efficient and non-blocking way. A Future is a placeholder object for a value that may not yet exist. Generally, the value of the Future is supplied concurrently and can subsequently be used. Composing concurrent tasks in this way tends to result in faster, asynchronous, non-blocking parallel code.</p>
+
+<p>By default, futures and promises are non-blocking, making use of callbacks instead of typical blocking operations. To simplify the use of callbacks both syntactically and conceptually, Scala provides combinators such as flatMap, foreach, and filter used to compose futures in a non-blocking way. Blocking is still possible - for cases where it is absolutely necessary, futures can be blocked on (although this is discouraged).</p>
+
+<h1 id="scala-scope-protection">Scala scope protection:</h1>
+<p>private[C] means that access is private “up to” C, where C is the corresponding package, class or singleton object.</p>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">private</span><span class="o">[</span><span class="kt">http</span><span class="o">]</span> <span class="k">def</span> <span class="nf">build</span> <span class="k">=</span> <span class="o">{</span>
+  <span class="c1">// ...</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>The modi?er can be quali?ed with an identi?er C (e.g. private[C]) that must denote a class or package enclosing the de?nition. Members labeled with such a modi?er are accessible respectively only from code inside the package C or only from code inside the class C and its companion module (¡ì5.4). Such members are also inherited only from templates inside C.</p>
+
+<h1 id="scala-flexible-import">Scala flexible import</h1>
+<p>you can import several classes the Scala way:</p>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">java.io.</span><span class="o">{</span><span class="nc">File</span><span class="o">,</span> <span class="nc">IOException</span><span class="o">,</span> <span class="nc">FileNotFoundException</span><span class="o">}</span>
+</code></pre></div></div>
+<p>Use the following syntax to import everything from the java.io package:</p>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">java.io._</span>
+</code></pre></div></div>
+<p>The _ character in this example is similar to the * wildcard character in Java.</p>
+
+<p>If the _ character feels unusual at first, it helps to know that it¡¯s used consistently throughout the Scala language as a wildcard character, and that consistency is very nice.</p>
+
+<h2 id="directives">Directives</h2>
+<p>A ¡°Directive¡± is a small building block used for creating arbitrarily complex route structures. Akka HTTP already pre-defines a large number of directives and you can easily construct your own:</p>
+
+<h1 id="regular-expression">Regular Expression</h1>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">pattern</span> <span class="k">=</span> <span class="s">"Scala"</span><span class="o">.</span><span class="py">r</span>
+      <span class="k">val</span> <span class="nv">str</span> <span class="k">=</span> <span class="s">"Scala is Scalable and cool"</span>
+      
+      <span class="nf">println</span><span class="o">(</span><span class="n">pattern</span> <span class="n">findFirstIn</span> <span class="n">str</span><span class="o">)</span>
+
+</code></pre></div></div>
+
+<p>We create a String and call the r( ) method on it. Scala implicitly converts the String to a RichString and invokes that method to get an instance of Regex. To find a first match of the regular expression, simply call the findFirstIn() method. If instead of finding only the first occurrence we would like to find all occurrences of the matching word, we can use the findAllIn( ) method and in case there are multiple Scala words available in the target string, this will return a collection of all matching words.</p>
+
+<h2 id="pathmatcher">PathMatcher</h2>
+
+<ul>
+  <li>Segment: PathMatcher1[String]
+Matches if the unmatched path starts with a path segment (i.e. not a slash). If so the path segment is extracted as a String instance.</li>
+</ul>
+
+<h1 id="option">Option</h1>
+<p>In short, if you have a value of type A that may be absent, Scala uses an instance of Option[A] as its container. An Intance of Option is either an instance of case class Some when it is present or case object None when it is not. Since both Some and None are children of Option, your function signature should declare that the returned value is an Option of some type, e.g. Option[A]</p>
+
+<h2 id="sample">Sample</h2>
+<p>It is very easy to create an Option in Scala, i.e. you can use a present/absent value directly.</p>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">optionalInt</span><span class="k">:</span> <span class="kt">Option</span><span class="o">[</span><span class="kt">Int</span><span class="o">]</span> <span class="k">=</span> <span class="nc">Some</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span>
+<span class="c1">// or</span>
+<span class="c1">// val optionalInt: Option[Int] = None</span>
+</code></pre></div></div>
+
+<h3 id="to-validate-user-login">To validate user login</h3>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">auth</span><span class="o">(</span><span class="n">user</span><span class="k">:</span><span class="kt">String</span><span class="o">,</span> <span class="n">pwd</span><span class="k">:</span><span class="kt">String</span><span class="o">)</span><span class="k">:</span> <span class="kt">AuthResult</span> <span class="o">=</span>
+	<span class="o">(</span><span class="n">user</span><span class="o">,</span> <span class="n">pwd</span><span class="o">)</span> <span class="k">match</span> <span class="o">{</span>
+	<span class="nf">case</span> <span class="o">(</span><span class="n">u</span><span class="o">,</span> <span class="k">_</span><span class="o">)</span> <span class="k">if</span> <span class="nc">Option</span><span class="o">(</span><span class="n">u</span><span class="o">).</span><span class="py">exists</span><span class="o">(</span><span class="nv">_</span><span class="o">.</span><span class="py">trim</span><span class="o">.</span><span class="py">isEmpty</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="nc">ErrorLogin</span>
+	<span class="nf">case</span> <span class="o">(</span><span class="k">_</span><span class="o">,</span> <span class="n">p</span><span class="o">)</span> <span class="k">if</span> <span class="nc">Option</span><span class="o">(</span><span class="n">p</span><span class="o">).</span><span class="py">exists</span><span class="o">(</span><span class="nv">_</span><span class="o">.</span><span class="py">trim</span><span class="o">.</span><span class="py">isEmpty</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="nc">ErrorPwd</span>
+	<span class="nf">case</span> <span class="o">(</span><span class="n">u</span><span class="o">,</span> <span class="n">p</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="nf">doAuth</span><span class="o">(</span><span class="n">u</span><span class="o">,</span><span class="n">p</span><span class="o">)</span>
+
+<span class="o">}</span>
+</code></pre></div></div>
+<h2 id="isdefined">isDefined</h2>
+<p>you add a checker for the None value using the isDefined method and specify logic to handle each scenario accordingly.</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">addTwoWithDefault</span><span class="o">(</span><span class="n">a</span><span class="k">:</span> <span class="kt">Option</span><span class="o">[</span><span class="kt">Int</span><span class="o">])</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="o">{</span>
+  <span class="nf">if</span><span class="o">(</span><span class="nv">a</span><span class="o">.</span><span class="py">isDefined</span><span class="o">)</span> <span class="nv">a</span><span class="o">.</span><span class="py">get</span> <span class="o">+</span> <span class="mi">2</span> <span class="k">else</span> <span class="mi">2</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h2 id="getorelse">getOrElse</h2>
+
+<p>In many cases, you have a fallback or default value for your absent values, e.g. zero in the above example. With Option, you can easily provide a default value via the getOrElse method.</p>
+
+<p>def addTwoWithDefault(a: Option[Int]): Int = a.getOrElse(0) + 2</p>
+
+<h2 id="flatten">flatten</h2>
+<p>Assume that we have a List of Option[Int].</p>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">l</span><span class="k">:</span> <span class="kt">List</span><span class="o">[</span><span class="kt">Option</span><span class="o">[</span><span class="kt">Int</span><span class="o">]]</span> <span class="k">=</span> <span class="nc">List</span><span class="o">(</span><span class="nc">Some</span><span class="o">(</span><span class="mi">3</span><span class="o">),</span> <span class="nc">Some</span><span class="o">(</span><span class="mi">1</span><span class="o">),</span> <span class="nc">None</span><span class="o">,</span> <span class="nc">Some</span><span class="o">(</span><span class="mi">5</span><span class="o">),</span> <span class="nc">Some</span><span class="o">(</span><span class="mi">8</span><span class="o">),</span> <span class="nc">None</span><span class="o">)</span>
+</code></pre></div></div>
+
+<p>A common scenario is that we need to filter out the absent values and return a List of Int. A straightfoward approach is to combine filter with .isDefined.</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">l</span><span class="o">.</span><span class="py">filter</span><span class="o">(</span><span class="nv">_</span><span class="o">.</span><span class="py">isDefined</span><span class="o">).</span><span class="py">map</span><span class="o">(</span><span class="nv">_</span><span class="o">.</span><span class="py">get</span><span class="o">)</span> 
+<span class="c1">// res1: List[Int] = List(3, 1, 5, 8)</span>
+</code></pre></div></div>
+<p>However, Scala actually provides an elegent built-in function to achieve the same goal, which is often more preferred.</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">l</span><span class="o">.</span><span class="py">flatten</span>
+<span class="c1">// res1: List[Int] = List(3, 1, 5, 8)</span>
+</code></pre></div></div>
+
+<h1 id="underscore">underscore</h1>
+<p>In Scala, pattern matching is somewhat similar to java switch statement. But it is more powerful.</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">def</span> <span class="nf">matchTest</span><span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span><span class="k">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="n">x</span> <span class="k">match</span> <span class="o">{</span>
+    <span class="k">case</span> <span class="mi">1</span> <span class="k">=&gt;</span> <span class="s">"one"</span>
+    <span class="k">case</span> <span class="mi">2</span> <span class="k">=&gt;</span> <span class="s">"two"</span>
+    <span class="k">case</span> <span class="k">_</span> <span class="k">=&gt;</span> <span class="s">"anything other than one and two"</span>
+  <span class="o">}</span>
+
+</code></pre></div></div>
+
+<p>_ acts like a wildcard. It will match anything. Scala allows nested patterns, so we can nest the _ also.Lets see another example that uses _ in nested pattern.</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">expr</span> <span class="k">match</span> <span class="o">{</span>
+  <span class="k">case</span> <span class="nc">List</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="k">_</span><span class="o">,</span><span class="k">_</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="s">" a list with three element and the first element is 1"</span>
+  <span class="k">case</span> <span class="nc">List</span><span class="o">(</span><span class="k">_</span><span class="o">*)</span>  <span class="k">=&gt;</span> <span class="s">" a list with zero or more elements "</span>
+  <span class="k">case</span> <span class="nc">Map</span><span class="o">[</span><span class="k">_</span>,<span class="k">_</span><span class="o">]</span> <span class="k">=&gt;</span> <span class="s">" matches a map with any key type and any value type "</span>
+  <span class="k">case</span> <span class="k">_</span> <span class="k">=&gt;</span>
+  <span class="o">}</span>
+</code></pre></div></div>
+
+<h2 id="anonymous-functions">Anonymous Functions</h2>
+<p>Scala represents anonymous functions with a elegant syntax. The _ acts as a placeholder for parameters in the anonymous function. The _ should be used only once, But we can use two or more underscores to refer different parameters.</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">List</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">3</span><span class="o">,</span><span class="mi">4</span><span class="o">,</span><span class="mi">5</span><span class="o">).</span><span class="py">foreach</span><span class="o">(</span><span class="nf">print</span><span class="o">(</span><span class="k">_</span><span class="o">))</span>
+<span class="nc">List</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">3</span><span class="o">,</span><span class="mi">4</span><span class="o">,</span><span class="mi">5</span><span class="o">).</span><span class="py">foreach</span><span class="o">(</span> <span class="n">a</span> <span class="k">=&gt;</span> <span class="nf">print</span><span class="o">(</span><span class="n">a</span><span class="o">))</span>
+<span class="c1">// Here the _ refers to the parameter. The first one is a short form of the second one. Lets look at another example which take two parameters.</span>
+
+<span class="k">val</span> <span class="nv">sum</span> <span class="k">=</span> <span class="nc">List</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">3</span><span class="o">,</span><span class="mi">4</span><span class="o">,</span><span class="mi">5</span><span class="o">).</span><span class="py">reduceLeft</span><span class="o">(</span><span class="k">_</span><span class="o">+</span><span class="k">_</span><span class="o">)</span>
+<span class="k">val</span> <span class="nv">sum</span> <span class="k">=</span> <span class="nc">List</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">3</span><span class="o">,</span><span class="mi">4</span><span class="o">,</span><span class="mi">5</span><span class="o">).</span><span class="py">reduceLeft</span><span class="o">((</span><span class="n">a</span><span class="o">,</span> <span class="n">b</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">)</span>
+</code></pre></div></div>
+
+<h2 id="functions">Functions</h2>
+<p>Scala is a functional language. So we can treat function as a normal variable. If you try to assign a function to a new variable, the function will be invoked and the result will be assigned to the variable. This confusion occurs due to the optional braces for method invocation. We should use _ after the function name to assign it to another variable.</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">List</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">3</span><span class="o">,</span><span class="mi">4</span><span class="o">,</span><span class="mi">5</span><span class="o">).</span><span class="py">foreach</span><span class="o">(</span><span class="nf">print</span><span class="o">(</span><span class="k">_</span><span class="o">))</span>
+<span class="k">class</span> <span class="nc">Test</span> <span class="o">{</span>
+  <span class="k">def</span> <span class="nf">fun</span> <span class="k">=</span> <span class="o">{</span>
+    <span class="c1">// some code</span>
+  <span class="o">}</span>
+  <span class="k">val</span> <span class="nv">funLike</span> <span class="k">=</span> <span class="n">fun</span> <span class="k">_</span>
+<span class="o">}</span>
+<span class="nc">List</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">3</span><span class="o">,</span><span class="mi">4</span><span class="o">,</span><span class="mi">5</span><span class="o">).</span><span class="py">foreach</span><span class="o">(</span><span class="nf">print</span><span class="o">(</span><span class="k">_</span><span class="o">))</span>
+</code></pre></div></div>
+
+<h1 id="either-left-right">Either, Left, Right</h1>
+
+<p>Using Either, Left, and Right
+Prior to Scala 2.10, an approach similar to Try was available with the Either, Left, and Right classes. With these classes, Either is analogous to Try, Right is similar to Success, and Left is similar to Failure.</p>
+
+<p>The following method demonstrates how to implement the Either approach:</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">divideXByY</span><span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">y</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span><span class="k">:</span> <span class="kt">Either</span><span class="o">[</span><span class="kt">String</span>, <span class="kt">Int</span><span class="o">]</span> <span class="k">=</span> <span class="o">{</span>
+    <span class="nf">if</span> <span class="o">(</span><span class="n">y</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="nc">Left</span><span class="o">(</span><span class="s">"Dude, can't divide by 0"</span><span class="o">)</span>
+    <span class="k">else</span> <span class="nc">Right</span><span class="o">(</span><span class="n">x</span> <span class="o">/</span> <span class="n">y</span><span class="o">)</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>As shown, your method should be declared to return an Either, and the method body should return a Right on success and a Left on failure. The Right type is the type your method returns when it runs successfully (an Int in this case), and the Left type is typically a String, because that¡¯s how the error message is returned.</p>
+
+<p>As with Option and Try, a method returning an Either can be called in a variety of ways, including getOrElse or a match expression:</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">x</span> <span class="k">=</span> <span class="nf">divideXByY</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">).</span><span class="py">right</span><span class="o">.</span><span class="py">getOrElse</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span>   <span class="c1">// returns 1</span>
+<span class="k">val</span> <span class="nv">x</span> <span class="k">=</span> <span class="nf">divideXByY</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">).</span><span class="py">right</span><span class="o">.</span><span class="py">getOrElse</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span>   <span class="c1">// returns 0</span>
+
+<span class="c1">// prints "Answer: Dude, can't divide by 0"</span>
+<span class="nf">divideXByY</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">)</span> <span class="k">match</span> <span class="o">{</span>
+    <span class="k">case</span> <span class="nc">Left</span><span class="o">(</span><span class="n">s</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="nf">println</span><span class="o">(</span><span class="s">"Answer: "</span> <span class="o">+</span> <span class="n">s</span><span class="o">)</span>
+    <span class="k">case</span> <span class="nc">Right</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="nf">println</span><span class="o">(</span><span class="s">"Answer: "</span> <span class="o">+</span> <span class="n">i</span><span class="o">)</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>You can also access the error message by testing the result with isLeft, and then accessing the left value, but this isn¡¯t really the Scala way:</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">scala</span><span class="o">&gt;</span> <span class="k">val</span> <span class="nv">x</span> <span class="k">=</span> <span class="nf">divideXByY</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">)</span>
+<span class="n">x</span><span class="k">:</span> <span class="kt">Either</span><span class="o">[</span><span class="kt">String</span>,<span class="kt">Int</span><span class="o">]</span> <span class="k">=</span> <span class="nc">Left</span><span class="o">(</span><span class="nc">Dude</span><span class="o">,</span> <span class="n">can</span><span class="ss">'t</span> <span class="n">divide</span> <span class="n">by</span> <span class="mi">0</span><span class="o">)</span>
+
+<span class="n">scala</span><span class="o">&gt;</span> <span class="nv">x</span><span class="o">.</span><span class="py">isLeft</span>
+<span class="n">res0</span><span class="k">:</span> <span class="kt">Boolean</span> <span class="o">=</span> <span class="kc">true</span>
+
+<span class="n">scala</span><span class="o">&gt;</span> <span class="nv">x</span><span class="o">.</span><span class="py">left</span>
+<span class="n">res1</span><span class="k">:</span> <span class="kt">scala.util.Either.LeftProjection</span><span class="o">[</span><span class="kt">String</span>,<span class="kt">Int</span><span class="o">]</span> <span class="k">=</span>
+      <span class="nc">LeftProjection</span><span class="o">(</span><span class="nc">Left</span><span class="o">(</span><span class="nc">Dude</span><span class="o">,</span> <span class="n">can</span><span class="ss">'t</span> <span class="n">divide</span> <span class="n">by</span> <span class="mi">0</span><span class="o">))</span>
+</code></pre></div></div>
+<p>Although the Either classes offered a potential solution prior to Scala 2.10, I now use the Try classes in all of my code instead of Either.</p>
+
+<h3 id="classof">classOf</h3>
+<p>Retrieve the runtime representation of a class type. classOf[T] is equivalent to the class literal T.class in Java.</p>
+
+<h2 id="operators">Operators</h2>
+<p>// Keywords
+&lt;-  // Used on for-comprehensions, to separate pattern from generator
+=&gt;  // Used for function types, function literals and import renaming</p>
+
+<h1 id="akka-framework">Akka framework</h1>
+<p>Akka is a toolkit and runtime for building highly concurrent, distributed, and fault-tolerant event-driven applications on the JVM.</p>
+
+<p>Actors are the unit of execution in Akka. The Actor model is an abstraction that makes it easier to write correct concurrent, parallel and distributed systems.</p>
+
+<p>This will get your feet wet, and hopefully inspire you to dive deeper into the wonderful sea of Akka!</p>
+
+<p>The Akka team refers to their creation as a toolkit rather than a framework. Frameworks tend to be a mechanism for providing a discrete element of a stack (e.g. the ui, or the web services layer). Akka provides a set of tools to render any part of the stack, and to provide the interconnects between them.</p>
+
+<p>He two ways (shared mutable state/message passing (Akka)) to solve the problem of selling tickets.</p>
+
+<p>Actors do not share state, can only communicate through immutable messages and do not talk to each other directly but through actor references, similar to the addresses we talked about. This approach satisfies the three things we wanted to change. So why is this simpler than the shared mutable state approach?</p>
+<ul>
+  <li>We don’t need to manage locks. We don’t have to think about how to protect the shared data. Inside an actor we’re safe.</li>
+  <li>We are more protected from deadlocks caused by out of order access by multiple threads, that cause the system to wait forever, or other problems like race conditions and thread starvation. Use of Akka precludes most of these problems, relieving us of the burden.</li>
+  <li>Performance tuning a shared mutable state solution is hard work and error prone and verification through tests is nearly impossible.</li>
+</ul>
+
+<h2 id="benefits-of-using-the-actor-model">Benefits of using the Actor Model</h2>
+
+<p>The following characteristics of Akka allow you to solve difficult concurrency and scalability challenges in an intuitive way:</p>
+
+<ul>
+  <li>Event-driven model — Actors perform work in response to messages. Communication between Actors is asynchronous, allowing Actors to send messages and continue their own work without blocking to wait for a reply.</li>
+  <li>Strong isolation principles — Unlike regular objects in Java, an Actor does not have a public API in terms of methods that you can invoke. Instead, its public API is defined through messages that the actor handles. This prevents any sharing of state between Actors; the only way to observe another actor’s state is by sending it a message asking for it.</li>
+  <li>Location transparency — The system constructs Actors from a factory and returns references to the instances. Because location doesn’t matter, Actor instances can start, stop, move, and restart to scale up and down as well as recover from unexpected failures.</li>
+  <li>Lightweight — Each instance consumes only a few hundred bytes, which realistically allows millions of concurrent Actors to exist in a single application.</li>
+</ul>
+
+<h3 id="message">Message</h3>
+<p>two special channels. The first is the Dead Letter channel, which contain message that couldn’t be delivered. This is sometimes also called a dead message queue. This channel can help when debugging, why some messages aren’t processed or to monitor where there are problems.</p>
+
+<h3 id="eventstream">EventStream</h3>
+<p>the benefit of decoupling the receivers and the sender and the dynamic nature of the publish-subscribe channel, but because the EventStream is available for all actors is also a nice solution for messages which can be send from all over the system and needs to be collected at one or more Actors. A good example is logging. Logging can be done throughout the system and needs to be collected at one point and be written to a log file. Internally the ActorLogging is using the EventStream to collect the log lines from all over the system.</p>
+
+<h3 id="dead-letter-message">Dead Letter Message</h3>
+<p>Akka is using the EventStream to implement the dead letter queue. This way only the actors which are interested in the failed messages are receiving them. When a message is queued in a mailbox of an actor that Terminates or is send after the Termination, the message is send to the EventStream of the ActorSystem. The message is wrapped into a DeadLetter object. This Object contains the original message, the sender of the message and the intended receiver. This way the Dead letter queue is integrated in the EventStream. To get these dead letter messages you only need to subscribe your actor to the EventStream with the DeadLetter class as the Classifier.</p>
+
+<p>Messages send to a Terminated Actor can’t be processed anymore and the ActorRef of this actor should not be used anymore. When there are messages send to a terminated Actor, these message will be send to the DeadLetter queue.</p>
+
+<p>Another use of the DeadLetter queue is when the processing fails. This is a Actor specific decision. An actor can decide that a received message couldn’t be processed and that it doesn’t know what to do with it. In this situation the messages can be send to the dead letter queue.</p>
+
+<h2 id="design-recommendations">Design recommendations</h2>
+<p>When defining Actors and their messages, keep these recommendations in mind:</p>
+
+<ul>
+  <li>Since messages are the Actor’s public API, it is a good practice to define messages with good names and rich semantic and domain specific meaning, even if they just wrap your data type. This will make it easier to use, understand and debug actor-based systems.</li>
+  <li>Messages should be immutable, since they are shared between different threads.</li>
+  <li>It is a good practice to put an actor’s associated messages as static classes in the class of the Actor. This makes it easier to understand what type of messages the actor expects and handles.</li>
+  <li>It is also a common pattern to use a static props method in the class of the Actor that describes how to construct the Actor.</li>
+</ul>
+
+<h3 id="props">Props</h3>
+<p>The static props method creates and returns a Props instance. Props is a configuration class to specify options for the creation of actors, think of it as an immutable and thus freely shareable recipe for creating an actor that can include associated deployment information. This example simply passes the parameters that the Actor requires when being constructed. We will see the props method in action later in this tutorial.</p>
+
+<h2 id="configuration">configuration</h2>
+
+<p>When using the default, the library will try to find the configuration file. Since the library supports a number of different configuration formats, it looks for different files, in the following order:
+application.properties
+This file should contain the configuration properties in the java property file format.
+application.json
+This file should contain the configuration properties in the json style</p>
+
+<p>application.conf
+This file should contain the configuration properties in the HOCON format. This is a format based on json but easier to read..
+It is possible to use all the different files at the same time. For the example below, in listing 7.2 we use the last file:
+MyAppl {
+    version = 10
+    description = “My application”
+    database {
+        connect=”jdbc:mysql://localhost/mydata”
+        user=”me”
+        }
+}
+Nesting is done by simply grouping with {}s</p>
+
+<h3 id="substitution">substitution</h3>
+<p>hostname=”localhost”
+hostname=${?HOST_NAME}
+MyAppl {
+    version = 10
+    description = “My
+    application”
+    database {
+        connect=”jdbc:mysql://${hostname}/mydata”
+user=”me” }
+}</p>
+
+<p>define the variable first, if system environment do exist, override it, otherwise use default
+? means get a variable from system envrionment</p>
+
+<h3 id="defaultfallback-properies">Default/fallback properies</h3>
+<p>Default properties are configured in the file reference.conf and placed in the root of the jar file; the idea is that every library contains its own defaults. The configuration library will find all the reference.conf files and integrate these settings into the configuration fall-back structure.</p>
+
+<h3 id="order-of-properties">Order of properties</h3>
+<p>System properties-&gt;application.conf-&gt;applicaiton.json-&gt;application.properties-&gt;reference.conf</p>
+
+<h2 id="the-power-of-location-transparency">The power of location transparency</h2>
+
+<p>In Akka you can’t create an instance of an Actor using the new keyword. Instead, you create Actor instances using a factory. The factory does not return an actor instance, but a reference, akka.actor.ActorRef, that points to the actor instance. This level of indirection adds a lot of power and flexibility in a distributed system.</p>
+
+<p>In Akka location doesn’t matter. Location transparency means that the ActorRef can, while retaining the same semantics, represent an instance of the running actor in-process or on a remote machine. If needed, the runtime can optimize the system by changing an Actor’s location or the entire application topology while it is running. This enables the “let it crash” model of failure management in which the system can heal itself by crashing faulty Actors and restarting healthy ones.</p>
+
+<h2 id="the-akka-actorsystem">The Akka ActorSystem</h2>
+
+<p>The akka.actor.ActorSystem factory is, to some extent, similar to Spring’s BeanFactory. It acts as a container for Actors and manages their life-cycles. The actorOf factory method creates Actors and takes two parameters, a configuration object called Props and a name.</p>
+
+<h3 id="asynchronous-communication">Asynchronous communication</h3>
+<p>Actors are reactive and message driven. An Actor doesn’t do anything until it receives a message. Actors communicate using asynchronous messages. This ensures that the sender does not stick around waiting for their message to be processed by the recipient. Instead, the sender puts the message in the recipient’s mailbox and is free to do other work. The Actor’s mailbox is essentially a message queue with ordering semantics. The order of multiple messages sent from the same Actor is preserved, but can be interleaved with messages sent by another Actor.</p>
+
+<p>You might be wondering what the Actor is doing when it is not processing messages, i.e. doing actual work? It is in a suspended state in which it does not consume any resources apart from memory. Again, showing the lightweight, efficient nature of Actors.</p>
+
+<h3 id="sending-messages-to-an-actor">Sending messages to an Actor</h3>
+<p>To put a message into an Actor’s mailbox, use the tell method on the ActorRef. For example, the main class of Hello World sends messages to the Greeter Actor like this:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">howdyGreeter</span><span class="o">.</span><span class="na">tell</span><span class="o">(</span><span class="k">new</span> <span class="nc">WhoToGreet</span><span class="o">(</span><span class="s">"Akka"</span><span class="o">),</span> <span class="nc">ActorRef</span><span class="o">.</span><span class="na">noSender</span><span class="o">());</span>
+<span class="n">howdyGreeter</span><span class="o">.</span><span class="na">tell</span><span class="o">(</span><span class="k">new</span> <span class="nc">Greet</span><span class="o">(),</span> <span class="nc">ActorRef</span><span class="o">.</span><span class="na">noSender</span><span class="o">());</span>
+</code></pre></div></div>
+
+<p>The test class is using akka.test.javadsl.TestKit, which is a module for integration testing of actors and actor systems. This class only uses a fraction of the functionality provided by TestKit.</p>
+
+<h2 id="akka-under-the-hood">Akka under the hood</h2>
+<p>So are there no concurrency primitives like locks used at all in Akka? Well, of course there are, it’s just that you don’t have to deal with them directly . Everything still eventually runs on threads and low level concurrency primitives. Akka uses the java.util.concurrent library to coordinate message processing and takes great care to minimize the number of locks used to an absolute bare minimum. It uses lock free and wait free algorithms where possible, for example compare-and-swap (CAS) techniques, which are beyond the scope of this book. And because nothing can be shared between actors, the shared locks that you would normally have between objects are not present at all.</p>
+
+<p>There are other benefits that stem from the message passing approach that Akka uses, which we will discuss in the next sections. We have touched on them briefly already:</p>
+<ol>
+  <li>Even in this first, simple example, the message passing approach is clearly more fault tolerant, averting catastrophic failure if one component (no matter how key) fails.</li>
+  <li>The shared mutable state is always in one place in the example (in one JVM if it is kept entirely in memory). If you need to scale beyond this constraint, you will have to (re)distribute the data somehow. Since the message passing style uses addresses, looking ahead, you can see that if local and remote addresses were interchangeable, scaling out would be possible without code changes of any kind.</li>
+</ol>
+
+<p>This scenario is one example of a fault tolerance strategy that Akka provides, which is called the Restart strategy. Other strategies that can be used are Resume, Stop and Escalate.</p>
+
+<h2 id="scale-up-and-scale-out">Scale up and Scale out</h2>
+<p>In our Ticketing example, scaling up would mean getting more TicketingAgents running on our one server, scaling out would be bringing up TicketingAgents on a number of machines.</p>
+
+<h2 id="locking">Locking</h2>
+
+<p>locks result in contention, which will mean the number of threads doing work at any one time is often less than the total number, as some will have to wait on each other to finish. Sharing as little as possible means locking as little as possible, which is the goal of the message passing approach.</p>
+
+<p>Every thread has a stack to store runtime data. The size of the stack differs per operating system, for instance on the linux x64 platform it is normally 256kB. The stack size is one of the factors that limits the number of threads that run at the same time on a server. Around 4096 threads can fit in 1GB of memory on the linux x64 platform.</p>
+
+<h2 id="dispatcher">Dispatcher</h2>
+
+<p>Actors run on an abstraction which is called a dispatcher. The dispatcher takes care of which threading model is used and processes the mailboxes.</p>
+
+<p>Actors are lightweight because they run on top of dispatchers, the actors are not necessarily directly proportional to the number of threads. Akka Actors take a lot less space than threads, around 2.7 million actors can fit in 1GB of memory. A big difference compared to 4096 threads, which means that you can create different types of actors more freely than you would when using threads directly. There are different types of dispatchers to choose from which can be tuned to specific needs.</p>
+
+<p>We identified that we had to make the following changes to get to a message passing style:</p>
+<ol>
+  <li>No mutable shared data structure.</li>
+  <li>Immutable message passing.</li>
+  <li>Asynchronous message sending.</li>
+</ol>
+
+<p>Akka implements actors and which components compare to the concepts we’ve talked about so far: actors, addresses and mailboxes.</p>
+
+<h2 id="actor-path">Actor Path</h2>
+<p>So how do you get an actor reference to an actor in the hierarchy? This is where ActorPaths come in. You could compare the hierarchy of actors to a URL path structure. Every actor has a name. This name needs to be unique per level in the hierarchy, two sibling actors cannot have the same name (if you do not provide a name Akka generates one for you, but it is a good idea to name all your actors). All actor references can be located directly by an actor path, absolute or relative, and it has to follow the URI generic syntax. An actor path is built just like a URI, starting with a scheme followed by a scheme-specific part,</p>
+
+<h2 id="core-actor-operations">Core Actor Operations</h2>
+<p>Another way to look at an actor is to describe the operations that it supports. An Akka actor has four core operations :</p>
+<ol>
+  <li>CREATE: An actor can create another actor. In Akka, actors are part of an actor system, which defines the root of the actor hierarchy and creates top-level actors. Every actor can create child actors. The topology of the actors is dynamic, it depends on which actors create other actors and which addresses are used to communicate with them.</li>
+  <li>SEND: An actor can send a message to another actor. Messages are sent asynchronously, using an address to send to an Actor associated with a given Mailbox.</li>
+  <li>BECOME: The behavior of an actor can be dynamically changed. Messages are received one at a time and an actor can designate that it wants to handle next messages in a different way, basically swapping its behavior, which we will look at in later chapters.</li>
+  <li>SUPERVISE: An actor supervises and monitors its children in the actor hierarchy and manages the failures that happen. As we will see in chapter 3, this provides a clean separation between message processing and error handling.</li>
+</ol>
+
+<h2 id="akka-concurrency">Akka concurrency</h2>
+<p>Message passing enables an easier road to real concurrency
+ With that concurrent approach, we will be able to scale up and out
+We can scale both the request and the processing elements of our application
+Messages also unlock greater fault tolerance capabilities
+Supervision provides a means of modeling for both concurrency and fault tolerance
+Akka infuses our code with these powers in a lightweight, unobtrusive manner</p>
+
+<h3 id="build-akka">Build Akka</h3>
+<p>using TypeSafe’s Simple Build Tool (SBT) to create a single jar file that can be used to run the app</p>
+
+<p>If you have not worked with the SBT DSL before it is important to note that you need to put en empty line between lines in the file (this is the price we pay for not telling Scala where each expression ends).</p>
+
+<h3 id="tell-vs-ask">tell vs ask</h3>
+<p>Messages are sent to an Actor through one of the following methods.</p>
+
+<p>! means “fire-and-forget”, e.g. send a message asynchronously and return immediately. Also known as tell.</p>
+
+<p>? sends a message asynchronously and returns a Future representing a possible reply. Also known as ask.</p>
+
+<p>So below line is equivalent to tell</p>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ReceiveActor</span> <span class="k">extends</span> <span class="nc">Actor</span> <span class="o">{</span>
+
+  <span class="k">def</span> <span class="nf">receive</span> <span class="k">=</span> <span class="o">{</span>
+    <span class="k">case</span> <span class="s">"Hello"</span> <span class="k">=&gt;</span> <span class="n">sender</span> <span class="o">!</span> <span class="s">"And Hello to you!"</span> <span class="c1">// same as sender.tell("And Hello to you!")</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<h4 id="sample-of-actor">Sample of actor</h4>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="nn">com.goticks</span>
+<span class="k">import</span> <span class="nn">akka.actor.</span><span class="o">{</span><span class="nc">PoisonPill</span><span class="o">,</span> <span class="nc">Actor</span><span class="o">}</span>
+<span class="k">class</span> <span class="nc">TicketSeller</span> <span class="k">extends</span> <span class="nc">Actor</span> <span class="o">{</span>
+  <span class="k">import</span> <span class="nn">TicketProtocol._</span>
+  <span class="k">var</span> <span class="n">tickets</span> <span class="k">=</span> <span class="nc">Vector</span><span class="o">[</span><span class="kt">Ticket</span><span class="o">]()</span>
+  <span class="k">def</span> <span class="nf">receive</span> <span class="k">=</span> <span class="o">{</span>
+    <span class="k">case</span> <span class="nc">GetEvents</span> <span class="k">=&gt;</span> <span class="n">sender</span> <span class="o">!</span> <span class="nv">tickets</span><span class="o">.</span><span class="py">size</span>
+    <span class="k">case</span> <span class="nc">Tickets</span><span class="o">(</span><span class="n">newTickets</span><span class="o">)</span> <span class="k">=&gt;</span>
+      <span class="n">tickets</span> <span class="k">=</span> <span class="n">tickets</span> <span class="o">++</span> <span class="n">newTickets</span>
+    <span class="k">case</span> <span class="nc">BuyTicket</span> <span class="k">=&gt;</span>
+      <span class="nf">if</span> <span class="o">(</span><span class="nv">tickets</span><span class="o">.</span><span class="py">isEmpty</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">sender</span> <span class="o">!</span> <span class="nc">SoldOut</span>
+        <span class="n">self</span> <span class="o">!</span> <span class="nc">PoisonPill</span>
+<span class="o">}</span>
+      <span class="nv">tickets</span><span class="o">.</span><span class="py">headOption</span><span class="o">.</span><span class="py">foreach</span> <span class="o">{</span> <span class="n">ticket</span> <span class="k">=&gt;</span>
+        <span class="n">tickets</span> <span class="k">=</span> <span class="nv">tickets</span><span class="o">.</span><span class="py">tail</span>
+        <span class="n">sender</span> <span class="o">!</span> <span class="n">ticket</span>
+<span class="o">}</span> <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="k">case</span> <span class="nc">Event</span><span class="o">(</span><span class="n">name</span><span class="o">,</span> <span class="n">nrOfTickets</span><span class="o">)</span> <span class="k">=&gt;</span>
+  <span class="nf">if</span><span class="o">(</span><span class="nv">context</span><span class="o">.</span><span class="py">child</span><span class="o">(</span><span class="n">name</span><span class="o">).</span><span class="py">isEmpty</span><span class="o">)</span> <span class="o">{</span>
+<span class="nc">If</span> <span class="nc">TicketSellers</span> <span class="n">have</span> <span class="n">not</span> <span class="n">been</span>
+   <span class="k">val</span> <span class="nv">ticketSeller</span> <span class="k">=</span> <span class="nv">context</span><span class="o">.</span><span class="py">actorOf</span><span class="o">(</span><span class="nc">Props</span><span class="o">[</span><span class="kt">TicketSeller</span><span class="o">],</span> <span class="n">name</span><span class="o">)</span>
+  <span class="k">val</span> <span class="nv">tickets</span> <span class="k">=</span> <span class="nc">Tickets</span><span class="o">((</span><span class="mi">1</span> <span class="n">to</span> <span class="n">nrOfTickets</span><span class="o">).</span><span class="py">map</span><span class="o">{</span>
+    <span class="n">nr</span><span class="k">=&gt;</span> <span class="nc">Ticket</span><span class="o">(</span><span class="n">name</span><span class="o">,</span> <span class="n">nr</span><span class="o">)).</span><span class="py">toList</span>
+<span class="o">}</span>
+  <span class="n">ticketSeller</span> <span class="o">!</span> <span class="n">tickets</span>
+<span class="o">}</span>
+<span class="n">sender</span> <span class="o">!</span> <span class="nc">EventCreated</span>
+
+</code></pre></div></div>
+
+<p>The BoxOffice creates TicketSellers for each event. Notice that it uses it’s context instead of the actor system to create the actor; Actors created with the context of another Actor are its children and subject to the parent Actor’s supervision</p>
+
+<h2 id="test">Test</h2>
+<p>Right now it always fails since it is not implemented yet, as is expected in Red-Green-Refactor style, where you first make sure the test fails (Red), then implement the code to make it pass (Green), after which you might refactor the code to make it nicer.</p>
+
+<h2 id="source-code">source code</h2>
+
+<h3 id="untypedactor">UntypedActor</h3>
+<p>This class is the Java cousin to the akka.actor.Actor Scala interface. Subclass this abstract class to create a MDB-style untyped actor.</p>
+
+<p>An actor has a well-defined (non-cyclic) life-cycle.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>RUNNING (created and started actor) - can receive messages
+SHUTDOWN (when 'stop' or 'exit' is invoked) - can't do anything
+</code></pre></div></div>
+
+<p>The Actor’s own akka.actor.ActorRef is available as getSelf(), the current message’s sender as getSender() and the akka.actor.UntypedActorContext as getContext(). The only abstract method is onReceive() which is invoked for each processed message unless dynamically overridden using getContext().become().</p>
+
+<p>Annotations
+    @Deprecated @deprecated 
+Deprecated</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(Since version 2.5.0) Use AbstractActor instead of UntypedActor.
+</code></pre></div></div>
+
+<h3 id="loggingadaptor">loggingAdaptor</h3>
+<p>trait LoggingAdapter extends AnyRef</p>
+
+<p>Logging wrapper to make nicer and optimize: provide template versions which evaluate .toString only if the log level is actually enabled. Typically used by obtaining an implementation from the Logging object:</p>
+
+
+<ul class="taxonomy__index">
+  
+  
+    <li>
+      <a href="#2021">
+        <strong>2021</strong> <span class="taxonomy__count">17</span>
+      </a>
+    </li>
+  
+    <li>
+      <a href="#2020">
+        <strong>2020</strong> <span class="taxonomy__count">29</span>
+      </a>
+    </li>
+  
+    <li>
+      <a href="#2019">
+        <strong>2019</strong> <span class="taxonomy__count">8</span>
+      </a>
+    </li>
+  
+    <li>
+      <a href="#2018">
+        <strong>2018</strong> <span class="taxonomy__count">41</span>
+      </a>
+    </li>
+  
+    <li>
+      <a href="#2017">
+        <strong>2017</strong> <span class="taxonomy__count">40</span>
+      </a>
+    </li>
+  
+    <li>
+      <a href="#2016">
+        <strong>2016</strong> <span class="taxonomy__count">54</span>
+      </a>
+    </li>
+  
+    <li>
+      <a href="#2007">
+        <strong>2007</strong> <span class="taxonomy__count">1</span>
+      </a>
+    </li>
+  
+</ul>
+
+
+
+
+  <section id="2021" class="taxonomy__section">
+    <h2 class="archive__subtitle">2021</h2>
+    <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blogs/tech/en/boostrap_logging_in_springbootapplication" rel="permalink">How logging system Bootstrapped in Spring Boot Application
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Summary
+Following diagram demonstrated the process to bootstrap and use Logback for loggings in Spring Boot applciation.
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blogs/tech/en/sqlserver_driver_not_configured_integrated_authenciation" rel="permalink">SQLServer Error about This driver is not configured for integrated authentication
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Symptoms
+When you are using integrated authentication (Kerberos connection) for MS SqlServer connection, there is one possible error :
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blogs/tech/en/save_resources_to_files" rel="permalink">How to copy files from resources folder in jar and save to a file
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Why to extract resources from jar to local disk
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blogs/tech/en/debug_not_hit_intelliJ" rel="permalink">Debug of SpringBoot run not working in IntelliJ
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Normal approach to debug maven
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/tech/2021/11/01/How-to-watch-kubenetes-deployment-by-label-selector.html" rel="permalink">How to watch specific kubenetes deployment by labels
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">How to watch specific kubenetes deployment by labels
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/tech/2021/10/11/Could-not-resolve-github-host.html" rel="permalink">Failed to talk to github.com from corporation network
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Background
+It’s typical to get various network connection issues when you run commands within corporation network. For example, you’ll find diversed issues w...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/tech/2021/10/11/Day-Day-Up-Java.html" rel="permalink">Day-Day-Up-Java
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">More developer friendly Threa Sleep
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/business/2021/10/08/How-to-user-fire-extinguisher.html" rel="permalink">How to user fire extinguisher
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Summary
+As you know, staff and your safety is paramount. So what if emergency take place, such as fire in office, how to help yourself and your colleagues by...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/tech/2021/10/07/Spring-Boot-ApplicationEvents-DeepDive.html" rel="permalink">Deep dive into ApplicationEvent in SpringBoot
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Summary
+As you know,  there are various event will be sent (multicast) when a specific story taken place.
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog_chn/business/2021/09/22/IT-Solutions-For-Remote-Learning.html" rel="permalink">2021-09-22-IT-Solutions-For-Remote-Learning
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">IT-Solutions-For-Remote-Learning.md
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog_business/business/2021/09/22/IT-Solutions-For-Remote-Learning.html" rel="permalink">2021-09-22-IT-Solutions-For-Remote-Learning
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">IT-Solutions-For-Remote-Learning.md
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2021/09/16/Kubernetes-Client-API-DeepDive.html" rel="permalink">Deep dive into Kubernetes Client API
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Summary
+To talk to K8s for getting data, there are few approaches. While K8s’ official Java library is the most widely used one.
+This blog will look into thi...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2021/09/14/Get-CPU-info-core-in-windows.html" rel="permalink">How to get CPU name, core, 64bit and speed in command line
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Summary
+In windows operation system, if you want to get your CPU name, core, 64bit and speed in command line. Just follow below actions:
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2021/09/13/Whitelabel-Error-Page.html" rel="permalink">Whitelabel Error Page
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Summary
+Whitelabel Error Page is the default error page in Spring Boot web app.
+It provide a more user-friently error page whenever there are any issues when...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2021/01/19/Google-maps-no-photos-reviews.html" rel="permalink">Google maps no photos reviews
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Summary
+I found a weird problem of the app Google Maps of my Oppo Android phone. That’s when you search a place in Google map, say “Central Park”, ideally th...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2021/01/19/Google-maps-no-photos-reviews-CHN.html" rel="permalink">谷歌地图里面照片的评论显示不出来
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">简介
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2021/01/04/Debts-In-a-nutshell.html" rel="permalink">Debts in a nutshell
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">A debt security represents a debt owed by the issuer to an investor. Here, the investor acts as a lender to the issuer which may be a government, organisatio...</p>
+  </article>
+</div>
+
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
+
+  <section id="2020" class="taxonomy__section">
+    <h2 class="archive__subtitle">2020</h2>
+    <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/10/20/How-to-use-S3-download-URL.html" rel="permalink">How to process data from S3 download URL
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">S3 download URL
+As you know, AWS S3 object can be downloaded/processed by S3 download URL. 
+I’m showing you two examples on how to process S3 Object by NIO f...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/09/24/Debug-Stuck-IntelliJ.html" rel="permalink">Debug Stuck IntelliJ
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">What happened to a debug job hanging in IntelliJ (IDEAS) IDE?
+You may find when you try to debug a class in Intellij but it stuck there and never proceed, e....</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/09/18/Awesome-Kotlin.html" rel="permalink">Awesome Kotlin
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Difference with Scala
+Kotlin takes the best of Java and Scala, the response times are similar as working with Java natively, which is a considerable advantag...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/09/17/Awesome-Chrome-tips.html" rel="permalink">Awesome tips for Chrome
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Shortcuts &amp; tips
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/chn/2020/09/15/JVM-Warm-up-CHN.html" rel="permalink">JVM热身
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  此文是作者英文原文的翻译文章，英文原文在：http://todzhang.com/posts/2018-06-10-jvm-warm-up/
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/09/07/Awesome-shortcuts-Slack.html" rel="permalink">Awesome tips and shortcuts for Slack
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Shortcuts for Slack
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/09/03/Neverl-ending-Gralde-run.html" rel="permalink">Gradle build stuck
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Gradle build stuck, keep on running but never ending
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/08/21/Reactor-Reactive.html" rel="permalink">Awesome Reactive programming
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Key points of Reactive Programming
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/08/20/Awesome-swift.html" rel="permalink">Awesome Swift for iOS
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Frame in Swift
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/08/16/Swift-For-iOS.html" rel="permalink">Swift for iOS
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">#
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/08/13/Mock-In-Kotlin.html" rel="permalink">Mock in kotlin
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Argument Matching &amp; Answers
+For example, you have mocked DOC with call(arg: Int): Intfunction. You want to return 1 if argument is greater than 5 and -1 ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/08/13/Docker.html" rel="permalink">Docker
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Dockers Concepts
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/08/03/How-to-decode-path-parameters-in-All-REST-calls.html" rel="permalink">How to decode path parameters in All REST WebServices calls
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">How to decode path parameters in All REST WebServices calls
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/07/27/Curl.html" rel="permalink">Curl
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Linux Curl command
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/07/24/AOP.html" rel="permalink">AOP
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">The concept of join points as matched by pointcut expressions is central to AOP, and Spring uses the AspectJ pointcut expression language by default.
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/07/07/micrometer-notes.html" rel="permalink">Micrometer notes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">As a general rule it should be possible to use the name as a pivot. Dimensions allow a particular named metric to be sliced to drill down and reason about th...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/07/07/Awesome-shortcuts.html" rel="permalink">Awesome Shortcuts
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Shortcuts &amp; tips
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/07/04/Leetcode-tips.html" rel="permalink">Tips about algorithm resolving from Leetcode
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Here are some tips and notes about how to resolve algorithm issues listed in LeetCode
+Rotation problem
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/07/02/pigeon-hole-principle.html" rel="permalink">Pigeons in holes principle
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description"># Pigeonhole principle
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/06/29/Awesome-Algorithm-Solutions.html" rel="permalink">Awesome solutions for algorithm questions
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">你就会发现只要涉及递归的问题，都是 树的问题。
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/06/29/Java-Concurrency.html" rel="permalink">Concurrency in Java
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">How to make thread-safe
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/06/28/Facial-Recognition_en.html" rel="permalink">A Facial Recognition utility in a dozen of LOC
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">A Facial Recognition utility in a dozen of python LOC (Lines Of Code)
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/06/26/TLS-SSL-HTTPS.html" rel="permalink">Awesome SSL certificates and HTTPS
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">What’s TLS
+TLS (Transport Layer Security) and its predecessor, SSL (Secure Sockets Layer), are security protocols designed to secure the communication betwee...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/06/21/JPA-Notes.html" rel="permalink">Java Pesistence API Notes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">JPA
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/05/10/Java-Deep-Notes.html" rel="permalink">Java Deep Notes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Java Deep Notes
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/03/28/JVM-Warm-up.html" rel="permalink">JVM warm up by Escape Analysis
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Why JVM need warm up
+I don’t know how and why you get to this blog. But I know the key words in your mind are “warm” for JVM. As the name “warm up” suggested...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/03/15/Concurrent-In-Java-col-2.html" rel="permalink">Java Concurrent Column 2
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is the second half about Java Concurrent of my blog
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/03/10/Concurrent-In-Java.html" rel="permalink">Java Concurrent
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">This blog is about noteworthy pivot points about Java Concurrent Framework
+
+  Back to Java old days there were wait()/notify() which is error prone, while fr...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/03/03/Algorithm-Leecode-1.html" rel="permalink">Algorithm notes from Leecode – 1
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Algorithm Leetcode
+</p>
+  </article>
+</div>
+
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
+
+  <section id="2019" class="taxonomy__section">
+    <h2 class="archive__subtitle">2019</h2>
+    <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2019/09/12/Conversations-with-God.html" rel="permalink">Conversations with God
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Feelings is the language of the soul.
+If you want to know what’s true for you about something, look to how your’re feeling about.
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2019/09/02/Kafka-In-Spring.html" rel="permalink">Kafka In Spring
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Enable Kafka listener annotated endpoints that are created under the covers by a AbstractListenerContainerFactory. To be used on Configuration classes as fol...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2019/08/25/AWS-Certificate.html" rel="permalink">AWS certification
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Footprint
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2019/07/26/Terraform.html" rel="permalink">Terraform
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Why Terraform
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2019/07/07/Kafka.html" rel="permalink">Kafka
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Kafka
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2019/01/17/Mifid.html" rel="permalink">Mifid
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">FX Spot is not covered by the regulation, as it is not considered to be a financial instrument by ESMA, the European Union (EU) regulator. As FX is considere...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2019/01/17/FX-ForeignExchange.html" rel="permalink">Foreign Exchange
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">currency pairs
+
+  Direct ccy: means USD is part of currency pair
+  Cross ccy: means ccy wihtout USD, so except NDF, the deal will be split to legs, both with...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2019/01/03/IPC.html" rel="permalink">Inter Processes Communication
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">IPC
+</p>
+  </article>
+</div>
+
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
+
+  <section id="2018" class="taxonomy__section">
+    <h2 class="archive__subtitle">2018</h2>
+    <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/11/01/seconds.html" rel="permalink">Seconds
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">nano seconds
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/10/13/SBE.html" rel="permalink">Citrix receiver
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Simple Binary Encoding (SBE)
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/09/26/Citrix.html" rel="permalink">Citrix receiver
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">“Cannot connect to remote desktop” with Citrix Receiver
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/09/18/Google-Guice.html" rel="permalink">Guice
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">A new type of Juice
+Put simply, Guice alleviates the need for factories and the use of new in your Java code. Think of Guice’s @Inject as the new new. You wi...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/09/16/yaml-config.html" rel="permalink">YAML
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Key points
+All YAML files (regardless of their association with Ansible or not) can optionally begin with — and end with …. This is part of the YAML format a...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/09/06/mockito.html" rel="permalink">Distruptor
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">multithreading
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/09/03/distruptor.html" rel="permalink">Mockito
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Feature
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/08/23/protobuf.html" rel="permalink">Protobuf
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">What are protocol buffers?
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/08/21/sudo.html" rel="permalink">Sudo in a Nutshell
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Sudo in a Nutshell
+
+Sudo (su “do”) allows a system administrator to give certain users (or groups of users) the ability to run some (or all) commands as root...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/08/19/ZooKeeper.html" rel="permalink">Zoo-keeper
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">ZK Motto
+
+  the motto “ZooKeeper: Because Coordinating Distributed Systems is a Zoo.”
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/08/15/PrestoDB.html" rel="permalink">Presto DB
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">WHAT IS PRESTO?
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/08/09/Chronicle.html" rel="permalink">Chronicle
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Overview
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/08/08/Cucumber.html" rel="permalink">Cucumber
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Acceptance testing vs unit test
+It’s sometimes said that unit tests ensure you build the thing right, whereas acceptance tests ensure you build the right thi...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/07/28/Scala.html" rel="permalink">Scala
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Scala String
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/07/23/akka-scala.html" rel="permalink">akka framework of scala
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">philosophy
+The actor model adopts the philosophy that everything is an actor. This is similar to the everything is an object philosophy used by some object-o...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/07/16/FileUtils_Camel.html" rel="permalink">File Util in Apache Camel
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">FileUtil.class
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/07/11/Camel.html" rel="permalink">Apache Camel
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Camel’s message model
+In Camel, there are two abstractions for modeling messages, both of which we’ll cover in this section.
+
+  org.apache.camel.Message—The ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/07/10/QuickFixJ.html" rel="permalink">QuickFixJ
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Settings
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/07/10/JMX.html" rel="permalink">JXM
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Exporting your beans to JMX
+The core class in Spring’s JMX framework is the MBeanExporter. This class is responsible for taking your Spring beans and registe...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/07/04/Solace-MQ.html" rel="permalink">Solace MQ
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Solace PubSub+
+It is a message broker that lets you establish event-driven interactions between applications and microservices across hybrid cloud environmen...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/06/26/Core-Java.html" rel="permalink">Core Java
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Annotation retention policy
+What is Retention policy in java annotations?
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/06/21/Apigee.html" rel="permalink">Apigee
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">App deployment, configuration management and orchestration - all from one system. Ansible is powerful IT automation that you can learn quickly.
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/06/21/Ansible.html" rel="permalink">Ansible
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Ansible: What Is It Good For?
+Ansible is often described as a configuration management tool, and is typically mentioned in the same breath as Chef, Puppet, a...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/06/14/flex-box.html" rel="permalink">flexbox
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">How Flexbox works — explained with big, colorful, animated gifs
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/06/14/JBoss-Console.html" rel="permalink">Jboss tips
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">commands:
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/06/12/Locking-And-Multithreading.html" rel="permalink">Locking and multithreading
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Single Writer principle
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/06/12/KDB.html" rel="permalink">KDB
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">KDB
+However kdb+ evaluates expressions right-to-left. There are no precedence rules. The reason commonly given for this behaviour is that it is a much simple...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/06/09/FX.html" rel="permalink">Foreign Exchange
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Foreign Exchange markets
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/06/07/Protractor.html" rel="permalink">Portactor
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Better to use smart wait
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/06/06/Scrum-Agile.html" rel="permalink">Agile and SCRUM
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Key concept
+In Scrum, a team is cross functional, meaning everyone is needed to take a feature from idea to implementation.
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/06/02/DevOps-Philosophy.html" rel="permalink">DevOps-Philosophy
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">:100:DevOps Model Defined
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/05/15/rxjs-pipe-in-depth.html" rel="permalink">rxjs pipe in depth
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">https://stormforger.com/blog/2016/07/08/types-of-performance-testing/
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/05/15/how-to-setup-node-config-in-intranet.html" rel="permalink">How to setup nodejs to install package from intranet
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Error of ‘ECONNRESET’
+You may face error ECONNRESET from intranet, even appropriate proxy tools (e.g. cntlm) is running. The errors may looks like
+```bash
+$ ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/05/14/Strategy-Of-Openshift-Releases.html" rel="permalink">Strategy-Of-Openshift-Releases
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Release &amp; Testing Strategy
+There are various methods for safely releasing changes to Production. Each team must select what is appropriate for their own ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/05/11/Node-errors-DB.html" rel="permalink">Node errors troubleshooting
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Here is the typical erros log:
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/03/18/NodeJs-Notes.html" rel="permalink">NodeJs Notes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">commands to read files
+var lineReader = require(‘readline’).createInterface({
+    input: require(‘fs’).createReadStream(‘C:\dev\node\input\git_reset_files.tx...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/02/27/MVP.html" rel="permalink">Minium Viable Product
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">https://blog.leanstack.com/minimum-viable-product-mvp-7e280b0b9418
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/01/11/Angular-Module-Declaration-Import.html" rel="permalink">What is difference between declarations, providers and import in NgModule
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">What is difference between declarations, providers and import in NgModule
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/01/10/CORS.html" rel="permalink">CORS :Cross-Origin Resource Sharing
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Cross-Origin Request Sharing - CORS (A.K.A. Cross-Domain AJAX request) is an issue that most web developers might encounter, according to Same-Origin-Policy,...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/01/08/ngrx.html" rel="permalink">ngrx
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Why @Effects?
+In a simple ngrx/store project without ngrx/effects there is really no good place to put your async calls. Suppose a user clicks on a button or...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/01/06/iOS.html" rel="permalink">iOS programming
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">View
+A view is also a responder (UIView is a subclass of UIResponder). This means that a view is subject to user interactions, such as taps and swipes. Thus,...</p>
+  </article>
+</div>
+
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
+
+  <section id="2017" class="taxonomy__section">
+    <h2 class="archive__subtitle">2017</h2>
+    <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/12/18/OpenStack-vs-OpenShift.html" rel="permalink">cloud computering
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">openshift vs openstack
+The shoft and direct answer is `OpenShift Origin can run on top of OpenStack. They are complementary projects that work well together....</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/12/18/Clouding.html" rel="permalink">cloud computering
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Concepts
+Cloud computing is the on-demand demand delivery of compute database storage applications and other IT resources through a cloud services platform v...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/12/12/Redux.html" rel="permalink">Redux
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">whats @Effects
+You can almost think of your Effects as special kinds of reducer functions that are meant to be a place for you to put your async calls in suc...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/12/11/Why-Reactive-programming-is-outpermant.html" rel="permalink">reactive programing
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">The second advantage to a lazy subscription is that the observable doesn’t hold onto data by default. In the previous example, each event generated by the in...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/12/10/RxJS.html" rel="permalink">Router in angular
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Lettable operators
+RxJS 5.5, piping all the things
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/12/08/Router-In-Angular.html" rel="permalink">RxJS reactive extension javascript
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Streams
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/12/07/Errors-In-NPM.html" rel="permalink">common errors in NPM or node
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">code E503
+code E503 when run npm install packages, e.g.
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/12/02/Container.html" rel="permalink">Container
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">The Docker project was responsible for popularizing container development in Linux systems. The original project defined a command and service (both named do...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/12/01/Promise-vs-Observable.html" rel="permalink">promise vs observiable
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">The drawback of using Promises is that they’re unable to handle data sources that produce more than one value, like mouse movements or sequences of bytes in ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/11/29/OpenShift.html" rel="permalink">Openshift tips
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Commands bible
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/11/27/TypeScript.html" rel="permalink">TypeScript noteworthy notes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Async Await keywords
+Async Await Support in TypeScript
+Async - Await has been supported by TypeScript since version 1.7. Asynchronous functions are prefixed ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/09/04/Google-Analytics.html" rel="permalink">google analysis
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">How Page Value is calculated
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/06/24/JDK-sources.html" rel="permalink">JDK source
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">interface RandomAccess
+Marker interface used by List implementations to indicate that they support fast (generally constant time) random access. The primary ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/04/06/SSH.html" rel="permalink">SSH SFTP
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Secure FTP
+
+  SFTP over FTP is the equivalant of HTTPS over HTTP, the security version
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/03/30/WebSphere-setp-via-CLI.html" rel="permalink">Setup WebSphere profiles and application in command line
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Setup WebSphere profiles and application in command line
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/03/21/aws.html" rel="permalink">AWS Tips
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">After establishing a SSH session, you can install a default web server by executing sudo yum install httpd -y. To start the web server, type sudo service htt...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/03/13/oracle.html" rel="permalink">Oracle
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  ORA-12899: Value Too Large for Column
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/03/05/Spring.html" rel="permalink">Spring notes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Spring Bean Life Cycle Callback Methods
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/02/21/Java-JIT.html" rel="permalink">Java JIT compiler
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is talking about Java JIT (Just-In-Time) compiler
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/02/15/Java-Security.html" rel="permalink">Java Security Notes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Java Security
+
+  well-behaved: programs should be prevent from consuming too much system resources
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/02/14/SerialVersionUID.html" rel="permalink">SeriableVersionUID
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Noteworthy points about SeriableVersionUID in Java
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/02/09/R-Lang.html" rel="permalink">R Language
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">s&lt;-read.csv("C:/Users/xxx/dev/R/IRS/SHH_SCHISHG.csv")
+# aggregate 
+s2&lt;-table(s$Original.CP)
+s3&lt;-as.data.frame(s2)
+# extract by Frequency ordered 
+s3...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/02/06/SSH-Cryptography.html" rel="permalink">SSH and Cryptography
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">SFTP versus FTPS
+
+  SS: Secure Shell
+  An increasing number of our customers are looking to move away from standard FTP for transferring data, so we are ofte...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/02/06/Eclipse-tips.html" rel="permalink">Eclipse notes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">How do I remove a plug-in?
+Run Help &gt; About Eclipse &gt; Installation Details, select the software you no longer want and click Uninstall. (On Macintosh i...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/02/05/JVM.html" rel="permalink">Java JVM
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Class loading subsystem
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/02/03/Maven-Notes.html" rel="permalink">Maven-Notes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Maven philosophy
+
+  “It is important to note that in the pom.xml file you specify the what and not the how. The pom.xml file can also serve as a documentatio...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/02/02/Java-New-IO.html" rel="permalink">Java New IO
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Notes
+
+  JDK 1.0 introduced rudimentary I/O facilities for accessing the file system (to create a directory, remove a file, or perform another task), accessi...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/28/Network-Protocols.html" rel="permalink">Network Protocols
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Net Protocols
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/26/IT-Architect.html" rel="permalink">IT-Architect
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">SOA
+
+  SOA is a set of design principles for building a suite of interoperable, flexible and reusable services based architecture.
+  top-down and bottom-up a...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/21/Algorithm.html" rel="permalink">Algorithm
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">This page is about key points about Algorithm
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/20/DeadLock.html" rel="permalink">Dead Lock
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Concept
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/19/Java-Tricky-Tech-Questions.html" rel="permalink">Java-Tricky-Tech-Questions.md
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">What is the difference between Serializable and Externalizable in Java?
+
+  In earlier version of Java, reflection was very slow, and so serializaing large ob...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/19/Java-NavigableMap.html" rel="permalink">NavigableMap Misc
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">What is NavigableMap
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/19/Compare-In-Java.html" rel="permalink">Compare-In-Java
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Concepts
+
+  If you implement Comparable interface and override compareTo() method it must be consistent with equals() method i.e. for equal object by equals(...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/17/Java-Collections-Misc.html" rel="permalink">Java Collections Misc
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Difference between equals and deepEquals of Arrays in Java
+
+  Arrays.equals() method does not compare recursively if an array contains another array
+  on oth...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/16/Java-HashMap.html" rel="permalink">HashMap in JDK
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Hashmap in JDK
+Some note worth points about hashmap
+
+  Lookup process
+    
+      Step# 1: Quickly determine the bucket number in which this element may resid...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/14/Java-8.html" rel="permalink">Java 8 Tips
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">This blog is listing key new features introduced in Java 8
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/04/Arbitrage-vs-Hedging.html" rel="permalink">Arbitrage vs Heading
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">What is the difference between arbitrage and hedging?
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/03/IntelliJ-Tips.html" rel="permalink">IntelliJ Tips
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Shortcuts
+Expand/collapse method body in code editor
+Cmd + +/- to expand and collapse a method body
+Show java doc
+
+  Ctrl+J: To show JavaDoc
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/02/Enum-Misc.html" rel="permalink">Java Enum Misc
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Enum Misc
+</p>
+  </article>
+</div>
+
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
+
+  <section id="2016" class="taxonomy__section">
+    <h2 class="archive__subtitle">2016</h2>
+    <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/12/30/Java-GC.html" rel="permalink">Java GC notes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">verbose:gc
+verbose:gc prints right after each gc collection and prints details about each generation memory details. Here is blog on how to read verbose gc
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/12/30/HashCode-Contract.html" rel="permalink">Hash Code Misc
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">contract of hashCode :
+
+  Whenever it is invoked on the same object more than once during an execution of a Java application, the hashCode method must consis...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/12/24/Apache-Tips.html" rel="permalink">Apache Tips
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Apache
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/12/12/Angular.html" rel="permalink">Angulary Misc
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Dependency Injection
+Angular doesn’t automatically know how you want to create instances of your services or the injector to create your service. You must co...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/12/09/HeadsFirst-RandomNumber-In-Java.html" rel="permalink">Random number in java
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">ThreadLocalRandom, SecureRandm, java.util.Random, java.math.Random
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/12/01/Java-New-Features-Chronicle.html" rel="permalink">Java new features
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">JDK Versions
+
+  JDK 1.5 in 2005
+  JDK 1.6 in 2006
+  JDK 1.7 in 2011
+  JDK 1.8 in 2014
+Sun之前风光无限，但是在2010年1月27号被Oracle收购。
+在被Oracle收购后对外承诺要回到每2年一个realse的节奏。但是20...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/11/22/Facial-Recognition.html" rel="permalink">用10几行代码自己写个人脸识别程序
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">用10几行代码自己写个人脸识别程序
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/11/12/elastic.html" rel="permalink">Eslastic Search
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Eslastic Search
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/11/05/JSON-Lines.html" rel="permalink">JSON lines
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">JSON lines
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/11/04/Python-Scrapy.html" rel="permalink">Python Scraphy
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Python Scraphy
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/10/26/Continuous-Integretaion-Simpler-Chronicle.html" rel="permalink">Simpler chronicle of CI(Continuous Integration) “乱弹系列”之持续集成工具
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">引言
+有句话说有人的地方就有江湖，同样，有江湖的地方就有恩怨。在软件行业历史长河（虽然相对于其他行业来说，软件行业的历史实在太短了，但是确是充满了智慧的碰撞也是十分的精彩）中有一些恩怨情愁，分分合合的小故事，比如类似的有，从一套代码发展出来后面由于合同到期就分道扬镳，然后各自发展成独门产品的Sybase DB和微...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/10/19/head-first-blockchian-3.html" rel="permalink">Head First Blockchina 3
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  Hyperledger Fabric for Mortals
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/10/13/head-first-blockchian-2.html" rel="permalink">【原创】深入浅出区块链系统：第二章
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  使用Solidity创建以太坊(Ethereum)智能合约(Smart Contract)
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/10/06/Sublime-Syntax-Highlights.html" rel="permalink">How to customize Sublime syntax highlights
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Reference
+
+  Sublime Scope Naming
+  Syntax Guide
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/09/17/Assert-In-Unit-Test-CN.html" rel="permalink">浅谈软件单元测试中的“断言” (assert)，从石器时代进步到黄金时代。
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">大家都知道，在软件测试特别是在单元测试时,必用的一个功能就是“断言”（Assert)，可能有些人觉得不就一个Assert语句，没啥花头，也有很多人用起来也是懵懵懂懂，认为只要是Assert开头的方法，拿过来就用。一个偶然的机会跟人聊到此功能，觉得还是有必要在此整理一下如何使用以及对“断言”的理解。希望可以帮助大家...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/09/14/JetBrains-Tips.html" rel="permalink">JetBrains/IntelliJ tips
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Shortcuts
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/09/11/head-first-blockchian-1.html" rel="permalink">Head First Blockchina 1
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">深入浅出区块链系统：第一章.
+what you should know about blockchain
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/09/04/Kubernets-vs-Swarm.html" rel="permalink">Kubernetes 与 Docker Swarm的对比
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Kubernetes 和Docker Swarm 可能是使用最广泛的工具，用于在集群环境中部署容器。但是这两个工具还是有很大的差别。
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/09/02/Design-Principals.html" rel="permalink">漫谈开发设计中的一些‘原则’及’设计哲学’
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">在开发设计中有一些常用原则或者潜规则，根据笔者的经验，这里稍微总结一下最最常用的，以飨读者。
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/09/01/Mac-Tips.html" rel="permalink">Mac tips
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">how to show full path in Finder window
+Open and run following command in terminal window
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true; ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/09/01/HTTP-Methods-RFC.html" rel="permalink">http methods
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">RFC origion http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.1.2)
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/08/30/Spark-vs-Storm.html" rel="permalink">Spark-vs-Storm
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">The stark difference among Spark and Storm. Although both are claimed to process the streaming data in real time. But Spark processes it as micro-batches; wh...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/08/24/microservices.html" rel="permalink">微服务
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">可以想像一下，之前的传统应用系统，像是一个大办公室里面，有各个部门，销售部，采购部，财务部。办一件事情效率比较高。但是也有一些弊端，首先，各部门都在一个房间里。
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/08/12/unmodifiableCollection.html" rel="permalink">unmodifiableList, unmodifiableSet,unmodifiableMap
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">What’s it
+Returns an unmodifiable view of the specified set.  This method allows
+modules to provide users with “read-only” access to internal sets.
+Query ope...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/08/11/Sentry.html" rel="permalink">kibana, view layer of elasticsearch
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+What’s Kibana
+kibana is an open source data visualization plugin for Elasticsearch.  It provides visualization capabilities on top of the content indexed on...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/08/11/Kibana.html" rel="permalink">kibana, view layer of elasticsearch
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+What’s Kibana
+kibana is an open source data visualization plugin for Elasticsearch.  It provides visualization capabilities on top of the content indexed on...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/08/05/Anatomy-of-ThreadLocal.html" rel="permalink">Anatomy of ThreadLocal
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Design philosophies
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/08/04/iConnect.html" rel="permalink">iConnect
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">UI
+HTML5, AngularJS, BootStrap, REST API, JSON
+Backend
+Hadoop core (HDFS), Hive, HBase, MapReduce, Oozie, Pig, Solr
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/08/04/BA.html" rel="permalink">Business Analysis
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Purpose of BA
+
+  带来一些商业价值（收益）
+  解决业务痛点
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/08/02/RESTful.html" rel="permalink">Something about RESTful architect
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">REST API must be hypertext driver
+Roy’s interview
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/07/25/Data-Structure.html" rel="permalink">Data Structure
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Binary Tree
+
+  A binary tree is a tree in which no node can have more than two children.
+  A property of a binary tree that is sometimes important is that th...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/07/24/Bookmarks.html" rel="permalink">Useful bookmarks
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">eBooks
+list of various books
+Node.js
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/07/02/file-name-too-long-when-git-checkout.html" rel="permalink">git raise error filename too long when checkout
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Symptoms:
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/29/heavy-load-web-app.html" rel="permalink">heavy load web application
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Common solutions
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/29/TIPS-AS400-IBM-EMULATOR.html" rel="permalink">tips in as400 IBM Emulator
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Toggle crosshair
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/29/SOMETHING-ABOUT-AUTHENTICATION.html" rel="permalink">Something about authentication
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">It’s annoying to keep on repeating typing same login and password when you access multiple systems within office or for systems in external Internet. There a...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/23/Equity.html" rel="permalink">equity trading
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Difference between mutal funds and hedge funds
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/14/SQL.html" rel="permalink">SQL
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Differences between not in, not exists , and left join with null
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/14/HTTP-HTTPS2.html" rel="permalink">HTTPS/2
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">concepts
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/13/github-pages.html" rel="permalink">Github page commands notes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">404 error for customized domain (such as godday)
+404
+There is not a GitHub Pages site here.
+
+
+  Go to github master branch for gitpages site, manually add CN...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/13/RQFII.html" rel="permalink">RenMinBi International
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">RQFII
+RQFII stands for Renminbi Qualified Foreign Institutional Investor. RQFII was introduced in 2011 to allow qualified foreign institutional investors to ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/13/GIT.html" rel="permalink">Git commands notes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">hall-of-frame by commit numbers
+git shortlog -s | sort -n -r
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/12/JavaScript-tips.html" rel="permalink">JavaScript tips
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">includes() vs some()
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/10/Linux-Tips.html" rel="permalink">Linux Tips
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Get permission denied error when sudo su (or hyphen in sudo command)
+bash: /home/YOURNAME/.bashrc: Permission denied
+That’s because you didn’t add “-“ hyphen...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/09/Docker-Errors-Fixes.html" rel="permalink">Docker Errors and Fixes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Docker Errors
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/07/Load-Balancing.html" rel="permalink">Load Balancing
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Concepts
+LVS means Linux Virtual Server, which is one Linux built-in component.
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/05/Python.html" rel="permalink">Python
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">(‘—–Unexpected error:’, &lt;type ‘exceptions.TypeError’&gt;) datetime.datetime.now()
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/03/Storage-Management.html" rel="permalink">Storage Management
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">RAID
+RAID is Reductant Array Independent Disk,
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/03/CI-CD.html" rel="permalink">CI and CD
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Concepts
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/01/XA-2PC.html" rel="permalink">XA Transactions in 2PC
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Description
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/01/Setup-Git-In-Mint.html" rel="permalink">Setup Git in Mint Linux
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">How to setup Git in Mint Linux
+=================================================
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/01/DB-Sharding.html" rel="permalink">Database sharding
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">DB sharding in YHD
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/05/31/Microservices-Vs-SOA.html" rel="permalink">Microservices vs. SOA
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Microservice
+
+  Services are organized around capabilities, e.g., user interface front-end, recommendation, logistics, billing, etc.
+  Services are small in ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/02/25/Java-Class-Loader.html" rel="permalink">Java Class Loader
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Codecache
+
+  The maximum size of the code cache is set via the -XX:ReservedCodeCacheSize=N flag (where N is the default just mentioned for the particular com...</p>
+  </article>
+</div>
+
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
+
+  <section id="2007" class="taxonomy__section">
+    <h2 class="archive__subtitle">2007</h2>
+    <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2007/04/28/GIT-scripts-bible-errors.html" rel="permalink">GIT useful scripts or error solutions
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Script bible
+</p>
+  </article>
+</div>
+
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
+
+
+  </div>
+</div>
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2022 Highly Distinguish. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

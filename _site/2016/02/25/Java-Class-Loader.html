@@ -1,0 +1,5086 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+
+<!--google fonts-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Java Class Loader - Highly Distinguish</title>
+<meta name="description" content="Codecache    The maximum size of the code cache is set via the -XX:ReservedCodeCacheSize=N flag (where N is the default just mentioned for the particular compiler). The code cache is managed like most memory in the JVM: there is an initial size (specified by -XX:InitialCodeCacheSize=N). Allocation of the code cache size starts at the initial size and increases as the cache fills up. The total of native and heap memory used by the JVM yields the total footprint of an application.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Highly Distinguish">
+<meta property="og:title" content="Java Class Loader">
+<meta property="og:url" content="http://localhost:4000/2016/02/25/Java-Class-Loader.html">
+
+
+  <meta property="og:description" content="Codecache    The maximum size of the code cache is set via the -XX:ReservedCodeCacheSize=N flag (where N is the default just mentioned for the particular compiler). The code cache is managed like most memory in the JVM: there is an initial size (specified by -XX:InitialCodeCacheSize=N). Allocation of the code cache size starts at the initial size and increases as the cache fills up. The total of native and heap memory used by the JVM yields the total footprint of an application.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2016-02-25T00:00:00+11:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/2016/02/25/Java-Class-Loader.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Highly Distinguish Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+<link rel="stylesheet" href="/assets/css/blog.css">
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--posts">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Highly Distinguish
+          <span class="site-subtitle">IT solution & education</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/blog_business/index.html">Business</a>
+            </li><li class="masthead__menu-item">
+              <a href="/sitemap/">Sitemap</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url"></a>
+    </h3>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+  
+  </div>
+
+
+
+  <div class="archive">
+    
+      <h1 id="page-title" class="page__title">Java Class Loader</h1>
+    
+    <h1 id="codecache">Codecache</h1>
+<ul>
+  <li>The maximum size of the code cache is set via the -XX:ReservedCodeCacheSize=N flag (where N is the default just mentioned for the particular compiler). The code cache is managed like most memory in the JVM: there is an initial size (specified by -XX:InitialCodeCacheSize=N). Allocation of the code cache size starts at the initial size and increases as the cache fills up. The total of native and heap memory used by the JVM yields the total footprint of an application.</li>
+</ul>
+
+<ol>
+  <li>The code cache is a resource with a defined maximum size that affects the total amount of compiled code the JVM can run.
+Tiered compilation can easily use up the entire code cache in its default configuration (particularly in Java 7); monitor the code cache and increase its size if necessary when using tiered compilation.
+Compilation Thresholds
+The major factor involved here is how often the code is executed; once it is executed a certain number of times, its compilation threshold is reached, and the com‐ piler deems that it has enough information to compile the code.
+Compilation is based on two counters in the JVM: the number of times the method has been called, and the number of times any loops in the method have branched back. Branching back can effectively be thought of as the number of times a loop has com‐ pleted execution, either because it reached the end of the loop itself or because it executed a branching statement like continue.
+When the JVM executes a Java method, it checks the sum of those two counters and decides whether or not the method is eligible for compilation. If it is, the method is queued for compilation So every time the loop completes an execution, the branching counter is incremented and inspected. If the branching counter has exceeded its indi‐ vidual threshold, then the loop (and not the entire method) becomes eligible for compilation.
+This kind of compilation is called on-stack replacement (OSR), because even if the loop is compiled, that isn’t sufficient: the JVM has to have the ability to start executing the compiled version of the loop while the loop is still running. When the code for the loop has finished compiling, the JVM replaces the code (on-stack), and the next iteration of the loop will execute the much-faster compiled version of the code. Standard compilation is triggered by the value of the -XX:CompileThreshold=N flag. The default value of N for the client compiler is 1,500; for the server compiler it is 10,000. Changing the value of the CompileThreshold flag will cause the the compiler to choose to compile the code sooner (or later) than it normally would have.
+Periodically (specifically, when the JVM reaches a safepoint), the value of each counter is reduced. Practically speaking, this means that the counters are a relative measure of the recent hotness of the method or loop. One side effect of this is that somewhat-frequently executed code may never be compiled, even for programs that run forever (these methods are sometimes called lukewarm [as opposed to hot]). This is one case where reducing the compilation threshold can be beneficial, and it is another reason why tiered compilation is usually slightly faster than the server compiler alone.
+Quick Summary</li>
+  <li>Compilation occurs when the number of times a method or loop has been executed reaches a certain threshold.
+Changing the threshold values can cause the code to be com‐ piled sooner than it otherwise would.
+“Lukewarm” methods will never reach the compilation thresh‐ old (particularly for the   server compiler) since the counters de‐ cay over time.
+that give visibility into the working of the compiler. The most important of these is -XX:+PrintCompilation (which by default is false).
+If PrintCompilation is enabled, every time a method (or loop) is compiled, the JVM prints out a line with information about what has just been compiled.
+Usually this number will simply increase monotonically
+Inspecting Compilation with jstat
+Seeing the compilation log requires that the program be started with the -XX:+PrintCompilation flag. If the program was started without that flag, you can get some limited visibility into the working of the compiler by using jstat.
+jstat has two options to provide information about the compiler. The -compiler option supplies summary information about how many methods have been compiled (here 5003 is the process ID of the program to be inspected):
+% jstat -compiler 5003
+Compiled Failed Invalid Time FailedType FailedMethod
+206 0   0   1.97    0
+Note this also lists the number of methods that failed to compile and the name of the last method that failed to compile; if profiles or other information lead you to suspect that a method is slow because it hasn’t been compiled, this is an easy way to verify that hypothesis.
+Because jstat takes an optional argument to repeat its operation, you can see over time which methods are being compiled. In this example, jstat repeats the information for process ID 5003 every second (1,000 ms):
+% jstat -printcompilation 5003 1000 Compiled</li>
+</ol>
+
+<p>It’s easy to read OSR lines like this example as 25% and wonder about the other 75%, but remember that the number is the compilation ID, and the % just signifies OSR compilation.</p>
+<ol>
+  <li>The best way to gain visibility into how code is being compiled is by enabling PrintCompilation.
+Output from enabling PrintCompilation can be used to make sure that compilation is proceeding as expected.
+If a method is compiled using standard compilation, then the next method invocation will execute the compiled method; if a loop is compiled using OSR, then the next iteration of the loop will execute the compiled code.
+These queues are not strictly first in, first out: methods whose invocation counters are higher have priority.
+this priority ordering helps to ensure that the most important code will be compiled first. (This is another reason why the compilation ID in the PrintCompilation output can appear out of order.)
+When the client compiler is in use, the JVM starts one compilation thread; the server compiler has two such threads. When tiered compilation is in effect, the JVM will by default start multiple client and server threads based on a somewhat complex equation involving double logs of the number of CPUs on the target platform. The number of compiler threads (for all three compiler options) can be adjusted by setting the -XX:CICompilerCount=N flag (with a default value given in the previous table).
+Quick Summary</li>
+  <li>Compilation occurs asynchronously for methods that are placed on the compilation queue.
+The queue is not strictly ordered; hot methods are compiled before other methods in the queue. This is another reason why compilation IDs can appear out of order in the compilation log.
+Inlining
+One of the most important optimizations the compiler makes is to inline methods. Code that follows good object-oriented design often contains a number of attributes that are accessed via getters (and perhaps setters):
+public class Point { private int x, y;
+public void getX() { return x; } public void setX(int i) { x = i; }
+}
+The overhead for invoking a method call like this is quite high, especially relative to the amount of code in the method. In fact, in the early days of Java, performance tips often argued against this sort of encapsulation precisely because of the performance impact of all those method calls. Fortunately, JVMs now routinely perform code inlining for these kinds of methods. Hence, you can write this code:
+Point p = getPoint(); p.setX(p.getX() * 2);
+and the compiled code will essentially execute this:
+Point p = getPoint(); p.x = p.x * 2;
+Inlining is enabled by default. It can be disabled using the -XX:-Inline flag, though it is such an important performance boost that you would never actually do that (for example, disabling inlining reduces the performance of the stock batching test by over 50%).</li>
+</ol>
+
+<p>The basic decision about whether to inline a method depends on how hot it is and its size. The JVM determines if a method is hot (i.e., called frequently) based on an internal calculation; it is not directly subject to any tunable parameters. If a method is eligible for inlining because it is called frequently, then it will be inlined only if its bytecode size is less than 325 bytes (or whatever is specified as the -XX:MaxFreqInlineSize=N flag). Otherwise, it is eligible for inlining only if it is small: less than 35 bytes (or whatever is specified as the -XX:MaxInlineSize=N flag).
+Sometimes you will see recommendations that the value of the MaxInlineSize flag be increased so that more methods are inlined.
+Inlining is the most beneficial optimization the compiler can make, particularly for object-oriented code where attributes are well encapsulated.</p>
+<ol>
+  <li>Tuning the inlining flags is rarely needed, and recommendations to do so often fail to account for the relationship between normal inlining and frequent inlining. Make sure to account for both cases when investigating the effects of inlining.
+Escape Analysis
+The server compiler performs some very aggressive optimizations if escape analysis is enabled (-XX:+DoEscapeAnalysis, which is true by default).
+Escape analysis is the most sophisticated of the optimizations the compiler can perform. This is the kind of optimization that fre¬quently causes microbenchmarks to go awry.</li>
+  <li>Escape analysis can often introduce “bugs” into improperly synchronized code.</li>
+</ol>
+
+<p>Escape analysis is a technical that evaluate the scope of a Java object. In particular, if a java object allocated by some execting thread can ever be seen by a different thread, the object ‘escapes’.
+For example, consider this class to work with factorials:</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Factorial</span> <span class="o">{</span>
+<span class="kd">private</span> <span class="nc">BigInteger</span> <span class="n">factorial</span><span class="o">;</span>
+<span class="kd">private</span> <span class="kt">int</span> <span class="n">n</span><span class="o">;</span>
+<span class="kd">public</span> <span class="nf">Factorial</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
+<span class="k">this</span><span class="o">.</span><span class="na">n</span> <span class="o">=</span> <span class="n">n</span><span class="o">;</span>
+<span class="o">}</span>
+<span class="kd">public</span> <span class="kd">synchronized</span> <span class="nc">BigInteger</span> <span class="nf">getFactorial</span><span class="o">()</span> <span class="o">{</span>
+<span class="k">if</span> <span class="o">(</span><span class="n">factorial</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span>
+<span class="n">factorial</span> <span class="o">=</span> <span class="o">...;</span>
+<span class="k">return</span> <span class="n">factorial</span><span class="o">;</span>
+<span class="o">}</span>
+<span class="o">}</span>
+<span class="nc">To</span> <span class="n">store</span> <span class="n">the</span> <span class="n">first</span> <span class="mi">100</span> <span class="n">factorial</span> <span class="n">values</span> <span class="n">in</span> <span class="n">an</span> <span class="n">array</span><span class="o">,</span> <span class="k">this</span> <span class="n">code</span> <span class="n">would</span> <span class="n">be</span> <span class="nl">used:</span>
+<span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">BigInteger</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">BigInteger</span><span class="o">&gt;();</span> <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+<span class="nc">Factorial</span> <span class="n">factorial</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Factorial</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+<span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">factorial</span><span class="o">.</span><span class="na">getFactorial</span><span class="o">());</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>The factorial object is referenced only inside that loop; no other code can ever access
+that object. Hence, the JVM is free to perform a number of optimizations on that object:
+·   It needn’t get a synchronization lock when calling the getFactorial() method.
+·   It needn’t store the field n in memory; it can keep that value in a register. Similarly it can store the factorial object reference in a register.
+·   In fact, it needn’t allocate an actual factorial object at all; it can just keep track of the individual fields of the object.
+Deoptimization</p>
+
+<p>There are two cases of deoptimization: when code is “made not entrant,” and when code is “made zombie.”
+This generates a deoptimization trap, and the previous optimizations are discarded. If a lot of additional calls are made with logging enabled, the JVM will quickly end up compiling that code and making new optimizations.
+The second thing that can cause code to be made not entrant is due to the way tiered compilation works. In tiered compilation, code is compiled by the client compiler, and then later compiled by the server compiler (and actually it’s a little more complicated than that,</p>
+
+<p>Deoptimizing Zombie Code</p>
+
+<p>When the compilation log reports that it has made zombie code, it is saying that it has reclaimed some previous code that was made not entrant. But there were still objects of the StockPriceHistoryImpl class around.
+Eventually all those objects were reclaimed by GC. When that happened, the compiler noticed that the methods of that class were now eligible to be marked as zombie code.</p>
+
+<p>The heap (usually) accounts for the largest amount of memory used by the JVM, but the JVM also uses memory for its internal operations. This nonheap memory is native memory. Native memory can also be allocated in applications (via JNI calls to malloc() and similar methods, or when using New I/O, or NIO). The total of native and heap memory used by the JVM yields the total footprint of an application.</p>
+<ol>
+  <li>Deoptimization allows the compiler to back out previous versions of compiled code.
+Code is deoptimized when previous optimizations are no longer valid (e.g., because the type of the objects in question has changed).</li>
+  <li>There is usually a small, momentary effect in performance when code is deoptimized, but the new code usually warms up quick‐ ly again.</li>
+  <li>Under tiered compilation, code is deoptimized when it had previously been compiled by the client compiler and has now been optimized by the server compiler.
+Tiered Compilation Levels
+It turns out that there are five levels of execution, because the client compiler has three different levels. So the level of compilation runs from:
+·   0: Interpreted code
+·   1: Simple C1 compiled code
+·   2: Limited C1 compiled code
+·   3: Full C1 compiled code
+·   4: C2 compiled code
+A typical compilation log shows that most methods are first compiled at level 3: full C1 compilation. (All methods start at level 0, of course.) If they run often enough, they will get compiled at level 4 (and the level 3 code will be made not entrant). This is the most frequent path: the client compiler waits to compile something until it has information about how the code is used that it can leverage to perform optimizations.
+If the server compiler queue is full, methods will be pulled from the server queue and compiled at level 2, which is the level at which the C1 compiler uses the invocation and back-edge counters (but doesn’t require profile feedback). That gets the method com‐ piled more quickly; the method will later be compiled at level 3 after the C1 compiler has gathered profile information, and finally compiled at level 4 when the server compiler queue is less busy.</li>
+</ol>
+
+<p>And of course when code is deoptimized, it goes to level 0.
+Summary:
+Tiered compilation can operate at five distinct levels among the two compilers
+Changing the path between levels is not recommended; this section just helps to explain the output of the compilation log.
+This chapter has provided a lot of details about how just-in-time compilation works. From a tuning perspective, the simple choice here is to use the server compiler with tiered compilation for virtually everything; this will solve 90% of compiler-related performance issues. Just make sure that the code cache is sized large enough, and the compiler will provide pretty much all the performance that is possible.
+If you have some experience with Java performance, you may be surprised that compilation has been discussed for an entire chapter without mentioning the final keyword. In some circles, the final keyword is thought to be an important factor in performance because it is believed to allow the JIT compiler to make better choices about inlining and other optimizations.
+Still, it is a persistent rumor. For the record, then, you should use the final keyword whenever it makes sense: for an immutable object or primitive value you don’t want to change, for parameters to certain inner classes, and so on. But the presence or absence of the final keyword will not affect the performance of an application.
+Don’t be afraid of small methods—and in particular getters and setters—because they are easily inlined. If you have a feeling that the method overhead can be ex‐ pensive, you’re correct in theory (we showed that removing inlining has a huge impact on performance). But it’s not the case in practice, since the compiler fixes that problem.</p>
+<ol>
+  <li>Code that needs to be compiled sits in a compilation queue. The more code in the queue, the longer the program will take to achieve optimal performance.</li>
+  <li>Although you can (and should) size the code cache, it is still a finite resource.</li>
+  <li>The simpler the code, the more optimizations that can be performed on it. Profile feedback and escape analysis can yield much faster code, but complex loop struc‐ tures and large methods limit their effectiveness.</li>
+</ol>
+
+<p>That concept is the essential difference between committed (or allocated) memory and reserved memory (sometimes called the virtual size of a process). The JVM must tell the operating system that it might need as much as 2 GB of memory for the heap, so that memory is reserved: the operating system promises that when the JVM attempts to allocate additional memory when it increases the size of the heap, that memory will be available.
+Still, only 512 MB of that memory is actually allocated initially, and that 512 MB is all of the memory that actually is being used (for the heap). That (actually allocated) mem‐ ory is known as the committed memory. The amount of committed memory will fluc‐ tuate as the heap resizes; in particular, as the heap size increases, the committed memory correspondingly increases.
+When we look at performance, only committed memory really matters: there is never a performance problem from reserving too much memory.
+However, sometimes you want to make sure that the JVM does not reserve too much memory. This is particularly true for 32-bit JVMs. Since the maximum process size of a 32-bit application is 4 GB (or less, depending on the operating system), over-reserving memory can be an issue. A JVM that reserves 3.5 GB of memory for the heap is left with only 0.5 GB of native memory for its stacks, code cache, and so on. It doesn’t matter if the heap only expands to commit 1 GB of memory: because of the 3.5 GB reservation, the amount of memory for other operations is limited to 0.5 GB.
+64-bit JVMs aren’t limited that way by the process size, but they are limited by the total amount of virtual memory on the machine. Say that you have a small server with 4 GB of physical memory and 10 GB of virtual memory and start a JVM with a maximum</p>
+
+<p>One exception to this is thread stacks. Every time the JVM creates a thread, the OS allocates some native memory to hold that thread’s stack, committing more memory to the process (until the thread exits, at least). Thread stacks, though, are fully allocated when they are created.</p>
+
+<p>Code cache
+The code cache uses native memory to hold compiled code. As discussed in Chap‐ ter 4, this can be tuned (though performance will suffer if all the code cannot be compiled due to space limitations).
+Developers can allocate native memory via JNI calls, but NIO byte buffers will also allocate native memory if they are created via the allocateDirect() method. Native byte buffers are quite important from a performance perspective, since they allow native code and Java code to share data without copying it. The most common example here is buffers that are used for filesystem and socket operations. Writing data to a native NIO buffer and then sending that data to the channel or socket) requires no copying of data between the JVM and the C library used to transmit the data. If a heap byte buffer is used instead, contents of the buffer must be copied by the JVM.</p>
+
+<p>The allocateDirect() method call is quite expensive; direct byte buffers should be reused as much as possible. The ideal situation is when threads are independent and each can keep a direct byte buffer as a thread-local variable. That can sometimes use too much native memory if there are many threads that need buffers of variable sizes, since eventually each thread will end up with a buffer at the maximum possible size. For that kind of situation—or when thread-local buffers don’t fit the application design— an object pool of direct byte buffers may be more useful.</p>
+
+<ol>
+  <li>From a tuning perspective, the footprint of the JVM can be limi¬ted in the amount of native memory it uses for direct byte buf¬fers, thread stack sizes, and the code cache (as well as the heap).</li>
+</ol>
+
+<h1 id="class-loader">Class loader</h1>
+<ul>
+  <li>
+    <p>A class loader in Java is simply an object whose type extends the ClassLoader class. When the virtual machine needs access to a particular class, it asks the appropriate class loader.</p>
+  </li>
+  <li>
+    <p>Class loaders are organized into a tree hierarchy. At the root of this tree is the system class loader. This class loader is also called the primordial class loader or the null class loader. It is used only to load classes from the core Java API.</p>
+  </li>
+  <li>
+    <p>The system class loader has one or more children. It has at least one child; the URL class loader that is used to load classes from the classpath. It may have other direct children, though typically any other class loaders are children of the URL class loader that reads the classpath.</p>
+  </li>
+  <li>
+    <p>The hierarchy comes into play when it is time to load a class. Classes are loaded in one of three ways: either explicitly by calling the loadClass( ) method of a class loader, explicitly by calling the Class.forName( ) method, or implicitly when they are referenced by an already−loaded class.
+In any case, a class loader is asked to load the class. In the first case, the class loader is the object on which the loadClass( ) method is invoked. In the case of the forName( ) method, the class loader is either passed to that method, or it is the class loader that loaded the class that is calling the forName( ) method. The implicit case is similar: the class loader that was used to load the referencing class is also used to load the referenced class.
+Class loaders are responsible for asking their parent to load a class; only if that operation fails will the class loader attempt to define the class itself.</p>
+  </li>
+  <li>
+    <p>The net effect of this is that system classes will always be loaded from the system class loader, classes on the class path will always be loaded by the class loader that knows about the classpath, and in general, a class will be loaded by the oldest class loader in the ancestor hierarchy that knows where to find a class.</p>
+  </li>
+  <li>
+    <p>When you create a class loader, you can insert it anywhere into the hierarchy of class loaders (except at the root). Typically, when a class loader is created, its parent is the class loader of the class that is instantiating the new class loader.</p>
+  </li>
+  <li>
+    <p>Implementing a Class Loader</p>
+  </li>
+  <li>
+    <p>Now we’ll look at how to implement a class loader. The class loader we implement will be able to extend the normal permissions that are granted via policy files, and it will enforce certain optional security features of the class loader.</p>
+  </li>
+  <li>
+    <p>The basic class that defines a class loader is the ClassLoader class (java.lang.ClassLoader):
+public abstract class ClassLoader
+Turn a series of Java bytecodes into a class definition. This class does not define how the bytecodes are obtained but provides all other functionality needed to create the class definition.</p>
+  </li>
+  <li>
+    <p>However, the preferred class to use as the basis of a class loader is the SecureClassLoader class (java.security.SecureClassLoader):
+public class SecureClassLoader extends ClassLoader
+Turn a series of Java bytecodes into a class definition. This class adds secure functionality to the ClassLoader class, but it still does not define how bytecodes are obtained. Although this class is not abstract, you must subclass it in order to use it.
+The secure class loader provides additional functionality in dealing with code sources and protection domains. You should always use this class as the basis of any class loader you work with; in fact, the ClassLoader class would be private were it not for historical reasons.</p>
+  </li>
+</ul>
+
+<p>public class URLClassLoader extends SecureClassLoader
+Load classes securely by obtaining the bytecodes from a set of given URLs.</p>
+
+<h1 id="key-methods-of-the-class-loader">Key Methods of the Class Loader</h1>
+
+<ul>
+  <li>
+    <p>The ClassLoader class and its subclasses have three key methods that you work with when creating your own class loader.
+6.3.2.1 The loadClass( ) method
+The loadClass( ) method is the only public entry into the class loader:
+public Class loadClass(String name)</p>
+  </li>
+  <li>
+    <p>Load the named class. A ClassNotFoundException is thrown if the class cannot be found.
+This is the simplest way to use a class loader directly: it requires that the class loader be instantiated and then be used via the loadClass( ) method. Once the Class object has been constructed, there are three ways in which a method in the class can be executed:
+The correct implementation of the loadClass( ) method is crucial to the security of the virtual machine. For instance, one operation this method performs is to call the parent class loader to see if it has already defined a particular class; this allows all the
+core Java classes to be loaded by the primordial class loader. If that operation is not performed correctly, security could suffer. As a developer you should be careful when you override this method; as an administrator, this is one of the reasons to prevent untrusted code from creating a class loader.</p>
+  </li>
+</ul>
+
+<h2 id="6322-the-findclass--method">6.3.2.2 The findClass( ) method</h2>
+
+<ul>
+  <li>
+    <p>The loadClass( ) method performs a lot of setup and bookkeeping related to defining a class, but from a developer perspective, the bulk of the work in creating a Class class object is performed by the findClass( ) method:
+protected Class findClass(String name)</p>
+  </li>
+  <li>
+    <p>The findClass( ) method uses whatever mechanism it deems appropriate to load the class (e.g., by reading a class file from the file system or from an HTTP server). It is then responsible for creating the protection domain associated with the class and using the next method to create the Class class object.</p>
+  </li>
+  <li>
+    <p>The defineClass( ) methods
+These methods all take an array of Java bytecodes and some information that specifies the permissions associated with the class represented by those bytecodes. They all return the Class class object:
+protected final Class defineClass(String name, byte[] b, int off, int len)</p>
+  </li>
+</ul>
+
+<h2 id="responsibilities-of-the-class-loader">Responsibilities of the Class Loader</h2>
+<p>When you implement a class loader, you override some or all of the methods we’ve just listed. In sum, the class loader must perform the following steps:
+The security manager is consulted to see if this program is allowed to access the class in question. If it is not, a security exception is thrown. This step is optional; it should be implemented at the beginning of the loadClass( ) method. This</p>
+
+<ol>
+  <li>
+    <p>corresponds to the use of the accessClassInPackage permission.
+If the class loader has already loaded this class, it finds the previously defined class object and returns that object. This step is built into the loadClass( ) method.</p>
+  </li>
+  <li>
+    <p>corresponds to the use of the accessClassInPackage permission.
+If the class loader has already loaded this class, it finds the previously defined class object and returns that object. This step is built into the loadClass( ) method.</p>
+  </li>
+  <li>
+    <p>Otherwise, the class loader consults its parent to see if the parent knows how to load the class. This is a recursive operation, so the system class loader</p>
+  </li>
+  <li>will always be asked first to load a class. This prevents programs from providing alternate definitions of classes in the core API (but a clever class loader can defeat that protection). This step is built into the loadClass( ) method.
+The security manager is consulted to see if this program is allowed to create the class in question. If it is not, a security exception is thrown. This step is optional; if implemented, it should appear at the beginning of the findClass( ) method. Note that this step should take place after the parent class loader is queried rather than at the beginning of the operation (as is done with the access check). No Sun−supplied class loader implements this step; it corresponds to the defineClassInPackage permission.</li>
+  <li>The class file is read into an array of bytes. The mechanism by which the class loader reads the file and creates the byte array will vary depending on the class loader (which, after all, is one of the points of having different class loaders). This occurs in the findClass( ) method.
+The appropriate protection domain is created for the class. This can come from the default security model (i.e., from the policy files), and it</li>
+  <li>can be augmented (or even replaced) by the class loader. Alternately, you can create a code source object and defer definition of the protection domain. This occurs in the findClass( ) method.</li>
+  <li>Within the findClass( ) method, a Class object is constructed from the bytecodes by calling the defineClass( ) method. If you used a code source in step 6, the getPermissions( ) method will be called to find the permissions associated with the code source. The defineClass( ) method also ensures that the bytecodes are run through the bytecode verifier.</li>
+  <li>Before the class can be used, it must be resolved −− which is to say that any classes that it immediately references must also be found by this class loader. The set of classes that are immediately referenced contains any classes that the class extends as well as any classes used by the static initializers of the class. Note that classes that are used only as instance variables, method parameters, or local variables are not normally loaded in this phase: they are loaded when the class actually references them (although certain compiler optimizations may require that these classes be loaded when the class is resolved). This step happens in the loadClass( ) method.</li>
+</ol>
+
+<p>If you want to use a custom class loader, the easiest route is to use the URL class loader. This limits the number of methods that you have to override.
+To construct an instance of this class, use one of the following constructors:
+public URLClassLoader(URL urls[])</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">URL</span> <span class="n">urls</span><span class="o">[]</span> <span class="o">=</span> <span class="k">new</span> <span class="no">URL</span><span class="o">[</span><span class="mi">2</span><span class="o">];</span>
+<span class="n">urls</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="k">new</span> <span class="no">URL</span><span class="o">(</span><span class="s">"http://piccolo.East/~sdo/"</span><span class="o">);</span>
+<span class="n">urls</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="k">new</span> <span class="no">URL</span><span class="o">(</span><span class="s">"file:/home/classes/LocalClasses.jar"</span><span class="o">);</span> <span class="nc">ClassLoader</span> <span class="n">parent</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getClassLoader</span><span class="o">(</span> <span class="o">);</span> <span class="nc">URLClassLoader</span> <span class="n">ucl</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">URLClassLoader</span><span class="o">(</span><span class="n">urls</span><span class="o">,</span> <span class="n">parent</span><span class="o">);</span>
+
+
+<span class="kd">public</span> <span class="kd">final</span> <span class="kd">synchronized</span> <span class="nc">Class</span> <span class="nf">loadClass</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="kt">boolean</span> <span class="n">resolve</span><span class="o">)</span>
+<span class="kd">throws</span> <span class="nc">ClassNotFoundException</span> <span class="o">{</span>
+<span class="c1">// First check if we have permission to access the package.</span>
+<span class="nc">SecurityManager</span> <span class="n">sm</span> <span class="o">=</span> <span class="nc">System</span><span class="o">.</span><span class="na">getSecurityManager</span><span class="o">(</span> <span class="o">);</span>
+<span class="k">if</span> <span class="o">(</span><span class="n">sm</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="na">lastIndexOf</span><span class="o">(</span><span class="sc">'.'</span><span class="o">);</span>
+<span class="k">if</span> <span class="o">(</span><span class="n">i</span> <span class="o">!=</span> <span class="err">−</span><span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
+<span class="n">sm</span><span class="o">.</span><span class="na">checkPackageAccess</span><span class="o">(</span><span class="n">name</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">i</span><span class="o">));</span>
+<span class="o">}</span>
+<span class="o">}</span>
+<span class="k">return</span> <span class="kd">super</span><span class="o">.</span><span class="na">loadClass</span><span class="o">(</span><span class="n">name</span><span class="o">,</span> <span class="n">resolve</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>6.3.4.2 Step 2: Use the previously−defined class, if available
+The loadClass( ) method of the ClassLoader class performs this operation for you, which is why we’ve called the super.loadClass( ) method.</p>
+
+<p>6.3.4.3 Step 3: Defer class loading to the parent
+The loadClass( ) method of the ClassLoader class performs this operation. 6.3.4.4 Step 4: Optionally call the checkPackageDefinition( ) method
+In order to call the checkPackageDefinition( ) method, you must override the findClass( ) method:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">protected</span> <span class="nc">Class</span> <span class="nf">findClass</span><span class="o">(</span><span class="kd">final</span> <span class="nc">String</span> <span class="n">name</span><span class="o">)</span>
+<span class="kd">throws</span> <span class="nc">ClassNotFoundException</span> <span class="o">{</span>
+<span class="c1">// First check if we have permission to access the package. SecurityManager sm = System.getSecurityManager( );</span>
+<span class="k">if</span> <span class="o">(</span><span class="n">sm</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="na">lastIndexOf</span><span class="o">(</span><span class="sc">'.'</span><span class="o">);</span>
+<span class="k">if</span> <span class="o">(</span><span class="n">i</span> <span class="o">!=</span> <span class="err">−</span><span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
+<span class="n">sm</span><span class="o">.</span><span class="na">checkPackageDefinition</span><span class="o">(</span><span class="n">name</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">i</span><span class="o">));</span>
+<span class="o">}</span>
+<span class="o">}</span>
+<span class="k">return</span> <span class="kd">super</span><span class="o">.</span><span class="na">findClass</span><span class="o">(</span><span class="n">name</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>6.3.4.5 Step 5: Read in the class bytes
+The URL class loader performs this operation for you by consulting the URLs that were passed to its constructor. If you need to adjust the way in which the class bytes are read, you should use the SecureClassLoader class instead.
+6.3.4.6 Step 6: Create the appropriate protection domain
+The URL class loader will create a code source for each class based on the URL from which the class was loaded and the signers (if any) of the class. The permissions associated with this code source will be obtained by using the getPermissions( ) method of the Policy class, which by default will return the permissions read in from the active policy files. In addition, the URL class loader will add additional permissions to that set:
+If the URL has a file protocol, it must specify a file permission that allows all files that descend from the URL path to be read. For example, if the URL is file:///xyz/classes/, then a file permission with a name of /xyz/classes/− and an action list of read will be added to the set of permiss ions. If the URL is a jar file (file:///xyz/MyApp.jar), the name file permission will be the URL itself.
+If you want to associate different permissions with the class, then you should override the getPermissions( ) method. For example, if we wanted the above rules to apply and also allow the class to exit the virtual machine, we’d use this code:</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">protected</span> <span class="nc">PermissionCollection</span> <span class="nf">getPermissions</span><span class="o">(</span><span class="nc">CodeSource</span> <span class="n">codesource</span><span class="o">)</span> <span class="o">{</span> <span class="nc">PermissionCollection</span> <span class="n">pc</span> <span class="o">=</span> <span class="kd">super</span><span class="o">.</span><span class="na">getPermissions</span><span class="o">(</span><span class="n">codesource</span><span class="o">);</span>
+<span class="n">pc</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">RuntimePermission</span><span class="o">(</span><span class="s">"exitVM"</span><span class="o">));</span>
+<span class="k">return</span> <span class="n">pc</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>We could completely change the permissions associated with the class (bypassing the Policy class altogether) by constructing a new permission collection in this method rather than calling super.getPermissions( ). The URL class loader will use whatever permissions are returned from this getPermissions( ) method to define the protection domain that will be associated with the class.
+If you need to load bytes from a source that is not a URL (or from a URL for which you don’t have a protocol handler, like FTP), then you’ll need to extend the SecureClassLoader class. A subclass is required because the constructors of this class are protected, and in any case you need to override the findClass( )</p>
+
+<p>The steps to use this class are exactly like the steps for the URLClassLoader class, except for step 5. To implement step 5, you must override the findClass( ) method like this:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">protected</span> <span class="nc">Class</span> <span class="nf">findClass</span><span class="o">(</span><span class="kd">final</span> <span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">ClassNotFoundException</span> <span class="o">{</span>
+<span class="c1">// First check if we have permission to access the package.</span>
+<span class="c1">// You could remove these 7 lines to skip the optional step 4.</span>
+<span class="nc">SecurityManager</span> <span class="n">sm</span> <span class="o">=</span> <span class="nc">System</span><span class="o">.</span><span class="na">getSecurityManager</span><span class="o">(</span> <span class="o">);</span>
+<span class="k">if</span> <span class="o">(</span><span class="n">sm</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="na">lastIndexOf</span><span class="o">(</span><span class="sc">'.'</span><span class="o">);</span>
+<span class="k">if</span> <span class="o">(</span><span class="n">i</span> <span class="o">!=</span> <span class="err">−</span><span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
+<span class="n">sm</span><span class="o">.</span><span class="na">checkPackageDefinition</span><span class="o">(</span><span class="n">name</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">i</span><span class="o">));</span>
+<span class="o">}</span>
+<span class="o">}</span>
+<span class="c1">// Now read in the bytes and define the class</span>
+<span class="k">try</span> <span class="o">{</span>
+<span class="k">return</span> <span class="o">(</span><span class="nc">Class</span><span class="o">)</span>
+<span class="nc">AccessController</span><span class="o">.</span><span class="na">doPrivileged</span><span class="o">(</span>
+<span class="k">new</span> <span class="nf">PrivilegedExceptionAction</span><span class="o">(</span> <span class="o">)</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="nc">Object</span> <span class="nf">run</span><span class="o">(</span> <span class="o">)</span> <span class="kd">throws</span> <span class="nc">ClassNotFoundException</span> <span class="o">{</span>
+<span class="kt">byte</span><span class="o">[]</span> <span class="n">buf</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+<span class="k">try</span> <span class="o">{</span>
+<span class="c1">// Acutally load the class bytes</span>
+<span class="n">buf</span> <span class="o">=</span> <span class="n">readClassBytes</span><span class="o">(</span><span class="n">name</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+<span class="k">throw</span> <span class="k">new</span> <span class="nf">ClassNotFoundException</span><span class="o">(</span><span class="n">name</span><span class="o">,</span> <span class="n">e</span><span class="o">);</span>
+<span class="o">}</span>
+<span class="c1">// Create an appropriate code source</span>
+<span class="nc">CodeSource</span> <span class="n">cs</span> <span class="o">=</span> <span class="n">getCodeSource</span><span class="o">(</span><span class="n">name</span><span class="o">);</span>
+<span class="c1">// Define the class</span>
+<span class="k">return</span> <span class="nf">defineClass</span><span class="o">(</span><span class="n">name</span><span class="o">,</span> <span class="n">buf</span><span class="o">,</span>
+<span class="mi">0</span><span class="o">,</span> <span class="n">buf</span><span class="o">.</span><span class="na">length</span><span class="o">,</span> <span class="n">cs</span><span class="o">);</span>
+<span class="o">}</span>
+<span class="o">}</span>
+<span class="o">);</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">java</span><span class="o">.</span><span class="na">security</span><span class="o">.</span><span class="na">PrivilegedActionException</span> <span class="n">pae</span><span class="o">)</span> <span class="o">{</span> <span class="k">throw</span> <span class="o">(</span><span class="nc">ClassNotFoundException</span><span class="o">)</span> <span class="n">pae</span><span class="o">.</span><span class="na">getException</span><span class="o">(</span> <span class="o">);</span> <span class="o">}</span>
+</code></pre></div></div>
+
+<p>The syntax of this method is complicated by the fact that we need to load the class bytes in a privileged block. Depending on your circumstances, that isn’t strictly necessary, but it’s by far the most common case for class loaders. Say that your class loader loads class A from the database; that class is given minimal permissions. When that class references class B, the class loader will be asked to load class B and class A will be on the stack. When it’s time to load the new class bytes, we need to load them with the permissions of the class loader rather than the entire stack, which is why we use a privileged block.
+Notwithstanding, the try block has three operations: it loads the class bytes, it defines a code source for that class, and it calls the defineClass( ) method to create the class. The first two of the opera tions are encapsulated in the readClassBytes( ) and getCodeSource( ) methods; these are methods that
+you must implement.
+Loading the class bytes is an operation left to the reader. The reason for providing your own class loader is that you want to read the class bytes in some special way; otherwise, you’d use the URLClassLoader class. The code source is another matter: we must determine a URL and a set of certificates that should be
+associated with the class.
+In a signed jar file, the certificates are read from the jar file and the URL is the location of the jar file. In Chapter 12, we’ll show how to get the certificates from a standard jar file and construct the appropriate URLClassLoader class. The code source is another matter: we must determine a URL and a set of certificates that should be
+associated with the class.
+In a signed jar file, the certificates are read from the jar file and the URL is the location of the jar file. In Chapter 12, we’ll show how to get the certificates from a standard jar file and construct the appropriate The defineClass( ) method will call back to the getPermissions( ) method in order to complete the definition of the protection domain for this class. And that’s why the URL used to construct the code source can be arbitrary: when you write the getPermissions( ) method, just make sure that you understand what the URL actually is. In default usage, the URL would be used to find entries in the policy files, but since you’re defining your own permissions anyway, the contents of the URL don’t matter. What matters is that you follow a consistent convention between the definition of your getCodeSource( ) and findClass( ) methods.
+Hence, possible implementations of the getPermissions( ) and getCodeSource( ) methods are as follows:</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">protected</span> <span class="nc">CodeSource</span> <span class="nf">getCodeSource</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+<span class="k">try</span> <span class="o">{</span>
+<span class="k">return</span> <span class="k">new</span> <span class="nf">CodeSource</span><span class="o">(</span><span class="k">new</span> <span class="no">URL</span><span class="o">(</span><span class="s">"file"</span><span class="o">,</span> <span class="s">"localhost"</span><span class="o">,</span> <span class="n">name</span><span class="o">),</span>
+<span class="kc">null</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">MalformedURLException</span> <span class="n">mue</span><span class="o">)</span> <span class="o">{</span>
+<span class="n">mue</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">(</span> <span class="o">);</span>
+<span class="o">}</span>
+<span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+<span class="o">}</span>
+<span class="kd">protected</span> <span class="nc">PermissionCollection</span> <span class="nf">getPermissions</span><span class="o">(</span><span class="nc">CodeSource</span> <span class="n">codesource</span><span class="o">)</span> <span class="o">{</span>
+<span class="nc">PermissionCollection</span> <span class="n">pc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Permissions</span><span class="o">(</span> <span class="o">);</span>
+<span class="n">pc</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">RuntimePermission</span><span class="o">(</span><span class="s">"exitVM"</span><span class="o">));</span>
+<span class="k">return</span> <span class="n">pc</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>If you’re reading the class bytes from, say, a database, it would be more useful if you could pass an arbitrary string to construct the code source. That doesn’t work directly since the code source requires a URL but the file part of the URL can be any arbitrary string. In this case, we just use the class name.
+Note that the getPermissions( ) method of the SecureClassLoader class does not add the additional permissions that the same method of the URLClassLoader class adds. As a result, we do not call the super.getPermissions( )</p>
+
+<h2 id="delegation">Delegation</h2>
+<p>As we’ve mentioned, class loading follows a delegation model. This model permits a class loader to be instantiated with this constructor:
+protected ClassLoader(ClassLoader parent)
+Create a class loader that is associated with the given class loader. This class loader delegates all operations to the parent first: if the parent is able to fulfill the operation, this class loader takes no action. For example, when the class loader is asked to load a class via the loadClass( ) method, it first calls the loadClass( ) method of the parent. If that succeeds, the class returned by the delegate will ultimately be returned by this class. If that fails, the class loader then uses its original logic to complete its task, something like this:</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="nc">Class</span> <span class="nf">loadClass</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+<span class="nc">Class</span> <span class="n">cl</span><span class="o">;</span>
+<span class="n">cl</span> <span class="o">=</span> <span class="n">delegate</span><span class="o">.</span><span class="na">loadClass</span><span class="o">(</span><span class="n">name</span><span class="o">);</span>
+<span class="k">if</span> <span class="o">(</span><span class="n">cl</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span>
+<span class="k">return</span> <span class="n">cl</span><span class="o">;</span>
+<span class="c1">// else continue with the loadClass( ) logic</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>You may retrieve the delegate associated with a class loader with the following method
+ public final ClassLoader getParent( )
+Return the class loader to which operations are being delegated.
+The class loader that exists at the root of the class loader hierarchy is retrieved via this method:
+Return the system class loader (the class loader that was used to load the base application classes). If a security manager is in place, you must have the getClassLoader runtime permission to use this method.</p>
+
+<h2 id="loading-resources">Loading Resources</h2>
+<p>A class loader can load not only classes, but any arbitrary resource: an audio file, an image file, or anything else. Instead of calling the loadClass( ) method, a resource is obtained by invoking one of these methods:
+public URL getResource(String name)
+public InputStream getResourceAsStream(String name)
+The getResource( ) method calls the getSystemResource( ) method; if it does not find a system resource, it returns the object retrieved by a call to the findResource( ) method (which by default will be null). The getResourceAsStream( ) method simply</p>
+
+<h2 id="loading-libraries">Loading Libraries</h2>
+<p>Loading classes with native methods creates a call to this method of the ClassLoader class:
+protected String findLibrary(String libname)
+Return the directory from which native libraries should be loaded.
+This method is used by the System.loadLibrary( ) method to determine the directory in which the native library in question should be found. If this method returns null (the default), the native library must be in one of the di</p>
+
+<p>谈到常量池，在Java体系中，共用三种常量池。分别是字符串常量池、Class常量池和运行时常量池。</p>
+
+
+<ul class="taxonomy__index">
+  
+  
+    <li>
+      <a href="#2021">
+        <strong>2021</strong> <span class="taxonomy__count">17</span>
+      </a>
+    </li>
+  
+    <li>
+      <a href="#2020">
+        <strong>2020</strong> <span class="taxonomy__count">29</span>
+      </a>
+    </li>
+  
+    <li>
+      <a href="#2019">
+        <strong>2019</strong> <span class="taxonomy__count">8</span>
+      </a>
+    </li>
+  
+    <li>
+      <a href="#2018">
+        <strong>2018</strong> <span class="taxonomy__count">41</span>
+      </a>
+    </li>
+  
+    <li>
+      <a href="#2017">
+        <strong>2017</strong> <span class="taxonomy__count">40</span>
+      </a>
+    </li>
+  
+    <li>
+      <a href="#2016">
+        <strong>2016</strong> <span class="taxonomy__count">54</span>
+      </a>
+    </li>
+  
+    <li>
+      <a href="#2007">
+        <strong>2007</strong> <span class="taxonomy__count">1</span>
+      </a>
+    </li>
+  
+</ul>
+
+
+
+
+  <section id="2021" class="taxonomy__section">
+    <h2 class="archive__subtitle">2021</h2>
+    <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blogs/tech/en/boostrap_logging_in_springbootapplication" rel="permalink">How logging system Bootstrapped in Spring Boot Application
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Summary
+Following diagram demonstrated the process to bootstrap and use Logback for loggings in Spring Boot applciation.
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blogs/tech/en/sqlserver_driver_not_configured_integrated_authenciation" rel="permalink">SQLServer Error about This driver is not configured for integrated authentication
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Symptoms
+When you are using integrated authentication (Kerberos connection) for MS SqlServer connection, there is one possible error :
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blogs/tech/en/save_resources_to_files" rel="permalink">How to copy files from resources folder in jar and save to a file
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Why to extract resources from jar to local disk
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blogs/tech/en/debug_not_hit_intelliJ" rel="permalink">Debug of SpringBoot run not working in IntelliJ
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Normal approach to debug maven
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/tech/2021/11/01/How-to-watch-kubenetes-deployment-by-label-selector.html" rel="permalink">How to watch specific kubenetes deployment by labels
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">How to watch specific kubenetes deployment by labels
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/tech/2021/10/11/Could-not-resolve-github-host.html" rel="permalink">Failed to talk to github.com from corporation network
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Background
+It’s typical to get various network connection issues when you run commands within corporation network. For example, you’ll find diversed issues w...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/tech/2021/10/11/Day-Day-Up-Java.html" rel="permalink">Day-Day-Up-Java
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">More developer friendly Threa Sleep
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/business/2021/10/08/How-to-user-fire-extinguisher.html" rel="permalink">How to user fire extinguisher
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Summary
+As you know, staff and your safety is paramount. So what if emergency take place, such as fire in office, how to help yourself and your colleagues by...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/tech/2021/10/07/Spring-Boot-ApplicationEvents-DeepDive.html" rel="permalink">Deep dive into ApplicationEvent in SpringBoot
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Summary
+As you know,  there are various event will be sent (multicast) when a specific story taken place.
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog_chn/business/2021/09/22/IT-Solutions-For-Remote-Learning.html" rel="permalink">2021-09-22-IT-Solutions-For-Remote-Learning
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">IT-Solutions-For-Remote-Learning.md
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog_business/business/2021/09/22/IT-Solutions-For-Remote-Learning.html" rel="permalink">2021-09-22-IT-Solutions-For-Remote-Learning
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">IT-Solutions-For-Remote-Learning.md
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2021/09/16/Kubernetes-Client-API-DeepDive.html" rel="permalink">Deep dive into Kubernetes Client API
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Summary
+To talk to K8s for getting data, there are few approaches. While K8s’ official Java library is the most widely used one.
+This blog will look into thi...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2021/09/14/Get-CPU-info-core-in-windows.html" rel="permalink">How to get CPU name, core, 64bit and speed in command line
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Summary
+In windows operation system, if you want to get your CPU name, core, 64bit and speed in command line. Just follow below actions:
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2021/09/13/Whitelabel-Error-Page.html" rel="permalink">Whitelabel Error Page
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Summary
+Whitelabel Error Page is the default error page in Spring Boot web app.
+It provide a more user-friently error page whenever there are any issues when...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2021/01/19/Google-maps-no-photos-reviews.html" rel="permalink">Google maps no photos reviews
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Summary
+I found a weird problem of the app Google Maps of my Oppo Android phone. That’s when you search a place in Google map, say “Central Park”, ideally th...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2021/01/19/Google-maps-no-photos-reviews-CHN.html" rel="permalink">谷歌地图里面照片的评论显示不出来
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">简介
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2021/01/04/Debts-In-a-nutshell.html" rel="permalink">Debts in a nutshell
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">A debt security represents a debt owed by the issuer to an investor. Here, the investor acts as a lender to the issuer which may be a government, organisatio...</p>
+  </article>
+</div>
+
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
+
+  <section id="2020" class="taxonomy__section">
+    <h2 class="archive__subtitle">2020</h2>
+    <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/10/20/How-to-use-S3-download-URL.html" rel="permalink">How to process data from S3 download URL
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">S3 download URL
+As you know, AWS S3 object can be downloaded/processed by S3 download URL. 
+I’m showing you two examples on how to process S3 Object by NIO f...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/09/24/Debug-Stuck-IntelliJ.html" rel="permalink">Debug Stuck IntelliJ
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">What happened to a debug job hanging in IntelliJ (IDEAS) IDE?
+You may find when you try to debug a class in Intellij but it stuck there and never proceed, e....</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/09/18/Awesome-Kotlin.html" rel="permalink">Awesome Kotlin
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Difference with Scala
+Kotlin takes the best of Java and Scala, the response times are similar as working with Java natively, which is a considerable advantag...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/09/17/Awesome-Chrome-tips.html" rel="permalink">Awesome tips for Chrome
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Shortcuts &amp; tips
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/chn/2020/09/15/JVM-Warm-up-CHN.html" rel="permalink">JVM热身
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  此文是作者英文原文的翻译文章，英文原文在：http://todzhang.com/posts/2018-06-10-jvm-warm-up/
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/09/07/Awesome-shortcuts-Slack.html" rel="permalink">Awesome tips and shortcuts for Slack
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Shortcuts for Slack
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/09/03/Neverl-ending-Gralde-run.html" rel="permalink">Gradle build stuck
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Gradle build stuck, keep on running but never ending
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/08/21/Reactor-Reactive.html" rel="permalink">Awesome Reactive programming
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Key points of Reactive Programming
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/08/20/Awesome-swift.html" rel="permalink">Awesome Swift for iOS
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Frame in Swift
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/08/16/Swift-For-iOS.html" rel="permalink">Swift for iOS
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">#
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/08/13/Mock-In-Kotlin.html" rel="permalink">Mock in kotlin
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Argument Matching &amp; Answers
+For example, you have mocked DOC with call(arg: Int): Intfunction. You want to return 1 if argument is greater than 5 and -1 ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/08/13/Docker.html" rel="permalink">Docker
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Dockers Concepts
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/08/03/How-to-decode-path-parameters-in-All-REST-calls.html" rel="permalink">How to decode path parameters in All REST WebServices calls
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">How to decode path parameters in All REST WebServices calls
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/07/27/Curl.html" rel="permalink">Curl
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Linux Curl command
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/07/24/AOP.html" rel="permalink">AOP
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">The concept of join points as matched by pointcut expressions is central to AOP, and Spring uses the AspectJ pointcut expression language by default.
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/07/07/micrometer-notes.html" rel="permalink">Micrometer notes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">As a general rule it should be possible to use the name as a pivot. Dimensions allow a particular named metric to be sliced to drill down and reason about th...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/07/07/Awesome-shortcuts.html" rel="permalink">Awesome Shortcuts
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Shortcuts &amp; tips
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/07/04/Leetcode-tips.html" rel="permalink">Tips about algorithm resolving from Leetcode
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Here are some tips and notes about how to resolve algorithm issues listed in LeetCode
+Rotation problem
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/07/02/pigeon-hole-principle.html" rel="permalink">Pigeons in holes principle
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description"># Pigeonhole principle
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/06/29/Awesome-Algorithm-Solutions.html" rel="permalink">Awesome solutions for algorithm questions
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">你就会发现只要涉及递归的问题，都是 树的问题。
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/06/29/Java-Concurrency.html" rel="permalink">Concurrency in Java
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">How to make thread-safe
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/06/28/Facial-Recognition_en.html" rel="permalink">A Facial Recognition utility in a dozen of LOC
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">A Facial Recognition utility in a dozen of python LOC (Lines Of Code)
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/06/26/TLS-SSL-HTTPS.html" rel="permalink">Awesome SSL certificates and HTTPS
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">What’s TLS
+TLS (Transport Layer Security) and its predecessor, SSL (Secure Sockets Layer), are security protocols designed to secure the communication betwee...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/06/21/JPA-Notes.html" rel="permalink">Java Pesistence API Notes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">JPA
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/05/10/Java-Deep-Notes.html" rel="permalink">Java Deep Notes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Java Deep Notes
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/03/28/JVM-Warm-up.html" rel="permalink">JVM warm up by Escape Analysis
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Why JVM need warm up
+I don’t know how and why you get to this blog. But I know the key words in your mind are “warm” for JVM. As the name “warm up” suggested...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/03/15/Concurrent-In-Java-col-2.html" rel="permalink">Java Concurrent Column 2
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is the second half about Java Concurrent of my blog
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/03/10/Concurrent-In-Java.html" rel="permalink">Java Concurrent
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">This blog is about noteworthy pivot points about Java Concurrent Framework
+
+  Back to Java old days there were wait()/notify() which is error prone, while fr...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2020/03/03/Algorithm-Leecode-1.html" rel="permalink">Algorithm notes from Leecode – 1
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Algorithm Leetcode
+</p>
+  </article>
+</div>
+
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
+
+  <section id="2019" class="taxonomy__section">
+    <h2 class="archive__subtitle">2019</h2>
+    <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2019/09/12/Conversations-with-God.html" rel="permalink">Conversations with God
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Feelings is the language of the soul.
+If you want to know what’s true for you about something, look to how your’re feeling about.
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2019/09/02/Kafka-In-Spring.html" rel="permalink">Kafka In Spring
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Enable Kafka listener annotated endpoints that are created under the covers by a AbstractListenerContainerFactory. To be used on Configuration classes as fol...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2019/08/25/AWS-Certificate.html" rel="permalink">AWS certification
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Footprint
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2019/07/26/Terraform.html" rel="permalink">Terraform
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Why Terraform
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2019/07/07/Kafka.html" rel="permalink">Kafka
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Kafka
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2019/01/17/Mifid.html" rel="permalink">Mifid
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">FX Spot is not covered by the regulation, as it is not considered to be a financial instrument by ESMA, the European Union (EU) regulator. As FX is considere...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2019/01/17/FX-ForeignExchange.html" rel="permalink">Foreign Exchange
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">currency pairs
+
+  Direct ccy: means USD is part of currency pair
+  Cross ccy: means ccy wihtout USD, so except NDF, the deal will be split to legs, both with...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2019/01/03/IPC.html" rel="permalink">Inter Processes Communication
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">IPC
+</p>
+  </article>
+</div>
+
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
+
+  <section id="2018" class="taxonomy__section">
+    <h2 class="archive__subtitle">2018</h2>
+    <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/11/01/seconds.html" rel="permalink">Seconds
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">nano seconds
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/10/13/SBE.html" rel="permalink">Citrix receiver
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Simple Binary Encoding (SBE)
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/09/26/Citrix.html" rel="permalink">Citrix receiver
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">“Cannot connect to remote desktop” with Citrix Receiver
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/09/18/Google-Guice.html" rel="permalink">Guice
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">A new type of Juice
+Put simply, Guice alleviates the need for factories and the use of new in your Java code. Think of Guice’s @Inject as the new new. You wi...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/09/16/yaml-config.html" rel="permalink">YAML
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Key points
+All YAML files (regardless of their association with Ansible or not) can optionally begin with — and end with …. This is part of the YAML format a...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/09/06/mockito.html" rel="permalink">Distruptor
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">multithreading
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/09/03/distruptor.html" rel="permalink">Mockito
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Feature
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/08/23/protobuf.html" rel="permalink">Protobuf
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">What are protocol buffers?
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/08/21/sudo.html" rel="permalink">Sudo in a Nutshell
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Sudo in a Nutshell
+
+Sudo (su “do”) allows a system administrator to give certain users (or groups of users) the ability to run some (or all) commands as root...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/08/19/ZooKeeper.html" rel="permalink">Zoo-keeper
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">ZK Motto
+
+  the motto “ZooKeeper: Because Coordinating Distributed Systems is a Zoo.”
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/08/15/PrestoDB.html" rel="permalink">Presto DB
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">WHAT IS PRESTO?
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/08/09/Chronicle.html" rel="permalink">Chronicle
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Overview
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/08/08/Cucumber.html" rel="permalink">Cucumber
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Acceptance testing vs unit test
+It’s sometimes said that unit tests ensure you build the thing right, whereas acceptance tests ensure you build the right thi...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/07/28/Scala.html" rel="permalink">Scala
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Scala String
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/07/23/akka-scala.html" rel="permalink">akka framework of scala
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">philosophy
+The actor model adopts the philosophy that everything is an actor. This is similar to the everything is an object philosophy used by some object-o...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/07/16/FileUtils_Camel.html" rel="permalink">File Util in Apache Camel
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">FileUtil.class
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/07/11/Camel.html" rel="permalink">Apache Camel
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Camel’s message model
+In Camel, there are two abstractions for modeling messages, both of which we’ll cover in this section.
+
+  org.apache.camel.Message—The ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/07/10/QuickFixJ.html" rel="permalink">QuickFixJ
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Settings
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/07/10/JMX.html" rel="permalink">JXM
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Exporting your beans to JMX
+The core class in Spring’s JMX framework is the MBeanExporter. This class is responsible for taking your Spring beans and registe...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/07/04/Solace-MQ.html" rel="permalink">Solace MQ
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Solace PubSub+
+It is a message broker that lets you establish event-driven interactions between applications and microservices across hybrid cloud environmen...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/06/26/Core-Java.html" rel="permalink">Core Java
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Annotation retention policy
+What is Retention policy in java annotations?
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/06/21/Apigee.html" rel="permalink">Apigee
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">App deployment, configuration management and orchestration - all from one system. Ansible is powerful IT automation that you can learn quickly.
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/06/21/Ansible.html" rel="permalink">Ansible
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Ansible: What Is It Good For?
+Ansible is often described as a configuration management tool, and is typically mentioned in the same breath as Chef, Puppet, a...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/06/14/flex-box.html" rel="permalink">flexbox
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">How Flexbox works — explained with big, colorful, animated gifs
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/06/14/JBoss-Console.html" rel="permalink">Jboss tips
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">commands:
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/06/12/Locking-And-Multithreading.html" rel="permalink">Locking and multithreading
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Single Writer principle
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/06/12/KDB.html" rel="permalink">KDB
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">KDB
+However kdb+ evaluates expressions right-to-left. There are no precedence rules. The reason commonly given for this behaviour is that it is a much simple...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/06/09/FX.html" rel="permalink">Foreign Exchange
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Foreign Exchange markets
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/06/07/Protractor.html" rel="permalink">Portactor
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Better to use smart wait
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/06/06/Scrum-Agile.html" rel="permalink">Agile and SCRUM
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Key concept
+In Scrum, a team is cross functional, meaning everyone is needed to take a feature from idea to implementation.
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/06/02/DevOps-Philosophy.html" rel="permalink">DevOps-Philosophy
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">:100:DevOps Model Defined
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/05/15/rxjs-pipe-in-depth.html" rel="permalink">rxjs pipe in depth
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">https://stormforger.com/blog/2016/07/08/types-of-performance-testing/
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/05/15/how-to-setup-node-config-in-intranet.html" rel="permalink">How to setup nodejs to install package from intranet
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Error of ‘ECONNRESET’
+You may face error ECONNRESET from intranet, even appropriate proxy tools (e.g. cntlm) is running. The errors may looks like
+```bash
+$ ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/05/14/Strategy-Of-Openshift-Releases.html" rel="permalink">Strategy-Of-Openshift-Releases
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Release &amp; Testing Strategy
+There are various methods for safely releasing changes to Production. Each team must select what is appropriate for their own ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/05/11/Node-errors-DB.html" rel="permalink">Node errors troubleshooting
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Here is the typical erros log:
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/03/18/NodeJs-Notes.html" rel="permalink">NodeJs Notes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">commands to read files
+var lineReader = require(‘readline’).createInterface({
+    input: require(‘fs’).createReadStream(‘C:\dev\node\input\git_reset_files.tx...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/02/27/MVP.html" rel="permalink">Minium Viable Product
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">https://blog.leanstack.com/minimum-viable-product-mvp-7e280b0b9418
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/01/11/Angular-Module-Declaration-Import.html" rel="permalink">What is difference between declarations, providers and import in NgModule
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">What is difference between declarations, providers and import in NgModule
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/01/10/CORS.html" rel="permalink">CORS :Cross-Origin Resource Sharing
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Cross-Origin Request Sharing - CORS (A.K.A. Cross-Domain AJAX request) is an issue that most web developers might encounter, according to Same-Origin-Policy,...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/01/08/ngrx.html" rel="permalink">ngrx
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Why @Effects?
+In a simple ngrx/store project without ngrx/effects there is really no good place to put your async calls. Suppose a user clicks on a button or...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2018/01/06/iOS.html" rel="permalink">iOS programming
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">View
+A view is also a responder (UIView is a subclass of UIResponder). This means that a view is subject to user interactions, such as taps and swipes. Thus,...</p>
+  </article>
+</div>
+
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
+
+  <section id="2017" class="taxonomy__section">
+    <h2 class="archive__subtitle">2017</h2>
+    <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/12/18/OpenStack-vs-OpenShift.html" rel="permalink">cloud computering
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">openshift vs openstack
+The shoft and direct answer is `OpenShift Origin can run on top of OpenStack. They are complementary projects that work well together....</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/12/18/Clouding.html" rel="permalink">cloud computering
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Concepts
+Cloud computing is the on-demand demand delivery of compute database storage applications and other IT resources through a cloud services platform v...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/12/12/Redux.html" rel="permalink">Redux
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">whats @Effects
+You can almost think of your Effects as special kinds of reducer functions that are meant to be a place for you to put your async calls in suc...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/12/11/Why-Reactive-programming-is-outpermant.html" rel="permalink">reactive programing
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">The second advantage to a lazy subscription is that the observable doesn’t hold onto data by default. In the previous example, each event generated by the in...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/12/10/RxJS.html" rel="permalink">Router in angular
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Lettable operators
+RxJS 5.5, piping all the things
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/12/08/Router-In-Angular.html" rel="permalink">RxJS reactive extension javascript
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Streams
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/12/07/Errors-In-NPM.html" rel="permalink">common errors in NPM or node
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">code E503
+code E503 when run npm install packages, e.g.
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/12/02/Container.html" rel="permalink">Container
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">The Docker project was responsible for popularizing container development in Linux systems. The original project defined a command and service (both named do...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/12/01/Promise-vs-Observable.html" rel="permalink">promise vs observiable
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">The drawback of using Promises is that they’re unable to handle data sources that produce more than one value, like mouse movements or sequences of bytes in ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/11/29/OpenShift.html" rel="permalink">Openshift tips
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Commands bible
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/11/27/TypeScript.html" rel="permalink">TypeScript noteworthy notes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Async Await keywords
+Async Await Support in TypeScript
+Async - Await has been supported by TypeScript since version 1.7. Asynchronous functions are prefixed ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/09/04/Google-Analytics.html" rel="permalink">google analysis
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">How Page Value is calculated
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/06/24/JDK-sources.html" rel="permalink">JDK source
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">interface RandomAccess
+Marker interface used by List implementations to indicate that they support fast (generally constant time) random access. The primary ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/04/06/SSH.html" rel="permalink">SSH SFTP
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Secure FTP
+
+  SFTP over FTP is the equivalant of HTTPS over HTTP, the security version
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/03/30/WebSphere-setp-via-CLI.html" rel="permalink">Setup WebSphere profiles and application in command line
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Setup WebSphere profiles and application in command line
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/03/21/aws.html" rel="permalink">AWS Tips
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">After establishing a SSH session, you can install a default web server by executing sudo yum install httpd -y. To start the web server, type sudo service htt...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/03/13/oracle.html" rel="permalink">Oracle
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  ORA-12899: Value Too Large for Column
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/03/05/Spring.html" rel="permalink">Spring notes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Spring Bean Life Cycle Callback Methods
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/02/21/Java-JIT.html" rel="permalink">Java JIT compiler
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is talking about Java JIT (Just-In-Time) compiler
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/02/15/Java-Security.html" rel="permalink">Java Security Notes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Java Security
+
+  well-behaved: programs should be prevent from consuming too much system resources
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/02/14/SerialVersionUID.html" rel="permalink">SeriableVersionUID
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Noteworthy points about SeriableVersionUID in Java
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/02/09/R-Lang.html" rel="permalink">R Language
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">s&lt;-read.csv("C:/Users/xxx/dev/R/IRS/SHH_SCHISHG.csv")
+# aggregate 
+s2&lt;-table(s$Original.CP)
+s3&lt;-as.data.frame(s2)
+# extract by Frequency ordered 
+s3...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/02/06/SSH-Cryptography.html" rel="permalink">SSH and Cryptography
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">SFTP versus FTPS
+
+  SS: Secure Shell
+  An increasing number of our customers are looking to move away from standard FTP for transferring data, so we are ofte...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/02/06/Eclipse-tips.html" rel="permalink">Eclipse notes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">How do I remove a plug-in?
+Run Help &gt; About Eclipse &gt; Installation Details, select the software you no longer want and click Uninstall. (On Macintosh i...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/02/05/JVM.html" rel="permalink">Java JVM
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Class loading subsystem
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/02/03/Maven-Notes.html" rel="permalink">Maven-Notes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Maven philosophy
+
+  “It is important to note that in the pom.xml file you specify the what and not the how. The pom.xml file can also serve as a documentatio...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/02/02/Java-New-IO.html" rel="permalink">Java New IO
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Notes
+
+  JDK 1.0 introduced rudimentary I/O facilities for accessing the file system (to create a directory, remove a file, or perform another task), accessi...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/28/Network-Protocols.html" rel="permalink">Network Protocols
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Net Protocols
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/26/IT-Architect.html" rel="permalink">IT-Architect
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">SOA
+
+  SOA is a set of design principles for building a suite of interoperable, flexible and reusable services based architecture.
+  top-down and bottom-up a...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/21/Algorithm.html" rel="permalink">Algorithm
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">This page is about key points about Algorithm
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/20/DeadLock.html" rel="permalink">Dead Lock
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Concept
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/19/Java-Tricky-Tech-Questions.html" rel="permalink">Java-Tricky-Tech-Questions.md
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">What is the difference between Serializable and Externalizable in Java?
+
+  In earlier version of Java, reflection was very slow, and so serializaing large ob...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/19/Java-NavigableMap.html" rel="permalink">NavigableMap Misc
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">What is NavigableMap
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/19/Compare-In-Java.html" rel="permalink">Compare-In-Java
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Concepts
+
+  If you implement Comparable interface and override compareTo() method it must be consistent with equals() method i.e. for equal object by equals(...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/17/Java-Collections-Misc.html" rel="permalink">Java Collections Misc
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Difference between equals and deepEquals of Arrays in Java
+
+  Arrays.equals() method does not compare recursively if an array contains another array
+  on oth...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/16/Java-HashMap.html" rel="permalink">HashMap in JDK
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Hashmap in JDK
+Some note worth points about hashmap
+
+  Lookup process
+    
+      Step# 1: Quickly determine the bucket number in which this element may resid...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/14/Java-8.html" rel="permalink">Java 8 Tips
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">This blog is listing key new features introduced in Java 8
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/04/Arbitrage-vs-Hedging.html" rel="permalink">Arbitrage vs Heading
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">What is the difference between arbitrage and hedging?
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/03/IntelliJ-Tips.html" rel="permalink">IntelliJ Tips
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Shortcuts
+Expand/collapse method body in code editor
+Cmd + +/- to expand and collapse a method body
+Show java doc
+
+  Ctrl+J: To show JavaDoc
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2017/01/02/Enum-Misc.html" rel="permalink">Java Enum Misc
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Enum Misc
+</p>
+  </article>
+</div>
+
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
+
+  <section id="2016" class="taxonomy__section">
+    <h2 class="archive__subtitle">2016</h2>
+    <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/12/30/Java-GC.html" rel="permalink">Java GC notes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">verbose:gc
+verbose:gc prints right after each gc collection and prints details about each generation memory details. Here is blog on how to read verbose gc
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/12/30/HashCode-Contract.html" rel="permalink">Hash Code Misc
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">contract of hashCode :
+
+  Whenever it is invoked on the same object more than once during an execution of a Java application, the hashCode method must consis...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/12/24/Apache-Tips.html" rel="permalink">Apache Tips
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Apache
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/12/12/Angular.html" rel="permalink">Angulary Misc
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Dependency Injection
+Angular doesn’t automatically know how you want to create instances of your services or the injector to create your service. You must co...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/12/09/HeadsFirst-RandomNumber-In-Java.html" rel="permalink">Random number in java
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">ThreadLocalRandom, SecureRandm, java.util.Random, java.math.Random
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/12/01/Java-New-Features-Chronicle.html" rel="permalink">Java new features
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">JDK Versions
+
+  JDK 1.5 in 2005
+  JDK 1.6 in 2006
+  JDK 1.7 in 2011
+  JDK 1.8 in 2014
+Sun之前风光无限，但是在2010年1月27号被Oracle收购。
+在被Oracle收购后对外承诺要回到每2年一个realse的节奏。但是20...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/11/22/Facial-Recognition.html" rel="permalink">用10几行代码自己写个人脸识别程序
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">用10几行代码自己写个人脸识别程序
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/11/12/elastic.html" rel="permalink">Eslastic Search
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Eslastic Search
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/11/05/JSON-Lines.html" rel="permalink">JSON lines
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">JSON lines
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/11/04/Python-Scrapy.html" rel="permalink">Python Scraphy
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Python Scraphy
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/10/26/Continuous-Integretaion-Simpler-Chronicle.html" rel="permalink">Simpler chronicle of CI(Continuous Integration) “乱弹系列”之持续集成工具
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">引言
+有句话说有人的地方就有江湖，同样，有江湖的地方就有恩怨。在软件行业历史长河（虽然相对于其他行业来说，软件行业的历史实在太短了，但是确是充满了智慧的碰撞也是十分的精彩）中有一些恩怨情愁，分分合合的小故事，比如类似的有，从一套代码发展出来后面由于合同到期就分道扬镳，然后各自发展成独门产品的Sybase DB和微...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/10/19/head-first-blockchian-3.html" rel="permalink">Head First Blockchina 3
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  Hyperledger Fabric for Mortals
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/10/13/head-first-blockchian-2.html" rel="permalink">【原创】深入浅出区块链系统：第二章
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  使用Solidity创建以太坊(Ethereum)智能合约(Smart Contract)
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/10/06/Sublime-Syntax-Highlights.html" rel="permalink">How to customize Sublime syntax highlights
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Reference
+
+  Sublime Scope Naming
+  Syntax Guide
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/09/17/Assert-In-Unit-Test-CN.html" rel="permalink">浅谈软件单元测试中的“断言” (assert)，从石器时代进步到黄金时代。
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">大家都知道，在软件测试特别是在单元测试时,必用的一个功能就是“断言”（Assert)，可能有些人觉得不就一个Assert语句，没啥花头，也有很多人用起来也是懵懵懂懂，认为只要是Assert开头的方法，拿过来就用。一个偶然的机会跟人聊到此功能，觉得还是有必要在此整理一下如何使用以及对“断言”的理解。希望可以帮助大家...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/09/14/JetBrains-Tips.html" rel="permalink">JetBrains/IntelliJ tips
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Shortcuts
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/09/11/head-first-blockchian-1.html" rel="permalink">Head First Blockchina 1
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">深入浅出区块链系统：第一章.
+what you should know about blockchain
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/09/04/Kubernets-vs-Swarm.html" rel="permalink">Kubernetes 与 Docker Swarm的对比
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Kubernetes 和Docker Swarm 可能是使用最广泛的工具，用于在集群环境中部署容器。但是这两个工具还是有很大的差别。
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/09/02/Design-Principals.html" rel="permalink">漫谈开发设计中的一些‘原则’及’设计哲学’
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">在开发设计中有一些常用原则或者潜规则，根据笔者的经验，这里稍微总结一下最最常用的，以飨读者。
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/09/01/Mac-Tips.html" rel="permalink">Mac tips
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">how to show full path in Finder window
+Open and run following command in terminal window
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true; ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/09/01/HTTP-Methods-RFC.html" rel="permalink">http methods
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">RFC origion http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.1.2)
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/08/30/Spark-vs-Storm.html" rel="permalink">Spark-vs-Storm
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">The stark difference among Spark and Storm. Although both are claimed to process the streaming data in real time. But Spark processes it as micro-batches; wh...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/08/24/microservices.html" rel="permalink">微服务
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">可以想像一下，之前的传统应用系统，像是一个大办公室里面，有各个部门，销售部，采购部，财务部。办一件事情效率比较高。但是也有一些弊端，首先，各部门都在一个房间里。
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/08/12/unmodifiableCollection.html" rel="permalink">unmodifiableList, unmodifiableSet,unmodifiableMap
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">What’s it
+Returns an unmodifiable view of the specified set.  This method allows
+modules to provide users with “read-only” access to internal sets.
+Query ope...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/08/11/Sentry.html" rel="permalink">kibana, view layer of elasticsearch
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+What’s Kibana
+kibana is an open source data visualization plugin for Elasticsearch.  It provides visualization capabilities on top of the content indexed on...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/08/11/Kibana.html" rel="permalink">kibana, view layer of elasticsearch
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+What’s Kibana
+kibana is an open source data visualization plugin for Elasticsearch.  It provides visualization capabilities on top of the content indexed on...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/08/05/Anatomy-of-ThreadLocal.html" rel="permalink">Anatomy of ThreadLocal
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Design philosophies
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/08/04/iConnect.html" rel="permalink">iConnect
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">UI
+HTML5, AngularJS, BootStrap, REST API, JSON
+Backend
+Hadoop core (HDFS), Hive, HBase, MapReduce, Oozie, Pig, Solr
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/08/04/BA.html" rel="permalink">Business Analysis
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Purpose of BA
+
+  带来一些商业价值（收益）
+  解决业务痛点
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/08/02/RESTful.html" rel="permalink">Something about RESTful architect
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">REST API must be hypertext driver
+Roy’s interview
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/07/25/Data-Structure.html" rel="permalink">Data Structure
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Binary Tree
+
+  A binary tree is a tree in which no node can have more than two children.
+  A property of a binary tree that is sometimes important is that th...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/07/24/Bookmarks.html" rel="permalink">Useful bookmarks
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">eBooks
+list of various books
+Node.js
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/07/02/file-name-too-long-when-git-checkout.html" rel="permalink">git raise error filename too long when checkout
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Symptoms:
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/29/heavy-load-web-app.html" rel="permalink">heavy load web application
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Common solutions
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/29/TIPS-AS400-IBM-EMULATOR.html" rel="permalink">tips in as400 IBM Emulator
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Toggle crosshair
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/29/SOMETHING-ABOUT-AUTHENTICATION.html" rel="permalink">Something about authentication
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">It’s annoying to keep on repeating typing same login and password when you access multiple systems within office or for systems in external Internet. There a...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/23/Equity.html" rel="permalink">equity trading
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Difference between mutal funds and hedge funds
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/14/SQL.html" rel="permalink">SQL
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Differences between not in, not exists , and left join with null
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/14/HTTP-HTTPS2.html" rel="permalink">HTTPS/2
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">concepts
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/13/github-pages.html" rel="permalink">Github page commands notes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">404 error for customized domain (such as godday)
+404
+There is not a GitHub Pages site here.
+
+
+  Go to github master branch for gitpages site, manually add CN...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/13/RQFII.html" rel="permalink">RenMinBi International
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">RQFII
+RQFII stands for Renminbi Qualified Foreign Institutional Investor. RQFII was introduced in 2011 to allow qualified foreign institutional investors to ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/13/GIT.html" rel="permalink">Git commands notes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">hall-of-frame by commit numbers
+git shortlog -s | sort -n -r
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/12/JavaScript-tips.html" rel="permalink">JavaScript tips
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">includes() vs some()
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/10/Linux-Tips.html" rel="permalink">Linux Tips
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Get permission denied error when sudo su (or hyphen in sudo command)
+bash: /home/YOURNAME/.bashrc: Permission denied
+That’s because you didn’t add “-“ hyphen...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/09/Docker-Errors-Fixes.html" rel="permalink">Docker Errors and Fixes
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Docker Errors
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/07/Load-Balancing.html" rel="permalink">Load Balancing
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Concepts
+LVS means Linux Virtual Server, which is one Linux built-in component.
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/05/Python.html" rel="permalink">Python
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">(‘—–Unexpected error:’, &lt;type ‘exceptions.TypeError’&gt;) datetime.datetime.now()
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/03/Storage-Management.html" rel="permalink">Storage Management
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">RAID
+RAID is Reductant Array Independent Disk,
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/03/CI-CD.html" rel="permalink">CI and CD
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Concepts
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/01/XA-2PC.html" rel="permalink">XA Transactions in 2PC
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Description
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/01/Setup-Git-In-Mint.html" rel="permalink">Setup Git in Mint Linux
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">How to setup Git in Mint Linux
+=================================================
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/06/01/DB-Sharding.html" rel="permalink">Database sharding
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">DB sharding in YHD
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/05/31/Microservices-Vs-SOA.html" rel="permalink">Microservices vs. SOA
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Microservice
+
+  Services are organized around capabilities, e.g., user interface front-end, recommendation, logistics, billing, etc.
+  Services are small in ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2016/02/25/Java-Class-Loader.html" rel="permalink">Java Class Loader
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Codecache
+
+  The maximum size of the code cache is set via the -XX:ReservedCodeCacheSize=N flag (where N is the default just mentioned for the particular com...</p>
+  </article>
+</div>
+
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
+
+  <section id="2007" class="taxonomy__section">
+    <h2 class="archive__subtitle">2007</h2>
+    <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2007/04/28/GIT-scripts-bible-errors.html" rel="permalink">GIT useful scripts or error solutions
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Script bible
+</p>
+  </article>
+</div>
+
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
+
+
+  </div>
+</div>
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2022 Highly Distinguish. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
