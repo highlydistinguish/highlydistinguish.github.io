@@ -7,7 +7,7 @@
 # #
 # # This will help ensure the proper Jekyll version is running.
 # # Happy Jekylling!
-# gem 'jekyll', github: 'jekyll/jekyll'
+gem 'jekyll', github: 'jekyll/jekyll'
 # gem "jekyll", "~> 4.2.0"
 gem "minimal-mistakes-jekyll"
 # # This is the default theme for new Jekyll sites. You may change this to anything you like.
@@ -34,5 +34,5 @@ gem "minimal-mistakes-jekyll"
 
 source "https://rubygems.org"
 
-# gem "github-pages", group: :jekyll_plugins
+gem "github-pages", group: :jekyll_plugins
 # gem "jekyll-include-cache", group: :jekyll_plugins
