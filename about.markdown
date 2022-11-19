@@ -41,6 +41,17 @@ permalink: /about/
   <div class="alert alert-dark shadow"> <p class="font-weight-bold">Contact us </p></div>
 
 <div class="table">
+
+  <div class="row ">
+    <div class="col-1"><span class="material-icons">drafts</span> </div>
+    <div class="col-1">Email: </div>
+    <div class="col-7 mx-auto">
+  Contact number: 1300 690 188
+    </div>
+  </div>
+
+  
+
   <div class="row ">
     <div class="col-1"><span class="material-icons">drafts</span> </div>
     <div class="col-1">Email: </div>
