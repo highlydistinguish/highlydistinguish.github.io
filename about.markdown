@@ -43,10 +43,9 @@ permalink: /about/
 <div class="table">
 
   <div class="row ">
-    <div class="col-1"><span class="material-icons">drafts</span> </div>
-    <div class="col-1">Email: </div>
-    <div class="col-7 mx-auto">
-  Contact number: 1300 690 188
+    <div class="col-1"><span class="material-icons">phone_in_talk</span> </div>
+    <div class="col-1">Contact number: </div>
+    <div class="col-7 mx-auto">1300 690 188
     </div>
   </div>
 
