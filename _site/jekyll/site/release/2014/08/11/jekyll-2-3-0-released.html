@@ -1,0 +1,31 @@
+<p>This latest release of Jekyll includes a slew of enhancements and bug
+fixes. Some of the highlights:</p>
+
+<ul>
+  <li>Strange bug around spacing/indentation should be resolved. <a href="https://github.com/jekyll/jekyll/issues/2676">It was a
+curious bug indeed.</a></li>
+  <li>Pages, Posts, and Drafts can now be converted by multiple converters.</li>
+  <li>Static files can now be safely included in collections. They’ll be placed
+in a <code class="language-plaintext highlighter-rouge">collection.files</code> array. <code class="language-plaintext highlighter-rouge">collection.docs</code> still holds exclusively
+content with YAML front matter.</li>
+  <li>Sass files can once again be rendered by Liquid. However, neither Sass
+nor CoffeeScript can ever have a layout. Bonus: <code class="language-plaintext highlighter-rouge">scssify</code> and <code class="language-plaintext highlighter-rouge">sassify</code>
+Liquid filters.</li>
+  <li>Partial variables allowed now in the path argument of <code class="language-plaintext highlighter-rouge">include</code> calls</li>
+  <li>We added a <code class="language-plaintext highlighter-rouge">jekyll help</code> command. Pass it a subcommand to see more info
+about that subcommand. Or don’t, to see the help for <code class="language-plaintext highlighter-rouge">jekyll</code> itself.</li>
+  <li>Lots of fixes to the site template we use for <code class="language-plaintext highlighter-rouge">jekyll new</code>, including
+converting the CSS into SCSS.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">jsonify</code> filter will now call <code class="language-plaintext highlighter-rouge">#to_liquid</code> for you</li>
+  <li>Lots, lots more!</li>
+</ul>
+
+<p>One change deserves special note. In <a href="/issues/2633">#2633</a>, subfolders <em>inside</em> a
+<code class="language-plaintext highlighter-rouge">_posts</code> folder were processed and added as categories to the posts. It
+turns out, this behaviour was unwanted by a large number of individuals, as
+it is a handy way to organize posts. Ultimately, we decided to revert this
+change in <a href="/issues/2705">#2705</a>, because it was a change in behaviour that was already
+well-established (at least since Jekyll v0.7.0), and was convenient.</p>
+
+<p>For more excellent CHANGELOG reading material, check out the <a href="/docs/history/">History
+page</a>! Happy Jekylling!</p>

@@ -1,0 +1,17 @@
+<p>Jekyll 1.4.3 contains two <strong>critical</strong> security fixes. If you run Jekyll locally
+and do not run Jekyll in “safe” mode (e.g. you do not build Jekyll sites on behalf
+of others), you are not affected and are not required to update at this time.
+(<a href="/pull/1944">See pull request.</a>)</p>
+
+<p>Versions of Jekyll prior to 1.4.3 and greater than 1.2.0 may allow malicious
+users to expose the content of files outside the source directory in the
+generated output via improper symlink sanitization, potentially resulting in an
+inadvertent information disclosure.</p>
+
+<p>Versions of Jekyll prior to 1.4.3 may also allow malicious users to write
+arbitrary <code class="language-plaintext highlighter-rouge">.html</code> files outside of the destination folder via relative path
+traversal, potentially overwriting otherwise-trusted content with arbitrary HTML
+or Javascript depending on your server’s configuration.</p>
+
+<p><em>Maintainer’s note: Many thanks to @gregose and @charliesome for discovering
+these vulnerabilities, and to @BenBalter and @alindeman for writing the patch.</em></p>

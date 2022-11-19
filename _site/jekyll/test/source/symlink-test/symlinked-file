@@ -1,0 +1,754 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+
+<!--google fonts-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Tom Preston-Werner - Highly Distinguish</title>
+<meta name="description" content="Highly Distinguish pty. ltd.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Highly Distinguish">
+<meta property="og:title" content="Tom Preston-Werner">
+<meta property="og:url" content="http://localhost:4000/jekyll/test/source/symlink-test/symlinked-file">
+
+
+  <meta property="og:description" content="Highly Distinguish pty. ltd.">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/jekyll/test/source/symlink-test/symlinked-file">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Highly Distinguish Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+<link rel="stylesheet" href="/assets/css/blog.css">
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--default">
+
+
+    <div class="initial-content">
+      h1. Welcome to my site
+
+h2. Please read our 279 Posts
+
+<ul>
+  
+    <li>2021-12-21 00:00:00 +1100 <a href="/blogs/tech/en/boostrap_logging_in_springbootapplication">How logging system Bootstrapped in Spring Boot Application</a></li>
+  
+    <li>2021-11-24 00:00:00 +1100 <a href="/blogs/tech/en/sqlserver_driver_not_configured_integrated_authenciation">SQLServer Error about This driver is not configured for integrated authentication</a></li>
+  
+    <li>2021-11-15 00:00:00 +1100 <a href="/blogs/tech/en/save_resources_to_files">How to copy files from resources folder in jar and save to a file</a></li>
+  
+    <li>2021-11-15 00:00:00 +1100 <a href="/blogs/tech/en/debug_not_hit_intelliJ">Debug of SpringBoot run not working in IntelliJ</a></li>
+  
+    <li>2021-11-01 00:00:00 +1100 <a href="/tech/2021/11/01/How-to-watch-kubenetes-deployment-by-label-selector.html">How to watch specific kubenetes deployment by labels</a></li>
+  
+    <li>2021-10-11 00:00:00 +1100 <a href="/tech/2021/10/11/Could-not-resolve-github-host.html">Failed to talk to github.com from corporation network</a></li>
+  
+    <li>2021-10-11 00:00:00 +1100 <a href="/tech/2021/10/11/Day-Day-Up-Java.html">Day-Day-Up-Java</a></li>
+  
+    <li>2021-10-08 00:00:00 +1100 <a href="/business/2021/10/08/How-to-user-fire-extinguisher.html">How to user fire extinguisher</a></li>
+  
+    <li>2021-10-07 00:00:00 +1100 <a href="/tech/2021/10/07/Spring-Boot-ApplicationEvents-DeepDive.html">Deep dive into ApplicationEvent in SpringBoot</a></li>
+  
+    <li>2021-09-22 00:00:00 +1000 <a href="/blog_tech/business/2021/09/22/IT-Solutions-For-Remote-Learning.html">2021-09-22-IT-Solutions-For-Remote-Learning</a></li>
+  
+    <li>2021-09-22 00:00:00 +1000 <a href="/blog_chn/business/2021/09/22/IT-Solutions-For-Remote-Learning.html">2021-09-22-IT-Solutions-For-Remote-Learning</a></li>
+  
+    <li>2021-09-22 00:00:00 +1000 <a href="/blog_business/business/2021/09/22/IT-Solutions-For-Remote-Learning.html">2021-09-22-IT-Solutions-For-Remote-Learning</a></li>
+  
+    <li>2021-09-16 00:00:00 +1000 <a href="/2021/09/16/Kubernetes-Client-API-DeepDive.html">Deep dive into Kubernetes Client API</a></li>
+  
+    <li>2021-09-14 00:00:00 +1000 <a href="/2021/09/14/Get-CPU-info-core-in-windows.html">How to get CPU name, core, 64bit and speed in command line</a></li>
+  
+    <li>2021-09-13 00:00:00 +1000 <a href="/2021/09/13/Whitelabel-Error-Page.html">Whitelabel Error Page</a></li>
+  
+    <li>2021-01-19 00:00:00 +1100 <a href="/2021/01/19/Google-maps-no-photos-reviews.html">Google maps no photos reviews</a></li>
+  
+    <li>2021-01-19 00:00:00 +1100 <a href="/2021/01/19/Google-maps-no-photos-reviews-CHN.html">谷歌地图里面照片的评论显示不出来</a></li>
+  
+    <li>2021-01-04 00:00:00 +1100 <a href="/2021/01/04/Debts-In-a-nutshell.html">Debts in a nutshell</a></li>
+  
+    <li>2020-10-20 00:00:00 +1100 <a href="/2020/10/20/How-to-use-S3-download-URL.html">How to process data from S3 download URL</a></li>
+  
+    <li>2020-09-24 00:00:00 +1000 <a href="/2020/09/24/Debug-Stuck-IntelliJ.html">Debug Stuck IntelliJ</a></li>
+  
+    <li>2020-09-18 00:00:00 +1000 <a href="/2020/09/18/Awesome-Kotlin.html">Awesome Kotlin</a></li>
+  
+    <li>2020-09-17 00:00:00 +1000 <a href="/2020/09/17/Awesome-Chrome-tips.html">Awesome tips for Chrome</a></li>
+  
+    <li>2020-09-15 00:00:00 +1000 <a href="/chn/2020/09/15/JVM-Warm-up-CHN.html">JVM热身</a></li>
+  
+    <li>2020-09-07 00:00:00 +1000 <a href="/2020/09/07/Awesome-shortcuts-Slack.html">Awesome tips and shortcuts for Slack</a></li>
+  
+    <li>2020-09-03 00:00:00 +1000 <a href="/2020/09/03/Neverl-ending-Gralde-run.html">Gradle build stuck</a></li>
+  
+    <li>2020-08-21 00:00:00 +1000 <a href="/2020/08/21/Reactor-Reactive.html">Awesome Reactive programming</a></li>
+  
+    <li>2020-08-20 00:00:00 +1000 <a href="/2020/08/20/Awesome-swift.html">Awesome Swift for iOS</a></li>
+  
+    <li>2020-08-16 00:00:00 +1000 <a href="/2020/08/16/Swift-For-iOS.html">Swift for iOS</a></li>
+  
+    <li>2020-08-13 00:00:00 +1000 <a href="/2020/08/13/Mock-In-Kotlin.html">Mock in kotlin</a></li>
+  
+    <li>2020-08-13 00:00:00 +1000 <a href="/2020/08/13/Docker.html">Docker</a></li>
+  
+    <li>2020-08-03 00:00:00 +1000 <a href="/2020/08/03/How-to-decode-path-parameters-in-All-REST-calls.html">How to decode path parameters in All REST WebServices calls</a></li>
+  
+    <li>2020-07-27 00:00:00 +1000 <a href="/2020/07/27/Curl.html">Curl</a></li>
+  
+    <li>2020-07-24 00:00:00 +1000 <a href="/2020/07/24/AOP.html">AOP</a></li>
+  
+    <li>2020-07-07 00:00:00 +1000 <a href="/2020/07/07/micrometer-notes.html">Micrometer notes</a></li>
+  
+    <li>2020-07-07 00:00:00 +1000 <a href="/2020/07/07/Awesome-shortcuts.html">Awesome Shortcuts</a></li>
+  
+    <li>2020-07-04 00:00:00 +1000 <a href="/2020/07/04/Leetcode-tips.html">Tips about algorithm resolving from Leetcode</a></li>
+  
+    <li>2020-07-02 00:00:00 +1000 <a href="/2020/07/02/pigeon-hole-principle.html">Pigeons in holes principle</a></li>
+  
+    <li>2020-06-29 00:00:00 +1000 <a href="/2020/06/29/Awesome-Algorithm-Solutions.html">Awesome solutions for algorithm questions</a></li>
+  
+    <li>2020-06-29 00:00:00 +1000 <a href="/2020/06/29/Java-Concurrency.html">Concurrency in Java</a></li>
+  
+    <li>2020-06-28 16:40:12 +1000 <a href="/2020/06/28/Facial-Recognition_en.html">A Facial Recognition utility in a dozen of LOC</a></li>
+  
+    <li>2020-06-26 00:00:00 +1000 <a href="/2020/06/26/TLS-SSL-HTTPS.html">Awesome SSL certificates and HTTPS</a></li>
+  
+    <li>2020-06-21 00:00:00 +1000 <a href="/2020/06/21/JPA-Notes.html">Java Pesistence API Notes</a></li>
+  
+    <li>2020-05-10 00:00:00 +1000 <a href="/2020/05/10/Java-Deep-Notes.html">Java Deep Notes</a></li>
+  
+    <li>2020-03-28 00:00:00 +1100 <a href="/2020/03/28/JVM-Warm-up.html">JVM warm up by Escape Analysis</a></li>
+  
+    <li>2020-03-15 00:00:00 +1100 <a href="/2020/03/15/Concurrent-In-Java-col-2.html">Java Concurrent Column 2</a></li>
+  
+    <li>2020-03-10 00:00:00 +1100 <a href="/2020/03/10/Concurrent-In-Java.html">Java Concurrent</a></li>
+  
+    <li>2020-03-03 00:00:00 +1100 <a href="/2020/03/03/Algorithm-Leecode-1.html">Algorithm notes from Leecode -- 1</a></li>
+  
+    <li>2019-09-12 00:00:00 +1000 <a href="/2019/09/12/Conversations-with-God.html">Conversations with God</a></li>
+  
+    <li>2019-09-02 00:00:00 +1000 <a href="/2019/09/02/Kafka-In-Spring.html">Kafka In Spring</a></li>
+  
+    <li>2019-08-25 00:00:00 +1000 <a href="/2019/08/25/AWS-Certificate.html">AWS certification</a></li>
+  
+    <li>2019-07-26 00:00:00 +1000 <a href="/2019/07/26/Terraform.html">Terraform</a></li>
+  
+    <li>2019-07-07 00:00:00 +1000 <a href="/2019/07/07/Kafka.html">Kafka</a></li>
+  
+    <li>2019-01-17 00:00:00 +1100 <a href="/2019/01/17/Mifid.html">Mifid</a></li>
+  
+    <li>2019-01-17 00:00:00 +1100 <a href="/2019/01/17/FX-ForeignExchange.html">Foreign Exchange</a></li>
+  
+    <li>2019-01-03 00:00:00 +1100 <a href="/2019/01/03/IPC.html">Inter Processes Communication</a></li>
+  
+    <li>2018-11-01 00:00:00 +1100 <a href="/2018/11/01/seconds.html">Seconds</a></li>
+  
+    <li>2018-10-13 00:00:00 +1100 <a href="/2018/10/13/SBE.html">Citrix receiver</a></li>
+  
+    <li>2018-09-26 00:00:00 +1000 <a href="/2018/09/26/Citrix.html">Citrix receiver</a></li>
+  
+    <li>2018-09-18 00:00:00 +1000 <a href="/2018/09/18/Google-Guice.html">Guice</a></li>
+  
+    <li>2018-09-16 00:00:00 +1000 <a href="/2018/09/16/yaml-config.html">YAML</a></li>
+  
+    <li>2018-09-06 00:00:00 +1000 <a href="/2018/09/06/mockito.html">Distruptor</a></li>
+  
+    <li>2018-09-03 00:00:00 +1000 <a href="/2018/09/03/distruptor.html">Mockito</a></li>
+  
+    <li>2018-08-23 00:00:00 +1000 <a href="/2018/08/23/protobuf.html">Protobuf</a></li>
+  
+    <li>2018-08-21 00:00:00 +1000 <a href="/2018/08/21/sudo.html">Sudo in a Nutshell</a></li>
+  
+    <li>2018-08-19 00:00:00 +1000 <a href="/2018/08/19/ZooKeeper.html">Zoo-keeper</a></li>
+  
+    <li>2018-08-15 00:00:00 +1000 <a href="/2018/08/15/PrestoDB.html">Presto DB</a></li>
+  
+    <li>2018-08-09 00:00:00 +1000 <a href="/2018/08/09/Chronicle.html">Chronicle</a></li>
+  
+    <li>2018-08-08 00:00:00 +1000 <a href="/2018/08/08/Cucumber.html">Cucumber</a></li>
+  
+    <li>2018-07-28 00:00:00 +1000 <a href="/2018/07/28/Scala.html">Scala</a></li>
+  
+    <li>2018-07-23 00:00:00 +1000 <a href="/2018/07/23/akka-scala.html">akka framework of scala</a></li>
+  
+    <li>2018-07-16 00:00:00 +1000 <a href="/2018/07/16/FileUtils_Camel.html">File Util in Apache Camel</a></li>
+  
+    <li>2018-07-11 00:00:00 +1000 <a href="/2018/07/11/Camel.html">Apache Camel</a></li>
+  
+    <li>2018-07-10 00:00:00 +1000 <a href="/2018/07/10/QuickFixJ.html">QuickFixJ</a></li>
+  
+    <li>2018-07-10 00:00:00 +1000 <a href="/2018/07/10/JMX.html">JXM</a></li>
+  
+    <li>2018-07-04 00:00:00 +1000 <a href="/2018/07/04/Solace-MQ.html">Solace MQ</a></li>
+  
+    <li>2018-06-26 00:00:00 +1000 <a href="/2018/06/26/Core-Java.html">Core Java</a></li>
+  
+    <li>2018-06-21 00:00:00 +1000 <a href="/2018/06/21/Apigee.html">Apigee</a></li>
+  
+    <li>2018-06-21 00:00:00 +1000 <a href="/2018/06/21/Ansible.html">Ansible</a></li>
+  
+    <li>2018-06-14 00:00:00 +1000 <a href="/2018/06/14/flex-box.html">flexbox</a></li>
+  
+    <li>2018-06-14 00:00:00 +1000 <a href="/2018/06/14/JBoss-Console.html">Jboss tips</a></li>
+  
+    <li>2018-06-12 00:00:00 +1000 <a href="/2018/06/12/Locking-And-Multithreading.html">Locking and multithreading</a></li>
+  
+    <li>2018-06-12 00:00:00 +1000 <a href="/2018/06/12/KDB.html">KDB</a></li>
+  
+    <li>2018-06-09 00:00:00 +1000 <a href="/2018/06/09/FX.html">Foreign Exchange</a></li>
+  
+    <li>2018-06-07 00:00:00 +1000 <a href="/2018/06/07/Protractor.html">Portactor</a></li>
+  
+    <li>2018-06-06 00:00:00 +1000 <a href="/2018/06/06/Scrum-Agile.html">Agile and SCRUM</a></li>
+  
+    <li>2018-06-02 11:21:13 +1000 <a href="/2018/06/02/DevOps-Philosophy.html">DevOps-Philosophy</a></li>
+  
+    <li>2018-05-15 00:00:00 +1000 <a href="/2018/05/15/rxjs-pipe-in-depth.html">rxjs pipe in depth</a></li>
+  
+    <li>2018-05-15 00:00:00 +1000 <a href="/2018/05/15/how-to-setup-node-config-in-intranet.html">How to setup nodejs to install package from intranet</a></li>
+  
+    <li>2018-05-14 00:00:00 +1000 <a href="/2018/05/14/Strategy-Of-Openshift-Releases.html">Strategy-Of-Openshift-Releases</a></li>
+  
+    <li>2018-05-11 00:00:00 +1000 <a href="/2018/05/11/Node-errors-DB.html">Node errors troubleshooting</a></li>
+  
+    <li>2018-03-18 00:00:00 +1100 <a href="/2018/03/18/NodeJs-Notes.html">NodeJs Notes</a></li>
+  
+    <li>2018-02-27 00:00:00 +1100 <a href="/2018/02/27/MVP.html">Minium Viable Product</a></li>
+  
+    <li>2018-01-11 00:00:00 +1100 <a href="/2018/01/11/Angular-Module-Declaration-Import.html">What is difference between declarations, providers and import in NgModule</a></li>
+  
+    <li>2018-01-10 00:00:00 +1100 <a href="/2018/01/10/CORS.html">CORS :Cross-Origin Resource Sharing</a></li>
+  
+    <li>2018-01-08 00:00:00 +1100 <a href="/2018/01/08/ngrx.html">ngrx</a></li>
+  
+    <li>2018-01-06 00:00:00 +1100 <a href="/2018/01/06/iOS.html">iOS programming</a></li>
+  
+    <li>2017-12-18 00:00:00 +1100 <a href="/2017/12/18/OpenStack-vs-OpenShift.html">cloud computering</a></li>
+  
+    <li>2017-12-18 00:00:00 +1100 <a href="/2017/12/18/Clouding.html">cloud computering</a></li>
+  
+    <li>2017-12-12 00:00:00 +1100 <a href="/2017/12/12/Redux.html">Redux</a></li>
+  
+    <li>2017-12-11 00:00:00 +1100 <a href="/2017/12/11/Why-Reactive-programming-is-outpermant.html">reactive programing</a></li>
+  
+    <li>2017-12-10 00:00:00 +1100 <a href="/2017/12/10/RxJS.html">Router in angular</a></li>
+  
+    <li>2017-12-08 00:00:00 +1100 <a href="/2017/12/08/Router-In-Angular.html">RxJS reactive extension javascript</a></li>
+  
+    <li>2017-12-07 00:00:00 +1100 <a href="/2017/12/07/Errors-In-NPM.html">common errors in NPM or node</a></li>
+  
+    <li>2017-12-02 00:00:00 +1100 <a href="/2017/12/02/Container.html">Container</a></li>
+  
+    <li>2017-12-01 00:00:00 +1100 <a href="/2017/12/01/Promise-vs-Observable.html">promise vs observiable</a></li>
+  
+    <li>2017-11-29 00:00:00 +1100 <a href="/2017/11/29/OpenShift.html">Openshift tips</a></li>
+  
+    <li>2017-11-27 00:00:00 +1100 <a href="/2017/11/27/TypeScript.html">TypeScript noteworthy notes</a></li>
+  
+    <li>2017-09-04 00:00:00 +1000 <a href="/2017/09/04/Google-Analytics.html">google analysis</a></li>
+  
+    <li>2017-06-24 00:00:00 +1000 <a href="/2017/06/24/JDK-sources.html">JDK source</a></li>
+  
+    <li>2017-04-06 00:00:00 +1000 <a href="/2017/04/06/SSH.html">SSH SFTP</a></li>
+  
+    <li>2017-03-30 00:00:00 +1100 <a href="/2017/03/30/WebSphere-setp-via-CLI.html">Setup WebSphere profiles and application in command line</a></li>
+  
+    <li>2017-03-21 00:00:00 +1100 <a href="/2017/03/21/aws.html">AWS Tips</a></li>
+  
+    <li>2017-03-13 00:00:00 +1100 <a href="/2017/03/13/oracle.html">Oracle</a></li>
+  
+    <li>2017-03-05 00:00:00 +1100 <a href="/2017/03/05/Spring.html">Spring notes</a></li>
+  
+    <li>2017-02-21 00:00:00 +1100 <a href="/2017/02/21/Java-JIT.html">Java JIT compiler</a></li>
+  
+    <li>2017-02-15 00:00:00 +1100 <a href="/2017/02/15/Java-Security.html">Java Security Notes</a></li>
+  
+    <li>2017-02-14 00:00:00 +1100 <a href="/2017/02/14/SerialVersionUID.html">SeriableVersionUID</a></li>
+  
+    <li>2017-02-09 00:00:00 +1100 <a href="/2017/02/09/R-Lang.html">R Language</a></li>
+  
+    <li>2017-02-06 00:00:00 +1100 <a href="/2017/02/06/SSH-Cryptography.html">SSH and Cryptography</a></li>
+  
+    <li>2017-02-06 00:00:00 +1100 <a href="/2017/02/06/Eclipse-tips.html">Eclipse notes</a></li>
+  
+    <li>2017-02-05 00:00:00 +1100 <a href="/2017/02/05/JVM.html">Java JVM</a></li>
+  
+    <li>2017-02-03 00:00:00 +1100 <a href="/2017/02/03/Maven-Notes.html">Maven-Notes</a></li>
+  
+    <li>2017-02-02 00:00:00 +1100 <a href="/2017/02/02/Java-New-IO.html">Java New IO</a></li>
+  
+    <li>2017-01-28 00:00:00 +1100 <a href="/2017/01/28/Network-Protocols.html">Network Protocols</a></li>
+  
+    <li>2017-01-26 00:00:00 +1100 <a href="/2017/01/26/IT-Architect.html">IT-Architect</a></li>
+  
+    <li>2017-01-21 00:00:00 +1100 <a href="/2017/01/21/Algorithm.html">Algorithm</a></li>
+  
+    <li>2017-01-20 00:00:00 +1100 <a href="/2017/01/20/DeadLock.html">Dead Lock</a></li>
+  
+    <li>2017-01-19 00:00:00 +1100 <a href="/2017/01/19/Java-Tricky-Tech-Questions.html">Java-Tricky-Tech-Questions.md</a></li>
+  
+    <li>2017-01-19 00:00:00 +1100 <a href="/2017/01/19/Java-NavigableMap.html">NavigableMap Misc</a></li>
+  
+    <li>2017-01-19 00:00:00 +1100 <a href="/2017/01/19/Compare-In-Java.html">Compare-In-Java</a></li>
+  
+    <li>2017-01-17 00:00:00 +1100 <a href="/2017/01/17/Java-Collections-Misc.html">Java Collections Misc</a></li>
+  
+    <li>2017-01-16 00:00:00 +1100 <a href="/2017/01/16/Java-HashMap.html">HashMap in JDK</a></li>
+  
+    <li>2017-01-14 00:00:00 +1100 <a href="/2017/01/14/Java-8.html">Java 8 Tips</a></li>
+  
+    <li>2017-01-04 00:00:00 +1100 <a href="/2017/01/04/Arbitrage-vs-Hedging.html">Arbitrage vs Heading</a></li>
+  
+    <li>2017-01-03 00:00:00 +1100 <a href="/2017/01/03/IntelliJ-Tips.html">IntelliJ Tips</a></li>
+  
+    <li>2017-01-02 00:00:00 +1100 <a href="/2017/01/02/Enum-Misc.html">Java Enum Misc</a></li>
+  
+    <li>2016-12-30 00:00:00 +1100 <a href="/2016/12/30/Java-GC.html">Java GC notes</a></li>
+  
+    <li>2016-12-30 00:00:00 +1100 <a href="/2016/12/30/HashCode-Contract.html">Hash Code Misc</a></li>
+  
+    <li>2016-12-24 00:00:00 +1100 <a href="/2016/12/24/Apache-Tips.html">Apache Tips</a></li>
+  
+    <li>2016-12-12 00:00:00 +1100 <a href="/2016/12/12/Angular.html">Angulary Misc</a></li>
+  
+    <li>2016-12-09 00:00:00 +1100 <a href="/2016/12/09/HeadsFirst-RandomNumber-In-Java.html">Random number in java</a></li>
+  
+    <li>2016-12-01 00:00:00 +1100 <a href="/2016/12/01/Java-New-Features-Chronicle.html">Java new features</a></li>
+  
+    <li>2016-11-22 00:00:00 +1100 <a href="/2016/11/22/Facial-Recognition.html">用10几行代码自己写个人脸识别程序</a></li>
+  
+    <li>2016-11-12 00:00:00 +1100 <a href="/2016/11/12/elastic.html">Eslastic Search</a></li>
+  
+    <li>2016-11-05 00:00:00 +1100 <a href="/2016/11/05/JSON-Lines.html">JSON lines</a></li>
+  
+    <li>2016-11-04 00:00:00 +1100 <a href="/2016/11/04/Python-Scrapy.html">Python Scraphy</a></li>
+  
+    <li>2016-10-26 00:00:00 +1100 <a href="/2016/10/26/Continuous-Integretaion-Simpler-Chronicle.html">Simpler chronicle of CI(Continuous Integration) “乱弹系列”之持续集成工具</a></li>
+  
+    <li>2016-10-19 00:00:00 +1100 <a href="/2016/10/19/head-first-blockchian-3.html">Head First Blockchina 3</a></li>
+  
+    <li>2016-10-13 00:00:00 +1100 <a href="/2016/10/13/head-first-blockchian-2.html">【原创】深入浅出区块链系统：第二章</a></li>
+  
+    <li>2016-10-06 00:00:00 +1100 <a href="/2016/10/06/Sublime-Syntax-Highlights.html">How to customize Sublime syntax highlights</a></li>
+  
+    <li>2016-09-17 00:00:00 +1000 <a href="/2016/09/17/Assert-In-Unit-Test-CN.html">浅谈软件单元测试中的“断言” (assert)，从石器时代进步到黄金时代。</a></li>
+  
+    <li>2016-09-14 00:00:00 +1000 <a href="/2016/09/14/JetBrains-Tips.html">JetBrains/IntelliJ tips</a></li>
+  
+    <li>2016-09-11 00:00:00 +1000 <a href="/2016/09/11/head-first-blockchian-1.html">Head First Blockchina 1</a></li>
+  
+    <li>2016-09-04 00:00:00 +1000 <a href="/2016/09/04/Kubernets-vs-Swarm.html">Kubernetes 与 Docker Swarm的对比</a></li>
+  
+    <li>2016-09-02 00:00:00 +1000 <a href="/2016/09/02/Design-Principals.html">漫谈开发设计中的一些‘原则’及'设计哲学'</a></li>
+  
+    <li>2016-09-01 00:00:00 +1000 <a href="/2016/09/01/Mac-Tips.html">Mac tips</a></li>
+  
+    <li>2016-09-01 00:00:00 +1000 <a href="/2016/09/01/HTTP-Methods-RFC.html">http methods</a></li>
+  
+    <li>2016-08-30 00:00:00 +1000 <a href="/2016/08/30/Spark-vs-Storm.html">Spark-vs-Storm</a></li>
+  
+    <li>2016-08-24 00:00:00 +1000 <a href="/2016/08/24/microservices.html">微服务</a></li>
+  
+    <li>2016-08-12 00:00:00 +1000 <a href="/2016/08/12/unmodifiableCollection.html">unmodifiableList, unmodifiableSet,unmodifiableMap</a></li>
+  
+    <li>2016-08-11 00:00:00 +1000 <a href="/2016/08/11/Sentry.html">kibana, view layer of elasticsearch</a></li>
+  
+    <li>2016-08-11 00:00:00 +1000 <a href="/2016/08/11/Kibana.html">kibana, view layer of elasticsearch</a></li>
+  
+    <li>2016-08-05 00:00:00 +1000 <a href="/2016/08/05/Anatomy-of-ThreadLocal.html">Anatomy of ThreadLocal</a></li>
+  
+    <li>2016-08-04 00:00:00 +1000 <a href="/2016/08/04/iConnect.html">iConnect</a></li>
+  
+    <li>2016-08-04 00:00:00 +1000 <a href="/2016/08/04/BA.html">Business Analysis</a></li>
+  
+    <li>2016-08-02 00:00:00 +1000 <a href="/2016/08/02/RESTful.html">Something about RESTful architect</a></li>
+  
+    <li>2016-07-25 00:00:00 +1000 <a href="/2016/07/25/Data-Structure.html">Data Structure</a></li>
+  
+    <li>2016-07-24 00:00:00 +1000 <a href="/2016/07/24/Bookmarks.html">Useful bookmarks</a></li>
+  
+    <li>2016-07-02 00:00:00 +1000 <a href="/2016/07/02/file-name-too-long-when-git-checkout.html">git raise error filename too long when checkout</a></li>
+  
+    <li>2016-06-29 00:00:00 +1000 <a href="/2016/06/29/heavy-load-web-app.html">heavy load web application</a></li>
+  
+    <li>2016-06-29 00:00:00 +1000 <a href="/2016/06/29/TIPS-AS400-IBM-EMULATOR.html">tips in as400 IBM Emulator</a></li>
+  
+    <li>2016-06-29 00:00:00 +1000 <a href="/2016/06/29/SOMETHING-ABOUT-AUTHENTICATION.html">Something about authentication</a></li>
+  
+    <li>2016-06-23 00:00:00 +1000 <a href="/2016/06/23/Equity.html">equity trading</a></li>
+  
+    <li>2016-06-14 00:00:00 +1000 <a href="/2016/06/14/SQL.html">SQL</a></li>
+  
+    <li>2016-06-14 00:00:00 +1000 <a href="/2016/06/14/HTTP-HTTPS2.html">HTTPS/2</a></li>
+  
+    <li>2016-06-13 00:00:00 +1000 <a href="/2016/06/13/github-pages.html">Github page commands notes</a></li>
+  
+    <li>2016-06-13 00:00:00 +1000 <a href="/2016/06/13/RQFII.html">RenMinBi International</a></li>
+  
+    <li>2016-06-13 00:00:00 +1000 <a href="/2016/06/13/GIT.html">Git commands notes</a></li>
+  
+    <li>2016-06-12 00:00:00 +1000 <a href="/2016/06/12/JavaScript-tips.html">JavaScript tips</a></li>
+  
+    <li>2016-06-10 00:00:00 +1000 <a href="/2016/06/10/Linux-Tips.html">Linux Tips</a></li>
+  
+    <li>2016-06-09 00:00:00 +1000 <a href="/2016/06/09/Docker-Errors-Fixes.html">Docker Errors and Fixes</a></li>
+  
+    <li>2016-06-07 00:00:00 +1000 <a href="/2016/06/07/Load-Balancing.html">Load Balancing</a></li>
+  
+    <li>2016-06-05 00:00:00 +1000 <a href="/2016/06/05/Python.html">Python</a></li>
+  
+    <li>2016-06-03 00:00:00 +1000 <a href="/2016/06/03/Storage-Management.html">Storage Management</a></li>
+  
+    <li>2016-06-03 00:00:00 +1000 <a href="/2016/06/03/CI-CD.html">CI and CD</a></li>
+  
+    <li>2016-06-01 00:00:00 +1000 <a href="/2016/06/01/XA-2PC.html">XA Transactions in 2PC</a></li>
+  
+    <li>2016-06-01 00:00:00 +1000 <a href="/2016/06/01/Setup-Git-In-Mint.html">Setup Git in Mint Linux</a></li>
+  
+    <li>2016-06-01 00:00:00 +1000 <a href="/2016/06/01/DB-Sharding.html">Database sharding</a></li>
+  
+    <li>2016-05-31 00:00:00 +1000 <a href="/2016/05/31/Microservices-Vs-SOA.html">Microservices vs. SOA</a></li>
+  
+    <li>2016-02-25 00:00:00 +1100 <a href="/2016/02/25/Java-Class-Loader.html">Java Class Loader</a></li>
+  
+    <li>2016-02-09 05:39:08 +1100 <a href="/jekyll/site/release/2016/02/09/jekyll-3-0-3-released.html">Jekyll 3.0.3 Released</a></li>
+  
+    <li>2016-01-21 09:08:18 +1100 <a href="/jekyll/site/release/2016/01/21/jekyll-3-0-2-released.html">Jekyll 3.0.2 Released</a></li>
+  
+    <li>2015-11-18 17:04:39 +1100 <a href="/jekyll/site/release/2015/11/18/jekyll-3-0-1-released.html">Jekyll 3.0.1 Released</a></li>
+  
+    <li>2015-10-27 09:37:30 +1100 <a href="/jekyll/site/release/2015/10/27/jekyll-3-0-released.html">Jekyll 3.0 Released</a></li>
+  
+    <li>2015-02-27 16:06:51 +1100 <a href="/jekyll/site/community/2015/02/27/introducing-jekyll-talk.html">Join the Discussion at Jekyll Talk</a></li>
+  
+    <li>2015-02-20 00:00:00 +1100 <a href="/extensionless-permalink">Extensionless Permalink</a></li>
+  
+    <li>2015-01-24 19:42:31 +1100 <a href="/jekyll/site/release/2015/01/24/jekyll-3-0-0-beta1-released.html">Jekyll 3.0.0.beta1 Released</a></li>
+  
+    <li>2015-01-21 14:23:12 +1100 <a href="/jekyll/site/meetup/2015/01/21/jekyll-meet-and-greet.html">Jekyll Meet & Greet at GitHub HQ</a></li>
+  
+    <li>2015-01-08 00:00:00 +1100 <a href="/jekyll/test/source/2015/01/08/post-excerpt-separator.html">Post Excerpt Separator</a></li>
+  
+    <li>2014-12-23 01:03:30 +1100 <a href="/jekyll/site/release/2014/12/23/jekyll-2-5-3-released.html">Jekyll Release for the Holidays! v2.5.3 Out</a></li>
+  
+    <li>2014-12-18 06:16:21 +1100 <a href="/jekyll/site/team/2014/12/18/alfredxing-welcome-to-jekyll-core.html">Alfred Xing has joined the Jekyll core team</a></li>
+  
+    <li>2014-11-24 00:00:00 +1100 <a href="/jekyll/test/source/2014/11/24/Rmd-extension.Rmd">Rmd Extension</a></li>
+  
+    <li>2014-11-13 13:49:08 +1100 <a href="/jekyll/site/release/2014/11/13/jekyll-2-5-2-released.html">Jekyll 2.5.2 Released</a></li>
+  
+    <li>2014-11-10 04:47:52 +1100 <a href="/jekyll/site/release/2014/11/10/jekyll-2-5-1-released.html">Jekyll 2.5.1 Released</a></li>
+  
+    <li>2014-11-06 05:48:22 +1100 <a href="/jekyll/site/release/2014/11/06/jekylls-midlife-crisis-jekyll-turns-2-5-0.html">Jekyll's Mid-Life Crisis (Or, Jekyll turns 2.5.0)</a></li>
+  
+    <li>2014-09-10 14:10:33 +1000 <a href="/jekyll/site/release/2014/09/10/jekyll-2-4-0-released.html">A Wild Jekyll 2.4.0 Appeared!</a></li>
+  
+    <li>2014-09-02 00:00:00 +1000 <a href="/jekyll/test/source/2014/09/02/relative-includes.html">Post</a></li>
+  
+    <li>2014-08-11 10:38:34 +1000 <a href="/jekyll/site/release/2014/08/11/jekyll-2-3-0-released.html">Jekyll 2.3.0 Released</a></li>
+  
+    <li>2014-07-30 08:59:13 +1000 <a href="/jekyll/site/release/2014/07/30/jekyll-2-2-0-released.html">Jekyll 2.2.0 Released</a></li>
+  
+    <li>2014-07-05 00:00:00 +1000 <a href="/jekyll/test/source/mixedcase/2014/07/05/mixed-case-category.html">Mixed Case Category in YAML</a></li>
+  
+    <li>2014-07-05 00:00:00 +1000 <a href="/jekyll/test/source/mixedcase/2014/07/05/another-mixed-case-category.html">Another Mixed Case Category in YAML</a></li>
+  
+    <li>2014-07-02 10:16:43 +1000 <a href="/jekyll/site/release/2014/07/02/jekyll-2-1-1-released.html">Jekyll 2.1.1 Released</a></li>
+  
+    <li>2014-06-29 07:26:59 +1000 <a href="/jekyll/site/release/2014/06/29/jekyll-turns-21-i-mean-2-1-0.html">Jekyll Turns 21! Err... I mean 2.1.0.</a></li>
+  
+    <li>2014-06-05 05:46:53 +1000 <a href="/jekyll/site/partners/2014/06/05/jekyll-stickers-1-dollar-stickermule.html">Pick Up your $1 Jekyll Sticker</a></li>
+  
+    <li>2014-05-09 12:43:17 +1000 <a href="/jekyll/site/release/2014/05/09/jekyll-2-0-3-released.html">Jekyll 2.0.3 Released</a></li>
+  
+    <li>2014-05-06 00:00:00 +1000 <a href="/jekyll/site/release/2014/05/06/jekyll-turns-2-0-0.html">Jekyll turns 2.0.0</a></li>
+  
+    <li>2014-03-28 13:43:48 +1100 <a href="/jekyll/site/release/2014/03/28/jekyll-1-5-1-released.html">Jekyll 1.5.1 Released</a></li>
+  
+    <li>2014-03-25 11:37:59 +1100 <a href="/jekyll/site/release/2014/03/25/jekyll-1-5-0-released.html">Jekyll 1.5.0 Released</a></li>
+  
+    <li>2014-03-22 00:00:00 +1100 <a href="/jekyll/test/source/2014/03/22/escape-+-20.html">Plus space percent</a></li>
+  
+    <li>2014-03-03 00:00:00 +1100 <a href="/jekyll/test/source/2014/03/03/yaml-with-dots.html">Test Post Where YAML Ends in Dots</a></li>
+  
+    <li>2014-01-14 12:43:32 +1100 <a href="/jekyll/site/release/2014/01/14/jekyll-1-4-3-released.html">Jekyll 1.4.3 Released</a></li>
+  
+    <li>2014-01-06 00:00:00 +1100 <a href="/%2e%2e/%2e%2e/%2e%2e/baddie.html">Permalink Traversal</a></li>
+  
+    <li>2013-12-20 00:00:00 +1100 <a href="/jekyll/test/source/foo/bar/baz/mixedcase/2013/12/20/properties.text">Properties Post</a></li>
+  
+    <li>2013-12-17 11:48:13 +1100 <a href="/jekyll/site/release/2013/12/17/jekyll-1-4-2-released.html">Jekyll 1.4.2 Released</a></li>
+  
+    <li>2013-12-17 00:00:00 +1100 <a href="/jekyll/test/source/2013/12/17/include-variable-filters.html">Post</a></li>
+  
+    <li>2013-12-10 13:44:13 +1100 <a href="/jekyll/site/release/2013/12/10/jekyll-1-4-1-released.html">Jekyll 1.4.1 Released</a></li>
+  
+    <li>2013-12-08 06:55:28 +1100 <a href="/jekyll/site/release/2013/12/08/jekyll-1-4-0-released.html">Jekyll 1.4.0 Released</a></li>
+  
+    <li>2013-11-27 12:52:20 +1100 <a href="/jekyll/site/release/2013/11/27/jekyll-1-3-1-released.html">Jekyll 1.3.1 Released</a></li>
+  
+    <li>2013-11-05 14:46:02 +1100 <a href="/jekyll/site/release/2013/11/05/jekyll-1-3-0-released.html">Jekyll 1.3.0 Released</a></li>
+  
+    <li>2013-10-29 12:14:39 +1100 <a href="/jekyll/site/release/2013/10/29/jekyll-1-3-0-rc1-released.html">Jekyll 1.3.0.rc1 Released</a></li>
+  
+    <li>2013-09-15 10:46:50 +1000 <a href="/jekyll/site/release/2013/09/15/jekyll-1-2-1-released.html">Jekyll 1.2.1 Released</a></li>
+  
+    <li>2013-09-07 12:02:41 +1000 <a href="/jekyll/site/release/2013/09/07/jekyll-1-2-0-released.html">Jekyll 1.2.0 Released</a></li>
+  
+    <li>2013-08-01 00:00:00 +1000 <a href="/jekyll/test/source/2013/08/01/mkdn-extension.html">Mkdn Extension</a></li>
+  
+    <li>2013-07-25 17:08:38 +1000 <a href="/jekyll/site/release/2013/07/25/jekyll-1-1-2-released.html">Jekyll 1.1.2 Released</a></li>
+  
+    <li>2013-07-25 17:08:38 +1000 <a href="/jekyll/site/release/2013/07/25/jekyll-1-0-4-released.html">Jekyll 1.0.4 Released</a></li>
+  
+    <li>2013-07-25 06:24:14 +1000 <a href="/jekyll/site/release/2013/07/25/jekyll-1-1-1-released.html">Jekyll 1.1.1 Released</a></li>
+  
+    <li>2013-07-22 00:00:00 +1000 <a href="/jekyll/test/source/bar/baz/z_category/mixedcase/2013/07/22/post-excerpt-with-layout.html">Post Excerpt with Layout</a></li>
+  
+    <li>2013-07-15 03:38:02 +1000 <a href="/jekyll/site/release/2013/07/15/jekyll-1-1-0-released.html">Jekyll 1.1.0 Released</a></li>
+  
+    <li>2013-06-08 05:02:13 +1000 <a href="/jekyll/site/release/2013/06/08/jekyll-1-0-3-released.html">Jekyll 1.0.3 Released</a></li>
+  
+    <li>2013-05-12 22:45:00 +1000 <a href="/jekyll/site/release/2013/05/12/jekyll-1-0-2-released.html">Jekyll 1.0.2 Released</a></li>
+  
+    <li>2013-05-10 00:00:00 +1000 <a href="/jekyll/test/source/2013/2013/05/10/number-category.html">Number Category in YAML</a></li>
+  
+    <li>2013-05-09 07:46:11 +1000 <a href="/jekyll/site/release/2013/05/09/jekyll-1-0-1-released.html">Jekyll 1.0.1 Released</a></li>
+  
+    <li>2013-05-06 10:12:52 +1000 <a href="/jekyll/site/release/2013/05/06/jekyll-1-0-0-released.html">Jekyll 1.0.0 Released</a></li>
+  
+    <li>2013-04-11 00:00:00 +1000 <a href="/jekyll/test/source/2013/04/11/custom-excerpt.html">Custom Excerpt</a></li>
+  
+    <li>2013-01-12 00:00:00 +1100 <a href="/jekyll/test/source/2013/01/12/no-layout.html">I have no layout</a></li>
+  
+    <li>2013-01-12 00:00:00 +1100 <a href="/jekyll/test/source/2013/01/12/nil-layout.html">No layout</a></li>
+  
+    <li>2013-01-02 00:00:00 +1100 <a href="/jekyll/test/source/2013/01/02/post-excerpt.html">Post Excerpt</a></li>
+  
+    <li>2011-04-12 23:07:09 +1000 <a href="/jekyll/test/source/2011/04/12/md-extension.html">Md Extension</a></li>
+  
+    <li>2011-04-12 00:00:00 +1000 <a href="/jekyll/test/source/2011/04/12/text-extension.text">Text Extension</a></li>
+  
+    <li>2010-01-11 00:07:09 +1100 <a href="/jekyll/test/source/2010/01/11/override-data.html">Override Data</a></li>
+  
+    <li>2010-01-11 00:07:09 +1100 <a href="/jekyll/test/source/2010/01/11/timezone-override.html">Timezone Override</a></li>
+  
+    <li>2010-01-11 00:07:09 +1100 <a href="/jekyll/test/source/2010/01/11/time-override.html">Time Override</a></li>
+  
+    <li>2010-01-10 00:00:00 +1100 <a href="/jekyll/test/source/2010/01/10/date-override.html">Date Override</a></li>
+  
+    <li>2010-01-08 00:00:00 +1100 <a href="/jekyll/test/source/2010/01/08/triple-dash.html">Foo --- Bar</a></li>
+  
+    <li>2009-06-22 00:00:00 +1000 <a href="/jekyll/test/source/2009/06/22/no-yaml.html">No Yaml</a></li>
+  
+    <li>2009-06-22 00:00:00 +1000 <a href="/jekyll/test/source/2009/06/22/empty-yaml.html">Empty Yaml</a></li>
+  
+    <li>2009-05-24 00:00:00 +1000 <a href="/jekyll/test/source/win/2009/05/24/yaml-linebreak.html">Test title</a></li>
+  
+    <li>2009-05-18 00:00:00 +1000 <a href="/jekyll/test/source/2009/05/18/tags.html">Some Tags</a></li>
+  
+    <li>2009-05-18 00:00:00 +1000 <a href="/jekyll/test/source/2009/05/18/tag.html">A Tag</a></li>
+  
+    <li>2009-05-18 00:00:00 +1000 <a href="/jekyll/test/source/2009/05/18/empty-tags.html">Some Tags</a></li>
+  
+    <li>2009-05-18 00:00:00 +1000 <a href="/jekyll/test/source/2009/05/18/empty-tag.html">A Tag</a></li>
+  
+    <li>2009-03-12 00:00:00 +1100 <a href="/jekyll/test/source/2009/03/12/hash-1.html">Hash</a></li>
+  
+    <li>2009-01-27 00:00:00 +1100 <a href="/jekyll/test/source/2009/01/27/no-category.html">Category in YAML</a></li>
+  
+    <li>2009-01-27 00:00:00 +1100 <a href="/jekyll/test/source/2009/01/27/empty-category.html">Category in YAML</a></li>
+  
+    <li>2009-01-27 00:00:00 +1100 <a href="/jekyll/test/source/2009/01/27/empty-categories.html">Category in YAML</a></li>
+  
+    <li>2009-01-27 00:00:00 +1100 <a href="/jekyll/test/source/foo/2009/01/27/category.html">Category in YAML</a></li>
+  
+    <li>2009-01-27 00:00:00 +1100 <a href="/jekyll/test/source/foo/bar/baz/2009/01/27/categories.html">Categories in YAML</a></li>
+  
+    <li>2009-01-27 00:00:00 +1100 <a href="/jekyll/test/source/foo/bar/baz/2009/01/27/array-categories.html">Array categories in YAML</a></li>
+  
+    <li>2008-12-13 00:00:00 +1100 <a href="/jekyll/test/source/2008/12/13/include.html">Include</a></li>
+  
+    <li>2008-12-12 00:00:00 +1100 <a href="/jekyll/test/source/foo/2008/12/12/topical-post.html">Topical Post</a></li>
+  
+    <li>2008-12-03 00:00:00 +1100 <a href="/my_category/permalinked-post">Post with Permalink</a></li>
+  
+    <li>2008-11-21 00:00:00 +1100 <a href="/jekyll/test/source/2008/11/21/nested.html">Nested</a></li>
+  
+    <li>2008-11-21 00:00:00 +1100 <a href="/jekyll/test/source/2008/11/21/complex.html">Complex</a></li>
+  
+    <li>2008-10-18 00:00:00 +1100 <a href="/jekyll/test/source/2008/10/18/foo-bar.html">Foo Bar</a></li>
+  
+    <li>2008-09-23 00:00:00 +1000 <a href="/jekyll/test/source/z_category/2008/09/23/categories.html">Categories</a></li>
+  
+    <li>2008-09-23 00:00:00 +1000 <a href="/jekyll/test/source/category/2008/09/23/categories.html">Categories</a></li>
+  
+    <li>2008-02-02 00:00:00 +1100 <a href="/jekyll/test/source/publish_test/2008/02/02/published.html">Publish</a></li>
+  
+    <li>2007-04-28 16:40:12 +1000 <a href="/2007/04/28/GIT-scripts-bible-errors.html">GIT useful scripts or error solutions</a></li>
+  
+    <li>2000-01-01 00:00:00 +1100 <a href="/jekyll/lib/site_template/update/2000/01/01/welcome-to-jekyll.markdown.erb">Welcome to Jekyll!</a></li>
+  
+</ul>
+
+
+<div id="first_post">
+  <h1>How logging system Bootstrapped in Spring Boot Application</h1>
+  <div>
+    <h1 id="summary">Summary</h1>
+<p>Following diagram demonstrated the process to bootstrap and use Logback for loggings in Spring Boot applciation.</p>
+
+<h1 id="video-version-of-this-explanation">Video version of this explanation</h1>
+<p>If you’d perfer a more intuitive and vision version, check it out below.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Q6GY8rLnyBc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+
+<h1 id="workflow-diagram">Workflow diagram</h1>
+
+<p><img src="/assets/images/BootstrapLoggingInSpringBoot.png" alt="" /></p>
+
+<h1 id="key-steps-explained">Key steps explained</h1>
+<blockquote>
+  <p>The first section for logic in SpringBoot Application domain</p>
+</blockquote>
+
+<ol>
+  <li>When a SpringBoot application start to execute SpringApplicaiton.run , internally it will execute <code class="language-plaintext highlighter-rouge">prepareEnvironment</code> , which will create or load application run environment , such as environment variables.</li>
+  <li>SpringBoot use Observer Pattern and  SpringApplicationEvent to keep tack of each key steps in Spring Boot Application life cycle.  SpringBoot will pass loaded environments as argument to list of registered listeners.</li>
+</ol>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">listeners</span><span class="o">.</span><span class="na">environmentPrepared</span><span class="o">(</span><span class="n">bootstrapContext</span><span class="o">,</span> <span class="n">environment</span><span class="o">);</span>
+</code></pre></div></div>
+<ol>
+  <li>SpringBoot’s Event publisher (EventPublishingRunListener) will publish an event called <strong>ApplicationEnvironmentPreparedEvent</strong> via it’s built-in multicast publisher.</li>
+  <li><strong>LoggingApplicationListener</strong> is one of 6 components in Spring subscribed to ApplicationEnvironmentPreparedEvent. It will configure Spring’s LoggingSystem. If the environment contains a logging.config property, it will be used to bootstrap the logging system, otherwise a default configuration is used.</li>
+  <li>SpringBoot will leverage Classloader to try to load any LoggingSystem or its descendants.</li>
+  <li>If you added sl4j into class path, LoggingSystemFactory will produce a new LogbackLoggingSystem, which extended LoggingSystem ultimately.</li>
+</ol>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">return</span> <span class="k">new</span> <span class="nc">LogbackLoggingSystem</span><span class="o">(</span><span class="n">classLoader</span><span class="o">);</span>
+</code></pre></div></div>
+<blockquote>
+  <p>Now we move to domain of logging system in slf4j &amp; logback.</p>
+</blockquote>
+
+<ol>
+  <li>LogbackLoggingSystem will invoke doConfig  of SpringBootJoranConfigurator to setup logging sub system. This Configurator is backbone of Joran framework.</li>
+</ol>
+
+<blockquote>
+  <p>Joran: a mature, flexible and powerful configuration framework. On which logback’s configuration logic is based. Details check it out at Joran Configuration framework</p>
+</blockquote>
+
+<ol>
+  <li><strong>Interpreter</strong> will parse configuration details in logback.xml , internally logback would convert elements of aforesaid xml file as a list of Event , then Interpreter has one EventPlayer to process those events one by one.e</li>
+  <li><strong>Interpreter</strong> is Joran’s main driving class. It extends SAX DefaultHandler which invokes various actions according to predefined patterns (configured as RuleStore ). It leverage Constructor to start a new instance of LogstashEncoder in memory.</li>
+  <li><strong>Joran</strong> defines StartEvent  and EndEvent  to process beginning and ending element in XML configuration. For &lt;/encoder&gt; , Joran will use reflection to call property setter of ConsolerAppender, and inject aforesaid logstashEncoder as property encoder .</li>
+  <li>This is the last step of this setup. When there are logs to be wrote, the log Appender’s internal encoder  (that’s LogstashEncoder in this case) will be invoked to render output message.</li>
+</ol>
+
+<p>–End–</p>
+
+
+  </div>
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

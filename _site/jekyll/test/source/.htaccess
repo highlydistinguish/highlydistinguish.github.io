@@ -1,0 +1,560 @@
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
+
+  # /blogs/tech/en/boostrap_logging_in_springbootapplication
+
+  # /blogs/tech/en/sqlserver_driver_not_configured_integrated_authenciation
+
+  # /blogs/tech/en/save_resources_to_files
+
+  # /blogs/tech/en/debug_not_hit_intelliJ
+
+  # /tech/2021/11/01/How-to-watch-kubenetes-deployment-by-label-selector.html
+
+  # /tech/2021/10/11/Could-not-resolve-github-host.html
+
+  # /tech/2021/10/11/Day-Day-Up-Java.html
+
+  # /business/2021/10/08/How-to-user-fire-extinguisher.html
+
+  # /tech/2021/10/07/Spring-Boot-ApplicationEvents-DeepDive.html
+
+  # /blog_tech/business/2021/09/22/IT-Solutions-For-Remote-Learning.html
+
+  # /blog_chn/business/2021/09/22/IT-Solutions-For-Remote-Learning.html
+
+  # /blog_business/business/2021/09/22/IT-Solutions-For-Remote-Learning.html
+
+  # /2021/09/16/Kubernetes-Client-API-DeepDive.html
+
+  # /2021/09/14/Get-CPU-info-core-in-windows.html
+
+  # /2021/09/13/Whitelabel-Error-Page.html
+
+  # /2021/01/19/Google-maps-no-photos-reviews.html
+
+  # /2021/01/19/Google-maps-no-photos-reviews-CHN.html
+
+  # /2021/01/04/Debts-In-a-nutshell.html
+
+  # /2020/10/20/How-to-use-S3-download-URL.html
+
+  # /2020/09/24/Debug-Stuck-IntelliJ.html
+
+  # /2020/09/18/Awesome-Kotlin.html
+
+  # /2020/09/17/Awesome-Chrome-tips.html
+
+  # /chn/2020/09/15/JVM-Warm-up-CHN.html
+
+  # /2020/09/07/Awesome-shortcuts-Slack.html
+
+  # /2020/09/03/Neverl-ending-Gralde-run.html
+
+  # /2020/08/21/Reactor-Reactive.html
+
+  # /2020/08/20/Awesome-swift.html
+
+  # /2020/08/16/Swift-For-iOS.html
+
+  # /2020/08/13/Mock-In-Kotlin.html
+
+  # /2020/08/13/Docker.html
+
+  # /2020/08/03/How-to-decode-path-parameters-in-All-REST-calls.html
+
+  # /2020/07/27/Curl.html
+
+  # /2020/07/24/AOP.html
+
+  # /2020/07/07/micrometer-notes.html
+
+  # /2020/07/07/Awesome-shortcuts.html
+
+  # /2020/07/04/Leetcode-tips.html
+
+  # /2020/07/02/pigeon-hole-principle.html
+
+  # /2020/06/29/Awesome-Algorithm-Solutions.html
+
+  # /2020/06/29/Java-Concurrency.html
+
+  # /2020/06/28/Facial-Recognition_en.html
+
+  # /2020/06/26/TLS-SSL-HTTPS.html
+
+  # /2020/06/21/JPA-Notes.html
+
+  # /2020/05/10/Java-Deep-Notes.html
+
+  # /2020/03/28/JVM-Warm-up.html
+
+  # /2020/03/15/Concurrent-In-Java-col-2.html
+
+  # /2020/03/10/Concurrent-In-Java.html
+
+  # /2020/03/03/Algorithm-Leecode-1.html
+
+  # /2019/09/12/Conversations-with-God.html
+
+  # /2019/09/02/Kafka-In-Spring.html
+
+  # /2019/08/25/AWS-Certificate.html
+
+  # /2019/07/26/Terraform.html
+
+  # /2019/07/07/Kafka.html
+
+  # /2019/01/17/Mifid.html
+
+  # /2019/01/17/FX-ForeignExchange.html
+
+  # /2019/01/03/IPC.html
+
+  # /2018/11/01/seconds.html
+
+  # /2018/10/13/SBE.html
+
+  # /2018/09/26/Citrix.html
+
+  # /2018/09/18/Google-Guice.html
+
+  # /2018/09/16/yaml-config.html
+
+  # /2018/09/06/mockito.html
+
+  # /2018/09/03/distruptor.html
+
+  # /2018/08/23/protobuf.html
+
+  # /2018/08/21/sudo.html
+
+  # /2018/08/19/ZooKeeper.html
+
+  # /2018/08/15/PrestoDB.html
+
+  # /2018/08/09/Chronicle.html
+
+  # /2018/08/08/Cucumber.html
+
+  # /2018/07/28/Scala.html
+
+  # /2018/07/23/akka-scala.html
+
+  # /2018/07/16/FileUtils_Camel.html
+
+  # /2018/07/11/Camel.html
+
+  # /2018/07/10/QuickFixJ.html
+
+  # /2018/07/10/JMX.html
+
+  # /2018/07/04/Solace-MQ.html
+
+  # /2018/06/26/Core-Java.html
+
+  # /2018/06/21/Apigee.html
+
+  # /2018/06/21/Ansible.html
+
+  # /2018/06/14/flex-box.html
+
+  # /2018/06/14/JBoss-Console.html
+
+  # /2018/06/12/Locking-And-Multithreading.html
+
+  # /2018/06/12/KDB.html
+
+  # /2018/06/09/FX.html
+
+  # /2018/06/07/Protractor.html
+
+  # /2018/06/06/Scrum-Agile.html
+
+  # /2018/06/02/DevOps-Philosophy.html
+
+  # /2018/05/15/rxjs-pipe-in-depth.html
+
+  # /2018/05/15/how-to-setup-node-config-in-intranet.html
+
+  # /2018/05/14/Strategy-Of-Openshift-Releases.html
+
+  # /2018/05/11/Node-errors-DB.html
+
+  # /2018/03/18/NodeJs-Notes.html
+
+  # /2018/02/27/MVP.html
+
+  # /2018/01/11/Angular-Module-Declaration-Import.html
+
+  # /2018/01/10/CORS.html
+
+  # /2018/01/08/ngrx.html
+
+  # /2018/01/06/iOS.html
+
+  # /2017/12/18/OpenStack-vs-OpenShift.html
+
+  # /2017/12/18/Clouding.html
+
+  # /2017/12/12/Redux.html
+
+  # /2017/12/11/Why-Reactive-programming-is-outpermant.html
+
+  # /2017/12/10/RxJS.html
+
+  # /2017/12/08/Router-In-Angular.html
+
+  # /2017/12/07/Errors-In-NPM.html
+
+  # /2017/12/02/Container.html
+
+  # /2017/12/01/Promise-vs-Observable.html
+
+  # /2017/11/29/OpenShift.html
+
+  # /2017/11/27/TypeScript.html
+
+  # /2017/09/04/Google-Analytics.html
+
+  # /2017/06/24/JDK-sources.html
+
+  # /2017/04/06/SSH.html
+
+  # /2017/03/30/WebSphere-setp-via-CLI.html
+
+  # /2017/03/21/aws.html
+
+  # /2017/03/13/oracle.html
+
+  # /2017/03/05/Spring.html
+
+  # /2017/02/21/Java-JIT.html
+
+  # /2017/02/15/Java-Security.html
+
+  # /2017/02/14/SerialVersionUID.html
+
+  # /2017/02/09/R-Lang.html
+
+  # /2017/02/06/SSH-Cryptography.html
+
+  # /2017/02/06/Eclipse-tips.html
+
+  # /2017/02/05/JVM.html
+
+  # /2017/02/03/Maven-Notes.html
+
+  # /2017/02/02/Java-New-IO.html
+
+  # /2017/01/28/Network-Protocols.html
+
+  # /2017/01/26/IT-Architect.html
+
+  # /2017/01/21/Algorithm.html
+
+  # /2017/01/20/DeadLock.html
+
+  # /2017/01/19/Java-Tricky-Tech-Questions.html
+
+  # /2017/01/19/Java-NavigableMap.html
+
+  # /2017/01/19/Compare-In-Java.html
+
+  # /2017/01/17/Java-Collections-Misc.html
+
+  # /2017/01/16/Java-HashMap.html
+
+  # /2017/01/14/Java-8.html
+
+  # /2017/01/04/Arbitrage-vs-Hedging.html
+
+  # /2017/01/03/IntelliJ-Tips.html
+
+  # /2017/01/02/Enum-Misc.html
+
+  # /2016/12/30/Java-GC.html
+
+  # /2016/12/30/HashCode-Contract.html
+
+  # /2016/12/24/Apache-Tips.html
+
+  # /2016/12/12/Angular.html
+
+  # /2016/12/09/HeadsFirst-RandomNumber-In-Java.html
+
+  # /2016/12/01/Java-New-Features-Chronicle.html
+
+  # /2016/11/22/Facial-Recognition.html
+
+  # /2016/11/12/elastic.html
+
+  # /2016/11/05/JSON-Lines.html
+
+  # /2016/11/04/Python-Scrapy.html
+
+  # /2016/10/26/Continuous-Integretaion-Simpler-Chronicle.html
+
+  # /2016/10/19/head-first-blockchian-3.html
+
+  # /2016/10/13/head-first-blockchian-2.html
+
+  # /2016/10/06/Sublime-Syntax-Highlights.html
+
+  # /2016/09/17/Assert-In-Unit-Test-CN.html
+
+  # /2016/09/14/JetBrains-Tips.html
+
+  # /2016/09/11/head-first-blockchian-1.html
+
+  # /2016/09/04/Kubernets-vs-Swarm.html
+
+  # /2016/09/02/Design-Principals.html
+
+  # /2016/09/01/Mac-Tips.html
+
+  # /2016/09/01/HTTP-Methods-RFC.html
+
+  # /2016/08/30/Spark-vs-Storm.html
+
+  # /2016/08/24/microservices.html
+
+  # /2016/08/12/unmodifiableCollection.html
+
+  # /2016/08/11/Sentry.html
+
+  # /2016/08/11/Kibana.html
+
+  # /2016/08/05/Anatomy-of-ThreadLocal.html
+
+  # /2016/08/04/iConnect.html
+
+  # /2016/08/04/BA.html
+
+  # /2016/08/02/RESTful.html
+
+  # /2016/07/25/Data-Structure.html
+
+  # /2016/07/24/Bookmarks.html
+
+  # /2016/07/02/file-name-too-long-when-git-checkout.html
+
+  # /2016/06/29/heavy-load-web-app.html
+
+  # /2016/06/29/TIPS-AS400-IBM-EMULATOR.html
+
+  # /2016/06/29/SOMETHING-ABOUT-AUTHENTICATION.html
+
+  # /2016/06/23/Equity.html
+
+  # /2016/06/14/SQL.html
+
+  # /2016/06/14/HTTP-HTTPS2.html
+
+  # /2016/06/13/github-pages.html
+
+  # /2016/06/13/RQFII.html
+
+  # /2016/06/13/GIT.html
+
+  # /2016/06/12/JavaScript-tips.html
+
+  # /2016/06/10/Linux-Tips.html
+
+  # /2016/06/09/Docker-Errors-Fixes.html
+
+  # /2016/06/07/Load-Balancing.html
+
+  # /2016/06/05/Python.html
+
+  # /2016/06/03/Storage-Management.html
+
+  # /2016/06/03/CI-CD.html
+
+  # /2016/06/01/XA-2PC.html
+
+  # /2016/06/01/Setup-Git-In-Mint.html
+
+  # /2016/06/01/DB-Sharding.html
+
+  # /2016/05/31/Microservices-Vs-SOA.html
+
+  # /2016/02/25/Java-Class-Loader.html
+
+  # /jekyll/site/release/2016/02/09/jekyll-3-0-3-released.html
+
+  # /jekyll/site/release/2016/01/21/jekyll-3-0-2-released.html
+
+  # /jekyll/site/release/2015/11/18/jekyll-3-0-1-released.html
+
+  # /jekyll/site/release/2015/10/27/jekyll-3-0-released.html
+
+  # /jekyll/site/community/2015/02/27/introducing-jekyll-talk.html
+
+  # /extensionless-permalink
+
+  # /jekyll/site/release/2015/01/24/jekyll-3-0-0-beta1-released.html
+
+  # /jekyll/site/meetup/2015/01/21/jekyll-meet-and-greet.html
+
+  # /jekyll/test/source/2015/01/08/post-excerpt-separator.html
+
+  # /jekyll/site/release/2014/12/23/jekyll-2-5-3-released.html
+
+  # /jekyll/site/team/2014/12/18/alfredxing-welcome-to-jekyll-core.html
+
+  # /jekyll/test/source/2014/11/24/Rmd-extension.Rmd
+
+  # /jekyll/site/release/2014/11/13/jekyll-2-5-2-released.html
+
+  # /jekyll/site/release/2014/11/10/jekyll-2-5-1-released.html
+
+  # /jekyll/site/release/2014/11/06/jekylls-midlife-crisis-jekyll-turns-2-5-0.html
+
+  # /jekyll/site/release/2014/09/10/jekyll-2-4-0-released.html
+
+  # /jekyll/test/source/2014/09/02/relative-includes.html
+
+  # /jekyll/site/release/2014/08/11/jekyll-2-3-0-released.html
+
+  # /jekyll/site/release/2014/07/30/jekyll-2-2-0-released.html
+
+  # /jekyll/test/source/mixedcase/2014/07/05/mixed-case-category.html
+
+  # /jekyll/test/source/mixedcase/2014/07/05/another-mixed-case-category.html
+
+  # /jekyll/site/release/2014/07/02/jekyll-2-1-1-released.html
+
+  # /jekyll/site/release/2014/06/29/jekyll-turns-21-i-mean-2-1-0.html
+
+  # /jekyll/site/partners/2014/06/05/jekyll-stickers-1-dollar-stickermule.html
+
+  # /jekyll/site/release/2014/05/09/jekyll-2-0-3-released.html
+
+  # /jekyll/site/release/2014/05/06/jekyll-turns-2-0-0.html
+
+  # /jekyll/site/release/2014/03/28/jekyll-1-5-1-released.html
+
+  # /jekyll/site/release/2014/03/25/jekyll-1-5-0-released.html
+
+  # /jekyll/test/source/2014/03/22/escape-+-20.html
+
+  # /jekyll/test/source/2014/03/03/yaml-with-dots.html
+
+  # /jekyll/site/release/2014/01/14/jekyll-1-4-3-released.html
+
+  # /%2e%2e/%2e%2e/%2e%2e/baddie.html
+
+  # /jekyll/test/source/foo/bar/baz/mixedcase/2013/12/20/properties.text
+
+  # /jekyll/site/release/2013/12/17/jekyll-1-4-2-released.html
+
+  # /jekyll/test/source/2013/12/17/include-variable-filters.html
+
+  # /jekyll/site/release/2013/12/10/jekyll-1-4-1-released.html
+
+  # /jekyll/site/release/2013/12/08/jekyll-1-4-0-released.html
+
+  # /jekyll/site/release/2013/11/27/jekyll-1-3-1-released.html
+
+  # /jekyll/site/release/2013/11/05/jekyll-1-3-0-released.html
+
+  # /jekyll/site/release/2013/10/29/jekyll-1-3-0-rc1-released.html
+
+  # /jekyll/site/release/2013/09/15/jekyll-1-2-1-released.html
+
+  # /jekyll/site/release/2013/09/07/jekyll-1-2-0-released.html
+
+  # /jekyll/test/source/2013/08/01/mkdn-extension.html
+
+  # /jekyll/site/release/2013/07/25/jekyll-1-1-2-released.html
+
+  # /jekyll/site/release/2013/07/25/jekyll-1-0-4-released.html
+
+  # /jekyll/site/release/2013/07/25/jekyll-1-1-1-released.html
+
+  # /jekyll/test/source/bar/baz/z_category/mixedcase/2013/07/22/post-excerpt-with-layout.html
+
+  # /jekyll/site/release/2013/07/15/jekyll-1-1-0-released.html
+
+  # /jekyll/site/release/2013/06/08/jekyll-1-0-3-released.html
+
+  # /jekyll/site/release/2013/05/12/jekyll-1-0-2-released.html
+
+  # /jekyll/test/source/2013/2013/05/10/number-category.html
+
+  # /jekyll/site/release/2013/05/09/jekyll-1-0-1-released.html
+
+  # /jekyll/site/release/2013/05/06/jekyll-1-0-0-released.html
+
+  # /jekyll/test/source/2013/04/11/custom-excerpt.html
+
+  # /jekyll/test/source/2013/01/12/no-layout.html
+
+  # /jekyll/test/source/2013/01/12/nil-layout.html
+
+  # /jekyll/test/source/2013/01/02/post-excerpt.html
+
+  # /jekyll/test/source/2011/04/12/md-extension.html
+
+  # /jekyll/test/source/2011/04/12/text-extension.text
+
+  # /jekyll/test/source/2010/01/11/override-data.html
+
+  # /jekyll/test/source/2010/01/11/timezone-override.html
+
+  # /jekyll/test/source/2010/01/11/time-override.html
+
+  # /jekyll/test/source/2010/01/10/date-override.html
+
+  # /jekyll/test/source/2010/01/08/triple-dash.html
+
+  # /jekyll/test/source/2009/06/22/no-yaml.html
+
+  # /jekyll/test/source/2009/06/22/empty-yaml.html
+
+  # /jekyll/test/source/win/2009/05/24/yaml-linebreak.html
+
+  # /jekyll/test/source/2009/05/18/tags.html
+
+  # /jekyll/test/source/2009/05/18/tag.html
+
+  # /jekyll/test/source/2009/05/18/empty-tags.html
+
+  # /jekyll/test/source/2009/05/18/empty-tag.html
+
+  # /jekyll/test/source/2009/03/12/hash-1.html
+
+  # /jekyll/test/source/2009/01/27/no-category.html
+
+  # /jekyll/test/source/2009/01/27/empty-category.html
+
+  # /jekyll/test/source/2009/01/27/empty-categories.html
+
+  # /jekyll/test/source/foo/2009/01/27/category.html
+
+  # /jekyll/test/source/foo/bar/baz/2009/01/27/categories.html
+
+  # /jekyll/test/source/foo/bar/baz/2009/01/27/array-categories.html
+
+  # /jekyll/test/source/2008/12/13/include.html
+
+  # /jekyll/test/source/foo/2008/12/12/topical-post.html
+
+  # /my_category/permalinked-post
+
+  # /jekyll/test/source/2008/11/21/nested.html
+
+  # /jekyll/test/source/2008/11/21/complex.html
+
+  # /jekyll/test/source/2008/10/18/foo-bar.html
+
+  # /jekyll/test/source/z_category/2008/09/23/categories.html
+
+  # /jekyll/test/source/category/2008/09/23/categories.html
+
+  # /jekyll/test/source/publish_test/2008/02/02/published.html
+
+  # /2007/04/28/GIT-scripts-bible-errors.html
+
+  # /jekyll/lib/site_template/update/2000/01/01/welcome-to-jekyll.markdown.erb

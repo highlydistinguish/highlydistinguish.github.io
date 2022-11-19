@@ -7,8 +7,10 @@
 # #
 # # This will help ensure the proper Jekyll version is running.
 # # Happy Jekylling!
-gem 'jekyll', github: 'jekyll/jekyll'
+# gem 'jekyll', github: 'jekyll/jekyll'
 # gem "jekyll", "~> 4.2.0"
+# gem "jekyll", "1.2.0"
+gem "jekyll", "3.9.2"
 # gem "minimal-mistakes-jekyll"
 # # This is the default theme for new Jekyll sites. You may change this to anything you like.
 # gem "minima", "~> 2.5"
@@ -33,6 +35,6 @@ gem 'jekyll', github: 'jekyll/jekyll'
 # gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 
 source "https://rubygems.org"
-
-gem "github-pages", group: :jekyll_plugins
+# gem "github-pages", group: :jekyll_plugins
+gem "github-pages", "227"
 # gem "jekyll-include-cache", group: :jekyll_plugins

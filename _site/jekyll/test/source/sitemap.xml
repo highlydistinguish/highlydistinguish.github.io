@@ -1,0 +1,2136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>http://example.com</loc>
+    <lastmod>2022-11-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  
+  <url>
+    <loc>http://example.com/blogs/tech/en/boostrap_logging_in_springbootapplication/</loc>
+    <lastmod>2021-12-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/blogs/tech/en/sqlserver_driver_not_configured_integrated_authenciation/</loc>
+    <lastmod>2021-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/blogs/tech/en/save_resources_to_files/</loc>
+    <lastmod>2021-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/blogs/tech/en/debug_not_hit_intelliJ/</loc>
+    <lastmod>2021-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tech/2021/11/01/How-to-watch-kubenetes-deployment-by-label-selector.html/</loc>
+    <lastmod>2021-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tech/2021/10/11/Could-not-resolve-github-host.html/</loc>
+    <lastmod>2021-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tech/2021/10/11/Day-Day-Up-Java.html/</loc>
+    <lastmod>2021-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/business/2021/10/08/How-to-user-fire-extinguisher.html/</loc>
+    <lastmod>2021-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tech/2021/10/07/Spring-Boot-ApplicationEvents-DeepDive.html/</loc>
+    <lastmod>2021-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/blog_tech/business/2021/09/22/IT-Solutions-For-Remote-Learning.html/</loc>
+    <lastmod>2021-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/blog_chn/business/2021/09/22/IT-Solutions-For-Remote-Learning.html/</loc>
+    <lastmod>2021-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/blog_business/business/2021/09/22/IT-Solutions-For-Remote-Learning.html/</loc>
+    <lastmod>2021-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2021/09/16/Kubernetes-Client-API-DeepDive.html/</loc>
+    <lastmod>2021-09-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2021/09/14/Get-CPU-info-core-in-windows.html/</loc>
+    <lastmod>2021-09-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2021/09/13/Whitelabel-Error-Page.html/</loc>
+    <lastmod>2021-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2021/01/19/Google-maps-no-photos-reviews.html/</loc>
+    <lastmod>2021-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2021/01/19/Google-maps-no-photos-reviews-CHN.html/</loc>
+    <lastmod>2021-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2021/01/04/Debts-In-a-nutshell.html/</loc>
+    <lastmod>2021-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/10/20/How-to-use-S3-download-URL.html/</loc>
+    <lastmod>2020-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/09/24/Debug-Stuck-IntelliJ.html/</loc>
+    <lastmod>2020-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/09/18/Awesome-Kotlin.html/</loc>
+    <lastmod>2020-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/09/17/Awesome-Chrome-tips.html/</loc>
+    <lastmod>2020-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/chn/2020/09/15/JVM-Warm-up-CHN.html/</loc>
+    <lastmod>2020-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/09/07/Awesome-shortcuts-Slack.html/</loc>
+    <lastmod>2020-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/09/03/Neverl-ending-Gralde-run.html/</loc>
+    <lastmod>2020-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/08/21/Reactor-Reactive.html/</loc>
+    <lastmod>2020-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/08/20/Awesome-swift.html/</loc>
+    <lastmod>2020-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/08/16/Swift-For-iOS.html/</loc>
+    <lastmod>2020-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/08/13/Mock-In-Kotlin.html/</loc>
+    <lastmod>2020-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/08/13/Docker.html/</loc>
+    <lastmod>2020-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/08/03/How-to-decode-path-parameters-in-All-REST-calls.html/</loc>
+    <lastmod>2020-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/07/27/Curl.html/</loc>
+    <lastmod>2020-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/07/24/AOP.html/</loc>
+    <lastmod>2020-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/07/07/micrometer-notes.html/</loc>
+    <lastmod>2020-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/07/07/Awesome-shortcuts.html/</loc>
+    <lastmod>2020-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/07/04/Leetcode-tips.html/</loc>
+    <lastmod>2020-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/07/02/pigeon-hole-principle.html/</loc>
+    <lastmod>2020-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/06/29/Awesome-Algorithm-Solutions.html/</loc>
+    <lastmod>2020-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/06/29/Java-Concurrency.html/</loc>
+    <lastmod>2020-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/06/28/Facial-Recognition_en.html/</loc>
+    <lastmod>2020-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/06/26/TLS-SSL-HTTPS.html/</loc>
+    <lastmod>2020-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/06/21/JPA-Notes.html/</loc>
+    <lastmod>2020-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/05/10/Java-Deep-Notes.html/</loc>
+    <lastmod>2020-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/03/28/JVM-Warm-up.html/</loc>
+    <lastmod>2020-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/03/15/Concurrent-In-Java-col-2.html/</loc>
+    <lastmod>2020-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/03/10/Concurrent-In-Java.html/</loc>
+    <lastmod>2020-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/03/03/Algorithm-Leecode-1.html/</loc>
+    <lastmod>2020-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2019/09/12/Conversations-with-God.html/</loc>
+    <lastmod>2019-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2019/09/02/Kafka-In-Spring.html/</loc>
+    <lastmod>2019-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2019/08/25/AWS-Certificate.html/</loc>
+    <lastmod>2019-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2019/07/26/Terraform.html/</loc>
+    <lastmod>2019-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2019/07/07/Kafka.html/</loc>
+    <lastmod>2019-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2019/01/17/Mifid.html/</loc>
+    <lastmod>2019-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2019/01/17/FX-ForeignExchange.html/</loc>
+    <lastmod>2019-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2019/01/03/IPC.html/</loc>
+    <lastmod>2019-01-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/11/01/seconds.html/</loc>
+    <lastmod>2018-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/10/13/SBE.html/</loc>
+    <lastmod>2018-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/09/26/Citrix.html/</loc>
+    <lastmod>2018-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/09/18/Google-Guice.html/</loc>
+    <lastmod>2018-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/09/16/yaml-config.html/</loc>
+    <lastmod>2018-09-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/09/06/mockito.html/</loc>
+    <lastmod>2018-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/09/03/distruptor.html/</loc>
+    <lastmod>2018-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/08/23/protobuf.html/</loc>
+    <lastmod>2018-08-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/08/21/sudo.html/</loc>
+    <lastmod>2018-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/08/19/ZooKeeper.html/</loc>
+    <lastmod>2018-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/08/15/PrestoDB.html/</loc>
+    <lastmod>2018-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/08/09/Chronicle.html/</loc>
+    <lastmod>2018-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/08/08/Cucumber.html/</loc>
+    <lastmod>2018-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/07/28/Scala.html/</loc>
+    <lastmod>2018-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/07/23/akka-scala.html/</loc>
+    <lastmod>2018-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/07/16/FileUtils_Camel.html/</loc>
+    <lastmod>2018-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/07/11/Camel.html/</loc>
+    <lastmod>2018-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/07/10/QuickFixJ.html/</loc>
+    <lastmod>2018-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/07/10/JMX.html/</loc>
+    <lastmod>2018-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/07/04/Solace-MQ.html/</loc>
+    <lastmod>2018-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/06/26/Core-Java.html/</loc>
+    <lastmod>2018-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/06/21/Apigee.html/</loc>
+    <lastmod>2018-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/06/21/Ansible.html/</loc>
+    <lastmod>2018-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/06/14/flex-box.html/</loc>
+    <lastmod>2018-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/06/14/JBoss-Console.html/</loc>
+    <lastmod>2018-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/06/12/Locking-And-Multithreading.html/</loc>
+    <lastmod>2018-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/06/12/KDB.html/</loc>
+    <lastmod>2018-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/06/09/FX.html/</loc>
+    <lastmod>2018-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/06/07/Protractor.html/</loc>
+    <lastmod>2018-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/06/06/Scrum-Agile.html/</loc>
+    <lastmod>2018-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/06/02/DevOps-Philosophy.html/</loc>
+    <lastmod>2018-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/05/15/rxjs-pipe-in-depth.html/</loc>
+    <lastmod>2018-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/05/15/how-to-setup-node-config-in-intranet.html/</loc>
+    <lastmod>2018-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/05/14/Strategy-Of-Openshift-Releases.html/</loc>
+    <lastmod>2018-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/05/11/Node-errors-DB.html/</loc>
+    <lastmod>2018-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/03/18/NodeJs-Notes.html/</loc>
+    <lastmod>2018-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/02/27/MVP.html/</loc>
+    <lastmod>2018-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/01/11/Angular-Module-Declaration-Import.html/</loc>
+    <lastmod>2018-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/01/10/CORS.html/</loc>
+    <lastmod>2018-01-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/01/08/ngrx.html/</loc>
+    <lastmod>2018-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/01/06/iOS.html/</loc>
+    <lastmod>2018-01-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/12/18/OpenStack-vs-OpenShift.html/</loc>
+    <lastmod>2017-12-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/12/18/Clouding.html/</loc>
+    <lastmod>2017-12-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/12/12/Redux.html/</loc>
+    <lastmod>2017-12-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/12/11/Why-Reactive-programming-is-outpermant.html/</loc>
+    <lastmod>2017-12-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/12/10/RxJS.html/</loc>
+    <lastmod>2017-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/12/08/Router-In-Angular.html/</loc>
+    <lastmod>2017-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/12/07/Errors-In-NPM.html/</loc>
+    <lastmod>2017-12-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/12/02/Container.html/</loc>
+    <lastmod>2017-12-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/12/01/Promise-vs-Observable.html/</loc>
+    <lastmod>2017-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/11/29/OpenShift.html/</loc>
+    <lastmod>2017-11-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/11/27/TypeScript.html/</loc>
+    <lastmod>2017-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/09/04/Google-Analytics.html/</loc>
+    <lastmod>2017-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/06/24/JDK-sources.html/</loc>
+    <lastmod>2017-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/04/06/SSH.html/</loc>
+    <lastmod>2017-04-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/03/30/WebSphere-setp-via-CLI.html/</loc>
+    <lastmod>2017-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/03/21/aws.html/</loc>
+    <lastmod>2017-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/03/13/oracle.html/</loc>
+    <lastmod>2017-03-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/03/05/Spring.html/</loc>
+    <lastmod>2017-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/02/21/Java-JIT.html/</loc>
+    <lastmod>2017-02-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/02/15/Java-Security.html/</loc>
+    <lastmod>2017-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/02/14/SerialVersionUID.html/</loc>
+    <lastmod>2017-02-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/02/09/R-Lang.html/</loc>
+    <lastmod>2017-02-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/02/06/SSH-Cryptography.html/</loc>
+    <lastmod>2017-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/02/06/Eclipse-tips.html/</loc>
+    <lastmod>2017-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/02/05/JVM.html/</loc>
+    <lastmod>2017-02-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/02/03/Maven-Notes.html/</loc>
+    <lastmod>2017-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/02/02/Java-New-IO.html/</loc>
+    <lastmod>2017-02-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/01/28/Network-Protocols.html/</loc>
+    <lastmod>2017-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/01/26/IT-Architect.html/</loc>
+    <lastmod>2017-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/01/21/Algorithm.html/</loc>
+    <lastmod>2017-01-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/01/20/DeadLock.html/</loc>
+    <lastmod>2017-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/01/19/Java-Tricky-Tech-Questions.html/</loc>
+    <lastmod>2017-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/01/19/Java-NavigableMap.html/</loc>
+    <lastmod>2017-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/01/19/Compare-In-Java.html/</loc>
+    <lastmod>2017-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/01/17/Java-Collections-Misc.html/</loc>
+    <lastmod>2017-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/01/16/Java-HashMap.html/</loc>
+    <lastmod>2017-01-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/01/14/Java-8.html/</loc>
+    <lastmod>2017-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/01/04/Arbitrage-vs-Hedging.html/</loc>
+    <lastmod>2017-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/01/03/IntelliJ-Tips.html/</loc>
+    <lastmod>2017-01-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2017/01/02/Enum-Misc.html/</loc>
+    <lastmod>2017-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/12/30/Java-GC.html/</loc>
+    <lastmod>2016-12-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/12/30/HashCode-Contract.html/</loc>
+    <lastmod>2016-12-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/12/24/Apache-Tips.html/</loc>
+    <lastmod>2016-12-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/12/12/Angular.html/</loc>
+    <lastmod>2016-12-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/12/09/HeadsFirst-RandomNumber-In-Java.html/</loc>
+    <lastmod>2016-12-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/12/01/Java-New-Features-Chronicle.html/</loc>
+    <lastmod>2016-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/11/22/Facial-Recognition.html/</loc>
+    <lastmod>2016-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/11/12/elastic.html/</loc>
+    <lastmod>2016-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/11/05/JSON-Lines.html/</loc>
+    <lastmod>2016-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/11/04/Python-Scrapy.html/</loc>
+    <lastmod>2016-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/10/26/Continuous-Integretaion-Simpler-Chronicle.html/</loc>
+    <lastmod>2016-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/10/19/head-first-blockchian-3.html/</loc>
+    <lastmod>2016-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/10/13/head-first-blockchian-2.html/</loc>
+    <lastmod>2016-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/10/06/Sublime-Syntax-Highlights.html/</loc>
+    <lastmod>2016-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/09/17/Assert-In-Unit-Test-CN.html/</loc>
+    <lastmod>2016-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/09/14/JetBrains-Tips.html/</loc>
+    <lastmod>2016-09-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/09/11/head-first-blockchian-1.html/</loc>
+    <lastmod>2016-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/09/04/Kubernets-vs-Swarm.html/</loc>
+    <lastmod>2016-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/09/02/Design-Principals.html/</loc>
+    <lastmod>2016-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/09/01/Mac-Tips.html/</loc>
+    <lastmod>2016-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/09/01/HTTP-Methods-RFC.html/</loc>
+    <lastmod>2016-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/08/30/Spark-vs-Storm.html/</loc>
+    <lastmod>2016-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/08/24/microservices.html/</loc>
+    <lastmod>2016-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/08/12/unmodifiableCollection.html/</loc>
+    <lastmod>2016-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/08/11/Sentry.html/</loc>
+    <lastmod>2016-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/08/11/Kibana.html/</loc>
+    <lastmod>2016-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/08/05/Anatomy-of-ThreadLocal.html/</loc>
+    <lastmod>2016-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/08/04/iConnect.html/</loc>
+    <lastmod>2016-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/08/04/BA.html/</loc>
+    <lastmod>2016-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/08/02/RESTful.html/</loc>
+    <lastmod>2016-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/07/25/Data-Structure.html/</loc>
+    <lastmod>2016-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/07/24/Bookmarks.html/</loc>
+    <lastmod>2016-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/07/02/file-name-too-long-when-git-checkout.html/</loc>
+    <lastmod>2016-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/06/29/heavy-load-web-app.html/</loc>
+    <lastmod>2016-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/06/29/TIPS-AS400-IBM-EMULATOR.html/</loc>
+    <lastmod>2016-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/06/29/SOMETHING-ABOUT-AUTHENTICATION.html/</loc>
+    <lastmod>2016-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/06/23/Equity.html/</loc>
+    <lastmod>2016-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/06/14/SQL.html/</loc>
+    <lastmod>2016-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/06/14/HTTP-HTTPS2.html/</loc>
+    <lastmod>2016-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/06/13/github-pages.html/</loc>
+    <lastmod>2016-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/06/13/RQFII.html/</loc>
+    <lastmod>2016-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/06/13/GIT.html/</loc>
+    <lastmod>2016-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/06/12/JavaScript-tips.html/</loc>
+    <lastmod>2016-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/06/10/Linux-Tips.html/</loc>
+    <lastmod>2016-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/06/09/Docker-Errors-Fixes.html/</loc>
+    <lastmod>2016-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/06/07/Load-Balancing.html/</loc>
+    <lastmod>2016-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/06/05/Python.html/</loc>
+    <lastmod>2016-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/06/03/Storage-Management.html/</loc>
+    <lastmod>2016-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/06/03/CI-CD.html/</loc>
+    <lastmod>2016-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/06/01/XA-2PC.html/</loc>
+    <lastmod>2016-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/06/01/Setup-Git-In-Mint.html/</loc>
+    <lastmod>2016-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/06/01/DB-Sharding.html/</loc>
+    <lastmod>2016-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/05/31/Microservices-Vs-SOA.html/</loc>
+    <lastmod>2016-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2016/02/25/Java-Class-Loader.html/</loc>
+    <lastmod>2016-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/release/2016/02/09/jekyll-3-0-3-released.html/</loc>
+    <lastmod>2016-02-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/release/2016/01/21/jekyll-3-0-2-released.html/</loc>
+    <lastmod>2016-01-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/release/2015/11/18/jekyll-3-0-1-released.html/</loc>
+    <lastmod>2015-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/release/2015/10/27/jekyll-3-0-released.html/</loc>
+    <lastmod>2015-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/community/2015/02/27/introducing-jekyll-talk.html/</loc>
+    <lastmod>2015-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/extensionless-permalink/</loc>
+    <lastmod>2015-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/release/2015/01/24/jekyll-3-0-0-beta1-released.html/</loc>
+    <lastmod>2015-01-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/meetup/2015/01/21/jekyll-meet-and-greet.html/</loc>
+    <lastmod>2015-01-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/2015/01/08/post-excerpt-separator.html/</loc>
+    <lastmod>2015-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/release/2014/12/23/jekyll-2-5-3-released.html/</loc>
+    <lastmod>2014-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/team/2014/12/18/alfredxing-welcome-to-jekyll-core.html/</loc>
+    <lastmod>2014-12-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/2014/11/24/Rmd-extension.Rmd/</loc>
+    <lastmod>2014-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/release/2014/11/13/jekyll-2-5-2-released.html/</loc>
+    <lastmod>2014-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/release/2014/11/10/jekyll-2-5-1-released.html/</loc>
+    <lastmod>2014-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/release/2014/11/06/jekylls-midlife-crisis-jekyll-turns-2-5-0.html/</loc>
+    <lastmod>2014-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/release/2014/09/10/jekyll-2-4-0-released.html/</loc>
+    <lastmod>2014-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/2014/09/02/relative-includes.html/</loc>
+    <lastmod>2014-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/release/2014/08/11/jekyll-2-3-0-released.html/</loc>
+    <lastmod>2014-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/release/2014/07/30/jekyll-2-2-0-released.html/</loc>
+    <lastmod>2014-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/mixedcase/2014/07/05/mixed-case-category.html/</loc>
+    <lastmod>2014-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/mixedcase/2014/07/05/another-mixed-case-category.html/</loc>
+    <lastmod>2014-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/release/2014/07/02/jekyll-2-1-1-released.html/</loc>
+    <lastmod>2014-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/release/2014/06/29/jekyll-turns-21-i-mean-2-1-0.html/</loc>
+    <lastmod>2014-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/partners/2014/06/05/jekyll-stickers-1-dollar-stickermule.html/</loc>
+    <lastmod>2014-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/release/2014/05/09/jekyll-2-0-3-released.html/</loc>
+    <lastmod>2014-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/release/2014/05/06/jekyll-turns-2-0-0.html/</loc>
+    <lastmod>2014-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/release/2014/03/28/jekyll-1-5-1-released.html/</loc>
+    <lastmod>2014-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/release/2014/03/25/jekyll-1-5-0-released.html/</loc>
+    <lastmod>2014-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/2014/03/22/escape-+-20.html/</loc>
+    <lastmod>2014-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/2014/03/03/yaml-with-dots.html/</loc>
+    <lastmod>2014-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/release/2014/01/14/jekyll-1-4-3-released.html/</loc>
+    <lastmod>2014-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/%2e%2e/%2e%2e/%2e%2e/baddie.html/</loc>
+    <lastmod>2014-01-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/foo/bar/baz/mixedcase/2013/12/20/properties.text/</loc>
+    <lastmod>2013-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/release/2013/12/17/jekyll-1-4-2-released.html/</loc>
+    <lastmod>2013-12-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/2013/12/17/include-variable-filters.html/</loc>
+    <lastmod>2013-12-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/release/2013/12/10/jekyll-1-4-1-released.html/</loc>
+    <lastmod>2013-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/release/2013/12/08/jekyll-1-4-0-released.html/</loc>
+    <lastmod>2013-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/release/2013/11/27/jekyll-1-3-1-released.html/</loc>
+    <lastmod>2013-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/release/2013/11/05/jekyll-1-3-0-released.html/</loc>
+    <lastmod>2013-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/release/2013/10/29/jekyll-1-3-0-rc1-released.html/</loc>
+    <lastmod>2013-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/release/2013/09/15/jekyll-1-2-1-released.html/</loc>
+    <lastmod>2013-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/release/2013/09/07/jekyll-1-2-0-released.html/</loc>
+    <lastmod>2013-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/2013/08/01/mkdn-extension.html/</loc>
+    <lastmod>2013-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/release/2013/07/25/jekyll-1-1-2-released.html/</loc>
+    <lastmod>2013-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/release/2013/07/25/jekyll-1-0-4-released.html/</loc>
+    <lastmod>2013-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/release/2013/07/25/jekyll-1-1-1-released.html/</loc>
+    <lastmod>2013-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/bar/baz/z_category/mixedcase/2013/07/22/post-excerpt-with-layout.html/</loc>
+    <lastmod>2013-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/release/2013/07/15/jekyll-1-1-0-released.html/</loc>
+    <lastmod>2013-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/release/2013/06/08/jekyll-1-0-3-released.html/</loc>
+    <lastmod>2013-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/release/2013/05/12/jekyll-1-0-2-released.html/</loc>
+    <lastmod>2013-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/2013/2013/05/10/number-category.html/</loc>
+    <lastmod>2013-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/release/2013/05/09/jekyll-1-0-1-released.html/</loc>
+    <lastmod>2013-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/release/2013/05/06/jekyll-1-0-0-released.html/</loc>
+    <lastmod>2013-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/2013/04/11/custom-excerpt.html/</loc>
+    <lastmod>2013-04-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/2013/01/12/no-layout.html/</loc>
+    <lastmod>2013-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/2013/01/12/nil-layout.html/</loc>
+    <lastmod>2013-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/2013/01/02/post-excerpt.html/</loc>
+    <lastmod>2013-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/2011/04/12/md-extension.html/</loc>
+    <lastmod>2011-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/2011/04/12/text-extension.text/</loc>
+    <lastmod>2011-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/2010/01/11/override-data.html/</loc>
+    <lastmod>2010-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/2010/01/11/timezone-override.html/</loc>
+    <lastmod>2010-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/2010/01/11/time-override.html/</loc>
+    <lastmod>2010-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/2010/01/10/date-override.html/</loc>
+    <lastmod>2010-01-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/2010/01/08/triple-dash.html/</loc>
+    <lastmod>2010-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/2009/06/22/no-yaml.html/</loc>
+    <lastmod>2009-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/2009/06/22/empty-yaml.html/</loc>
+    <lastmod>2009-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/win/2009/05/24/yaml-linebreak.html/</loc>
+    <lastmod>2009-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/2009/05/18/tags.html/</loc>
+    <lastmod>2009-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/2009/05/18/tag.html/</loc>
+    <lastmod>2009-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/2009/05/18/empty-tags.html/</loc>
+    <lastmod>2009-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/2009/05/18/empty-tag.html/</loc>
+    <lastmod>2009-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/2009/03/12/hash-1.html/</loc>
+    <lastmod>2009-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/2009/01/27/no-category.html/</loc>
+    <lastmod>2009-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/2009/01/27/empty-category.html/</loc>
+    <lastmod>2009-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/2009/01/27/empty-categories.html/</loc>
+    <lastmod>2009-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/foo/2009/01/27/category.html/</loc>
+    <lastmod>2009-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/foo/bar/baz/2009/01/27/categories.html/</loc>
+    <lastmod>2009-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/foo/bar/baz/2009/01/27/array-categories.html/</loc>
+    <lastmod>2009-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/2008/12/13/include.html/</loc>
+    <lastmod>2008-12-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/foo/2008/12/12/topical-post.html/</loc>
+    <lastmod>2008-12-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/my_category/permalinked-post/</loc>
+    <lastmod>2008-12-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/2008/11/21/nested.html/</loc>
+    <lastmod>2008-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/2008/11/21/complex.html/</loc>
+    <lastmod>2008-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/2008/10/18/foo-bar.html/</loc>
+    <lastmod>2008-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/z_category/2008/09/23/categories.html/</loc>
+    <lastmod>2008-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/category/2008/09/23/categories.html/</loc>
+    <lastmod>2008-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/publish_test/2008/02/02/published.html/</loc>
+    <lastmod>2008-02-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2007/04/28/GIT-scripts-bible-errors.html/</loc>
+    <lastmod>2007-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/lib/site_template/update/2000/01/01/welcome-to-jekyll.markdown.erb/</loc>
+    <lastmod>2000-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/+/%25%23%20+.html</loc>
+    <lastmod>2022-11-19</lastmod>
+    
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/404.html</loc>
+    <lastmod>2022-11-19</lastmod>
+    
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/about/</loc>
+    <lastmod>2022-11-19</lastmod>
+    
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/about/</loc>
+    <lastmod>2022-11-19</lastmod>
+    
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/about/</loc>
+    <lastmod>2022-11-19</lastmod>
+    
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/contacts/bar.html</loc>
+    <lastmod>2022-11-19</lastmod>
+    
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/contacts.html</loc>
+    <lastmod>2022-11-19</lastmod>
+    
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/environment.html</loc>
+    <lastmod>2022-11-19</lastmod>
+    
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/%2e%2e/%2e%2e/%2e%2e/baddie.html</loc>
+    <lastmod>2022-11-19</lastmod>
+    
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/+/plus+in+url</loc>
+    <lastmod>2022-11-19</lastmod>
+    
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/contacts/humans/</loc>
+    <lastmod>2022-11-19</lastmod>
+    
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/contacts/</loc>
+    <lastmod>2022-11-19</lastmod>
+    
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/lib/site_template/</loc>
+    <lastmod>2022-11-19</lastmod>
+    
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/news/releases/</loc>
+    <lastmod>2022-11-19</lastmod>
+    
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/news/</loc>
+    <lastmod>2022-11-19</lastmod>
+    
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/</loc>
+    <lastmod>2022-11-19</lastmod>
+    
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/</loc>
+    <lastmod>2022-11-19</lastmod>
+    
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/blog_tech/</loc>
+    <lastmod>2022-11-19</lastmod>
+    
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/</loc>
+    <lastmod>2022-11-19</lastmod>
+    
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/blog_chn/</loc>
+    <lastmod>2022-11-19</lastmod>
+    
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/blog_business/</loc>
+    <lastmod>2022-11-19</lastmod>
+    
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/site/help/</loc>
+    <lastmod>2022-11-19</lastmod>
+    
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/properties/</loc>
+    <lastmod>2022-11-19</lastmod>
+    
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/jekyll/test/source/static_files.html</loc>
+    <lastmod>2022-11-19</lastmod>
+    
+    
+  </url>
+  
+</urlset>

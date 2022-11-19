@@ -1,8 +1,536 @@
 var store = [{
+        "title": "Welcome to Jekyll!",
+        "excerpt":"You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.  To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.  Jekyll also offers powerful support for code snippets:  def print_hi(name)   puts \"Hi, #{name}\" end print_hi('Tom') #=&gt; prints 'Hi, Tom' to STDOUT.  Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].  [jekyll-docs]: http://jekyllrb.com/docs/home [jekyll-gh]:   https://github.com/jekyll/jekyll [jekyll-talk]: https://talk.jekyllrb.com/ ","categories": ["jekyll","lib","site_template","update"],
+        "tags": [],
+        "url": "/jekyll/lib/site_template/update/2000/01/01/welcome-to-jekyll.markdown.erb",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
         "title": "GIT useful scripts or error solutions",
         "excerpt":"Script bible   to list merge conflicts files in command line  You can use either one of below three commands  git diff --name-only --diff-filter=U git status --short | grep \"^UU \" git ls-files -u   One line command to add, commit and push one changed file  git status --short | awk '{split($0, a);print a[2]}' | xargs git add &amp;&amp; git commit -m 'commit changes' &amp;&amp; git push origin BRANCH_NAME   to show files commited but not pushed  git diff --stat --cached origin/feature/BRANCH_NAME   to view file content changed  git show PATH/abc.sql   show file change logs   git log is the powerful command for this kind of tasks, as below sample commands  git log --pretty=format:\"%h [%an] %s\" --graph  git log --pretty=format:\"%h [%an] %s\" --graph --since=7.days     %h means short hash   %s is subject   git log --pretty=format:\"%h [%an] %s\" --graph --since=7.days -S bower.json  git log --pretty=format:\"%h [%an] %s\" --graph --since=7.days --grep Npm git log --pretty=format:\"%h [%an] %s\" --graph --since=7.days --committer todd     -S keyword_of_filter_files   Get correct branch name   Sometimes, if you checkout new branch with incorrect case. It still can check it out to local but you’ll get errors when you try to push it to remote.   To solve this issue, please use following command to get correct branch to checkout  git fetch &amp;&amp; git for-each-ref | grep -i 'THE KEY WORD'  | awk '{split($0,a);print a[3]}' git checkout -b BRANCH_NAME_FROM_ABOVE   Errors   failed to push change  Errors as below  fatal: unable to access 'https://tzhang@stash.xxx.com/scm/abc.git/': SSL certificate prob lem: self signed certificate in certificate chain  Solutions:   git config --global http.sslVerify false  ","categories": [],
         "tags": ["DevOps"],
         "url": "/2007/04/28/GIT-scripts-bible-errors.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Publish",
+        "excerpt":"This should be published.  ","categories": ["jekyll","test","source","publish_test"],
+        "tags": [],
+        "url": "/jekyll/test/source/publish_test/2008/02/02/published.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Categories",
+        "excerpt":"Categories should work  ","categories": ["jekyll","test","source","category"],
+        "tags": [],
+        "url": "/jekyll/test/source/category/2008/09/23/categories.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Categories",
+        "excerpt":"Categories should work. Even if ordered after index.  ","categories": ["jekyll","test","source","z_category"],
+        "tags": [],
+        "url": "/jekyll/test/source/z_category/2008/09/23/categories.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Foo Bar",
+        "excerpt":"Foo Bar   Best post ever  ","categories": ["jekyll","test","source"],
+        "tags": [],
+        "url": "/jekyll/test/source/2008/10/18/foo-bar.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Complex",
+        "excerpt":"url: /jekyll/test/source/2008/11/21/complex.html date: 2008-11-21 00:00:00 +1100 id: /jekyll/test/source/2008/11/21/complex  ","categories": ["jekyll","test","source"],
+        "tags": [],
+        "url": "/jekyll/test/source/2008/11/21/complex.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Nested",
+        "excerpt":"url: /jekyll/test/source/2008/11/21/nested.html date: 2008-11-21 00:00:00 +1100 id: /jekyll/test/source/2008/11/21/nested  ","categories": ["jekyll","test","source"],
+        "tags": [],
+        "url": "/jekyll/test/source/2008/11/21/nested.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Post with Permalink",
+        "excerpt":"h1. Post with Permalink   Best post ever  ","categories": ["jekyll","test","source"],
+        "tags": [],
+        "url": "/my_category/permalinked-post",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Topical Post",
+        "excerpt":"h1. Topical Post   This post has a topic.  ","categories": ["jekyll","test","source","foo"],
+        "tags": [],
+        "url": "/jekyll/test/source/foo/2008/12/12/topical-post.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Include",
+        "excerpt":" This is cool  ","categories": ["jekyll","test","source"],
+        "tags": [],
+        "url": "/jekyll/test/source/2008/12/13/include.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Array categories in YAML",
+        "excerpt":"Best post ever  ","categories": ["jekyll","test","source","foo","bar","baz"],
+        "tags": [],
+        "url": "/jekyll/test/source/foo/bar/baz/2009/01/27/array-categories.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Categories in YAML",
+        "excerpt":"Best post ever  ","categories": ["jekyll","test","source","foo","bar","baz"],
+        "tags": [],
+        "url": "/jekyll/test/source/foo/bar/baz/2009/01/27/categories.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Category in YAML",
+        "excerpt":"Best post ever  ","categories": ["jekyll","test","source","foo"],
+        "tags": [],
+        "url": "/jekyll/test/source/foo/2009/01/27/category.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Category in YAML",
+        "excerpt":"Best post ever  ","categories": ["jekyll","test","source"],
+        "tags": [],
+        "url": "/jekyll/test/source/2009/01/27/empty-categories.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Category in YAML",
+        "excerpt":"Best post ever  ","categories": ["jekyll","test","source"],
+        "tags": [],
+        "url": "/jekyll/test/source/2009/01/27/empty-category.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Category in YAML",
+        "excerpt":"Best post ever  ","categories": ["jekyll","test","source"],
+        "tags": [],
+        "url": "/jekyll/test/source/2009/01/27/no-category.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Hash",
+        "excerpt":"Hashes are nice  ","categories": ["jekyll","test","source"],
+        "tags": [],
+        "url": "/jekyll/test/source/2009/03/12/hash-1.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "A Tag",
+        "excerpt":"Whoa.  ","categories": ["jekyll","test","source"],
+        "tags": [],
+        "url": "/jekyll/test/source/2009/05/18/empty-tag.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Some Tags",
+        "excerpt":"Awesome!  ","categories": ["jekyll","test","source"],
+        "tags": [],
+        "url": "/jekyll/test/source/2009/05/18/empty-tags.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "A Tag",
+        "excerpt":"Whoa.  ","categories": ["jekyll","test","source"],
+        "tags": ["code"],
+        "url": "/jekyll/test/source/2009/05/18/tag.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Some Tags",
+        "excerpt":"Awesome!  ","categories": ["jekyll","test","source"],
+        "tags": ["food","cooking","pizza"],
+        "url": "/jekyll/test/source/2009/05/18/tags.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Test title",
+        "excerpt":"This is the content  ","categories": ["jekyll","test","source","win"],
+        "tags": ["Ruby"],
+        "url": "/jekyll/test/source/win/2009/05/24/yaml-linebreak.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Empty Yaml",
+        "excerpt":"Empty YAML.  ","categories": ["jekyll","test","source"],
+        "tags": [],
+        "url": "/jekyll/test/source/2009/06/22/empty-yaml.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "No Yaml",
+        "excerpt":"No YAML.  ","categories": ["jekyll","test","source"],
+        "tags": [],
+        "url": "/jekyll/test/source/2009/06/22/no-yaml.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Foo --- Bar",
+        "excerpt":"Triple the fun!  ","categories": ["jekyll","test","source"],
+        "tags": [],
+        "url": "/jekyll/test/source/2010/01/08/triple-dash.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Date Override",
+        "excerpt":"Post with a front matter date   10 Jan 2010  ","categories": ["jekyll","test","source"],
+        "tags": [],
+        "url": "/jekyll/test/source/2010/01/10/date-override.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Time Override",
+        "excerpt":"Post with a front matter time   11 Jan 2010  ","categories": ["jekyll","test","source"],
+        "tags": [],
+        "url": "/jekyll/test/source/2010/01/11/time-override.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Timezone Override",
+        "excerpt":"Post with a front matter time with timezone   11 Jan 2010  ","categories": ["jekyll","test","source"],
+        "tags": [],
+        "url": "/jekyll/test/source/2010/01/11/timezone-override.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Override Data",
+        "excerpt":" ","categories": ["jekyll","test","source"],
+        "tags": ["A","string"],
+        "url": "/jekyll/test/source/2010/01/11/override-data.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Text Extension",
+        "excerpt":"","categories": ["jekyll","test","source"],
+        "tags": [],
+        "url": "/jekyll/test/source/2011/04/12/text-extension.text",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Md Extension",
+        "excerpt":"under default configuration, this post should get processed by the identity converter. By changing textile extension or markdown extension configuration parameters, you should be able to associate it with either of those converters  ","categories": ["jekyll","test","source"],
+        "tags": [],
+        "url": "/jekyll/test/source/2011/04/12/md-extension.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Post Excerpt",
+        "excerpt":"First paragraph with link ref.   Second paragraph     Third paragraph   ","categories": ["jekyll","test","source"],
+        "tags": [],
+        "url": "/jekyll/test/source/2013/01/02/post-excerpt.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "No layout",
+        "excerpt":"This post has no layout.  ","categories": ["jekyll","test","source"],
+        "tags": [],
+        "url": "/jekyll/test/source/2013/01/12/nil-layout.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "I have no layout",
+        "excerpt":"This post will be rendered with the “post” layout.  ","categories": ["jekyll","test","source"],
+        "tags": [],
+        "url": "/jekyll/test/source/2013/01/12/no-layout.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Custom Excerpt",
+        "excerpt":"This is not my excerpt.   Neither is this.   I can use the excerpt: I can set a custom excerpt  ","categories": ["jekyll","test","source"],
+        "tags": [],
+        "url": "/jekyll/test/source/2013/04/11/custom-excerpt.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Jekyll 1.0.0 Released",
+        "excerpt":"Hey! After many months of hard work by Jekyll’s contributors, we’re excited to announce the first major release of the project in a long while. v1.0.0 is finally here! While the list of improvements and bug fixes is quite lengthy, here are the highlights (thanks to @benbalter for the examples and for compiling this list):      Support for the Gist tag for easily embedding Gists (example)   Automatically generated post excerpts (example)   Save and preview drafts before publishing (example)   Take a look at the Upgrading page in the docs for more detailed information.   ","categories": ["jekyll","site","release"],
+        "tags": [],
+        "url": "/jekyll/site/release/2013/05/06/jekyll-1-0-0-released.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Jekyll 1.0.1 Released",
+        "excerpt":"Hot on the trails of v1.0, v1.0.1 is out! Here are the highlights:      Add newer language- class name prefix to code blocks (#1037)   Commander error message now preferred over process abort with incorrect args (#1040)   Do not force use of toc_token when using generate_toc in RDiscount (#1048)   Make Redcarpet respect the pygments configuration option (#1053)   Fix the index build with LSI (#1045)   Don’t print deprecation warning when no arguments are specified. (#1041)   Add missing &lt;/div&gt; to site template used by new subcommand, fixed typos in code (#1032)   See the History page for more information on this release.   ","categories": ["jekyll","site","release"],
+        "tags": [],
+        "url": "/jekyll/site/release/2013/05/09/jekyll-1-0-1-released.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Number Category in YAML",
+        "excerpt":"Please make me pass  ","categories": ["jekyll","test","source","2013"],
+        "tags": [],
+        "url": "/jekyll/test/source/2013/2013/05/10/number-category.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Jekyll 1.0.2 Released",
+        "excerpt":"v1.0.2 has some key bugfixes that optionally restore some behaviour from pre-1.0 releases, and fix some other annoying bugs:      Backwards-compatibilize relative permalinks (#1081)   Add jekyll doctor command to check site for any known compatibility problems (#1081)   Deprecate old config server_port, match to port if port isn’t set (#1084)   Update pygments.rb and kramdon versions to 0.5.0 and 1.0.2, respectively (#1061, #1067)   Fix issue when post categories are numbers (#1078)   Add a data-lang=\"&lt;lang&gt;\" attribute to Redcarpet code blocks (#1066)   Catching that Redcarpet gem isn’t installed (#1059)   See the History page for more information on this release.   ","categories": ["jekyll","site","release"],
+        "tags": [],
+        "url": "/jekyll/site/release/2013/05/12/jekyll-1-0-2-released.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Jekyll 1.0.3 Released",
+        "excerpt":"v1.0.3 contains some key enhancements and bug fixes:      Fail with non-zero exit code when MaRuKu errors (#1190) or Liquid errors (#1121)   Add support for private gists to gist tag (#1189)   Add --force option to jekyll new (#1115)   Fix compatibility with exclude and include with pre-1.0 Jekyll (#1114)   Fix pagination issue regarding File.basename and page:num (#1063)   See the History page for more information on this release.   ","categories": ["jekyll","site","release"],
+        "tags": [],
+        "url": "/jekyll/site/release/2013/06/08/jekyll-1-0-3-released.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Jekyll 1.1.0 Released",
+        "excerpt":"After a month of hard work, the Jekyll core team is excited to announce the release of Jekyll v1.1.0! This latest release of Jekyll brings some really exciting new additions:      Add docs subcommand to read Jekyll’s docs when offline. (#1046)   Support passing parameters to templates in include tag (#1204)   Add support for Liquid tags to post excerpts (#1302)   Fix pagination for subdirectories (#1198)   Provide better error reporting when generating sites (#1253)   Latest posts first in non-LSI related_posts (#1271)   See the GitHub Release page for more a more detailed changelog for this release.   ","categories": ["jekyll","site","release"],
+        "tags": [],
+        "url": "/jekyll/site/release/2013/07/15/jekyll-1-1-0-released.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Post Excerpt with Layout",
+        "excerpt":"First paragraph with link ref.   Second paragraph     Third paragraph   ","categories": ["jekyll","test","source","bar","baz","z_category","MixedCase"],
+        "tags": ["first","second","third","jekyllrb.com"],
+        "url": "/jekyll/test/source/bar/baz/z_category/mixedcase/2013/07/22/post-excerpt-with-layout.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Jekyll 1.1.1 Released",
+        "excerpt":"Coming just 10 days after the release of v1.1.0, v1.1.1 is out with a patch for the nasty excerpt inception bug (#1339) and non-zero exit codes for invalid commands (#1338).   To all those affected by the strange excerpt bug in v1.1.0, I’m sorry. I think we have it all patched up and it should be deployed to GitHub Pages in the next couple weeks. Thank you for your patience!   If you’re checking out v1.1.x for the first time, definitely check out what shipped with v1.1.0!   See the GitHub Release page for more a more detailed changelog for this release.   ","categories": ["jekyll","site","release"],
+        "tags": [],
+        "url": "/jekyll/site/release/2013/07/25/jekyll-1-1-1-released.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Jekyll 1.0.4 Released",
+        "excerpt":"Version 1.0.4 fixes a minor, but nonetheless important security vulnerability affecting several third-party Jekyll plugins. If your Jekyll site does not use plugins, you may, but are not required to upgrade at this time.   Community and custom plugins extending the Liquid::Drop class may inadvertently disclose some system information such as directory structure or software configuration to users with access to the Liquid templating system.   We recommend you upgrade to Jekyll v1.0.4 immediately if you use Liquid::Drop plugins on your Jekyll site.   Many thanks for Ben Balter for alerting us to the problem and submitting a patch so quickly.   ","categories": ["jekyll","site","release"],
+        "tags": [],
+        "url": "/jekyll/site/release/2013/07/25/jekyll-1-0-4-released.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Jekyll 1.1.2 Released",
+        "excerpt":"Version 1.1.2 fixes a minor, but nonetheless important security vulnerability affecting several third-party Jekyll plugins. If your Jekyll site does not use plugins, you may, but are not required to upgrade at this time.   Community and custom plugins extending the Liquid::Drop class may inadvertently disclose some system information such as directory structure or software configuration to users with access to the Liquid templating system.   We recommend you upgrade to Jekyll v1.1.2 immediately if you use Liquid::Drop plugins on your Jekyll site.   Many thanks for Ben Balter for alerting us to the problem and submitting a patch so quickly.   ","categories": ["jekyll","site","release"],
+        "tags": [],
+        "url": "/jekyll/site/release/2013/07/25/jekyll-1-1-2-released.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Mkdn Extension",
+        "excerpt":" ","categories": ["jekyll","test","source"],
+        "tags": [],
+        "url": "/jekyll/test/source/2013/08/01/mkdn-extension.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Jekyll 1.2.0 Released",
+        "excerpt":"After nearly a month and a half of hard work, the Jekyll team is happy to announce the release of v1.2.0. It’s chock full of bug fixes and some enhancements that we think you’ll love.   Here are a few things we think you’ll want to know about this release:      Run jekyll serve --detach to boot up a WEBrick server in the background. Note: you’ll need to run kill [server_pid] to shut the server down.   You can now disable automatically-generated excerpts if you set excerpt_separator to \"\".   If you’re moving around pages and post, you can now check for URL conflicts by running jekyll doctor.   If you’re a fan of the drafts feature, you’ll be happy to know we’ve added -D, a shortened version of --drafts.   Permalinks with special characters should now generate without errors.   Expose the current Jekyll version as the jekyll.version Liquid variable.   For a full run-down, visit our change log!  ","categories": ["jekyll","site","release"],
+        "tags": [],
+        "url": "/jekyll/site/release/2013/09/07/jekyll-1-2-0-released.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Jekyll 1.2.1 Released",
+        "excerpt":"Quick turnover, anyone? A recent incompatibility with Liquid v2.5.2 produced a nasty bug in which include tags were not rendered properly within if blocks.   This release also includes a better handling of detached servers (prints pid and the command for killing the process). Note: the --detach flag and --watch flags are presently incompatible in 1.2.x. Fix for that coming soon!   For a full list of the fixes in this release, check out the change log!  ","categories": ["jekyll","site","release"],
+        "tags": [],
+        "url": "/jekyll/site/release/2013/09/15/jekyll-1-2-1-released.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Jekyll 1.3.0.rc1 Released",
+        "excerpt":"Jekyll 1.3.0 is going to be a big release! In order to make sure we didn’t screw anything up too badly, we’re making a release candidate available for any early adopters who want to give the latest and greatest code a spin without having to clone a repository from git.   Please take this prerelease for a spin and let us know if you run into any issues!  ","categories": ["jekyll","site","release"],
+        "tags": [],
+        "url": "/jekyll/site/release/2013/10/29/jekyll-1-3-0-rc1-released.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Jekyll 1.3.0 Released",
+        "excerpt":"It’s been about six weeks since v1.2.0 and the Jekyll team is happy to announce the arrival of v1.3.0. This is a huge release full of all sorts of new features, bug fixes, and other things that you’re sure to love.   Here are a few things we think you’ll want to know about this release:           You can add arbitrary data to the site by adding YAML files under a site’s _data directory. This will allow you to avoid repetition in your templates and to set site specific options without changing _config.yml.            You can now run jekyll serve --detach to boot up a WEBrick server in the background. Note: you’ll need to run kill [server_pid] to shut the server down. When ran, you’ll get a process id that you can use in place of [server_pid]            You can now disable automatically-generated excerpts if you set excerpt_separator to \"\".            If you’re moving pages and posts, you can now check for URL conflicts by running jekyll doctor.            If you’re a fan of the drafts feature, you’ll be happy to know we’ve added -D, a shortened version of --drafts.            Permalinks with special characters should now generate without errors.            Expose the current Jekyll version as the jekyll.version Liquid variable.       For a full run-down, visit our change log!   ","categories": ["jekyll","site","release"],
+        "tags": [],
+        "url": "/jekyll/site/release/2013/11/05/jekyll-1-3-0-released.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Jekyll 1.3.1 Released",
+        "excerpt":"Just in time for the US holiday Thanksgiving, we’re releasing version 1.3.1 of Jekyll to address some of the issues seen since the release of 1.3.0.   In addition to a couple of other smaller bug fixes, the biggest thing we’ve fixed is an issue with the --watch option with Ruby 1.8.7. For a full run-down, visit our change log!   Thanks to all the people who have contributed to this release! They are (in alphabetical order): Abhi Yerra, Anatol Broder, Andreas Möller, Greg Karékinian, Sam Rayner, Santeri Paavolainen, Shigeya Suzuki, Yihang Ho, albertogg, andrewhavens, maul.esel, and thomasdao  ","categories": ["jekyll","site","release"],
+        "tags": [],
+        "url": "/jekyll/site/release/2013/11/27/jekyll-1-3-1-released.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Jekyll 1.4.0 Released",
+        "excerpt":"About a month after the release of Jekyll v1.3.0, we are releasing Jekyll v1.4.0. This release will be the last non-patch release to support Ruby 1.8.7 and our next release will be Jekyll 2.0.0.   Here are a few things we think you’ll want to know about this release:           TOML is now a supported markup language for config files.            Maruku has been updated to 0.7.0 which provides some new features and a ton of bugfixes over the previous 0.6.x releases.            Non-gem Plugins are now sorted alphabetically by filename before they’re processed, which can provide a rudimentary way to establish a load order for plugins.       For a full run-down, visit our change log!   As always, Jekyll wouldn’t be possible without the contributions from others in the Jekyll community. We’d like to thank the following people for contributing to this release: Anatol Broder, David Sawyer, Greg Karékinian, Jordon Bedwell, Matthew Iversen, Persa Zula, and Yi Zeng.  ","categories": ["jekyll","site","release"],
+        "tags": [],
+        "url": "/jekyll/site/release/2013/12/08/jekyll-1-4-0-released.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Jekyll 1.4.1 Released",
+        "excerpt":"Another quick turnover, anyone? A critical bug in the reading of posts snuck itself into the 1.4.0 release.   To address this issue, we’re releasing v1.4.1 of Jekyll so that you can keep on writing without any problems.   As always, you can find the full list of fixes in this release in the change log!  ","categories": ["jekyll","site","release"],
+        "tags": [],
+        "url": "/jekyll/site/release/2013/12/10/jekyll-1-4-1-released.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Post",
+        "excerpt":"Liquid tests     1   2   3   Whitespace tests     4   5   6   Parameters test     7   Partial variable test     8  ","categories": ["jekyll","test","source"],
+        "tags": [],
+        "url": "/jekyll/test/source/2013/12/17/include-variable-filters.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Jekyll 1.4.2 Released",
+        "excerpt":"This release fixes a regression where Maruku fenced code blocks were turned off, instead of the previous default to on. We’ve added a new default configuration to our maruku config key: fenced_code_blocks and set it to default to true.   If you do not wish to use Maruku fenced code blocks, you may turn this option off in your site’s configuration file.   ","categories": ["jekyll","site","release"],
+        "tags": [],
+        "url": "/jekyll/site/release/2013/12/17/jekyll-1-4-2-released.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Properties Post",
+        "excerpt":"All the properties.  Plus an excerpt. ","categories": ["jekyll","test","source","foo","bar","baz","MixedCase"],
+        "tags": ["ay","bee","cee"],
+        "url": "/jekyll/test/source/foo/bar/baz/mixedcase/2013/12/20/properties.text",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Permalink Traversal",
+        "excerpt":"Test  ","categories": ["jekyll","test","source"],
+        "tags": [],
+        "url": "/baddie.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Jekyll 1.4.3 Released",
+        "excerpt":"Jekyll 1.4.3 contains two critical security fixes. If you run Jekyll locally and do not run Jekyll in “safe” mode (e.g. you do not build Jekyll sites on behalf of others), you are not affected and are not required to update at this time. (See pull request.)   Versions of Jekyll prior to 1.4.3 and greater than 1.2.0 may allow malicious users to expose the content of files outside the source directory in the generated output via improper symlink sanitization, potentially resulting in an inadvertent information disclosure.   Versions of Jekyll prior to 1.4.3 may also allow malicious users to write arbitrary .html files outside of the destination folder via relative path traversal, potentially overwriting otherwise-trusted content with arbitrary HTML or Javascript depending on your server’s configuration.   Maintainer’s note: Many thanks to @gregose and @charliesome for discovering these vulnerabilities, and to @BenBalter and @alindeman for writing the patch.  ","categories": ["jekyll","site","release"],
+        "tags": [],
+        "url": "/jekyll/site/release/2014/01/14/jekyll-1-4-3-released.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Test Post Where YAML Ends in Dots",
+        "excerpt":"Test  ","categories": ["jekyll","test","source"],
+        "tags": [],
+        "url": "/jekyll/test/source/2014/03/03/yaml-with-dots.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Plus space percent",
+        "excerpt":"Signs are nice  ","categories": ["jekyll","test","source"],
+        "tags": [],
+        "url": "/jekyll/test/source/2014/03/22/escape-+-20.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Jekyll 1.5.0 Released",
+        "excerpt":"As work continues on Jekyll 2.0.0, we felt it was important to address two key issues of Jekyll 1.4.3, namely the safe_yaml dependency below 1.0 and the inability to use Jekyll 1.4.3 on Windows due to a fun issue with path sanitizing.   For a full changelog, check out our history page.   Now, back to work on 2.0.0!   ","categories": ["jekyll","site","release"],
+        "tags": [],
+        "url": "/jekyll/site/release/2014/03/25/jekyll-1-5-0-released.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Jekyll 1.5.1 Released",
+        "excerpt":"The hawk-eyed @gregose spotted a bug in our Jekyll.sanitized_path code:   &gt; sanitized_path(\"/tmp/foobar/jail\", \"..c:/..c:/..c:/etc/passwd\") =&gt; \"/tmp/foobar/jail/../../../etc/passwd\"  Well, we can’t have that! In 1.5.1, you’ll instead see:   &gt; sanitized_path(\"/tmp/foobar/jail\", \"..c:/..c:/..c:/etc/passwd\") =&gt; \"/tmp/foobar/jail/..c:/..c:/..c:/etc/passwd\"  Luckily not affecting 1.4.x, this fix will make 1.5.0 that much safer for the masses. Thanks, Greg!  ","categories": ["jekyll","site","release"],
+        "tags": [],
+        "url": "/jekyll/site/release/2014/03/28/jekyll-1-5-1-released.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Jekyll turns 2.0.0",
+        "excerpt":"A year ago to the day, we released Jekyll 1.0.0. One year later, we present to you the next major version: Jekyll 2.0.0.   Jam-packed with some highly-requested features and bugfixes galore, this is the best Jekyll yet. Some notable changes:      Collections - Collections allow you to define an unlimited number of custom document types (beyond just posts and pages) for different types of content you may want to author in Jekyll such as API documentation or a cookbook!   Brand new site template (thanks @jglovier!) - Getting started with Jekyll just got a lot easier and a lot more beautiful. Just run jekyll new &lt;path&gt; and you’re good to go.   Native Sass &amp; CoffeeScript support - We love CSS and JavaScript as much as the next guy, but there will always be a special place in our hearts for Sass and CoffeeScript. We now offer native support for these file types — no more messing around with Rake or Grunt!   YAML Front Matter defaults - If you’ve set layout: post more than once in your life, you’ll love this new feature: set front matter defaults for a given directory or type.   Custom markdown processors - Always wanted to use your favourite home-grown Markdown converter, but couldn’t with Jekyll? Now you can. Simply specify markdown: MyConverterClass and you’re on your way.   Addition of where and group_by Liquid filters - Simplifying your Liquid templates one filter at a time. The where filter selects from an array all items within which have a given value for a property. The group_by filter groups all items in an array which have the same value for a given property.   Switch from Maruku to Kramdown as default markdown converter - Maruku is dead. We’ve replaced it with the converter which has the closest feature parity: Kramdown!   Check out our changelog for a complete list of all (200+) changes.   Many thanks to these 183 contributors for making Jekyll 2.0.0 happen:   Parker Moore, Matt Rogers, maul.esel, Anatol Broder, Zach Gersh, Joel Glovier, Ben Balter, XhmikosR, Coby Chapple, John Piasetzki, Aidan Feldman, Robin Dupret, Pascal Borreli, Troy Swanson, Erik Michaels-Ober, albertogg, Lucas Jenss, Matt Rogers &amp; Persa Zula, Eric Mill, Shigeya Suzuki, Jens Nazarenus, ddavison, Pat Hawks, Rob Wierzbowski, MURAOKA Taro, Casey Lang, Fabian Rodriguez, Greg Karékinian, Zlatan Vasović, Christopher Nicotera, Dmitry Chestnykh, Ryan Morrissey, Jordon, John Hughes, akira yamada, Matt Swanson, Jashank Jeremy, Matthew Iversen, Meeka, liufengyun, Anand Narayan, nitoyon, Geoff Shannon, Benjamin J. Balter, Juan Ignacio Donoso, David Briggs, Benjamin Esham, Slava Pavlutin, Assaf Gelber, Josh Brown, Nick Fagerlund, Davide Ficano, pilosus, Anthony Smith, André Arko, Mikael Konutgan, Matthew Scharley, Dan Tao, scribu, Mort Yao, m, Stephen McDonald, Marcus Stollsteimer, Thomas Torsney-Weir, Jordon Bedwell, Tom Preston-Werner, Lincoln Mullen, Philip Poots, Ivan Tse, Christopher Giroir, Valery Tolstov, Wlodek Bzyl, Xavier Noria, Yi Zeng, Persa Zula, Phil Leggetter, Pirogov Evgenij, Rafael Revi, Rob McGuire-Dale, Rob Muhlestein, Robin Mehner, Roland Warmerdam, Rusty Geldmacher, Sam Rayner, Santeri Paavolainen, Sebastian Morr, Stephan Groß, Steven Spasbo, Tobias Brunner, Tuomas Kareinen, Tyler Margison, Uwe Dauernheim, Yihang Ho, Zach Leatherman, Zequez, andrew morton, andrewhavens, imathis, jannypie, jaybe@jekyll, kk_Ataka, markets, redwallhp, schneems, szymzet, thomasdao, tomsugden, wǒis神仙, 张君君, Noah Slater, Abhi Yerra, Adam Heckler, Ahmed Hazem, Aigars Dzerviniks, Aleksey V. Zapparov, Andreas Möller, Andy Lindeman, Arlen Cuss, Aziz Shamim, Ben Baker-Smith, Ben Hanzl, Ben Hildred, Brian Kim, Brice, Carol Nichols, Chezou, Chris Jones, Christian Grobmeier, Christoph Hochstrasser, Christoph Schiessl, Clint Shryock, Colin Dean, Corey Ward, Damian Lettie, Daniel Schauenberg, David Ensinger, David Paschich, David Sawyer, David Silva Smith, Donald Perry, Doug Johnston, Edward Ball, Eric Dobson, Erik Dungan, Florent Guilleux, Francis, Frederic ROS, GSI2013, Garen Torikian, George Anderson, Giuseppe Capizzi, Ishibashi Hideto, Jarrod Birch, Jeff Kolesky, Jens Bissinger, Jens Krause, John Firebaugh, John Papandriopoulos, Josh Branchaud, Katy DeCorah, Lachlan Holden, Mark Prins, Markus Roth, Martin Charles, Matt Iversen, Matt Sheehan, Matt Swensen, Matthias Vogelgesang, Michael Parker, Miha Rekar, Nathan Youngman, Nick Quaranto, Nick Quinlan, Nick Schonning, Nicolas Alpi, Nicolás Reynolds, Nikkau, 4ensicLog, Octavian Damiean, Olov Lassus, PatrickC8t, Paul Annesley, and Paul Oppenheim.   Happy developing!   ","categories": ["jekyll","site","release"],
+        "tags": [],
+        "url": "/jekyll/site/release/2014/05/06/jekyll-turns-2-0-0.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Jekyll 2.0.3 Released",
+        "excerpt":"Hey again! Just wanted to let you know we’ve released another version of Jekyll, jam-packed with bug fixes.   A huge “thank you” is in order for all the folks who have submitted bug reports over the last 2 days — your input is what allows this project to continue. It’s always a pain to deal with a MAJOR version bump release, but it’s been pretty smooth so far and you have all been nice about the flaws you’ve found in the tool. Keep filing those reports so we can continue to make Jekyll even better!   Thank you to the contributors that contributed code to 2.0.1, 2.0.2, and/or 2.0.3:   Parker Moore, Yi Zeng, Gabe Ortiz, Aaron Broder, Alberto Grespan, gpxl, David Briggs, Kevin Ingersoll, and Troy Swanson.   As always, check out the changelog for more info. Happy Jekylling!  ","categories": ["jekyll","site","release"],
+        "tags": [],
+        "url": "/jekyll/site/release/2014/05/09/jekyll-2-0-3-released.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Pick Up your $1 Jekyll Sticker",
+        "excerpt":"   You may have heard that @cobyism’s excellent Jekyll logo has been made into a sticker. You may have sat idly by, wishing that you could have a sticker honoring your beloved Jekyll.   The StickerMule team says, “Pine no longer!” StickerMule has discounted the price of Jekyll stickers down to $1 and are offering free (domestic) shipping! Go grab one now on the StickerMule marketplace – they’ll look swell on your favourite hardware.  ","categories": ["jekyll","site","partners"],
+        "tags": [],
+        "url": "/jekyll/site/partners/2014/06/05/jekyll-stickers-1-dollar-stickermule.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Jekyll Turns 21! Err... I mean 2.1.0.",
+        "excerpt":"Jekyll’s finally legal to drink in the States. And he’s done a lot of learning in the process! Here are some of the new things to look forward to:      Uses the latest Liquid version (2.6.1) (#2495)   Set front matter defaults for collections (#2419)   Set a collection-specific URL template (#2418)   pygments.rb 0.6.0! (#2504)   .json files in _data (#2369)   Allow subdirectories in _data (#2395)   Add support for hl_lines in highlight tag (#2532)   Post categories now merge with directory, front matter, and defaults (#2373)   New --skip_initial_build flag for jekyll serve (#2477)   A bajilion bug fixes and site updates!   Let’s go party!   Check out the full changelog for more.   Many thanks to these 37 contributors for the 2.1.0 release:   Alberto Grespan, Alessandro Lorenzi, Alex Medearis, Alfred Xing, Anatol Broder, Ben, Ben Balter, Bud Parr, Chezou, Denilson Figueiredo de Sá, Denilson Sá, Ivan Tse, Jens Nazarenus, Jesse Shawl, Jordon Bedwell, Josh Davis, János Rusiczki, Marc Ransome, Mathieu Bruyen, Matt Rogers, Parker Moore, Pat Hawks, Paul Henry, Peter Rhoades, Philipp Rudloff, Quinn Shanahan, Renaud Martinet, Rob Murray, Rodrigo Dumont, Simon Sarris, Terry, Terry Schmidt, Tomer Cohen, XhmikosR, Yihang Ho, jaybe@jekyll, and mikecole.  ","categories": ["jekyll","site","release"],
+        "tags": [],
+        "url": "/jekyll/site/release/2014/06/29/jekyll-turns-21-i-mean-2-1-0.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Jekyll 2.1.1 Released",
+        "excerpt":"This is a minor release for Jekyll 2.1.0. It fixes a couple bugs and introduces fixes for a couple security-related issues.   It covers two security vulnerabilities:      One in the reading of data   One in the layouts setting   They were identified in Jekyll 1.5.1 and has been confirmed as patched in this version and the version used by GitHub Pages. If you are in the business of building Jekyll sites, please ensure you upgrade to 2.1.1 as soon as possible.   For more, check out jekyll/jekyll#2563.   Additionally, the dependency on Maruku has been loosened and a bug was fixed with document URLs.   As always, check out the full changelog for more info!   Happy Jekylling!  ","categories": ["jekyll","site","release"],
+        "tags": [],
+        "url": "/jekyll/site/release/2014/07/02/jekyll-2-1-1-released.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Another Mixed Case Category in YAML",
+        "excerpt":"Best post ever  ","categories": ["jekyll","test","source","Mixedcase"],
+        "tags": [],
+        "url": "/jekyll/test/source/mixedcase/2014/07/05/another-mixed-case-category.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Mixed Case Category in YAML",
+        "excerpt":"Best post ever  ","categories": ["jekyll","test","source","MixedCase"],
+        "tags": [],
+        "url": "/jekyll/test/source/mixedcase/2014/07/05/mixed-case-category.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Jekyll 2.2.0 Released",
+        "excerpt":"Jekyll 2.2.0 contains a few key updates:      A warning will now fire if you specify a layout in any of your pages or  posts that doesn’t exist.   Certain Pygments options are now whitelisted in safe mode   Categories in a post’s path are now respected (i.e. folders in _posts will now work properly).   As always, a full list of the updates are on the history page. Happy Jekylling!  ","categories": ["jekyll","site","release"],
+        "tags": [],
+        "url": "/jekyll/site/release/2014/07/30/jekyll-2-2-0-released.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Jekyll 2.3.0 Released",
+        "excerpt":"This latest release of Jekyll includes a slew of enhancements and bug fixes. Some of the highlights:      Strange bug around spacing/indentation should be resolved. It was a curious bug indeed.   Pages, Posts, and Drafts can now be converted by multiple converters.   Static files can now be safely included in collections. They’ll be placed in a collection.files array. collection.docs still holds exclusively content with YAML front matter.   Sass files can once again be rendered by Liquid. However, neither Sass nor CoffeeScript can ever have a layout. Bonus: scssify and sassify Liquid filters.   Partial variables allowed now in the path argument of include calls   We added a jekyll help command. Pass it a subcommand to see more info about that subcommand. Or don’t, to see the help for jekyll itself.   Lots of fixes to the site template we use for jekyll new, including converting the CSS into SCSS.   The jsonify filter will now call #to_liquid for you   Lots, lots more!   One change deserves special note. In #2633, subfolders inside a _posts folder were processed and added as categories to the posts. It turns out, this behaviour was unwanted by a large number of individuals, as it is a handy way to organize posts. Ultimately, we decided to revert this change in #2705, because it was a change in behaviour that was already well-established (at least since Jekyll v0.7.0), and was convenient.   For more excellent CHANGELOG reading material, check out the History page! Happy Jekylling!  ","categories": ["jekyll","site","release"],
+        "tags": [],
+        "url": "/jekyll/site/release/2014/08/11/jekyll-2-3-0-released.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Post",
+        "excerpt":"Liquid tests          1 relative_included            2 relative_included            3 relative_included       Whitespace tests          4 relative_included            5 relative_included            6 relative_included       Parameters test     7            var1 = foo        var2 = bar      Partial variable test     8 relative_included   Relative to self test:      9 — title: Test Post Where YAML Ends in Dots …   Test   ","categories": ["jekyll","test","source"],
+        "tags": [],
+        "url": "/jekyll/test/source/2014/09/02/relative-includes.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "A Wild Jekyll 2.4.0 Appeared!",
+        "excerpt":"Well, lookie here! A new release of Jekyll! v2.4.0 contains lots of goodies, including some brilliant new additions:      A new relative_include Liquid tag (#2870)   Render Liquid in CoffeeScript files (#2830)   Add 4 new array Liquid filters: push, pop, shift, and unshift (#2895)   Auto-enable watch on ‘serve’ (#2858). No more -w!   Add :title and :name to collection URL template fillers (#2864 &amp; #2799)   Add support for CSV files in the _data directory (#2761)   Add inspect liquid filter (#2867)   Add a slugify Liquid filter (#2880)   Some other wunderbar bug fixes in there as well. Check out the full changelog for the whole scoop.   As always, many thanks to our amazing contributors who made this release possible: Chris Frederick, Garen Torikian, James Smith, Ruslan Korolev, Joel Glovier, Michael Kühnel, Minn Soe, Pat Hawks, Peter deHaan, Shu Uesugi, TJ, Zhuochun, Alfred Xing, nitoyon, Anatol Broder, Faruk AYDIN, Frederic Hemberger, and Gordon Gao. Thank you!!   Happy Jekylling!  ","categories": ["jekyll","site","release"],
+        "tags": [],
+        "url": "/jekyll/site/release/2014/09/10/jekyll-2-4-0-released.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Jekyll's Mid-Life Crisis (Or, Jekyll turns 2.5.0)",
+        "excerpt":"A new day, a new release! Jekyll just turned 2.5.0 and has gained a lot of wisdom along the way. This 2.5.0 release also comes just a few weeks after Jekyll turned 6 years old! In fashion, we’re celebrating this huge milestone with a pretty big release. What’s changed in 2.5.0? Here are some highlights:      Require plugins in the :jekyll_plugins Gemfile group (turned off with an environment variable)   YAML Front Matter permalinks can now contain placeholders like :name. Check out all the placeholders on the Permalinks docs page.   The jsonify filter now deep-converts arrays to liquid.   Shorted build and serve commands with b and s aliases, respectively   WEBrick will now list your directory if it can’t find an index file.   Any enumerable can be used with the where filter.   Performance optimizations thanks to @tmm1’s stackprof   Fix for Rouge’s Redcarpet interface   Security auditors will love this: path sanitation has now been centralized.   Specify a log level with JEKYLL_LOG_LEVEL: debug, info, warn, or error.   …and a whole bunch of other fixes and enhancements you can read more about in the changelog!   As always, if you run into issues, please check the issues and create an issue if one doesn’t exist for the bug you encountered. If you just need some help, the extraordinary jekyll help team is here for you!   When was the first commit to Jekyll? All the way back on October 19, 2008. It features interesting historical tidbits, such as the old name for Jekyll was “autoblog”, and was first released via Rubyforge. What a difference 6 years has made!   Thanks to the following contributors for making this release possible:   Parker Moore, XhmikosR, Alfred Xing, Ruslan Korolev, Pat Hawks, chrisfinazzo, Mike Kruk, Tanguy Krotoff, Matt Hickford, Philipp Rudloff, Rob Murray, Sean Collins, Seth Warburton, Tom Thorogood, Vasily Vasinov, Veres Lajos, feivel, mitaa, nitoyon, snrbrnjna, tmthrgd, Bret Comnes, Charles Baynham, Christian Mayer, Dan Croak, Frederic Hemberger, Glauco Custódio, Igor Kapkov, and Kevin Ndung’u!  ","categories": ["jekyll","site","release"],
+        "tags": [],
+        "url": "/jekyll/site/release/2014/11/06/jekylls-midlife-crisis-jekyll-turns-2-5-0.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Jekyll 2.5.1 Released",
+        "excerpt":"Hot on the heels of v2.5.0, this release brings relief to our Windows users. It includes a fix for a 2.5.0 path sanitation change that has been confirmed to work on Windows.   To our Windows users: while we don’t officially support Windows, we don’t wish to impede your normal use of Jekyll at all. Our lack of full support for Windows is due to our lack of a Windows machine for development testing (no one on the core team has a Windows machine upon which to test new release candidates), not due to any malice or willful oversight. If you come to us with an issue, we are more than happy to work through it with you to come to a solution that works for all platforms. Along those lines, we have created a Windows Test Force (WTF) which is a group of Jekyll users dedicated to making sure all future releases work on Windows before they’re released so we don’t have this issue again. A special thanks goes out to the initial WTF team members, XhmikosR, Julian Thilo, Pedro Rogério, and Alfred Xing.   Happy Jekylling!   ","categories": ["jekyll","site","release"],
+        "tags": [],
+        "url": "/jekyll/site/release/2014/11/10/jekyll-2-5-1-released.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Jekyll 2.5.2 Released",
+        "excerpt":"A very minor release, 2.5.2 fixes a bug with path sanitation that 2.5.1 introduced. It also improves the post_url tag such that it checks the posts’ name (e.g. 2014-03-03-my-cool-post) instead of a compiled time and name. This fixes issues where posts are created and the day changes based on timezone discrepancies.   Full history here.   Happy Jekylling!  ","categories": ["jekyll","site","release"],
+        "tags": [],
+        "url": "/jekyll/site/release/2014/11/13/jekyll-2-5-2-released.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Rmd Extension",
+        "excerpt":"","categories": ["jekyll","test","source"],
+        "tags": [],
+        "url": "/jekyll/test/source/2014/11/24/Rmd-extension.Rmd",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Alfred Xing has joined the Jekyll core team",
+        "excerpt":"We’re excited to announce that @alfredxing has joined the @jekyll/core team!   He hails from Vancouver, BC, Canada, where he is studying Economics and Computer Science at the University of British Columbia. Alfred popped up in the issues a few months ago with terrific insights, focus, and humility. Performance buffs may be pleased to hear incremental regeneration will be released in a future version of Jekyll – a significant piece of the feature written by Alfred.   Please join me in welcoming Alfred to the Jekyll core team. We’re excited he’s agreed to lend his talents to this project. The future is an exciting place!   Happy Jekylling!   ","categories": ["jekyll","site","team"],
+        "tags": [],
+        "url": "/jekyll/site/team/2014/12/18/alfredxing-welcome-to-jekyll-core.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Jekyll Release for the Holidays! v2.5.3 Out",
+        "excerpt":"Happy Holidays, everyone.   Jekyll v2.5.3 is a quick patch release, containing some minor fixes. See the full history for more info. If you notice any problems, please let us know.   This release also marks the start of Jekyll 3 development. I wrote about it over on my personal blog: Jekyll 3 — The Road Ahead. Feel free to chime in over on GitHub.   Happy Jekylling!  ","categories": ["jekyll","site","release"],
+        "tags": [],
+        "url": "/jekyll/site/release/2014/12/23/jekyll-2-5-3-released.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Post Excerpt Separator",
+        "excerpt":"First paragraph with link ref.   Second paragraph     Third paragraph   ","categories": ["jekyll","test","source"],
+        "tags": [],
+        "url": "/jekyll/test/source/2015/01/08/post-excerpt-separator.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Jekyll Meet & Greet at GitHub HQ",
+        "excerpt":"Hey! Our friends at GitHub have agreed to host a Jekyll meet &amp; greet on February 5, 2015 at 7pm. The event will be hosted at GitHub’s Headquarters here in San Francisco, CA. Pizza &amp; beer will be available for those interested, and there will be much time to sit and chat about all things Jekyll. This would be an especially good time to get help with bugs you’ve encountered or to talk over a potential feature with the core team in attendance.   A special thanks to @gjtorikian for making this all possible! You rock.   We look forward to meeting all you fine folks. Cheers!  ","categories": ["jekyll","site","meetup"],
+        "tags": [],
+        "url": "/jekyll/site/meetup/2015/01/21/jekyll-meet-and-greet.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Jekyll 3.0.0.beta1 Released",
+        "excerpt":"Hey!   Exciting news! First beta for Jekyll 3 is out. Check out the sizable changelog to get a feel for what changes are afoot. Key features:      Speed. Jekyll now features incremental regeneration and greatly improved problematic code that caused slow-downs.   Gobs of bugfixes and customization.   Uniformity and sanity to Jekyll extensions of Liquid.   To install just run:   $ gem install jekyll --pre  Future versions will include some awesome new features that we haven’t built yet. If you see one you want to tackle, submit a PR &amp; you’ll be featured in the Jekyll 3.0 release post as a contributor to that epic release.   Please file bugs as you encounter them, being sure to include your version of Ruby, the Jekyll version, and (if possible) a link to your site so we can reproduce.   If you think there’s room for improvement in the UX, also do let us know. We’re always looking to make Jekyll easier to use!   Happy Jekylling!  ","categories": ["jekyll","site","release"],
+        "tags": [],
+        "url": "/jekyll/site/release/2015/01/24/jekyll-3-0-0-beta1-released.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Extensionless Permalink",
+        "excerpt":"/extensionless-permalink  ","categories": ["jekyll","test","source"],
+        "tags": [],
+        "url": "/extensionless-permalink",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Join the Discussion at Jekyll Talk",
+        "excerpt":"We’re super excited to announce the launch of Jekyll Talk, a Discourse forum for anything related to Jekyll!   The forum was set up by @envygeeks to build a community more accessible to Jekyll users and more suitable for general discussion.   There’s already been a lot of interesting topics, including a site showcase and a poll for Jekyll 3.0 priorities.   Come join the fun!  ","categories": ["jekyll","site","community"],
+        "tags": [],
+        "url": "/jekyll/site/community/2015/02/27/introducing-jekyll-talk.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Jekyll 3.0 Released",
+        "excerpt":"The much-anticipated Jekyll 3.0 has been released! Key changes:      Incremental regeneration (experimental, enable with --incremental)   Liquid profiler (add --profile to a build or serve)   Hook plugin API (no more monkey-patching!)   Dependencies reduced from 14 to 8, none contain C extensions. We’re hoping to reduce this even more in the future.   Changed version support: no support for Ruby 1.9.3, added basic JRuby support. Better Windows support.   Extension-less URLs   site.collections is an array of collections, thus:            collection[0] becomes collection.label       collection[1] becomes collection           Default highlighter is now Rouge instead of Pygments   Lots of performance improvements   … and lots more!   We also added a Code of Conduct to encourage a happier, nicer community where contributions and discussion is protected from negative behaviour.   A huge shout-out to the amazing Jekyll Core Team members Jordon Bedwell, Alfred Xing, and Matt Rogers for all their hard work in making Jekyll 3 the best release yet.   We also added Jekyll Talk, managed solely by Jordon, which offers a modern forum experience for Jekyllers across the globe to talk and learn about Jekyll!   As always, check out the full history for more details.   Our contributors are the core of what makes Jekyll great! Many thanks to the 132 contributors who made this release possible (in alphabetical order): AJ Acevedo, Adam Richeimer, Alan Scherger, Alfred Xing, Anatol Broder, Andrew Dunning, Anna Debenham, Anton, Arne Gockeln, Arthur Hammer, Arthur Neves, BRAVO, Ben Balter, Bernardo Dias, BigBlueHat, Brandon Mathis, Bruce Smith, Cai⚡️, Carlos Matallín, ChaYoung You, Christian Vuerings, Cory Simmons, David Herman, David Silva Smith, David Smith, David Wales, David Williamson, DigitalSparky, Dimitri König, Dominik, Eduardo Boucas, Eduardo Bouças, Eduardo Bouças, Erlend Sogge Heggen, Eugene Pirogov, Ezmyrelda Andrade, Fabian Rodriguez, Fabian Tamp, Fabio Niephaus, Falko Richter, Florian Weingarten, Fonso, Garen Torikian, Guillaume LARIVIERE, Günter Kits, I´m a robot, Jason Ly, Jedd Ahyoung, Jensen Kuras, Jesse Pinho, Jesse W, Jim Meyer, Joel Glovier, Johan Bové, Joop Aué, Jordan Thornquest, Jordon Bedwell, Joseph Anderson, Julien Bourdeau, Justin Weiss, Kamil Dziemianowicz, Kevin Locke, Kevin Ushey, Leonard, Lukas, Mads Ohm Larsen, Malo Skrylevo, Marcus Stollsteimer, Mark Phelps, Mark Tareshawty, Martijn den Hoedt, Martin Jorn Rogalla, Martin Rogalla, Matt Rogers, Matt Sheehan, Matthias Nuessler, Max, Max Beizer, Max White, Merlos, Michael Giuffrida, Michael Tu, Mike Bland, Mike Callan, MonsieurV, Nate Berkopec, Neil Faccly, Nic West, Nicholas Burlett, Nicolas Hoizey, Parker Moore, Pascal Borreli, Pat Hawks, Paul Rayner, Pedro Euko, Peter Robins, Philipp Rudloff, Philippe Loctaux, Rafael Picanço, Renaud Martinet, Robert Papp, Ryan Burnette, Ryan Tomayko, Seb, Seth Warburton, Shannon, Stephen Crosby, Stuart Kent, Suriyaa Kudo, Sylvester Keil, Tanguy Krotoff, Toddy69, Tom Johnson, Tony Eichelberger, Tunghsiao Liu, Veres Lajos, Vitaly Repin, Will Norris, William Entriken, XhmikosR, chrisfinazzo, eksperimental, hartmel, jaybe@jekyll, kaatt, nightsense, nitoyon, robschia, schneems, sonnym, takuti, and tasken.   Happy Jekylling!  ","categories": ["jekyll","site","release"],
+        "tags": [],
+        "url": "/jekyll/site/release/2015/10/27/jekyll-3-0-released.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Jekyll 3.0.1 Released",
+        "excerpt":"Hey, folks! Bunch of bug fixes here. Notables:      Only superdirectories of _posts will be categories.   :title in permalink templates are now properly cased as before   .jekyll-metadata being erroneously written when not using incremental build.   Failure in liquid will now always fail the jekyll process.   All hooks should now be properly registered &amp; documented   And a bunch more changes which you can see over in the changelog.   Thanks to the 17 developers who contributed code and documentation to this patch release: Alfred Xing, Christian Trosell, Jordan Thornquest, Jordon Bedwell, Larry Fox, Lawrence Murray, Lewis Cowles, Matt Rogers, Nicole White, Parker Moore, Paul Robert Lloyd, Sarah Kuehnle, Vincent Wochnik, Will Norris, XhmikosR, chrisfinazzo, and rebornix.  ","categories": ["jekyll","site","release"],
+        "tags": [],
+        "url": "/jekyll/site/release/2015/11/18/jekyll-3-0-1-released.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Jekyll 3.0.2 Released",
+        "excerpt":"A crucial bug was found in v3.0.1 which caused invalid post dates to go unnoticed in the build chain until the error that popped up was unhelpful. v3.0.2 throws errors as you’d expect when there is a post like _posts/2016-22-01-future.md or a post has an invalid date like date: \"tuesday\" in their front matter.  ","categories": ["jekyll","site","release"],
+        "tags": [],
+        "url": "/jekyll/site/release/2016/01/21/jekyll-3-0-2-released.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "Jekyll 3.0.3 Released",
+        "excerpt":"GitHub Pages upgraded to Jekyll 3.0.2 last week and there has been a joyous reception so far! This release is to address some bugs that affected some users during the cut-over. The fixes include:      Fix problem where outputting to a folder would have two extensions   Handle tildes (~) in filenames properly   Fix issue when comparing documents without dates   Include line numbers in liquid error output   Read more on the changelog with links to the related patches.   Please keep submitting bugs as you find them! Please do take a look in our various help resources before filing a bug and use our forum for asking questions and getting help on a specific problem you’re having.   Happy Jekylling!   ","categories": ["jekyll","site","release"],
+        "tags": [],
+        "url": "/jekyll/site/release/2016/02/09/jekyll-3-0-3-released.html",
         "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
       },{
         "title": "Java Class Loader",
@@ -1083,6 +1611,12 @@ var store = [{
         "excerpt":"IT-Solutions-For-Remote-Learning.md  ","categories": ["blog_chn","business"],
         "tags": [],
         "url": "/blog_chn/business/2021/09/22/IT-Solutions-For-Remote-Learning.html",
+        "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
+      },{
+        "title": "2021-09-22-IT-Solutions-For-Remote-Learning",
+        "excerpt":"IT-Solutions-For-Remote-Learning.md  ","categories": ["blog_tech","business"],
+        "tags": [],
+        "url": "/blog_tech/business/2021/09/22/IT-Solutions-For-Remote-Learning.html",
         "teaser": "/assets/images/HighlyDistinguishLogo-stamp.png"
       },{
         "title": "Deep dive into ApplicationEvent in SpringBoot",

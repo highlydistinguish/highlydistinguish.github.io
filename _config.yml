@@ -29,11 +29,11 @@ twitter_username: CloudsDocker
 github_username:  CloudsDocker
 
 # Build settings
-theme: jekyll-theme-merlot
-#theme: minimal-mistakes-jekyll
+# theme: jekyll-theme-merlot
+# theme: minimal-mistakes-jekyll
 #minimal_mistakes_skin: "aqua" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
 # minimal_mistakes_skin: "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
-#remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 teaser: /assets/images/HighlyDistinguishLogo-stamp.png
 # breadcrumbs: true
 
@@ -46,7 +46,7 @@ analytics:
 search: true
 search_full_content: true
 # remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-plugins:
+plugins_dir:
   - jekyll-feed
   - jekyll-include-cache
 
