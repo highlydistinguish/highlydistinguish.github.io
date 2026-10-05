@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+/* Palette taken from the Highly Distinguish logo: charcoal + amber. */
+:root {
+  --background: #faf8f5;
+  --surface: #ffffff;
+  --surface-sunken: #f3efe8;
+  --border: #e7e1d7;
+  --border-strong: #d6cdbf;
+
+  --foreground: #1f1d1a;
+  --muted: #6b655c;
+  --muted-strong: #48433c;
+
+  /* Dark "ink" sections echo the logo's charcoal background. */
+  --ink: #2b2a28;
+  --ink-foreground: #f5efe6;
+  --ink-muted: #bdb3a5;
+
+  /* Amber is for fills; brand-strong is the text-safe shade on light surfaces. */
+  --brand: #e0a030;
+  --brand-hover: #d18f1c;
+  --brand-strong: #8f5410;
+  --brand-soft: #fbf1e1;
+
+  --success: #2f7a4f;
+  --warning: #a4400f;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-sunken: var(--surface-sunken);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-strong: var(--muted-strong);
+  --color-ink: var(--ink);
+  --color-ink-foreground: var(--ink-foreground);
+  --color-ink-muted: var(--ink-muted);
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-brand-strong: var(--brand-strong);
+  --color-brand-soft: var(--brand-soft);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+
+  --font-sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand-strong);
+  outline-offset: 2px;
+}
+
+/* Long-form article typography (Insights + case studies). */
+.prose {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--muted-strong);
+}
+.prose > * + * {
+  margin-top: 1.1em;
+}
+.prose h2 {
+  margin-top: 2.2em;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  font-weight: 650;
+  color: var(--foreground);
+  letter-spacing: -0.01em;
+}
+.prose h3 {
+  margin-top: 1.8em;
+  font-size: 1.2rem;
+  font-weight: 650;
+  color: var(--foreground);
+}
+.prose strong {
+  color: var(--foreground);
+  font-weight: 650;
+}
+.prose a {
+  color: var(--brand-strong);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.prose ul,
+.prose ol {
+  padding-left: 1.4em;
+}
+.prose ul {
+  list-style: disc;
+}
+.prose ol {
+  list-style: decimal;
+}
+.prose li + li {
+  margin-top: 0.4em;
+}
+.prose blockquote {
+  border-left: 3px solid var(--brand);
+  background: var(--brand-soft);
+  padding: 0.9em 1.2em;
+  border-radius: 0 0.75rem 0.75rem 0;
+  color: var(--foreground);
+}
+.prose blockquote > * + * {
+  margin-top: 0.6em;
+}
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  display: block;
+  overflow-x: auto;
+}
+.prose th,
+.prose td {
+  border: 1px solid var(--border);
+  padding: 0.55em 0.8em;
+  text-align: left;
+  vertical-align: top;
+}
+.prose th {
+  background: var(--surface-sunken);
+  color: var(--foreground);
+  font-weight: 600;
+}
+.prose hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 2.4em 0;
+}
+.prose code {
+  font-size: 0.9em;
+  background: var(--surface-sunken);
+  padding: 0.1em 0.35em;
+  border-radius: 0.3em;
+}
