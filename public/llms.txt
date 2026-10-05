@@ -1,0 +1,31 @@
+# Highly Distinguish
+
+> Highly Distinguish Pty Ltd (ABN 70 651 431 677) is an Australian technology company that helps small professional firms — accounting and bookkeeping practices, mortgage and finance brokers, and registered migration agents — adopt AI safely. Services are delivered in English and Mandarin. We provide technology services, not legal, tax or migration advice.
+
+Contact: phone 1300 690 188, email highlydistinguish@gmail.com. Serving clients across Australia, online and in person.
+
+## Services
+
+- [Services and how we work](https://www.hdeazy.com/services/): a free 30-minute AI safety check, a fixed-price safe AI setup (business-grade AI tool, written AI use policy, staff training, task templates), and an optional monthly support retainer.
+- [Contact / book a free AI safety check](https://www.hdeazy.com/contact/)
+
+## Industries
+
+- [AI for accounting and bookkeeping practices](https://www.hdeazy.com/industries/accountants/): TPB confidentiality, AML/CTF tranche 2 (from 1 July 2026), why chatbots should not do calculations.
+- [AI for mortgage and finance brokers](https://www.hdeazy.com/industries/mortgage-brokers/): credit information, best interests duty, licensee policies.
+- [AI for registered migration agents](https://www.hdeazy.com/industries/migration-agents/): confidentiality, translation requirements, hallucinated visa rules.
+
+## Guides
+
+- [Can you paste client information into ChatGPT?](https://www.hdeazy.com/insights/free-chatgpt-client-data/): data use on ChatGPT Free/Plus/Pro vs Business/Enterprise, professional rules by industry, the small business privacy exemption, and a five-step safe setup.
+- [AI anxiety, from the owner's chair](https://www.hdeazy.com/insights/ai-anxiety-for-owners/)
+
+## Case studies
+
+- [AI that shows its working on financial reports](https://www.hdeazy.com/case-studies/ai-that-shows-its-working/): 79.5% strict accuracy on 1,490 ConvFinQA questions vs 89.4% for human experts; why a person must review AI output.
+- [Secure by default](https://www.hdeazy.com/case-studies/secure-by-default/): server-side secrets, secrets manager, short-lived deploy credentials, Australian hosting.
+
+## Optional
+
+- [中文网站](https://www.hdeazy.com/zh/)
+- [About us](https://www.hdeazy.com/about/)
