@@ -13,9 +13,9 @@ const sources = {
 
 const zh: Dictionary = {
   meta: {
-    siteTitle: "Highly Distinguish — 为悉尼小企业提供安全、实用的 AI 服务",
+    siteTitle: "Highly Distinguish — 为澳洲小企业提供安全、实用的 AI 服务",
     siteDescription:
-      "我们帮助悉尼的小型会计所、贷款经纪和移民代理用 AI 节省时间，同时保护客户资料、守住行业合规底线。",
+      "我们帮助全澳的小型会计所、贷款经纪和移民代理用 AI 节省时间，同时保护客户资料、守住行业合规底线。",
   },
   nav: {
     industries: "服务行业",
@@ -42,7 +42,7 @@ const zh: Dictionary = {
     minRead: "分钟阅读",
   },
   footer: {
-    tagline: "为悉尼小型专业服务机构提供安全、实用的 AI 服务。",
+    tagline: "为全澳小型专业服务机构提供安全、实用的 AI 服务。",
     explore: "浏览",
     company: "公司",
     archive: "技术存档",
@@ -56,9 +56,9 @@ const zh: Dictionary = {
     eyebrow: "专为小型会计所、贷款经纪和移民代理设计的 AI 服务",
     title: "用 AI 每周省下好几个小时，",
     titleHighlight: "同时不让客户资料承担风险。",
-    body: "我们帮悉尼的小企业选对 AI 工具、安全地配置好、并培训您的团队。说人话，价格固定，重要内容始终由人把关。",
+    body: "我们帮全澳的小企业选对 AI 工具、安全地配置好、并培训您的团队。说人话，价格固定，重要内容始终由人把关。",
     secondaryCta: "了解服务流程",
-    proof: ["20 年企业级 IT 经验，包括全球大型银行", "在真实财务文件上开发并测试过 AI 系统", "中英双语服务", "悉尼本地 · ABN 70 651 431 677"],
+    proof: ["20 年企业级 IT 经验，包括全球大型银行", "在真实财务文件上开发并测试过 AI 系统", "中英双语服务", "澳洲公司 · ABN 70 651 431 677"],
     checklistTitle: "您的 AI 安全配置",
     checklist: [
       "企业级 AI 方案，默认不用您的数据训练模型",
@@ -100,6 +100,23 @@ const zh: Dictionary = {
     ],
     industriesTitle: "专为像您这样的机构打造",
     industriesIntro: "每个行业都有自己的规则，也有自己最耗时间的环节。我们从这两点出发。",
+    industriesMore: {
+      title: "不在这几个行业？",
+      body: "只要您的生意要处理敏感的客户信息，同样的“安全用 AI”方法都适用——不论您做哪一行。",
+      cta: "说说您的情况",
+    },
+    founderBand: {
+      eyebrow: "建议背后的底气",
+      statValue: "20",
+      statUnit: "年",
+      statCaption: "企业级 IT 经验——在客户数据不容有失的地方历练出来。",
+      banksLabel: "曾任职于",
+      banks: ["摩根士丹利", "汇丰", "花旗"],
+      body: "保护全球大银行客户数据的那套习惯，正是五个人的小公司真正需要的——用大白话讲清楚、按小公司的预算定价。正因为这段背景，我们才会像您一样，把客户的资料当回事。",
+      signatureName: "Highly Distinguish",
+      signatureRole: "创始人亲自主理 · 澳洲科技公司",
+      cta: "更多关于我们",
+    },
     honestyTitle: "AI 做不到的事，我们会如实告诉您。",
     honestyBody:
       "我们开发并实测过一个 AI 系统，用来回答关于上市公司真实财务报告的问题。它表现不错，但多步骤问题里仍有大约五分之一会答错，人类专家做得更好。所以我们搭建的所有方案，凡是要发给客户、银行或监管机构的内容，都保留人工审核这一步。",
@@ -117,7 +134,7 @@ const zh: Dictionary = {
       },
       { title: "中英双语，说人话", body: "不讲术语，不炒概念。我们可以用中文或英文培训您的团队、讲清楚风险。" },
       { title: "固定价格", body: "开工前就知道花多少钱，不会有“又多花了几个小时”的意外账单。" },
-      { title: "本地、可问责", body: "我们是有 ABN 的悉尼公司，打电话有真人接听。" },
+      { title: "本地、可问责", body: "我们是有 ABN 的澳洲公司，打电话有真人接听。" },
     ],
     faqTitle: "常见问题",
     faqs: [
@@ -149,7 +166,7 @@ const zh: Dictionary = {
       slug: "accountants",
       name: "会计所与记账服务",
       teaser: "客户邮件、会议记录和催收资料，都能更快完成，同时守住保密义务。",
-      metaTitle: "悉尼小型会计所的 AI 服务",
+      metaTitle: "澳洲小型会计所的 AI 服务",
       metaDescription: "在会计所和记账业务中安全使用 AI：更快处理客户邮件、会议记录和资料收集，同时遵守 TPB 保密义务和反洗钱规定。",
       heroTitle: "小型会计所安全使用 AI 的正确方式",
       heroBody:
@@ -187,7 +204,7 @@ const zh: Dictionary = {
       slug: "mortgage-brokers",
       name: "贷款与融资经纪",
       teaser: "整理客户资料、更新进度、查找银行政策，最终判断仍由您来做。",
-      metaTitle: "悉尼贷款经纪的 AI 服务",
+      metaTitle: "澳洲贷款经纪的 AI 服务",
       metaDescription: "帮助小型贷款和融资经纪公司安全使用 AI：更快整理客户资料、发送进度更新、查找资料，同时保护信用信息。",
       heroTitle: "贷款经纪用 AI：少打字，多陪客户",
       heroBody:
@@ -225,7 +242,7 @@ const zh: Dictionary = {
       slug: "migration-agents",
       name: "移民代理",
       teaser: "材料清单、客户更新和证据整理，同时保护好护照和健康信息。",
-      metaTitle: "悉尼注册移民代理的 AI 服务",
+      metaTitle: "澳洲注册移民代理的 AI 服务",
       metaDescription: "帮助小型移民代理机构安全使用 AI：更快生成材料清单、发送客户更新、整理证据，同时保护敏感的客户信息。",
       heroTitle: "移民代理用 AI：行政工作更少，用心不减",
       heroBody:
@@ -269,7 +286,7 @@ const zh: Dictionary = {
   },
   services: {
     metaTitle: "服务内容",
-    metaDescription: "为悉尼小型专业服务机构提供免费 AI 安全体检、固定价格的 AI 安全上手套餐和长期支持。",
+    metaDescription: "为全澳小型专业服务机构提供免费 AI 安全体检、固定价格的 AI 安全上手套餐和长期支持。",
     title: "服务简单，价格清楚",
     intro: "先做免费体检。觉得对您的公司有意义，再继续。",
     tiers: [
@@ -343,11 +360,11 @@ const zh: Dictionary = {
         "密钥只存放在服务器上，绝不打包进用户下载的应用。",
         "密钥保存在专门的密钥管理服务中，不出现在配置文件或日志里。",
         "自动部署使用短期凭证，而不是长期有效的密码。",
-        "服务运行在 Google Cloud 悉尼区域，并设置访问频率限制防止滥用。",
+        "服务运行在 Google Cloud 澳洲区域，并设置访问频率限制防止滥用。",
       ],
       results: [
         { value: "0", label: "打包进应用的密钥数量" },
-        { value: "悉尼", label: "服务运行的云区域" },
+        { value: "澳洲", label: "服务云区域所在的国家" },
       ],
       resultsNote: "这是 LessChoice 的后端。LessChoice 是我们开发的 AI iOS 应用，用来推荐值得去的地方。",
       lesson: "好的安全主要是一组枯燥的习惯，每次都照做。从一开始就做，成本很低；事后再补，代价很高。",
@@ -372,14 +389,14 @@ const zh: Dictionary = {
   },
   about: {
     metaTitle: "关于我们",
-    metaDescription: "Highly Distinguish 是一家悉尼科技公司，帮助小型专业服务机构安全地使用 AI。创始人 Todd Zhang。",
+    metaDescription: "Highly Distinguish 是一家澳洲科技公司，帮助小型专业服务机构安全地使用 AI。",
     title: "大企业的经验，专注小企业",
     intro:
-      "Highly Distinguish 是一家悉尼科技公司。我们帮助小型专业服务机构享受 AI 带来的好处，同时避开风险。标准向大银行看齐，讲解用通俗的语言。",
+      "Highly Distinguish 是一家澳洲科技公司。我们帮助小型专业服务机构享受 AI 带来的好处，同时避开风险。标准向大银行看齐，讲解用通俗的语言。",
     founderTitle: "创始人",
     founderBody: [
-      "Todd Zhang 拥有 20 年软件系统开发与运维经验，曾在摩根士丹利、汇丰、花旗等全球大型银行从事工程工作。在那里，保护客户数据不是可选项。",
-      "如今他设计并测试 AI 系统，包括一个已公开文档的财务报告问答 AI，以及一款 AI iOS 应用。他在 todzhang.com 用中英文撰写技术文章。",
+      "我们的创始人拥有 20 年软件系统开发与运维经验，曾在摩根士丹利、汇丰、花旗等全球大型银行从事工程工作。在那里，保护客户数据不是可选项。",
+      "如今的工作是设计并测试 AI 系统，包括一个已公开文档的财务报告问答 AI，以及一款 AI iOS 应用，并用中英文发表技术文章。",
       "我们做 AI 服务，是因为小企业里有一个很普遍的现象：被要求“用上 AI”，员工私下用免费工具处理客户资料，却没有人用通俗的语言讲清楚其中的利弊。",
     ],
     principlesTitle: "我们的工作原则",
@@ -393,18 +410,18 @@ const zh: Dictionary = {
     companyLabels: { name: "公司名称", location: "所在地", phone: "电话" },
     elsewhereTitle: "其他平台",
     elsewhere: [
-      { label: "Todd 的技术博客", href: "https://www.todzhang.com" },
+      { label: "我们的技术博客", href: "https://www.todzhang.com" },
       { label: "GitHub", href: "https://github.com/CloudsDocker" },
     ],
   },
   contact: {
     metaTitle: "联系我们 · 免费 AI 安全体检",
-    metaDescription: "为您在悉尼的会计所、贷款经纪或移民代理业务预约 30 分钟免费 AI 安全体检。",
+    metaDescription: "为您在澳洲各地的会计所、贷款经纪或移民代理业务预约 30 分钟免费 AI 安全体检。",
     title: "预约免费 AI 安全体检",
-    intro: "给我们打电话或发邮件，我们会安排一个您方便的 30 分钟时段，可以在悉尼当面，也可以线上。",
+    intro: "给我们打电话或发邮件，我们会安排一个您方便的 30 分钟时段，全澳均可线上进行，就近也可当面。",
     phoneLabel: "电话",
     emailLabel: "邮箱",
-    hours: "周一至周五，悉尼时间工作时段。",
+    hours: "周一至周五，澳洲东部时间工作时段。",
     emailSubject: "预约免费 AI 安全体检",
     emailBody: "您好，\n\n我想预约一次免费 AI 安全体检。\n\n公司名称：\n所属行业：\n员工人数：\n方便沟通的时间：\n\n谢谢！",
     stepsTitle: "接下来会怎样",
@@ -413,7 +430,7 @@ const zh: Dictionary = {
       { title: "您会收到一页纸总结", body: "需要马上处理的风险和值得尝试的省时方法，用通俗语言写清楚。" },
       { title: "由您决定", body: "可以自己按总结去做，也可以找我们要固定报价。怎么选都没有压力。" },
     ],
-    area: "悉尼可当面服务，全澳客户可线上服务。",
+    area: "全澳客户均可线上服务，就近可安排当面。",
   },
   notFound: { title: "页面不存在", body: "您要找的页面已移动或不存在。", home: "返回首页" },
 };

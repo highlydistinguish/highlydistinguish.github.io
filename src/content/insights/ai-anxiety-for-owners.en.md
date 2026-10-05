@@ -53,4 +53,4 @@ Neither column is pure virtue. Measurement exposes wishful thinking, and "we've 
 
 None of this is an argument for avoiding AI. Firms that refuse useful tools on principle will simply be slower and more expensive. Learn the tools, use them enough to see where they're reliable and where they fail, and then make an honest decision about what your firm is for once the routine work gets cheaper.
 
-*This article is adapted for business owners from Todd Zhang's longer essay, [What AI Anxiety Really Means](https://www.todzhang.com/blogs/tech/en/ai-anxiety-value-automation).*
+*This article is adapted for business owners from a longer essay, [What AI Anxiety Really Means](https://www.todzhang.com/blogs/tech/en/ai-anxiety-value-automation).*

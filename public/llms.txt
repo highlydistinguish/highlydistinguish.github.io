@@ -1,8 +1,8 @@
 # Highly Distinguish
 
-> Highly Distinguish Pty Ltd (ABN 70 651 431 677) is a Sydney technology company that helps small professional firms — accounting and bookkeeping practices, mortgage and finance brokers, and registered migration agents — adopt AI safely. Services are delivered in English and Mandarin. We provide technology services, not legal, tax or migration advice.
+> Highly Distinguish Pty Ltd (ABN 70 651 431 677) is an Australian technology company that helps small professional firms — accounting and bookkeeping practices, mortgage and finance brokers, and registered migration agents — adopt AI safely. Services are delivered in English and Mandarin. We provide technology services, not legal, tax or migration advice.
 
-Contact: phone 1300 690 188, email highlydistinguish@gmail.com. Serving Sydney in person and Australia online.
+Contact: phone 1300 690 188, email highlydistinguish@gmail.com. Serving clients across Australia, online and in person.
 
 ## Services
 
@@ -23,9 +23,9 @@ Contact: phone 1300 690 188, email highlydistinguish@gmail.com. Serving Sydney i
 ## Case studies
 
 - [AI that shows its working on financial reports](https://www.hdeazy.com/case-studies/ai-that-shows-its-working/): 79.5% strict accuracy on 1,490 ConvFinQA questions vs 89.4% for human experts; why a person must review AI output.
-- [Secure by default](https://www.hdeazy.com/case-studies/secure-by-default/): server-side secrets, secrets manager, short-lived deploy credentials, Sydney hosting.
+- [Secure by default](https://www.hdeazy.com/case-studies/secure-by-default/): server-side secrets, secrets manager, short-lived deploy credentials, Australian hosting.
 
 ## Optional
 
 - [中文网站](https://www.hdeazy.com/zh/)
-- [About the founder, Todd Zhang](https://www.hdeazy.com/about/)
+- [About us](https://www.hdeazy.com/about/)

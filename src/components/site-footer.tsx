@@ -102,7 +102,7 @@ export function SiteFooter({ locale }: { locale: Locale }) {
         <Container className="flex flex-col gap-3 py-6 text-xs leading-relaxed text-ink-muted">
           <p>{t.footer.disclaimer}</p>
           <p>
-            © {new Date().getFullYear()} {site.legalName} · ABN {site.abn} · {site.city}, {site.region}
+            © {new Date().getFullYear()} {site.legalName} · ABN {site.abn} · {site.location}
           </p>
         </Container>
       </div>

@@ -99,6 +99,19 @@ export type Dictionary = {
     steps: Card[];
     industriesTitle: string;
     industriesIntro: string;
+    industriesMore: { title: string; body: string; cta: string };
+    founderBand: {
+      eyebrow: string;
+      statValue: string;
+      statUnit: string;
+      statCaption: string;
+      banksLabel: string;
+      banks: string[];
+      body: string;
+      signatureName: string;
+      signatureRole: string;
+      cta: string;
+    };
     honestyTitle: string;
     honestyBody: string;
     honestyStats: { value: string; label: string }[];

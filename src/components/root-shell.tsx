@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { getDictionary } from "@/content";
 import { htmlLang, type Locale } from "@/lib/i18n";
+import { Analytics } from "./analytics";
 import { OrganizationJsonLd } from "./json-ld";
 import { SiteFooter } from "./site-footer";
 import { SiteHeader } from "./site-header";
@@ -12,6 +13,7 @@ export function RootShell({ locale, children }: { locale: Locale; children: Reac
   return (
     <html lang={htmlLang[locale]} className="h-full antialiased">
       <body className="flex min-h-full flex-col">
+        <Analytics />
         <OrganizationJsonLd description={t.meta.siteDescription} />
         <SiteHeader locale={locale} nav={t.nav} />
         <main className="flex-1">{children}</main>

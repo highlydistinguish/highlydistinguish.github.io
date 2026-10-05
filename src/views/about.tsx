@@ -58,9 +58,7 @@ export function AboutView({ locale }: { locale: Locale }) {
                 </div>
                 <div>
                   <dt className="inline text-muted">{a.companyLabels.location}: </dt>
-                  <dd className="inline">
-                    {site.city}, {site.region}
-                  </dd>
+                  <dd className="inline">{site.location}</dd>
                 </div>
                 <div>
                   <dt className="inline text-muted">{a.companyLabels.phone}: </dt>

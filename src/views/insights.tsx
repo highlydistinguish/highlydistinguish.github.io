@@ -54,7 +54,7 @@ export function InsightView({ locale, slug }: { locale: Locale; slug: string }) 
           description: post.description,
           datePublished: post.date,
           inLanguage: locale === "zh" ? "zh-Hans" : "en-AU",
-          author: { "@type": "Person", name: site.founder, url: site.links.blog },
+          author: { "@type": "Organization", name: site.name, url: site.url },
           publisher: { "@id": `${site.url}/#organization` },
           mainEntityOfPage: `${site.url}${localePath(locale, `/insights/${slug}/`)}`,
         }}
@@ -72,7 +72,7 @@ export function InsightView({ locale, slug }: { locale: Locale; slug: string }) 
             <h1 className="mt-5 text-3xl font-bold leading-tight tracking-tight sm:text-[2.6rem]">{post.title}</h1>
             <p className="mt-5 text-lg leading-relaxed text-muted">{post.description}</p>
             <p className="mt-6 text-sm text-muted">
-              {site.founder} · {t.common.publishedOn} {formatDate(post.date, locale)} · {post.readingMinutes}{" "}
+              {site.name} · {t.common.publishedOn} {formatDate(post.date, locale)} · {post.readingMinutes}{" "}
               {t.common.minRead}
             </p>
           </Container>

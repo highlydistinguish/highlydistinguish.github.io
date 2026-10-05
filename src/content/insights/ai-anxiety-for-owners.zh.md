@@ -53,4 +53,4 @@ AI 在小型专业服务机构里，也是同样让人不安的形态。问题�
 
 这些都不是在劝您回避 AI。出于原则拒绝有用工具的公司，只会变得更慢、更贵。去学这些工具，用到足以看清它们哪里可靠、哪里会出错，然后诚实地回答：当日常工作变便宜之后，您的公司存在的意义是什么。
 
-*本文根据 Todd Zhang 的长文 [What AI Anxiety Really Means](https://www.todzhang.com/blogs/tech/en/ai-anxiety-value-automation)（英文）为企业主改写。*
+*本文根据一篇长文 [What AI Anxiety Really Means](https://www.todzhang.com/blogs/tech/en/ai-anxiety-value-automation)（英文）为企业主改写。*

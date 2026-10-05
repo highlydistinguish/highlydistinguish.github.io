@@ -16,9 +16,9 @@ export const sources = {
 
 const en: Dictionary = {
   meta: {
-    siteTitle: "Highly Distinguish — Safe, practical AI for Sydney small firms",
+    siteTitle: "Highly Distinguish — Safe, practical AI for Australian small firms",
     siteDescription:
-      "We help small accounting practices, mortgage brokers and migration agents in Sydney use AI to save time — without putting client data or professional obligations at risk.",
+      "We help small accounting practices, mortgage brokers and migration agents across Australia use AI to save time — without putting client data or professional obligations at risk.",
   },
   nav: {
     industries: "Industries",
@@ -45,7 +45,7 @@ const en: Dictionary = {
     minRead: "min read",
   },
   footer: {
-    tagline: "Safe, practical AI for Sydney's small professional firms.",
+    tagline: "Safe, practical AI for Australia's small professional firms.",
     explore: "Explore",
     company: "Company",
     archive: "Engineering archive",
@@ -60,13 +60,13 @@ const en: Dictionary = {
     eyebrow: "AI for small accounting, mortgage broking & migration practices",
     title: "Save hours every week with AI —",
     titleHighlight: "without putting client data at risk.",
-    body: "We help small Sydney firms choose the right AI tools, set them up safely, and train the team. Plain English, fixed prices, and a person checking anything that matters.",
+    body: "We help small Australian firms choose the right AI tools, set them up safely, and train the team. Plain English, fixed prices, and a person checking anything that matters.",
     secondaryCta: "See how it works",
     proof: [
       "20 years in enterprise IT, including global banks",
       "Built and tested real AI systems on financial documents",
       "English & 中文",
-      "Sydney-based · ABN 70 651 431 677",
+      "Australian company · ABN 70 651 431 677",
     ],
     checklistTitle: "Your safe AI setup",
     checklist: [
@@ -109,6 +109,23 @@ const en: Dictionary = {
     ],
     industriesTitle: "Built for firms like yours",
     industriesIntro: "Each industry has its own rules and its own time-sinks. We start from both.",
+    industriesMore: {
+      title: "Another kind of firm?",
+      body: "If your business handles sensitive client information, the same safe-AI approach applies — whatever your field.",
+      cta: "Tell us about your firm",
+    },
+    founderBand: {
+      eyebrow: "The experience behind the advice",
+      statValue: "20",
+      statUnit: "years",
+      statCaption: "in enterprise IT — handling client data where it's non-negotiable.",
+      banksLabel: "Previously at",
+      banks: ["Morgan Stanley", "HSBC", "Citi"],
+      body: "The habits that protect a global bank's client data are exactly what a five-person practice needs — explained plainly and priced for a small firm. That background is why we take your clients' information as seriously as you do.",
+      signatureName: "Highly Distinguish",
+      signatureRole: "Founder-led · Australian technology company",
+      cta: "More about us",
+    },
     honestyTitle: "We're honest about what AI can't do.",
     honestyBody:
       "We built and measured an AI system that answers questions about real company financial reports. It does well — and it still gets about one in five multi-step questions wrong. Human experts do better. That's why everything we set up keeps a person reviewing anything that goes to a client, a lender or a regulator.",
@@ -135,7 +152,7 @@ const en: Dictionary = {
       },
       {
         title: "Local and accountable",
-        body: "We're a Sydney company with an ABN and a phone number that a person answers.",
+        body: "We're an Australian company with an ABN and a phone number that a person answers.",
       },
     ],
     faqTitle: "Common questions",
@@ -171,7 +188,7 @@ const en: Dictionary = {
       slug: "accountants",
       name: "Accounting & bookkeeping practices",
       teaser: "Client emails, meeting notes and document chasing — without breaching confidentiality.",
-      metaTitle: "AI for small accounting practices in Sydney",
+      metaTitle: "AI for small accounting practices in Australia",
       metaDescription:
         "Use AI safely in your accounting or bookkeeping practice: save time on client emails, notes and document collection while meeting TPB confidentiality and AML/CTF obligations.",
       heroTitle: "AI for small accounting practices — the safe way",
@@ -222,7 +239,7 @@ const en: Dictionary = {
       slug: "mortgage-brokers",
       name: "Mortgage & finance brokers",
       teaser: "Fact-find summaries, client updates and lender research — with your judgement still in charge.",
-      metaTitle: "AI for mortgage brokers in Sydney",
+      metaTitle: "AI for mortgage brokers in Australia",
       metaDescription:
         "Help for small mortgage and finance broking businesses to use AI safely: faster fact-find summaries, client updates and research while protecting credit information.",
       heroTitle: "AI for mortgage brokers — more time with clients, less time typing",
@@ -273,7 +290,7 @@ const en: Dictionary = {
       slug: "migration-agents",
       name: "Migration agents",
       teaser: "Checklists, client updates and evidence organisation — without risking passports and health data.",
-      metaTitle: "AI for registered migration agents in Sydney",
+      metaTitle: "AI for registered migration agents in Australia",
       metaDescription:
         "Help for small migration practices to use AI safely: faster document checklists, client updates and evidence organisation while protecting sensitive client information.",
       heroTitle: "AI for migration agents — less admin, same care",
@@ -331,7 +348,7 @@ const en: Dictionary = {
   services: {
     metaTitle: "Services",
     metaDescription:
-      "A free AI safety check, a fixed-price safe AI setup, and ongoing support for small professional firms in Sydney.",
+      "A free AI safety check, a fixed-price safe AI setup, and ongoing support for small professional firms across Australia.",
     title: "Simple services, clear prices",
     intro: "Start with a free check. Only go further if it makes sense for your firm.",
     tiers: [
@@ -420,11 +437,11 @@ const en: Dictionary = {
         "Secret keys live only on the server, never inside the app people download.",
         "Keys are kept in a dedicated secrets manager, not in configuration files or logs.",
         "Automated deployments use short-lived credentials instead of long-lived passwords.",
-        "The service runs in Google Cloud's Sydney region, with rate limits to stop abuse.",
+        "The service runs in Google Cloud's Australian region, with rate limits to stop abuse.",
       ],
       results: [
         { value: "0", label: "secret keys shipped inside the app" },
-        { value: "Sydney", label: "cloud region the service runs in" },
+        { value: "Australia", label: "where the service's cloud region is" },
       ],
       resultsNote:
         "This is the backend for LessChoice, our AI-powered iOS app that suggests places to visit.",
@@ -454,14 +471,14 @@ const en: Dictionary = {
   about: {
     metaTitle: "About us",
     metaDescription:
-      "Highly Distinguish is a Sydney technology company helping small professional firms adopt AI safely. Founded by Todd Zhang.",
+      "Highly Distinguish is an Australian technology company helping small professional firms adopt AI safely.",
     title: "Enterprise experience, small-business focus",
     intro:
-      "Highly Distinguish is a Sydney technology company. We help small professional firms get the benefits of AI without the risks — using the same standards big banks expect, explained in plain language.",
+      "Highly Distinguish is an Australian technology company. We help small professional firms get the benefits of AI without the risks — using the same standards big banks expect, explained in plain language.",
     founderTitle: "Our founder",
     founderBody: [
-      "Todd Zhang has spent 20 years building and running software systems, including engineering roles at global banks such as Morgan Stanley, HSBC and Citi — environments where client data protection is not optional.",
-      "Today he designs and tests AI systems, including a publicly documented AI for answering questions about financial reports, and an AI-powered iOS app. He writes about engineering at todzhang.com, in English and Chinese.",
+      "Our founder has spent 20 years building and running software systems, including engineering roles at global banks such as Morgan Stanley, HSBC and Citi — environments where client data protection is not optional.",
+      "Today the work is designing and testing AI systems, including a publicly documented AI for answering questions about financial reports, and an AI-powered iOS app, with engineering write-ups published in English and Chinese.",
       "Our AI practice exists because of a pattern that's common in small firms: pressure to 'do something with AI', staff quietly using free tools with client data, and nobody explaining the trade-offs in plain language.",
     ],
     principlesTitle: "How we work",
@@ -475,19 +492,19 @@ const en: Dictionary = {
     companyLabels: { name: "Name", location: "Location", phone: "Phone" },
     elsewhereTitle: "Find us elsewhere",
     elsewhere: [
-      { label: "Todd's engineering blog", href: "https://www.todzhang.com" },
+      { label: "Our engineering blog", href: "https://www.todzhang.com" },
       { label: "GitHub", href: "https://github.com/CloudsDocker" },
     ],
   },
   contact: {
     metaTitle: "Contact & free AI safety check",
     metaDescription:
-      "Book a free 30-minute AI safety check for your accounting, mortgage broking or migration practice in Sydney.",
+      "Book a free 30-minute AI safety check for your accounting, mortgage broking or migration practice, anywhere in Australia.",
     title: "Book your free AI safety check",
-    intro: "Call or email us and we'll find a 30-minute slot that suits you — in person in Sydney, or online.",
+    intro: "Call or email us and we'll find a 30-minute slot that suits you — online anywhere in Australia, or in person if you're nearby.",
     phoneLabel: "Phone",
     emailLabel: "Email",
-    hours: "Monday to Friday, business hours (Sydney time).",
+    hours: "Monday to Friday, business hours (Australian Eastern time).",
     emailSubject: "Free AI safety check",
     emailBody:
       "Hi,\n\nI'd like to book a free AI safety check.\n\nBusiness name:\nIndustry:\nNumber of staff:\nBest time to talk:\n\nThanks,",
@@ -497,7 +514,7 @@ const en: Dictionary = {
       { title: "You get a one-page summary", body: "Risks to fix now and time-savers worth trying, in plain English." },
       { title: "You decide", body: "Use the summary yourself, or ask us for a fixed-price quote. No pressure either way." },
     ],
-    area: "Serving Sydney in person and clients across Australia online.",
+    area: "Serving clients across Australia online, and in person where we can.",
   },
   notFound: {
     title: "Page not found",

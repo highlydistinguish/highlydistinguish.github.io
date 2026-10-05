@@ -67,7 +67,7 @@ You can get value from AI this week without touching client information:
 
 ## Where to go from here
 
-If you'd like a second pair of eyes, we offer a free 30-minute AI safety check for small accounting, broking and migration practices in Sydney. You'll get a one-page summary of what to fix and what to try — whether or not you work with us.
+If you'd like a second pair of eyes, we offer a free 30-minute AI safety check for small accounting, broking and migration practices across Australia. You'll get a one-page summary of what to fix and what to try — whether or not you work with us.
 
 ---
 

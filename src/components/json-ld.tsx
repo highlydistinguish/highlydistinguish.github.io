@@ -16,16 +16,11 @@ export function OrganizationJsonLd({ description }: { description: string }) {
     taxID: `ABN ${site.abn}`,
     address: {
       "@type": "PostalAddress",
-      addressLocality: site.city,
       addressRegion: site.region,
       addressCountry: site.country,
     },
-    areaServed: [
-      { "@type": "City", name: "Sydney" },
-      { "@type": "Country", name: "Australia" },
-    ],
+    areaServed: { "@type": "Country", name: "Australia" },
     knowsLanguage: ["en", "zh"],
-    founder: { "@type": "Person", name: site.founder, url: site.links.blog },
     sameAs: [site.links.github, site.links.blog],
   };
   return <JsonLd data={data} />;

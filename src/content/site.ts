@@ -9,10 +9,12 @@ export const site = {
   phoneHref: "tel:1300690188",
   // TODO: switch to a domain address (e.g. hello@hdeazy.com) once set up.
   email: "highlydistinguish@gmail.com",
-  city: "Sydney",
   region: "NSW",
   country: "AU",
-  founder: "Todd Zhang",
+  // Shown in the footer and About page. National positioning — no single city.
+  location: "Australia",
+  // Google Analytics 4 measurement ID (e.g. "G-XXXXXXXXXX"). Leave empty to disable.
+  gaId: "G-FZCZCLPPSV",
   links: {
     github: "https://github.com/CloudsDocker",
     blog: "https://www.todzhang.com",

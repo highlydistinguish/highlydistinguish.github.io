@@ -69,6 +69,39 @@ body {
   outline-offset: 2px;
 }
 
+/* On-load entrance — plays on first paint (no scroll needed), so the first
+   screen isn't static. `both` fill-mode holds the hidden state before it runs. */
+@keyframes enter-up {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: none; }
+}
+.animate-enter { animation: enter-up 0.7s ease-out both; }
+@media (prefers-reduced-motion: reduce) {
+  .animate-enter { animation: none; }
+}
+
+/* Hero ambient glow — slow, on-brand amber drift. Disabled for reduced motion. */
+@keyframes aurora-a {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.85; }
+  50% { transform: translate3d(-48px, 36px, 0) scale(1.18); opacity: 1; }
+}
+@keyframes aurora-b {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1.1); opacity: 0.5; }
+  50% { transform: translate3d(40px, -28px, 0) scale(0.92); opacity: 0.8; }
+}
+.animate-aurora-a { animation: aurora-a 16s ease-in-out infinite; }
+.animate-aurora-b { animation: aurora-b 20s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .animate-aurora-a,
+  .animate-aurora-b { animation: none; }
+}
+
+/* Founder signature flourish. Cursive system stack — no web-font request. */
+.font-signature {
+  font-family: "Snell Roundhand", "Segoe Script", "Brush Script MT", "Apple Chancery", cursive;
+  font-style: italic;
+}
+
 /* Long-form article typography (Insights + case studies). */
 .prose {
   font-size: 1.0625rem;
