@@ -48,9 +48,9 @@ const en: Dictionary = {
     tagline: "Safe, practical AI for Australia's small professional firms.",
     explore: "Explore",
     company: "Company",
-    archive: "Engineering archive",
-    archiveTech: "Tech notes (2016–2021)",
-    archiveChinese: "技术博客 (2016–2021)",
+    archive: "Engineering blog",
+    archiveTech: "English posts",
+    archiveChinese: "中文技术博客",
     privacy: "Privacy policy",
     terms: "Terms of use",
     disclaimer:

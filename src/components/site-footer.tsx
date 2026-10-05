@@ -82,15 +82,15 @@ export function SiteFooter({ locale }: { locale: Locale }) {
 
         <div>
           <p className="text-sm font-semibold">{t.footer.archive}</p>
-          {/* Plain anchors: these are the frozen pre-2022 Jekyll pages, not Next routes. */}
+          {/* External links to the founder's live engineering blog on todzhang.com. */}
           <ul className="mt-3 space-y-2">
             <li>
-              <a href={site.archive.tech} className={linkClass}>
+              <a href={site.archive.tech} target="_blank" rel="noopener noreferrer" className={linkClass}>
                 {t.footer.archiveTech}
               </a>
             </li>
             <li>
-              <a href={site.archive.chinese} className={linkClass}>
+              <a href={site.archive.chinese} target="_blank" rel="noopener noreferrer" className={linkClass}>
                 {t.footer.archiveChinese}
               </a>
             </li>

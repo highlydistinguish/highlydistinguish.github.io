@@ -20,10 +20,10 @@ export const site = {
     blog: "https://www.todzhang.com",
     playbook: "https://github.com/CloudsDocker/AI-FDE-Playbook",
   },
-  // Pre-2022 engineering posts, kept at their original URLs.
+  // Live engineering blog (full archive), English and Chinese listings.
   archive: {
-    tech: "/blog_tech/",
-    chinese: "/blog_chn/",
+    tech: "https://www.todzhang.com/posts/",
+    chinese: "https://www.todzhang.com/zh/posts/",
   },
 } as const;
 
