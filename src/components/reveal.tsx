@@ -4,7 +4,8 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 // Fades + lifts its children into view on scroll. `delay` staggers siblings
-// (e.g. cards in a grid). Reduced-motion users see everything immediately.
+// (e.g. cards in a grid). Reduced-motion users get instant reveals via the
+// motion-reduce:transition-none class below (no fade/lift animation).
 export function Reveal({
   children,
   className,
@@ -20,10 +21,6 @@ export function Reveal({
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) {
-      setShown(true);
-      return;
-    }
     const obs = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
