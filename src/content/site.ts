@@ -14,7 +14,7 @@ export const site = {
   // Shown in the footer and About page. National positioning — no single city.
   location: "Australia",
   // Google Analytics 4 measurement ID (e.g. "G-XXXXXXXXXX"). Leave empty to disable.
-  gaId: "G-FZCZCLPPSV",
+  gaId: "G-4LDW6HMJC8",
   links: {
     github: "https://github.com/CloudsDocker",
     blog: "https://www.todzhang.com",
