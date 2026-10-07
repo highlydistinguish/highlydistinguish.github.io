@@ -5,6 +5,7 @@ import { CountUp } from "@/components/count-up";
 import { CtaBand } from "@/components/cta-band";
 import { JsonLd } from "@/components/json-ld";
 import { Reveal } from "@/components/reveal";
+import { RotatingWords } from "@/components/rotating-words";
 import { Container, Section, SectionHeading, SourceLinks } from "@/components/layout-primitives";
 import { getDictionary } from "@/content";
 import { localePath, type Locale } from "@/lib/i18n";
@@ -47,10 +48,16 @@ export function HomeView({ locale }: { locale: Locale }) {
               {h.eyebrow}
             </p>
             <h1
-              className="animate-enter mt-6 text-4xl font-bold leading-[1.12] tracking-tight sm:text-5xl lg:text-[3.35rem]"
+              className="animate-enter mt-6 text-balance text-4xl font-bold leading-[1.12] tracking-tight sm:text-5xl lg:text-[3.35rem]"
               style={{ animationDelay: "0.1s" }}
             >
-              {h.title} <span className="text-brand-strong">{h.titleHighlight}</span>
+              {h.title}
+              {/* The rolling word gets its own line: its width changes as it turns
+                  over, and on a shared line that would re-wrap the whole headline. */}
+              <span className="block">
+                <RotatingWords words={h.titleRotating} className="text-brand-strong" />
+                {h.titleSuffix}
+              </span>
             </h1>
             <p
               className="animate-enter mt-6 max-w-xl text-lg leading-relaxed text-muted-strong"

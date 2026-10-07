@@ -58,8 +58,9 @@ const en: Dictionary = {
   },
   home: {
     eyebrow: "AI for small accounting, mortgage broking & migration practices",
-    title: "Save hours every week with AI —",
-    titleHighlight: "without putting client data at risk.",
+    title: "Save hours every week with AI — without risking",
+    titleRotating: ["client data", "client trust", "confidentiality", "your reputation"],
+    titleSuffix: ".",
     body: "We help small Australian firms choose the right AI tools, set them up safely, and train the team. Plain English, fixed prices, and a person checking anything that matters.",
     secondaryCta: "See how it works",
     proof: [

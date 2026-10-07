@@ -86,7 +86,9 @@ export type Dictionary = {
   home: {
     eyebrow: string;
     title: string;
-    titleHighlight: string;
+    /** Keyword that rolls over in the headline; the first entry is what crawlers see. */
+    titleRotating: string[];
+    titleSuffix: string;
     body: string;
     secondaryCta: string;
     proof: string[];
